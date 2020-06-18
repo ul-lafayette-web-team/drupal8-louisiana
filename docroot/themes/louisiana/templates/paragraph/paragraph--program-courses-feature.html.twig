@@ -1,0 +1,39 @@
+<section class="section--wide-lined-title section--banded section--white section--program__courses">
+  <div class="grid-container">
+  
+    <div class="grid-x">
+      <div class="cell">
+        <h2><span>{{ content.field_component_title }}</span></h2>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x section__content courses__tabs-set">
+      <div class="cell small-12 medium-4 large-3">
+        <div class="courses__tabs">
+          <a href="#freshman-year" class="h4 courses__tab" aria-selected="true">Freshman Year</a>
+          <a href="#sophomore-year" class="h4 courses__tab" aria-selected="false">Sophomore Year</a>
+          <a href="#junior-year" class="h4 courses__tab" aria-selected="false">Junior Year</a>
+          <a href="#senior-year" class="h4 courses__tab" aria-selected="false">Senior Year</a>
+        </div>
+      </div>
+      <div class="cell small-12 medium-8 large-9" >
+          {# Thinking about wrapping the first one here to set the aria-hidden=false #}
+          <div class="courses__year" aria-hidden="false">
+              {{ content.field_pcf_course_feature_years.0 }}
+          </div>
+          <div class="courses__year" aria-hidden="true">
+              {{ content.field_pcf_course_feature_years.1 }}
+          </div>          
+          <div class="courses__year" aria-hidden="true">
+              {{ content.field_pcf_course_feature_years.2 }}
+          </div>
+          <div class="courses__year" aria-hidden="true">
+              {{ content.field_pcf_course_feature_years.3 }}
+          </div>
+      </div>
+    <div class="grid-x section__all-link">
+      <div class="cell">
+        {{ content.field_component_link }}
+      </div>
+    </div>
+  </div>
+</section>

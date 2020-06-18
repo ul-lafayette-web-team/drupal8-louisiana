@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
+.site-search__toggle { display: none; }
+
+#edit-submit--2 {
+ background-color: transparent;
+ width: 36px;
+ height: 33px;
+ font-size: 0;
+ padding: 0;
+ position: absolute;
+ top: 1px;
+ right: 1em;
+ bottom: 1em;
+ z-index: 11;
+}
+
+#edit-actions--2::after
+{
+ content: "\f002";
+ font-family: "Font Awesome 5 Pro";
+ color: #ffffff;
+ font-size: 18px;
+ position: relative;
+ left: -3px;
+ top: 2px;
+}
+
+article {
+
+}
+
+.section--brand-features {
+  margin-top: 100px;
+}
+
+.ull-header__utility--second a {
+  font-weight: bold;
+}
+
+.section--campaign-highlight img {
+  position: relative;
+  z-index: 11;
+  padding: 20px;
+}
+.section--campaign-highlight {
+  color: white; 
+  position: relative;
+  z-index: 11;
+}
+
+.cal_date {
+    background: #ce181e;    
+    text-align: center;
+    text-transform: uppercase;
+    color: 
+    #ffffff;
+    font-family: "Roboto Slab", courier, georgia, serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1;
+    height: 64px;
+    width: 64px;
+    padding: 12px;
+}
+  
+.cal_date .cal_date_month {
+    font-family: "HCo Gotham SSm", helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+.lw-top-date div {
+    display: block;
+}
+
+.section--livewhale .link-underline::after {
+    content: "\00a0\f360";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+}
+
+.section--livewhale h2::after {
+    right: 103%;
+}
+
+.section--program-features {
+    margin-top: 2.5rem;
+}
+
+.program-featured__inner {
+    max-width: 820px;
+}
+
+/*
+.program-featured__inner a {
+    display: inline-block;
+    margin-bottom: 0;
+    transition: background 250ms ease-in-out, color 250ms ease-in-out;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #ce181e;
+    font-family: "HCo Gotham SSm", helvetica, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.program-featured__inner a:hover {
+    background-color: #a1c4c9;
+    text-decoration: none;
+}
+*/
+
+.page .main-content {
+/*    padding: 25px; */
+}
+
+.page--organization .main-content {
+    padding: 0px;
+}
+
+.page--home .main-content {
+    padding: 0;
+}
+
+.alert--site-wide {
+    position: relative;
+    z-index: 1100;
+    padding: 20px;
+    text-align: center;
+    background: #FF7900;
+    color: white;
+    font-size: 25px;
+}
+.differentiator i {
+    font-size: 50px;
+    display: block;
+    text-align: center;
+}
+.differentiator__title h4 a {
+    margin-top: 2.5rem;
+    line-height: calc(21 / 16);
+    font-size: 1.1875rem;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+.differentiator__desc p {
+    display: block:
+    text-align: justify;
+}
+
+.organization__title-strip .term-type a {
+    text-decoration: none;
+}
+
+#tuitionFeesSelect {
+    background-image: url(/themes/louisiana/assets/img/bg-select-arrow.svg);
+}
+
+.site-search .form-submit, #edit-submit--3 { display: none; }
+
+.ull-header__main {
+    background: transparent !important;
+    background-size: auto !important;
+}

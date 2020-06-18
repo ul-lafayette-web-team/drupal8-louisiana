@@ -1,6 +1,8 @@
 {% import "@oho_base/includes/oho-macros.html.twig" as oho_macros %}
-<article class="checkerboard-item">
-  <div class="checkerboard-item__media compat-object-fit-container">
+<article class="checkerbd">
+  <div class="grid-x">
+  <div class="cell small-12 medium-7 large-8">
+    <figure class="checkerbd__figure">
     {% if content.field_component_video|render %}
       <a data-fancybox href="{{ content.field_component_video }}">
         {{ content.field_component_image }}
@@ -17,10 +19,11 @@
     {% else %}
       {{ content.field_component_image }}
     {% endif %}
-    <p>{{ content.field_component_caption }}</p>
+    <figcaption>{{ content.field_component_caption }}</figcaption>
+    </figure>
   </div>
-  <div class="checkerboard-item__info">
-    <div class="checkerboard-item__info__inner">
+  <div class="cell small-12 medium-5 large-4">
+    <div class="checkerbd__text">
       <h2>
         {% if content.field_component_title_link|render %}
           <a href="{{ content.field_component_title_link }}">

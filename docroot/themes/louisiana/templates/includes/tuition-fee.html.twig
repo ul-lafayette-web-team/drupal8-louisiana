@@ -1,0 +1,41 @@
+{#
+  /**
+   * Template to fill in tuition and fees rows
+   *
+   * Variables:
+   *  - title (string): Text in the row.
+   *  - number (string): Number in the row.
+   *  - content (string): Optional content.
+   *  - subtitle (string): Optional title for the optional content
+   */
+#}
+
+
+{% if content %}
+
+  <button type="button" class="costs__accordion-button">
+    <div class="costs__name">{{ title }}</div>
+    <div class="costs__amount">+ {{ number }}</div>
+    <span class="show-for-sr">Click to <span>show</span> background information</span>
+  </button> 
+  <div class="costs__accordion__content">  
+    <div class="costs__breakdown__title">What is this?</div>   
+      <div class="costs__breakdown__body">{{ content }}</div>
+    {% if breakdown %}
+    <div class="costs__breakdown__title">Breakdown</div> 
+      <div class="costs__breakdown__body">{{ breakdown }}</div>
+    {% endif %}
+    {% if resources %}
+    <div class="costs__breakdown__title">Resources</div>     
+      <div class="costs__breakdown__body">{{ resources }}</div>
+    {% endif %}
+  </div>
+  
+{% else %}
+
+  <div class="costs__textrow">
+    <div class="costs__name">{{ title }}</div>
+    <div class="costs__amount">+ {{ number }}</div>
+  </div>  
+  
+{% endif %} 

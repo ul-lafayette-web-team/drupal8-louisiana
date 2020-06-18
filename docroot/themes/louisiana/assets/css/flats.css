@@ -1,0 +1,75 @@
+/**
+ * OHO Interactive flat base stylesheet.
+ * Version 2019-04-08
+ * https://www.oho.com
+ */
+/*
+Gotham
+XLight 200
+Light 300 
+Book 400
+Medium 500
+Bold 700
+Black 800
+
+Montserrat
+Light 300
+Book 400
+Medium 500
+Bold 700
+
+Roboto Slab
+Light 300
+Bold 700
+*/
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.5.3
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
+code {
+  background-color: #949494;
+}
+
+pre code {
+  display: block;
+  padding: 1em;
+  border: solid 1px #2e2e2e;
+}
+
+.base-key {
+  max-width: 600px;
+  margin-bottom: 2rem;
+  padding: 1rem 1rem 0;
+  border: solid 1px #fe5000;
+  background-color: #4d4d4d;
+  font-family: monospace;
+  line-height: 1.5;
+}
+
+.base-key dt {
+  float: left;
+  clear: left;
+  width: 5rem;
+  font-family: "HCo Gotham SSm", helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.base-key dt,
+.base-key dd {
+  margin-bottom: .75rem;
+}
+
+.base-key ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.base-key li {
+  margin-bottom: .375rem;
+}
+
+/*# sourceMappingURL=../maps/flats.css.map */

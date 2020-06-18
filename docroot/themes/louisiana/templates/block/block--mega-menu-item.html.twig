@@ -1,0 +1,17 @@
+{% import "@oho_base/includes/oho-macros.html.twig" as oho_macros %}
+
+{{ content.field_component_link }}
+
+<div class="ull-header__mega-menu">
+  <div class="ull-header-mega-menu__title">
+    {{ content.field_component_link }}
+  </div>
+  <div class="ull-header-mega-menu__row">
+    <div class="ull-header-mega-menu__text">
+      <p>{{ content.field_component_body }}</p>
+      <nav class="ull-header-mega-menu__list">
+        {{ oho_macros.link_field_list(content.field_mmi_links, 'menu') }}
+      </nav>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+////
+/// @group components-micro
+/// Styles for buttons.
+////
+
+.btn {
+  @include btn;
+
+  &--light {
+    color: $primary-color--light;
+    background: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+  &[href*="//"]:not([href*="louisiana.edu"]):after {
+    content: "\00a0\f360";
+    font-family: $font-awesome;
+    font-weight: 400;
+  } 
+  &:not(:only-child) {
+    margin-right: rem-calc(30);
+  }
+}
+
+.video-link--fancy {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: none;
+  .play-button {
+    position: relative;
+    &:before,
+    &:after {
+      font-family: $font-awesome;
+      font-weight: 900;
+      text-align: center;
+    }
+    // circle
+    &:before {
+      position: relative;
+      z-index: 2;
+      content: "\f111";
+      color: rgba(206,24,30,0.8);
+      font-size: 70px;
+      transition: color 0.3s ease-out;
+    }
+    // play triangle
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 3;
+      content: "\f04b";   
+      color: #fff;
+      font-size: 28px;  
+      transition: color 0.3s ease-out;   
+    }
+
+  }
+  
+  &:hover,
+  &:focus {
+    .play-button:before {
+      color: rgba(0,0,0,0.8);
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.section--brand-features {
+  width: 100%;
+  max-width: rem-calc(1420);
+  margin-left: auto;
+  margin-right: auto;
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @include breakpoint(650) {
+      padding: 0 20px;
+    }
+    @include breakpoint(large) {
+      padding: 0 40px;
+    }
+  }
+  li {
+    flex: 1 1 auto;
+    @include breakpoint(649 down) {
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+    @include breakpoint(650) {
+      
+      max-width: calc(50% - 10px);
+      
+      &:nth-child(n+3){
+        margin-top: 20px;
+      }
+
+    }
+    @include breakpoint(large) {
+      
+      max-width: calc(50% - 20px);
+      
+      &:nth-child(n+3){
+        margin-top: 40px;
+      }
+
+    }
+  }
+
+}
+
+.brand-feature {
+  height: 100%;
+  background: $ull-teal-dusty-light;
+  transition: 0.3s background ease-out, 0.3s box-shadow ease-out;
+  
+  &:hover {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5), 0 10px 20px 2px rgba(0,0,0,0.15);
+  }
+  
+  &__title {
+    position: relative;
+    
+    img {
+      vertical-align: middle;
+    }
+    
+    h2 {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      
+      span {
+        display: table;
+        margin: 0 auto;
+        padding: rem-calc(20);
+        background-color: rgba(255,255,255,0.8);
+        text-transform: uppercase;
+      }
+    }
+  }
+  
+  &__text {
+    @include paddings-top(20, 20, 40);
+    @include paddings-left-right(20, 20, 40);
+    @include paddings-bottom(20, 20, 40);
+  }
+  &__button:not(:first-child) {
+    @include margins-top(20, 20, 30);
+  }
+}

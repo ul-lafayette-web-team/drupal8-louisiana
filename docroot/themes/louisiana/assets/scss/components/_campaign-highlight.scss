@@ -1,0 +1,53 @@
+.section--campaign-highlight {
+  position: relative;
+  @include paddings-top(40, 120, 200);
+  @include paddings-bottom(40, 120, 200);  
+  background-color: #333;
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+  @include breakpoint(600) {
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  h2,
+  p {
+    color: #fff;
+  }  
+  .btn {
+    background: $white;
+    color: $black;
+    &:hover,
+    &:focus {
+      background-color: $ull-teal-dusty;
+    }
+  }
+  p,
+  .btn {
+    margin-top: rem-calc(20);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(10,2,3,0.55);    
+  }
+  .grid-container {
+    position: relative;
+    z-index: 2;
+  }
+  img {
+    @include breakpoint(small down) {
+      margin-bottom: rem-calc(30);
+      max-width: rem-calc(160);
+    }
+    @include breakpoint(medium) {
+      float: right;
+    }
+  }
+}

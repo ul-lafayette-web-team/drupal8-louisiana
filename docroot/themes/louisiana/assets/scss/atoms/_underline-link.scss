@@ -1,0 +1,36 @@
+////
+/// @group components-micro
+/// Styles for an underline link.
+////
+
+.link-underline {
+  position: relative;
+  line-height: 1;
+  display: inline-block;
+  
+  &:before {
+    content:"";
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    left: 0;
+    height: 5px;
+    background-color: $ull-red;
+    transition: background-color 0.3s ease-out;
+  }
+  &:hover, 
+  &:focus {
+    outline: none;
+    color: #000;
+    
+    &:before {
+      background-color: $ull-teal;
+    }
+  }
+  
+  &[href*="//"]:not([href*="louisiana.edu"]):after {
+    content: "\00a0\f360";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+  }
+}

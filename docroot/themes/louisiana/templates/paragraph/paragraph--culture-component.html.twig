@@ -1,4 +1,26 @@
-<section>
-  <h2>{{ content.field_component_title }}</h2>
-  {{ content.field_cc_culture_features }}
+<section class="section--culture-component section--wide-lined-title section--banded section--dusty-light">
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell">
+        <h2><span>{{ content.field_component_title }}</span></h2>
+      </div>
+    </div>
+  </div>
+  <section class="culture-component__slick">
+    {% for key, item in content.field_main_culture_feature if key|first != '#' %}
+      {{ item }}
+    {% endfor %}
+  </section>
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="cell culture-component__cell">
+        {{ content.field_cc_culture_features }}
+      </div>
+    </div>
+    <div class="grid-x section__all-link">
+      <div class="cell">
+        {{ content.field_component_link }}
+      </div>
+    </div>
+  </div>
 </section>

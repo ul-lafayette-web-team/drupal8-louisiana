@@ -1,15 +1,12 @@
-{#
-/**
- * @file
- * Default theme implementation for the OHO Nav.
- *
- * Available variables:
- * - nav_title
- * - nav_url
- * - nav
- */
-#}
-<nav>
+<nav class="sidebar-menu sidebar-menu--padded-levels" data-menu-open-text="Open the %s submenu" data-menu-close-text="Close the %s submenu">
+  <button class="sidebar-menu__toggle" data-button-open-text="Click to expose navigation links on mobile" data-button-close-text="Click to hide navigation links on mobile" data-button-open-class="sidebar-menu-open" data-button-disable-at="769">
+    More In This Section
+    <span class="show-for-sr">Click to expose navigation links on mobile</span>
+  </button>
+  <div class="sidebar-menu__container">
+    {% if title %}
+      <h3><a href>{{ title }}</a></h3>
+    {% endif %}
   {% if nav_title %}
     {% if nav_title.items|length > 1 %}
       <ul>
@@ -32,7 +29,6 @@
       {% endif %}
       </h3>
     {% endif %}
-  {% endif %}
-
-  {{ nav }}
+  {% endif %}    
+  </div>
 </nav>

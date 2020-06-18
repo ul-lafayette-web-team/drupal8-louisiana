@@ -1,0 +1,19 @@
+.program-requirements__secondary-cta {
+  @include margins-top(10,10,20);
+  a {
+    @include red-link;
+    font-weight: 700;
+  }
+}
+
+.section--program__requirements {
+  .section__content {
+    margin-bottom: 0;
+    h3 {
+      @include margins-top(30, 0, 0);
+    }
+    a.btn {
+      margin: rem-calc(15 0 5); // trying to get to 20px
+    }
+  }
+}

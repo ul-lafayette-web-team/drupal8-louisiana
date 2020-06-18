@@ -1,0 +1,14 @@
+{% if content.field_component_image|render is not empty %}
+<div class="cell small-12 large-4">
+  <figure class="career-feature-alumni__photo">
+    {{ content.field_component_image }}
+  </figure>
+</div>
+{% endif %}
+<div class="cell small-12 large-8">
+  <h3>{{ content.field_component_title }}</h3>
+  <p class="career-feature-alumni__quote">{{ content.field_component_body }}</p>
+  <div class="career-feature-alumni__program-year">{{ content.field_component_subtitle }}</div>
+  <div class="career-feature-alumni__outcome">{{ content.field_outcome_or_job }}</div>
+  {{ content.field_component_link }}
+</div>
