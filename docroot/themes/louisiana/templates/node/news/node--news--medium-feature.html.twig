@@ -1,0 +1,36 @@
+  <article class="hero--staggered__item">
+    <div class="hero--staggered__media">
+      {{ content.field_news_image }}
+      <a href="https://player.vimeo.com/external/264260655.sd.mp4?s=5bffe0d3766c547c7eb27d5f12b72b2f34ea5753&profile_id=165" data-fancybox class=" video-link--fancy">
+        <span class="show-for-sr">Click to play the video</span>
+        <span class="play-button"></span>
+      </a>
+    </div>
+
+    <div class="hero--staggered__text">
+      <div class="hero--staggered__quote">
+        {{ content.field_news_summary }}
+      </div>
+      <div class="news-story__title"
+        <h2 class="h4"><a href="{{ url }}" class="link-arrow">{{ label }}</a></h2>
+      </div>
+      <div class="news-story__text">
+        <div class="news-story--subject__image">
+          <figure class="news-story--subject__portait">
+            {{ content.field_news_story_subject_image }}
+          </figure>
+        </div>
+        <div class="news-story--subject__details">
+          <div class="news-story--subject__name">{{ content.field_news_story_subject_name }}</div>
+            <dl class="news-story--subject__info">
+              <dt>Graduation Year</dt>
+              <dd class="news-story--subject__grad-year">{{ content.field_news_story_subject_g_year }}</dd>
+              <dt>Major</dt>
+              <dd class="news-story--subject__major">{{ content.field_news_story_subject_o_title }}</dd>
+              <dt>Hometown</dt>
+              <dd class="news-story--subject__hometown">{{ content.field_news_story_subject_home }}</dd>
+            </dl>
+          </div>
+        </div>    
+      </div>
+</article>

@@ -1,0 +1,190 @@
+////
+/// @group wrapper
+/// Main footer styles.
+////
+
+.site-footer {
+  @include paddings-top(30, 40, 50);  
+  @include paddings-bottom(20,20,30);
+  background-color: $white;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  a:not(.btn) {
+    color: $ull-red;
+    border-bottom: 1px solid transparent;
+    &:hover,
+    &:focus {
+      outline: none;
+      color: #000;
+      border-bottom: 1px solid $ull-red;
+    }
+  }
+  &__logo {
+    border-bottom: none;
+    
+    &:hover,
+    &:focus {
+      border-bottom: none !important; // needed since cascade isn't working
+    }
+    img {
+      margin-bottom: rem-calc(30);
+    }
+    @media (max-width: 480px) {
+      display: block;
+      width: 160px;
+      margin: 0 auto;
+    }
+  }
+  
+  &__contact {
+    li {
+      position: relative;
+      &:not(:first-child) {
+        margin-top: rem-calc(20);
+      }
+    }
+    i.far {
+      position: absolute;
+      top: 0.25em;
+      left: 0;
+      font-size: rem-calc(16);
+    }
+    &-text {
+      margin-left: 30px;
+      font-size: rem-calc(16);
+      line-height: rem-calc(24);
+      
+      p:not(:first-child) {
+        margin-top: 0;
+      }
+
+    }
+  }
+  
+  &__main-nav {
+    ul {
+      @include line-height-adjustment(20, 35);
+    }
+    li {
+      font-weight: 700;
+      font-size: rem-calc(20);
+      line-height: rem-calc(35); 
+      margin-top: rem-calc(18);  
+      &:first-child {
+        margin-top: rem-calc(30);
+        @include breakpoint(large) {
+          margin-top: rem-calc(0);
+        }          
+      }
+      
+    }
+  }
+  
+  &__links {
+    ul {
+      padding-bottom: rem-calc(20);
+      border-bottom: 1px solid $ull-teal-dusty;
+      margin-bottom: rem-calc(20);
+      @include breakpoint(large) {
+        padding-bottom: rem-calc(30);
+        margin-bottom: rem-calc(30);
+      }
+    }
+    li {
+      font-size: rem-calc(16);
+      line-height: rem-calc(24);   
+      margin-top: rem-calc(18);
+      &:first-child {
+        margin-top: rem-calc(30);
+        @include breakpoint(large) {
+          margin-top: rem-calc(0);
+        }          
+      }   
+    }  
+    
+    a[href*="//"]:not([href*="louisiana.edu"]):after {
+      content: "\00a0\f360";
+      font-family: $font-awesome;
+      font-weight: 400;
+    }  
+  }
+  
+  &__links--primary {
+    li {
+      font-weight: 700;      
+    }
+  }
+  
+  &__social {
+    li {
+      float: left;
+      font-size: 22px;
+      margin-right: 20px;
+    }
+  }
+  
+  &__campaign-callout--desktop {
+    padding-top: rem-calc(60);
+    h2 {
+      font-size: rem-calc(20);
+      line-height: rem-calc(26);
+    }
+    display: none;
+    @include breakpoint(large) {
+      display: block;
+    }
+  }
+  
+  &__campaign-callout--mobile {
+    margin-top: rem-calc(30);
+
+    @include breakpoint(large) {
+      display: none;
+    }
+    .btn {
+      margin-top: rem-calc(20);
+    }
+    a:hover,
+    a:focus {
+      border-bottom: none !important; // needed since cascade isn't working
+    }
+  }
+  
+  &--footer {
+    .cell {
+      border-top: 2px solid $ull-teal-dusty;
+      @include paddings-top(20, 20, 30);
+      @include paddings-bottom(30, 40, 50);      
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    p, ul, li {
+      @include margins-top(20,0,0);
+      @include breakpoint(medium) {
+        display: inline;
+      }
+      font-size: rem-calc(16);
+      line-height: rem-calc(24);      
+    }
+    p,
+    li {
+      margin-right: 1em;
+    }
+    a {
+      color: $ull-red;
+      border-bottom: none;
+      font-weight: 700;
+      &:hover,
+      &:focus {
+        outline: none;
+        color: $black;
+        border-bottom: 1px solid $ull-red;
+      }      
+    }
+  }
+}

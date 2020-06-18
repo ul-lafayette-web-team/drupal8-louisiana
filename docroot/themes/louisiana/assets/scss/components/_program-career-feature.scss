@@ -1,0 +1,101 @@
+.career-feature {
+  &__alumni {
+    background-color: $white;
+    box-shadow: 0 10px 20px 2px rgba(0,0,0,0.15);
+    padding: rem-calc(20);
+    @include breakpoint(large) {
+      padding: rem-calc(30);
+    }
+  }
+  &__alumni-cell {
+    & > .link-underline {
+      @include margins-top(30, 40, 60);
+      @include margins-bottom(36, 0, 0);
+    }
+    h3 {
+      margin-top: rem-calc(20) !important;
+      @include breakpoint(large) {
+        margin-top: 0 !important;
+      }
+    }
+  }
+  &-alumni {
+    &__photo {
+      margin: 0;
+      img {
+        width: 70px;
+        height: auto;
+        border-radius: 35px;
+        @include breakpoint(large) {
+          width: 160px;
+          border-radius: 80px;
+        }
+      }
+    }
+
+    &__quote {
+      font-family: $serif;
+      font-size: rem-calc(19);
+      line-height: rem-calc(33);
+    }
+    &__program-year {
+      @include eyebrow;
+      @include margins-top(20, 20, 30);
+    }
+    &__outcome {
+      @include accent-text;
+      margin-top: 0;
+      @include margins-bottom(20, 20, 30);
+      font-weight: 700;
+    }
+  }
+  &__outcomes {
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      break-inside: avoid;
+      font-weight: 500;
+      padding: rem-calc(20 0);
+      border-bottom: 1px solid $white;
+      &:first-child {
+        border-top: 1px solid $white;
+      }
+      &:not(:first-child) {
+        position: relative;
+
+      }
+    }
+  }
+}
+
+.section--career-feature {
+  .section__content {
+    margin-bottom: 0;
+  }
+}
+
+// when there is no card, we make all sorts of changes
+
+.no-card {
+  .career-feature__alumni-cell {
+    order: 1;
+  }
+  .career-feature__outcomes-cell {
+    width: 100%;
+    @include breakpoint(medium) {
+      ul {
+        columns: 2;
+        li:first-child {
+          border-top: none;
+        }
+      }
+    }
+    @include breakpoint(large) {
+      ul {
+        columns: 3;
+      }
+    }
+  }
+}

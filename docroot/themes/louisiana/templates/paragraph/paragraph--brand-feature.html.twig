@@ -1,0 +1,19 @@
+{% import "@oho_base/includes/oho-macros.html.twig" as oho_macros %}
+<li>
+  <article class="brand-feature">
+    <div class="brand-feature__title">
+      {{ content.field_component_image }}
+      <h2><span>{{ content.field_component_title }}</span></h2>
+    </div>
+    <div class="brand-feature__text">
+      {% if content.field_component_body|render %}
+        <div class="brand-feature__blurb">
+          {{ content.field_component_body }}
+        </div>
+      {% endif %}
+      <div class="brand-feature__button">
+        {{ oho_macros.link_field_link(content.field_component_link, 'btn') }}
+      </div>
+    </div>
+  </article>
+</li>

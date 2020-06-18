@@ -1,0 +1,23 @@
+////
+/// @group D8
+/// Styles for OHO Alert.
+////
+
+.oho-alert {
+  @include paddings-top(30,40,50);
+  @include paddings-bottom(30,40,50);
+  background-color: $white;
+
+  .fa {
+    color: $ull-red;
+    font-size: rem-calc(45);
+    margin-bottom: rem-calc(20);
+  }
+  h2 {
+    @extend .h3;
+  }
+  a {
+    color: $text-color;
+    @extend .btn;
+  }
+}

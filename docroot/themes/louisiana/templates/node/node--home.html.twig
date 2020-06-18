@@ -1,3 +1,36 @@
-<article class="home-page">
-  {{ hero }}
+<article class="home-page" style="padding: 0px">
+  <section class="hero section--global-spacing hero--img {{hero_classes}}">
+    <div class="hero__media">
+        <div class="video-feature">
+          <video autoplay=autoplay id="hero" loop muted {# poster="{{video_poster}}" #}>
+            <source src="https://player.vimeo.com/external/367032013.hd.mp4?s=cf9603fc8ae1cd11aa03261fa08a1f1079869a94&profile_id=175">
+          </video>
+        </div>
+    </div>
+  </section>
+  <section class="section--brand-features">
+    <h2>{{ 'Find your'|t }}&hellip;</h2>
+    <ul>
+      {{ content.field_home_brand_features }}
+    </ul>
+  </section>
+
+  <section class="section--campaign-highlight" style="background-image: url(https://picsum.photos/id/134/1440/700">
+    {{ content.field_home_campaign_highlight }}
+  </section>
+  
+  <section class="section--news-story-feature section--wide-lined-title section--banded section--dusty-light">
+    {{ content.field_news_curated_feature }}
+  </section>
+  
+  {{ content.field_culture_component }}
+
+  <section class="section--banded section--white section--livewhale">
+    {{ content.field_livewhale_event_feature }}
+  </section>
+  
+  <section class="section--image-video-gallery section--wide-lined-title section--banded section--dusty">
+    {{ content.field_home_instagram_gallery }}
+  </section>
+
 </article>

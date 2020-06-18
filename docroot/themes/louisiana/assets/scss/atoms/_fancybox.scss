@@ -1,0 +1,12 @@
+
+.fancybox-slide--html .fancybox-close-small {
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  top: -15px;
+  right: 0;
+  &:hover {
+    background-color: transparent;
+    color: $ull-red;
+  }
+}
