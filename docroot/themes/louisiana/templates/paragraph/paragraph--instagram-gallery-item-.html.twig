@@ -1,0 +1,32 @@
+      <div class="image-video-grid__slide">
+        <a href="{{ node.id }}" data-fancybox="image-video-gallery"  class="fancybox image-video-grid__item">
+          <div class="video-indicator">
+            <i class="fas fa-circle"></i>
+            {% if content.field_video %}
+              <i class="fas fa-play"></i>
+            {% else %}
+              <i class="far fa-expand-arrows"></i>
+            {% endif %}
+          </div>
+          <div class="image-video-grid-item__media">
+            {{ content.field_component_image }}
+          </div>
+          <div class="image-video-grid-item__text">
+            <div>{{ content.field_component_title }}</div>
+            <div class="insta-credit"><i class="fab fa-instagram"></i><span>ullafayette</span></div>
+          </div>
+        </a>
+        <figure class="image-video-grid__fancy" id="{{ node.id }}">
+          {% if content.field_component_video %}
+          <div class="iframe-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/yAZi5p3Dljk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          {% else %}
+            <img src="{{ content.field_component_image }}" alt="something">
+
+          {% endif %}
+            <figcaption class="image-video-grid-fancy__text">
+              {{ content.field_component_title }}
+            </figcaption>
+        </figure>        
+      </div><!-- /__slide -->

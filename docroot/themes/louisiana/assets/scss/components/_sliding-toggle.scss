@@ -1,0 +1,102 @@
+////
+/// @group components
+/// Styles for slide-toggle.
+////
+
+/// All Styles
+/// ----------
+.slide-toggle {
+  --slide-toggle-offset: 0;
+  --slide-toggle-scale: 1;
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__button {
+    margin: 0;
+    transition: color $primary-transition;
+    background-color: transparent;
+  }
+
+  /// Line
+  /// ----
+
+  // Disabling stylelint order so we can have the supports near the selector it
+  // modifies.
+  &--line { // stylelint-disable-line
+    border-bottom: .0625em solid $black;
+
+    .slide-toggle__button {
+      color: $text-color;
+
+      &[aria-selected='true'] {
+        color: $primary-color;
+      }
+    }
+
+    @supports (--css: variables) {
+
+      &:after {
+        bottom: 0;
+        height: .3125em;
+        transform:
+          translate(var(--slide-toggle-offset), 50%)
+          scale(var(--slide-toggle-scale), 1);
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  /// Pill
+  /// ----
+  &--pill {
+    padding: 1em;
+    background-color: $primary-color--dark;
+
+    .slide-toggle__button {
+      position: relative;
+      z-index: 1;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+
+      &[aria-selected='true'] {
+        background-color: $primary-color;
+      }
+    }
+
+    @supports (--css: variables) {
+
+      &:after {
+        top: 1em;
+        bottom: 1em;
+        transform:
+          translateX(calc(var(--slide-toggle-offset) - 1em))
+          scale(var(--slide-toggle-scale), 1);
+        background-color: $primary-color--light;
+      }
+    }
+  }
+
+  @supports (--css: variables) {
+
+    &:after {
+      position: absolute;
+      display: block;
+      // Keeping this in pixels because slide-toggle.js scales off this value.
+      width: 100px;
+      content: '';
+      transition: transform $primary-transition;
+      transform-origin: 0 0;
+    }
+
+    // Disabling linting because we always want the background transparent when
+    // animating the toggle.
+    .slide-toggle__button {
+      background-color: transparent !important; // stylelint-disable-line
+    }
+  }
+}

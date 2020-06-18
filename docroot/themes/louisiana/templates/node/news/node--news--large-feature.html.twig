@@ -1,0 +1,23 @@
+<article class="news-story--featured oho-animate-sequence">
+  {{ content.field_news_image }}
+  <a href class="link-box oho-animate fade-in-up">
+    <div class="news-story__text ">
+      <div class="news-story__eyebrow">
+      {% if content.field_news_type %}
+        <span class="news-story__type">{{ content.field_news_type }}</span>
+      {% endif %}
+      {% if content.field_news_date %}
+        <span class="news-story__publish-date">{{ content.field_news_date }}</span>
+      {% endif %}
+      </div>
+      <h3>{{ node.title.value }}</h3>
+      <p>{{ content.body }}</p>
+      {% if content.field_news_tags %}
+      <div class="listing-item__tags tags">
+        <h2 class="tags__heading show-for-sr">Tags:</h2>
+        {{ content.field_news_tags }}
+      </div>
+      {% endif %}
+    </div>
+  </a>
+</article> 

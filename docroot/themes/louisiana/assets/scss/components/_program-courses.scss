@@ -1,0 +1,172 @@
+.courses {
+  &__tabs-set {
+    position: relative;
+  }
+  &__tabs {
+    position: relative;
+    z-index: 1;
+    display: none;
+    @include breakpoint(medium) {
+      display: block;
+    }    
+  }
+  &__tab {
+    position: relative;
+    display: block;
+    text-align: center;
+    border: 3px solid #dbdbdb;
+    padding: rem-calc(20);
+    &:not(:first-child) {
+      margin-top: rem-calc(30);
+    }
+    color: $ull-red;
+    background-color: $white;
+    &:hover,
+    &:focus {
+      color: $black;
+    }
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      border-bottom: 3px solid #dbdbdb;
+      position: absolute;
+      top: calc(50% - 2px);
+      left: 50%;
+      z-index: -1;
+    }
+    &[aria-selected="true"] {
+      color: $black;
+      border-color: $ull-red;
+      &:after {
+        border-color: $ull-red;
+      }
+    }
+  }
+  &__year {
+    position: relative;
+    z-index: 2;
+    &:not(:first-child) {
+      margin-top: rem-calc(20);
+    }  
+    @include breakpoint(medium) {
+      
+      &:not(:first-child) {
+        margin-top: 0;
+      }      
+      
+      &[aria-hidden="true"]{
+        display: none;
+      }
+    }
+  }
+  &__btn {
+    position: relative;
+    width: 100%;
+    padding: rem-calc(20);
+    text-align: left;
+    font-family: $serif;
+    font-size: rem-calc(17);
+    text-transform: none;
+    color: $black;
+    font-weight: 700;
+    background-color: $white;
+    border: 1px solid $ull-red;
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      background-color: $black;
+      position: absolute;
+      transition: background-color 0.3s ease-out;
+    }
+    &:before {
+      width: 30px;
+      height: 3px;
+      right: 20px;
+      top: calc(50% - 1.5px);
+    }
+    &:after {
+      width: 3px;
+      height: 30px;
+      right: 33.5px;
+      top: calc(50% - 15px);
+    } 
+    &:hover,
+    &:focus {
+      background-color: $ull-red !important;
+      color: $white !important;
+      &:before,
+      &:after {
+        background-color: $white;
+      }
+    }   
+    &.engaged:after {
+       background-color: transparent;
+    }  
+    
+    @include breakpoint(medium) {
+      display: none;
+    }
+  }
+  &__feature {
+    display: none;
+    background-color: $ull-red;
+    padding: rem-calc(30);
+    @include breakpoint(medium) {
+      display: block;
+      padding: rem-calc(60);
+      min-height: 400px;
+    }
+
+  }
+  &__title,
+  &__professor,
+  &__professor a,
+  &__quote {
+    color: $white;
+  }
+  &__professor {
+    font-weight: 700;
+     margin-top: rem-calc(20);
+    a {
+      color: #fff;
+      border-bottom: 1px solid $white;
+      &:hover,
+      &:focus {
+        outline: none;
+        border-bottom: 1px solid $black;
+      }
+    }
+  }
+  &__quote {
+    position: relative;
+    border-left: none;
+    padding-left: rem-calc(40) !important;
+    font-weight: 400;
+    font-size: rem-calc(19);
+    line-height: rem-calc(33);
+    margin-top: rem-calc(20) !important;
+    &:before {
+      content: "\f10d";
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: $font-awesome;
+      font-size: rem-calc(20);
+      font-weight: 700;
+    }
+    &--source {
+      @include margins-top(10,10,20);
+      @include eyebrow;
+    }
+  }
+}
+
+.section--program__courses {
+  @include paddings-bottom(44, 44, 80);
+  .section__content {
+    @include margins-bottom(20, 40, 60);
+  }
+}

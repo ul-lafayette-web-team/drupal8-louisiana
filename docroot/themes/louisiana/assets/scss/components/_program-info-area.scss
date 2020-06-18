@@ -1,0 +1,48 @@
+.program__other-prog-links {
+  h2 {
+    @include margins-top(20, 20, 40);
+  }
+  .btn {
+    @include margins-top(20, 20, 20);
+  }
+}
+.program__at-a-glance {
+  background-color: $ull-teal-dusty-light;
+  @include margins-top(30, 0, 0);
+  padding: rem-calc(20);
+  @include breakpoint(large) {
+    padding: rem-calc(30);
+  }
+  dl {
+    @include small-text;
+    @include margins-top(10,10,20);
+  }
+  dt {
+    font-weight: 700;
+    &:not(:first-child) {
+      @include margins-top(10,10,10);
+      border-top: 2px solid $ull-teal-dusty;
+      @include paddings-top(10,10,10);
+    }
+  }
+  dd {
+    margin: rem-calc(10 0 0 0);
+    ul {
+      list-style: none;
+      padding-left: 0;
+      li {
+        display: inline-block;
+        &:not(:last-child):after {
+          content: ", ";
+        }
+      }
+    } 
+    a {
+      @include red-link;
+    }   
+  }
+}
+
+.program__who-for + .wysiwyg > .intro-text {
+  margin-top: rem-calc(20);
+}

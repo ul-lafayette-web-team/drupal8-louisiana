@@ -1,0 +1,43 @@
+.find-your-counselor {
+  &__title {
+    font-family: $serif;
+    font-size: rem-calc(19);
+    line-height: rem-calc(25);
+    margin-bottom: rem-calc(10);
+    margin-top: rem-calc(24); // to get to 30
+    @include breakpoint(medium) {
+      margin-top: 0;
+    }
+  }
+  &__select {
+    appearance: none;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid $ull-teal-dusty;
+    background-image: url(/assets/img/bg-select-arrow.svg);
+    
+    @include breakpoint(medium) {
+      margin-bottom: rem-calc(40);
+    }
+    
+    & + .find-your-counselor__title{
+      margin-top: rem-calc(15);
+    }
+  }    
+}
+
+.section--white.section--find-your-counselor {
+  .section__content {
+    margin-bottom: 0;
+    
+    a.btn {
+      @include margins-top(30,30,20);
+    }
+  }
+  .find-your-counselor__profile {
+    padding: rem-calc(20);
+    @include margins-top(24, 0, 0); // to get to 40 for mobile
+  }
+}
+
+/// Counselor block styles are in _profiles.scss

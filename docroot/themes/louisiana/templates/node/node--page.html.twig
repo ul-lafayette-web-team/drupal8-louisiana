@@ -4,43 +4,43 @@
  * Template to display a general page.
  */
 #}
-{%
-  set classes = [
-    'basic-page',
-  ]
-%}
-
-{% block sidebar %}
-  {% if sidebar_nav %}
-    <div class="cell initial-12 medium-3">
-      {{ sidebar_nav }}
-    </div>
-  {% endif %}
-{% endblock %}
-
-{% block page %}
-  <div class="columns initial-12 medium-auto">
-    {{ breadcrumbs }}
-    <article{{ attributes.addClass(classes) }}>
-      <h1>{{ node.title.value }}</h1>
-
+{# Example    
       {% if content.field_intro_text|render %}
         <div class="intro-text">{{ content.field_intro_text }}</div>
       {% endif %}
+#}
 
-      {% if content.field_header_image|render %}
-        <div class="featured-image--basic">
-          <figure>
-            {{ content.field_header_image }}
-          </figure>
-        </div>
-      {% endif %}
+<div class="hero__media general-pg__media">
+  {% if content.field_header_video|render %}
+    <div class="video-feature">
+      <video id="hero" loop="" muted="" poster="http://placehold.it/768x480" autoplay="autoplay">
+        <source src="https://player.vimeo.com/external/264260655.sd.mp4?s=5bffe0d3766c547c7eb27d5f12b72b2f34ea5753&amp;profile_id=165">
+      </video>
+    </div>    
+  {% endif %}
+  {% if content.field_header_image|render %}
+    {{ content.field_header_image }}
+  {% endif %}
+</div>
 
-      <section class="clearfix">
-        {% block content %}
+<div class="grid-container main-content-cols basic-page-cols">
+  <div class="grid-x grid-margin-x">
+    <div class="cell initial-12">    
+      <h1>{{ node.title.value }}</h1>
+    </div>
+    {% if sidebar_nav|render %}
+    <div class="cell medium-3">
+      {{ sidebar_nav }}
+    </div>
+    {% endif %}
+    <div class="cell medium-auto">
+      <article class="basic-page">
+        <div class="intro-text">{{ content.field_intro_text }}</div>
+        <section class="clearfix full-wysiwyg">
           {{ content.body }}
-        {% endblock %}
-      </section>
-    </article>
+        </section>
+      </article>
+    </div>
   </div>
-{% endblock %}
+</div>
+{{ content.field_page_components }}

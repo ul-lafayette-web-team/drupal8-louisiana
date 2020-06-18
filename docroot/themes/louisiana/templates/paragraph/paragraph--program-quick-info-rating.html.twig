@@ -1,0 +1,12 @@
+<li class="program__rated--item">
+  <div>{{ content.field_component_title }}</div>
+  {% if content.field_pqir_rating.0['#markup'] == '1' %}
+    <img src="/{{ directory }}/assets/img/one-of-three.svg" alt="Rated 1 out of 3">
+  {% endif %}
+  {% if content.field_pqir_rating.0['#markup'] == '2' %}
+    <img src="/{{ directory }}/assets/img/two-of-three.svg" alt="Rated 2 out of 3">
+  {% endif %}
+  {% if content.field_pqir_rating.0['#markup'] == '3' %}
+    <img src="/{{ directory }}/assets/img/three-of-three.svg" alt="Rated 3 out of 3">
+  {% endif %}
+</li>

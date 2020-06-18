@@ -1,0 +1,24 @@
+////
+/// @group components-micro
+/// Styles for an arrow link.
+////
+
+.link-arrow {
+  @include link-arrow;
+  
+  &:after {
+    position: relative;
+    left: 0;
+    transition: all 0.3s ease-out;
+  }
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $ull-red;
+    
+    &:after {
+      left: 10px;
+    }
+    
+  }
+}

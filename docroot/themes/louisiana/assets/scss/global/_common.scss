@@ -1,0 +1,84 @@
+////
+/// @group global
+/// Base styles for common elements.
+////
+
+/// Elements Base Styles
+/// --------------------
+* { // stylelint-disable-line
+  box-sizing: border-box;
+}
+
+/// @todo Is this still needed?
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  color: $text-color;
+  font-family: $sans-serif;
+  @include font-sizes(16, 16, 20);
+  @include line-heights(24, 24, 36);
+}
+
+// IE 11 missing UA styles fix.
+main {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+figure {
+  display: table;
+}
+
+figcaption {
+  display: table-caption;
+  margin-top: .5em;
+  caption-side: bottom;
+  color: $gray--dark;
+  font-size: rem-calc(16);
+  line-height: rem-calc(24);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/// Customizing Foundation Grid
+/// -------------------------
+
+.grid-container {
+  padding-right: rem-calc(20);
+  padding-left: rem-calc(20);
+  max-width: 75rem;
+}
+
+/// Margin and padding resets
+/// -------------------------
+dl,
+pre {
+  margin: 0;
+  padding: 0;
+}
+
+/// Helper Classes
+/// -------
+.clearfix {
+  @include clearfix;
+}
+
+.show-for-sr,
+.visually-hidden {
+  @include show-for-sr;
+}
+
+.basic-page-cols h1 {
+  @include margins-bottom(20,20,30);
+}

@@ -1,0 +1,11 @@
+////
+/// @group components-micro
+/// Styles for intro text.
+////
+
+.intro-text {
+  font-family: $serif;
+  font-weight: 300;
+  @include font-sizes(18, 24, 24);
+  @include line-heights(27, 36, 36);
+}

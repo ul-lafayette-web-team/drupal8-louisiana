@@ -1,31 +1,133 @@
-{% import "@oho_base/includes/oho-macros.html.twig" as oho_macros %}
+<article class="program-detail">
 
-{{ breadcrumbs }}
-<h1>{{ node.title.value }}</h1>
+<div class="grid-container page__title">
+  <div class="grid-x">
+    <div class="cell">
+    <h1>{{ node.title.value }}</h1>
+    </div>
+  </div>
+</div> 
 
-<div class="columns initial-12 medium-auto">
-  <article{{ attributes.addClass(classes) }}>
-    {% if content.field_intro_text|render %}
-      <h2>{{ 'Who is this Program For?'|t }}</h2>
-      <div class="intro-text">{{ content.field_intro_text }}</div>
-    {% endif %}
+<section class="hero--staggered">
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell">
+        {{ content.field_header_featured_news }}
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="clearfix">
-      {{ content.body }}
-    </section>
-  </article>
+<section class="program__info-area">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="cell small-12 medium-8">
+      <div class="wysiwyg">
+          <div class="intro-text">
+              {{ content.field_intro_text }}
+          </div>
+          {{ content.body }}
+      </div>
+      <div class="program__other-prog-links">
+{% if content.field_program_other_app_links[0] %}
+<h2 class="h5">Other {{ node.title.value }} Programs at UL Lafayette</h2>
+  {% for key, item in content.field_program_other_app_links if key|first != '#' %}
+    <div>{{ item }}</div>
+  {% endfor %}
+{% endif %}
 </div>
-
-<div class="cell initial-12 medium-3">
-  <h2>{{ node.title.value }} {{ 'At a Glance'|t }}</h2>
-
-  {% if content.field_program_degree|render %}
-    <h3>{{ 'Degree'|t }}</h3>
-    {{ content.field_program_degree }}
-  {% endif %}
-
-  <h3>{{ 'Program Tracks'|t }}</h3>
-  {{ oho_macros.field_list(content.field_program_tracks) }}
-</div>
-
+      </div>
+      <div class="cell small-12 medium-4">
+        <aside class="program__at-a-glance">
+          <h3 class="h4">{{ node.title.value }} at a Glance</h3>
+          <dl>
+            <dt>Degree</dt>
+            <dd>{{ content.field_program_degree }}</dd>
+            <dt>Program</dt>
+            <dd>
+{% if content.field_program_tracks[0] %}
+  <ul>
+    {% for key, item in content.field_program_tracks if key|first != '#' %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+            </dd>
+            <dt>Total Credit Hours</dt>
+            <dd>{{ content.field_program_credit_hours }}</dd>
+            <dt>College</dt>
+            <dd>
+{% if content.field_program_colleges[0] %}
+  <ul>
+    {% for key, item in content.field_program_colleges if key|first != '#' %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+{% if content.field_program_dept_schools[0] %}
+            </dd>
+            <dt>Department</dt>
+            <dd>
+  <ul>
+    {% for key, item in content.field_program_dept_schools if key|first != '#' %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+            </dd>            
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+{{ content.field_program_diff_section }}
 {{ content.field_program_features_section }}
+{{ content.field_checkerboard }}
+{{ content.field_program_courses_feature }}
+{{ content.field_program_career_feature }}
+<section class="section--wide-lined-title section--banded section--white section--program__requirements">
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell">
+        <h2><span>Program Requirements</span></h2>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x section__content">
+      <div class="cell small-12 medium-8">
+      <section class="accordions">
+      {% if content.field_program_requirements[0] %}
+        {% for key, item in content.field_program_requirements if key|first != '#' %}
+          {{ item }}
+        {% endfor %}
+      {% endif %}
+      </section>
+      </div>
+      <div class="cell small-12 medium-4">
+        <h3 class="h4">Resources</h3>
+        {{ content.field_program_primary_link }}
+        {% if content.field_program_secondary_links[0] %}
+          {% for key, item in content.field_program_secondary_links if key|first != '#' %}
+            <div class="program-requirements__secondary-cta">{{ item }}</div>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section--org-contact">
+  <div class="grid-container">
+  <div class="section--org-contact__content">
+    <div class="grid-x">
+      <div class="cell small-12 medium-5">
+        <h2>Still Not Sure?</h2>
+        <p><a href class="link-arrow">All people, departments &amp; offices</a></p>
+      </div>
+      <div class="cell small-12 medium-7">
+      {{ content.field_organizations_contact }}
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+</article>

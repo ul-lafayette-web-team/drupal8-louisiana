@@ -1,0 +1,42 @@
+{#
+  /**
+   * Template to display a news/story feature.
+   *
+   * Variables:
+   *  - image (string): The image source URL.
+   *  - type (string): The type of item.
+   *  - date (string): The publishing date.
+   *  - title (string): The feature title.
+   *  - text (string): The feature text.
+   *  - tags (string): basically, are there tags?
+   */
+#}
+
+<article class="news-story--featured oho-animate-sequence">
+  <img src="{{ image }}" alt="placeholder">
+  <a href class="link-box oho-animate fade-in-up">
+    <div class="news-story__text ">
+      <div class="news-story__eyebrow">
+      {% if type %}
+        <span class="news-story__type">{{ type }}</span>
+      {% endif %}
+      {% if date %}
+        <span class="news-story__publish-date">{{ date }}</span>
+      {% endif %}
+      </div>
+      <h3>{{ title }}</h3>
+      <p>{{ text }}</p>
+      {% if tags %}
+      <div class="listing-item__tags tags">
+        <h2 class="tags__heading show-for-sr">Tags:</h2>
+        <ul>
+          <li>News Tag A</li>
+          <li>News Tag B</li>
+          <li>C</li>
+          <li>News Tag D</li>
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  </a>
+</article> 
