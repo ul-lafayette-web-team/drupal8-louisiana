@@ -1,0 +1,36 @@
+<div class="culture-component__slide">
+  <article class="culture-component__item">
+    <div class="culture-component-item__media">
+      {{ content.field_cf_image }}
+      {% if video %}
+      <a href="{{ video }}" data-fancybox class="video-link--fancy culture-component-item__link">
+        <span class="show-for-sr">Click to play the video</span>
+        <span class="play-button"></span>
+      </a>
+      {% endif %}
+    </div>
+    <div class="culture-component-item__details">
+      <div class="grid-x">
+        <div class="cell small-12 medium-6">
+          <h3 class="h4">{{ node.title.value }}</h3>
+          {% if content.field_cf_description %}
+          <p>{{ content.field_cf_description }}</p>
+          {% endif %}
+        </div>
+        <div class="cell small-12 medium-6">
+        <ul>
+          {% if content.field_cf_highlight %}
+          <li class="culture-component-item-details__highlight"><span class="eyebrow">Highlight</span><span>{{ content.field_cf_highlight }}</span></li>
+          {% endif %}
+          {% if content.field_cf_distance %}
+          <li class="culture-component-item-details__distance"><span class="eyebrow">Distance</span><span>{{ content.field_cf_distance }}</span></li>
+          {% endif %}
+          {% if content.field_cf_when %}
+          <li class="culture-component-item-details__when"><span class="eyebrow">When it Happens</span><span>{{ content.field_cf_when }}</span></li>
+          {% endif %}
+        </ul>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>

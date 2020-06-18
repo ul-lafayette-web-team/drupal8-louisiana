@@ -1,0 +1,994 @@
+////
+/// @group wrapper
+/// Main header styles.
+////
+
+/// Header heights.
+/// @type Number
+$mobile-header-height: rem-calc(70);
+$desktop-header-height: rem-calc(140);
+
+/// Header Styles
+/// -------------
+.site-header {
+  height: $mobile-header-height;
+
+
+  > .grid-container {
+    position: relative;
+    height: 100%;
+  }
+
+  // All ULs and LIs in the header (all menu items) need these rules set.
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+  }
+
+  &__logo {
+    display: block;
+    max-width: 3rem;
+    padding-top: rem-calc(10);
+  }
+
+  @include breakpoint(medium down) {
+    // When JavaScript doesn't load for some reason.
+    :root:not(.oho-js) & {
+      height: auto;
+    }
+  }
+
+  @include breakpoint(large) {
+    height: $desktop-header-height;
+
+    &__logo {
+      max-width: 6.625rem;
+      height: auto;
+    }
+  }
+}
+
+/// Fixed Header
+/// -----------
+/// A fixed header is triggered by the following class on the .page element.
+/// This class can be added via front-matter to any page template individually,
+/// or site-wide by editing the page_classes array in layouts/page.html.twig.
+.fixed-header {
+  padding-top: $mobile-header-height;
+
+  .site-header {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    /// Logged-in Adjustments
+    /// ---------------------
+    /// Note, there is a gap on mobile in the flats onsly, but this is only
+    /// because the incorrect classes are applied, as the JavaScript detection
+    /// isn't running and changing .toolbar-horizontal to .toolbar-vertical.
+    .toolbar-vertical.toolbar-fixed &,
+    .toolbar-horizontal.toolbar-fixed & {
+      top: rem-calc(39);
+    }
+
+    // The specificity here is greater than what we normally allow, but there's
+    // no way to do this with less class specificity, so we're ignoring the
+    // selectors.
+    .toolbar-horizontal.toolbar-fixed.toolbar-tray-open & { // stylelint-disable-line
+      top: rem-calc(79);
+    }
+  }
+
+  .main-menu--sticky {
+    position: static;
+    width: auto;
+    transform: translateX(0);
+  }
+
+  @include breakpoint(large) {
+    padding-top: $desktop-header-height;
+  }
+}
+
+/// Mobile Menu
+/// -----------
+.mobile-menu-button {
+  display: none;
+
+  @include breakpoint(medium down) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: $mobile-header-height;
+    margin: 0;
+    padding: 0;
+    background-color: $gray--dark;
+
+    &:before {
+      content: fa-content($fa-var-bars);
+      transition: color $primary-transition;
+      color: $gray;
+      font-family: $font-awesome;
+      font-size: 2em;
+      font-weight: 400;
+
+      .mobile-menu-open & {
+        content: fa-content($fa-var-times);
+      }
+    }
+
+    &:hover {
+      background-color: $gray--dark;
+
+      &:before {
+        color: $white;
+      }
+    }
+
+    // When JavaScript doesn't load for some reason, hide the button.
+    :root:not(.oho-js) & {
+      display: none;
+    }
+  }
+}
+
+.site-header__main {
+
+  @include breakpoint(medium down) {
+    position: absolute;
+    z-index: 1;
+    top: $mobile-header-height;
+    right: 0;
+    display: none;
+    flex-direction: column-reverse;
+    width: 24rem;
+    background-color: $gray--dark;
+
+    .mobile-menu-open & {
+      display: flex;
+    }
+  }
+
+  @include breakpoint(tiny down) {
+    width: 100vw;
+  }
+}
+
+/// Top Menu Area
+/// -------------
+.site-header__top {
+
+  @include breakpoint(medium down) {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column-reverse;
+  }
+
+  @include breakpoint(large) {
+    position: absolute;
+    top: 1rem;
+    right: .9375rem;
+    display: flex;
+  }
+}
+
+/// Bottom Menu Area
+/// ----------------
+.site-header__bottom {
+
+  @include breakpoint(medium down) {
+    flex: 0 0 auto;
+  }
+}
+
+/// Custom ULL Header
+/// ----------------
+/// mobile strip
+.ull-header__container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ull-header {
+  position: relative;
+  z-index: 9;
+  
+  &--mobile {
+    background: $ull-red;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint(large) {
+      display: none;
+    }
+  }
+  
+  &__buttons {
+    width: 76px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4px;    
+  }
+  &__button--search,
+  &__button--menu {
+    padding: 10px 0 6px;
+    &:after {
+      font-family: $font-awesome;
+      color: $white;
+      font-size: 30px;
+    }
+    &:not(.sidebar-menu__toggle):hover,
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: transparent;
+        
+      @include breakpoint(large) { 
+        background-color: $ull-red-dark;
+        span {
+          color: $white;
+        }
+      }
+    }
+  }
+  &__button--search {
+    &:after {
+      content: "\f002";
+    }
+  }
+  &__button--menu {
+    &:after {
+      content: "\f0c9";
+    }
+  }
+}
+/// search panel
+.ull-header {
+  &__search {
+    background-color: $ull-gray;
+    padding: 30px;
+    position: absolute;
+    
+    right: 0;
+    display: none;
+    @media (max-width: 1199px) {
+      left: 0;
+    }
+    @include breakpoint(large) { 
+      margin-top: 40px;
+    }
+    @include breakpoint(1200) {
+      display: block;
+      margin-top: 0;
+      background-color: transparent;
+      padding: 0;
+      right: calc(50vw - 620px);
+    }
+    .site-search .search-block-form {
+      position: relative;
+      max-width: 260px;
+      padding: 0;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+
+      @include breakpoint(1200) {
+        margin-left: 0;
+        border: 1px solid rgba(255,255,255,0.5);
+        box-shadow: inset 0 3px 4px rgba(0, 0, 0, 0.5);
+        margin-top: 2px;
+        max-height: 36px;
+      }
+      label {
+        position: relative !important;
+        width: 100%;
+        height: auto;
+        clip: auto;
+        color: $white;
+        font-weight: 700;
+        @include breakpoint(1200) {
+          font-size: 0;
+          height: 0;
+        }
+      }
+      .form-item {
+        width: 224px;
+        @include breakpoint(1200) {
+          width: 210px;
+        }
+      }
+      .form-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      button {
+        width: 36px;
+        height: 33px;
+        font-size: 0;
+        padding: 0;
+        position: relative;
+        top: 1px;
+        @include breakpoint(1200) {
+          background-color: transparent;
+        }
+/*
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 36px;
+        height: 32px;
+        
+        
+*/
+        &:after {
+          content: "\f002";
+          font-family: $font-awesome;
+          color: $white;
+          font-size: 18px;
+          position: relative;
+          left: -3px;
+          top: 2px;
+        }
+      }
+      input.form-search {
+
+        background-color: transparent;
+        border: 1px solid rgba(255,255,255,0.5);
+        color: $white;
+        height: 32px;
+        max-width: 100%;
+        padding: 0.5em 0.5em 0;
+        font-size: 12px;
+        @include placeholder {
+          color: $white !important;
+          line-height: 1;
+          font-size: 12px;
+        }
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,
+        &::-ms-input-placeholder,
+        &:-moz-placeholder {
+          color: $white !important;
+        }
+        @include breakpoint(1200) {
+          border: none;
+        }
+      }
+    }
+    [type='search'] {
+      color: #fff;
+      &::-webkit-input-placeholder,
+      &::-moz-placeholder,
+      &::-ms-input-placeholder,
+      &:-moz-placeholder {
+        color: #fff !important;
+      }
+    }
+    
+    .ull-header-search__close {
+      display: none;
+      @include breakpoint(large) { 
+        display: block;
+        position: absolute;
+        z-index: 12;
+        top: 10px;
+        right: 10px;
+        background: transparent;
+        .fa-times {
+          font-size: 24px;
+        }
+        &:hover,
+        &:focus {
+          border: none;
+          .fa-times {
+            color: $ull-red-alt;
+          }
+        }
+      }
+      @include breakpoint(1200) {
+        display: none;
+      }
+    }
+  }
+  
+    #{text-inputs()},
+    [type='file'],
+    [type='image'],
+    textarea {
+
+    
+      @include placeholder {
+        color: $white;
+      }
+    }
+}
+
+.ull-header__button--search {
+  @include breakpoint(large) { 
+    border-left: 1px solid $ull-red !important;
+    &:hover,
+    &:focus {
+      background-color: $ull-red-dark;
+      span {
+        color: $white;
+      }
+    }
+  }
+}
+/// utility nav
+.ull-header {
+  &__dropdown {
+    display: none;
+    flex-direction: column-reverse;
+    position: absolute;
+    left: 0;
+    right: 0;
+    @include breakpoint(large) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__utility {
+    background: $ull-red;
+    
+    .ull-header__container {
+      @include breakpoint(large) {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+      &--utility {
+        @include breakpoint(1200) {
+          padding-right: 270px;
+        }
+      }
+    }
+    .ull-header__button--search {
+      display: none;
+      @include breakpoint(large) {
+        display: block;
+        order: 3;
+        padding: 0 10px;
+        
+        span {
+          text-transform: none;
+          letter-spacing: 0;
+        }
+        &:after {
+          font-size: 13px;
+          margin-left: 6px;
+        }
+      }
+      @include breakpoint(1100) {
+        padding: 0 20px;
+      }
+      @include breakpoint(1200) {
+        display: none;
+      }
+    }
+  }
+
+  &__utility--first,
+  &__utility--second {
+    ul.menu {
+      list-style: none;
+    }
+    li {
+      font-size: rem-calc(13);
+      @include breakpoint(large) {
+        display: inline-block;
+        margin-right: rem-calc(20);
+      }
+    }
+    a {
+      color: $white;
+      &:hover,
+      &:focus {
+        outline: none;
+        border-bottom: 1px solid $white;
+      }
+    }
+    a[href*="//"]:not([href*="louisiana.edu"]):after {
+      content: "\00a0\f360";
+      font-family: $font-awesome;
+      font-weight: 400;
+      color: $ull-red-dark;
+    } 
+  }
+  &__utility--first {
+    padding: 30px 30px 0;
+    @include breakpoint(large) {
+      padding: 0;
+      margin-right: 20px;
+      position: relative;
+      &:after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 20px;
+        background-color: rgba(255,255,255,0.5);
+        position: absolute;
+        right: 0;
+        top: 10px;
+      }
+    }
+    li {
+      font-weight: 700;
+    }
+  }
+  &__utility--second {
+    padding: 30px;
+    @include breakpoint(large) {
+      padding: 0;
+    }
+  }
+  .audience-menu {
+    @include breakpoint(large) {
+      order: 1;
+    }
+  }
+  .audience-menu span.audience-menu__trigger {
+    background: $ull-red-dark;
+    color: $white;
+    font-size: rem-calc(13);
+    font-weight: 700;
+    padding: rem-calc(13 10);
+    height: 100%;
+    &:after {
+      display: none;
+      @include breakpoint(large) {
+        display: inline-block;
+      }
+      content: "\f107";
+      font-family: $font-awesome;
+      font-size: 16px;
+      font-weight: 300;
+      color: $white;
+      margin-left: 30px;
+    }
+  }
+  .audience-menu .menu-item__button {
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    transform: translateX(0);
+    font-size: 0;
+    text-align: right;
+    padding: rem-calc(10 30);
+    
+    &:before {
+      content: "\f107";
+      font-size: rem-calc(30);
+      position: relative;
+      top: 7px;
+    }
+    @include breakpoint(large) {
+      opacity: 0;
+    }
+    &:not(.sidebar-menu__toggle):hover,
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      opacity: 1;
+      outline: none;
+    }
+  }
+  .audience-menu .menu-item--open > .menu-item__button:before {
+    content: "\f106";
+    
+  }
+  .audience-menu ul ul li + li {
+    border-top: none;
+  }
+  .audience-menu .menu-item--open > ul {
+    // just for mobile
+    margin: rem-calc(0 30);
+    @include breakpoint(large) {
+      margin: 0;
+    }
+  }
+  .audience-menu ul ul {
+    box-shadow: 0 2px 7px rgba(0,0,0,0.2);
+    a {
+      background-color: $white;
+      padding: rem-calc(12);
+      font-weight: 400;
+      @include accent-text;
+      color: $black;
+      border-top: none;
+      border-bottom-color: $ull-teal-dusty;
+      &:hover,
+      &:focus {
+        outline: none;
+        background-color: $ull-teal-dusty-light;
+      }
+    }
+  }
+}
+/// main nav
+.header__bg {
+  display: none;
+  @include breakpoint(large) {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 140px;
+    background: #4d4d4d url(/assets/img/bg-header.jpg) no-repeat center center;
+    background-size: cover;    
+  }
+}
+.ull-header {
+
+  &__main {
+    background: $white;
+    padding: rem-calc(20 20 30);
+    @include breakpoint(large) {
+      background: transparent;
+    }
+    &.main-menu--show.main-menu--sticky {
+      background: $white;
+      @include breakpoint(large) {
+        background: $ull-red;
+      }
+      padding: rem-calc(6 20 4);
+      width: 100%;
+    }
+    
+    
+    .ull-header__main-nav {
+      @include breakpoint(large) {
+        display: flex;
+        justify-content: space-between;
+        & > ul.menu {
+          display: flex;
+        }
+      }
+    }
+    .ull-header__logo {
+      display: none;
+      border-bottom: none;
+      @include breakpoint(large) {
+        display: block;
+        width: 173px;
+      }
+      @include breakpoint(1200) {
+        width: 230px;
+      }
+    }
+    
+    .ull-header__main-nav > ul.menu > li > a {
+      display: block;
+      padding: 10px;
+      color: $black;
+      font-size: rem-calc(15);
+      font-weight: 500;
+      text-transform: uppercase;
+      border-bottom: none;
+      @include breakpoint(large) {
+        font-size: rem-calc(13);
+        font-weight: 500;
+        color: $white;
+        text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+      }
+      @include breakpoint(1240) {
+        font-size: rem-calc(15);
+        padding: rem-calc(10 15);
+      }
+      &:hover,
+      &:focus {
+        outline: none;
+        background-color: $ull-teal-dusty;
+        @include breakpoint(large) {
+          background-color: rgba(0,0,0,0.33);
+        }
+      }
+      &.is-active {
+        @include breakpoint(large) {
+          background-color: rgba(0,0,0,0.33);
+        }        
+      }
+      &.engaged {
+        color: $white;
+        background-color: $ull-gray; 
+        @include breakpoint(large) {
+          color: $black;
+          background-color: transparent;
+        }
+      }
+    }
+
+  }
+  &__mega-menu {
+    display: none;
+    margin-bottom: rem-calc(16);
+    padding: rem-calc(0 10 10);
+    background-color: $white;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.2);
+    @include breakpoint(large) {
+      width: 700px;
+      padding: rem-calc(24 20 17);
+    }
+  }
+  @include breakpoint(large) {
+    .ull-header__main-nav > ul.menu > li {
+      position: relative;
+    }
+    .ull-header__main-nav > ul.menu > li:hover > a {
+      background-color: rgba(0,0,0,0.33);
+    }
+    .ull-header__main-nav > ul.menu > li:hover .ull-header__mega-menu {
+      display: block;
+      position: absolute;
+    }
+    .ull-header__main-nav > ul.menu > li:nth-child(-n+2) .ull-header__mega-menu {
+      left: 0;
+    }
+    .ull-header__main-nav > ul.menu > li:nth-child(n+3) .ull-header__mega-menu {
+      right: 0;
+    }
+    .ull-header__main-nav > ul.menu > li:nth-child(2) .ull-header__mega-menu ,
+    .ull-header__main-nav > ul.menu > li:nth-child(3) .ull-header__mega-menu  {
+      @media (min-width: 1024px) and (max-width: 1250px) {
+        width: 600px;
+      }
+    }
+  }
+  &-mega-menu {
+    &__row {
+      margin-top: rem-calc(10);
+      @include breakpoint(large) {
+        margin-top: 0;
+        display: flex;
+      }
+    }
+    &__title {
+      font-size: rem-calc(20);
+      line-height: rem-calc(35);
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: rem-calc(10 0 1);
+      border-bottom: 2px solid $ull-teal-dusty;
+      a {
+        color: $ull-red;
+        border-bottom: none;
+        &:hover,
+        &:focus {
+          color: $black;
+          outline: none;
+        }
+      }
+      @include breakpoint(large) {
+        padding: rem-calc(10 0 0);
+        margin-bottom: rem-calc(20);
+      }
+    }
+    
+    &__text {
+      display: none;
+      @include breakpoint(large) {
+        display: block;
+        width: 255px;
+        margin-right: 30px;
+        font-size: rem-calc(16);
+        line-height: rem-calc(24);
+      }
+    }
+    
+    &__list {
+      ul.menu {
+        @include breakpoint(large) {
+          columns: 2;
+          column-gap: 40px;
+        }
+      }
+      ul.menu li {
+        font-size: rem-calc(13);
+        line-height: rem-calc(17);
+        &:not(:last-child) {
+          margin-bottom: 14px;
+        }
+        
+        a {
+          color: $ull-red;
+          border-bottom: none;
+          
+          &:hover,
+          &:focus {
+            outline: none;
+            color: $ull-black;
+          }
+        }
+      }
+    }
+  }
+}
+.toolbar-fixed .ull-header__main,
+.has-alert .ull-header__main {
+  @include breakpoint(large) {
+    background: #4d4d4d url(/assets/img/bg-header.jpg) no-repeat center center;
+    background-size: cover;      
+  }
+}
+.mega-menu--trigger {
+  display: none;
+  @include breakpoint(large) {
+    display: block;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1.5rem;
+    height: 1rem;
+    transition: opacity 250ms ease-in-out;
+    transform: translateX(-50%);
+    opacity: 0;
+    font-size: 0;
+    &:before {
+      width: 100%;
+      content: "\f078";
+      color: #ffffff;
+      font-family: "Font Awesome 5 Pro";
+      font-size: 16px;
+    }
+    &:focus {
+      opacity: 1;
+    }
+  }
+}
+.ull-header__main-nav > ul.menu li.mega-menu-open {
+  .ull-header__mega-menu {
+    display: block;
+    position: absolute;
+  }
+}
+// mobile interactivity
+.mobile-menu-open .ull-header {
+  &__dropdown {
+    display: flex;
+  }
+  &__button--menu {
+    &:after {
+      content: "\f00d";
+    }
+  }
+}
+.mobile-search-open .ull-header {
+  &__search {
+    display: block;
+    @include breakpoint(large) {
+      height: 150px;
+      z-index: 11;
+    }
+  }
+  &__button--search {
+    &:after {
+      
+      @media (max-width: 1023px) {
+        content: "\f00d";
+      }
+    }
+  }
+}
+
+// subsite header customizations
+.subsite-header {
+  &__return-strip {
+    position: relative;
+    z-index: 3;
+    background-color: $white;
+
+    .grid-container {
+      text-align: center;
+      @include breakpoint(medium) {
+        text-align: left;
+      }
+    }
+
+    a {
+      font-size: rem-calc(13);
+      line-height: rem-calc(17);
+      border-bottom: none;
+      display: inline-flex;
+      flex-flow: row;
+      align-items: center;
+      i.far:before {
+        color: $ull-teal;
+        font-size: 24px;
+      }
+      span {
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
+  }
+  &__logo-lockup {
+    @media (max-width: 1023px) {
+      display: none;
+    }
+    display: flex;
+    align-items: center;
+    min-width: 310px;
+    max-width: 40%;
+    .ull-header__logo {
+      width: 165px;
+      padding-right: 15px;
+      border-right: 1px solid #333;
+      margin-right: 15px;
+    }
+    span {
+      font-size: rem-calc(20);
+      line-height: rem-calc(24);
+      font-weight: 700;
+    }
+  }
+  &__mobile-title {
+    display: none;
+    background-color: $white;
+    padding: rem-calc(10);
+    text-align: center;
+    font-size: rem-calc(20);
+    font-weight: 700;
+    @include breakpoint(medium) {
+      padding: rem-calc(15);
+    }
+    @include breakpoint(large) {
+      display: none;
+    }
+  }
+}
+.page--subsite-page .subsite-header__mobile-title {
+  display: block;
+    @include breakpoint(large) {
+      display: none;
+    }
+}
+.subsite-header + .site-header {
+  @media (max-width: 1023) {
+    height: rem-calc(120);
+  }
+  .ull-header__main {
+    padding: rem-calc(20);
+    background-color: $white;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.20);
+    .ull-header__main-nav > ul.menu > li > a {
+      color: $black;
+      text-shadow: none;
+    }
+  }
+}
+
+// all of the myriad variations for things we put above the header
+// duplicating what's in supplemental.scss for convenience
+
+.toolbar-fixed {
+  padding-top: 39px;
+  
+
+  @include breakpoint(976) {
+    padding-top: 79px;
+    
+    .header__bg {
+      margin-top: 79px;
+    }
+  }
+}
+.oho-alert + .header__bg,
+.system-region + .header__bg {
+  display: none;
+}

@@ -1,0 +1,167 @@
+.gallery-image-video {
+  &__slide {
+    display: table !important;
+  }
+  &__item {
+    vertical-align: middle;
+  }
+}
+
+/// scale differences
+.gallery-image-video__slick {
+  .slick-track {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 30px; /// for drop-shadow
+  }
+  .slick-slide {
+    transition: transform 0.3s ease-out;
+    display: table !important;
+    transform: scale(1);
+    @media (max-width: 767px) {
+      max-width: calc(100vw - 40px);
+    }
+    @include breakpoint(800) {
+      transform: scale(0.48);
+    }
+  }
+  .slick-active {
+    transform: scale(1);
+    @include breakpoint(800) {
+      transform: scale(0.48);
+    }
+  }
+  .slick-current {
+    transform: scale(1);
+    @media (max-width: 767px) {
+      max-width: calc(100vw - 40px);
+    }
+    @include breakpoint(1080) {
+      width: 760px !important;
+    }
+  }
+  .slick-current + .slick-active {
+    transform-origin: left center;
+    @include breakpoint(1260) {
+      margin-left: 40px;
+    }
+  }
+  .slick-disabled {
+    opacity: 0.5;
+  }
+}
+
+// arrows in Slick
+.gallery-image-video__slick {
+  .slick-arrow {
+    position: absolute;
+    z-index: 1;
+    top:38%;
+  }
+  .slick--previous {
+    left: -20px;
+  }
+  .slick--next {
+    right: -20px;
+  }
+}
+// settings all slides share
+.gallery-image-video {
+  &__item {
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    img {
+      vertical-align: middle;
+    }
+    figcaption {
+      display: table-caption;
+      @include breakpoint(768) {
+        display: none;
+      }
+    }
+  }
+}
+
+/// current slide shows its figcaption
+.slick-current {
+  .gallery-image-video {
+    &__item {
+      @include breakpoint(large) {
+        padding-bottom: 60px;
+      }
+      figcaption {
+        display: block;
+        background-color: #fff;
+        box-shadow: 0 10px 20px 2px rgba(0,0,0,0.15);
+        margin-top: 0;
+        padding: rem-calc(10);
+        @include breakpoint(large) {
+          padding: rem-calc(20);
+          position: absolute;
+          right: 120px;
+          bottom: 0;
+          left: 20px;
+        }
+      }
+    }
+  }
+}
+
+/// fancy box version
+.gallery-image-video__item--fancy {
+  display: none;
+}
+.fancybox-content {
+   .fancy-arrow {
+    position: absolute;
+    z-index: 1;
+    top:50%;
+  }
+  .fancy--previous {
+    left: 0;
+  }
+  .fancy--next {
+    right: 0;
+  } 
+}
+.fancybox-content .gallery-image-video__item--fancy {
+  padding: 0;
+  display: table;
+  margin: 0 50px;
+  background: $black;
+  img {
+    width: 100%;
+  }
+  .iframe-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+  figcaption {
+    color: $white;
+    display: block;
+    caption-side: bottom;
+    padding: 20px;
+  }
+
+}
+
+.section--gallery-image-video {
+  padding-bottom: rem-calc(30) !important; // adjusted to include the padding in the slider (for the shadow)
+  @include breakpoint(large) {
+    padding-bottom: rem-calc(50) !important;
+  }
+  .section__content {
+    @include margins-bottom(0,0,0);
+  }
+}

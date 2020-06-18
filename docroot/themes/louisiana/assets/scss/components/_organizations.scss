@@ -1,0 +1,261 @@
+.organization {
+  &__name {
+    a {
+      @include red-link;
+    }
+  }
+  &__type {
+    @include small-text;
+    @include margins-top(10,10,10);
+    font-weight: 700;
+  }
+  &__what-we-do {
+    position: relative;
+    @include margins-top(20,10,20);
+    @include paddings-top(20,10,20);
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 60px;
+      height: 1px;
+      border-top: 2px solid $ull-teal-dusty;
+    }
+    h4 {
+      @include eyebrow;
+      font-weight: 500;
+    }
+    p {
+      @include small-text;
+      @include margins-top(10,10,10);
+    }
+  }
+  &__details {
+    ul {
+      @include paddings-top(10,10,20);
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      position: relative;
+      padding: 5px 0;
+      i {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        color: $ull-red;
+        font-size: 20px;
+      }
+      span {
+        display: block;
+        margin-left: 30px;
+        font-size: rem-calc(13);
+        line-height: 1.5;
+      }
+      a {
+        color: $ull-red;
+        border-bottom: none;
+        &:hover,
+        &:focus {
+          color: $black;
+        }
+      }
+      a[href^="mailto:"] {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap; 
+        text-overflow: ellipsis;
+        border-bottom: none;
+        &:hover,
+        &:focus {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+/// slick settings
+.organization {
+  &__slick {
+//     @include margins-top(30,40,60);
+    
+    .slick--previous {
+      display:  none !important; //overriding an inline style from Slick
+    }
+    .slick--next {
+      position: absolute;
+      right: -20px;
+      top: 160px;
+      @include breakpoint(1288) {
+        right: -60px;
+      }
+    }
+    .slick-disabled {
+      opacity: 0;
+    }
+    .slick-list {
+      padding-bottom: 4px;
+    }
+  }
+  &__slide {
+    padding-right: 40px;
+    .organization__name h3.h4 {
+      @include font-sizes(22, 19, 22);
+      @include line-heights(29, 25, 29);
+    }
+  }
+}
+
+/// organization contact block
+.section--org-contact {
+  @include paddings-top(40,60,100);
+   @include paddings-bottom(40,60,100);
+}
+.section--org-contact__content {
+  background: $ull-teal-dusty-light;
+  border-top: 5px solid $ull-red;
+  @include paddings-top(30,40,60);
+  @include paddings-left-right(30,40,60);
+  @include paddings-bottom(30,40,60);
+  
+  h2 {
+    font-weight: 400;
+    & + p {
+      @include margins-top(20, 20, 20);
+    }
+  }
+}
+.org-contact__organization {
+  &:first-child {
+    @include margins-top(30,0,0);
+  }
+  & + .org-contact__organization {
+    @include margins-top(20,20,40);
+  }
+  .organization__name {
+    position: relative;
+    @include margins-bottom(20,20,20);
+    @include paddings-bottom(20,20,20);
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 60px;
+      height: 1px;
+      border-top: 2px solid $ull-teal-dusty;
+    }    
+  }
+  .organization__what-we-do {
+    @include margins-top(0,0,0);
+    @include paddings-top(0,0,0);
+    &:before {
+      display: none;
+    }
+    h4 {
+      font-size: rem-calc(16);
+      font-weight: 700;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    p {
+      @include margins-top(7,7,7);
+      @include accent-text;
+    }
+  }
+  .organization__details {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      @include margins-top(20,20,20);
+      padding-top: 0;
+    }
+    li {
+      
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+      
+      i {
+        font-size: 18px;
+        top: 5px;
+      }
+      span {
+        max-width: 170px;
+      }
+    }
+  }
+  .organization__name + .organization__details {
+    ul {
+      @include paddings-top(0,0,0);
+    }
+  }
+}
+
+/// organization landing page
+
+.landing-page--organization {
+  h1,
+  .term-type {
+    display: inline-block;
+  }
+  h1 + .term-type {
+    margin-left: 20px;
+  }
+  .organization__title-strip {
+    display: flex;
+    align-items: center;
+  }
+}
+/// organization landing page - about box
+.organization__about-info {
+  padding: rem-calc(20);
+  box-shadow: 0 10px 20px 2px rgba(0,0,0,0.15);
+  @include breakpoint(large) {
+    padding: rem-calc(30);
+  }
+  h2 {
+    padding-bottom: rem-calc(20);
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      height: 2px;
+      border-bottom: 2px solid $ull-teal-dusty;
+    }
+  }
+}
+.org-about-info {
+
+  &__title {
+    @include margins-top(20, 20, 20);
+    h3 {
+      @include eyebrow;
+    }
+  }
+  &__content {
+    @include accent-text;
+  }
+  &__social {
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      display: inline-block;
+      margin-right: rem-calc(16);
+    }
+    a {
+      border: none;
+      color: $ull-red;
+      font-size: rem-calc(22);
+    }
+  }
+}

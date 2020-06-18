@@ -1,0 +1,152 @@
+////
+/// @group content-types
+/// Story-specific styles.
+////
+
+/// All View Modes
+/// --------------
+
+// note: many story styles are carried over from _news.scss
+
+.story {
+  &__component {
+    background-color: $ull-red;
+    @include margins-top(20,20,40);
+    @include margins-bottom(20,20,40);
+    padding: rem-calc(20);
+    @include breakpoint(large) {
+      padding: rem-calc(40);
+    }
+    h2,
+    .wysiwyg {
+      color: $white;
+    }
+    .wysiwyg * {
+      @include small-text;
+      &:first-child {
+        @include margins-top(10, 10, 20);
+      }
+    }
+    .cell:not(:first-child) h2 {
+      @include margins-top(20, 0, 0);
+    }
+  }
+}
+.story--detail {
+  .news__featured-image {
+    margin-bottom: 0;
+  }
+  .news__intro-text {
+    @include margins-top(30,40,80);
+  }
+}
+
+.story__subject {
+    max-width: rem-calc(1160);
+    margin-left: auto;
+    margin-right: auto;  
+    
+    &-box {
+      position: relative;
+      z-index: 3;
+      display: block;
+      background: $white; 
+      box-shadow: 0 10px 20px 2px rgba(0,0,0,0.15);
+      margin: rem-calc(-20 20 0);
+      @include breakpoint(large) {
+        margin: rem-calc(-40 50 0);
+      }
+      
+      @include paddings-top(20, 20, 40);
+      @include paddings-left-right(20, 20, 40);
+      @include paddings-bottom(44, 44, 44);        
+    }
+
+  
+  &__quote p {
+    font-family: $serif;
+    font-weight: 400;
+    @include font-sizes(14,14,19);
+    @include line-heights(26,26,33);
+  }  
+  .news-story {
+    
+    &__subject__title {
+      @include margins-top(20, 0, 0);
+      .link-arrow {
+        font-weight: 700;
+      }
+    }
+    &__text {
+      display: flex;
+      @include margins-top(20,20,30);
+    }
+    &--subject__image {
+      padding-right: 10px;
+      @include breakpoint(medium) {
+        padding-right: 30px;
+      }
+    }
+    &--subject__portait {
+      position: relative;
+      width: 70px;
+      height: 70px;
+      margin: 0;
+      padding: 0;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      @include breakpoint(medium) {
+        width: 104px;
+        height: 104px;
+      }
+
+    }
+    &--subject__details {
+
+    }
+    &--subject__name {
+      @include small-text;
+      font-weight: 700;
+      width: 100%;
+    }
+    &--subject__info {
+
+      @include breakpoint(medium) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      dt {
+        @include eyebrow;
+        line-height: 1.3;
+        margin-top: 10px;
+        width: 100%;
+        @include breakpoint(large) {
+          width: 60%
+        }
+      }
+      dd {
+        @include accent-text;
+        width: 100%;
+        margin-left: 0;
+        @include breakpoint(large) {
+          width: auto;
+          margin-top: 10px;
+        }
+      }
+    }
+    &--subject__grad-year {}
+    &--subject__major {}
+    &--subject__hometown {}
+  }
+
+}

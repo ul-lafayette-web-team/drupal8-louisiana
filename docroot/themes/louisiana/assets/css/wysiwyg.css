@@ -1,0 +1,138 @@
+/**
+ * OHO Interactive WYSIWYG stylesheet.
+ * Version 2019-04-08
+ * https://www.oho.com
+ */
+/*
+Gotham
+XLight 200
+Light 300 
+Book 400
+Medium 500
+Bold 700
+Black 800
+
+Montserrat
+Light 300
+Book 400
+Medium 500
+Bold 700
+
+Roboto Slab
+Light 300
+Bold 700
+*/
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.5.3
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
+.obj-right,
+.align-right {
+  margin: 0;
+  margin-top: 1.25rem;
+}
+
+@media print, screen and (min-width: 48em) {
+  .obj-right,
+  .align-right {
+    margin-top: 1.25rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .obj-right,
+  .align-right {
+    margin-top: 2.5rem;
+  }
+}
+
+@media print, screen and (min-width: 48em) {
+  .obj-right,
+  .align-right {
+    float: right;
+    padding: 0 0 0 2.5rem;
+    margin-bottom: 3.75rem;
+  }
+  .obj-right figcaption,
+  .align-right figcaption {
+    padding: 0 0 0 2.5rem;
+  }
+}
+
+.obj-right img,
+.align-right img {
+  display: block;
+}
+
+.obj-left,
+.align-left {
+  margin: 0;
+  margin-top: 1.25rem;
+}
+
+@media print, screen and (min-width: 48em) {
+  .obj-left,
+  .align-left {
+    margin-top: 1.25rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .obj-left,
+  .align-left {
+    margin-top: 2.5rem;
+  }
+}
+
+@media print, screen and (min-width: 48em) {
+  .obj-left,
+  .align-left {
+    float: left;
+    padding: 0 2.5rem 0 0;
+    margin-bottom: 3.75rem;
+  }
+  .obj-left figcaption,
+  .align-left figcaption {
+    padding: 0 2.5rem 0 0;
+  }
+}
+
+.obj-left img,
+.align-left img {
+  display: block;
+}
+
+.obj-center,
+.align-center:not(.grid-x) {
+  margin-top: 1.25rem;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+}
+
+@media print, screen and (min-width: 48em) {
+  .obj-center,
+  .align-center:not(.grid-x) {
+    margin-top: 1.25rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .obj-center,
+  .align-center:not(.grid-x) {
+    margin-top: 2.5rem;
+  }
+}
+
+.obj-center img,
+.align-center:not(.grid-x) img {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=../maps/wysiwyg.css.map */

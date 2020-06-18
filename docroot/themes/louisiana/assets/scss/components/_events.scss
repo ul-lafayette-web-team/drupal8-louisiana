@@ -1,0 +1,211 @@
+.section--livewhale {
+  
+  h2 {
+    position: relative;
+    font-weight: 400;
+    @include breakpoint(medium down) {
+      border-bottom: 2px solid $ull-teal-dusty;
+    } 
+    @include breakpoint(medium) {
+      span {
+        position: relative;
+        display: inline-block;
+        background: $white;
+        padding-right: 18px;
+        &:before {
+          content: "";
+          position: absolute;
+          z-index: 10;
+          top: 0;
+          right: 100%;
+          bottom: 0;
+          width: 18px;
+          background: $white;
+        }
+      }  
+      &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 16px;
+        right: 100%;
+        left: 0;
+        height: 1px;
+        border-bottom: 2px solid $ull-teal-dusty;
+        transition: all 0.3s ease-out;
+        @include breakpoint(1330) {
+          left: -65px;
+        }
+      }      
+    }
+  }
+  h2 + .section__all-link {
+    display: none;
+    @include breakpoint(large) {
+      display: block;
+      margin-top: rem-calc(60);
+    }
+  }
+  .all-link--destination {
+    margin-top: rem-calc(30);
+    @include breakpoint(large) {
+      display: none;
+      margin-top: 0;
+    }
+  }
+}
+
+.livewhale--event-set {
+  
+  .lw-event-item:not(:first-child) {
+    margin-top: rem-calc(45);
+  }
+  @include margins-top(0, 45, 0);
+
+  @include breakpoint(medium) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .lw-event-item {
+      flex: 1 1 calc(50% - 20px);
+      
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        margin-top: 0;
+      }
+      &:nth-of-type(odd) {
+        margin-right: 20px;
+      }
+      &:nth-of-type(even) {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.lw {
+  
+  &-top-date {
+    background: $ull-red;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    font-family: $serif;
+    font-weight: 700;
+    font-size: 24px;
+    height: 64px;
+    width: 64px;
+    line-height: 1;
+    padding: 12px;
+    span {
+      display: block;
+      
+      &:first-child {
+        font-family: $sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+      }
+      
+    }
+  }
+  &-event-item h4 {
+    margin-top: rem-calc(20);
+    @media (max-width: 767px) {
+      margin-right: 50px;
+    }
+    a {
+      @extend .link-arrow;
+      font-weight: 700;
+    }
+  }
+  &-summary {
+    @include small-text;
+    @media (max-width: 767px) {
+      margin-right: 50px;
+    }
+  }
+  &-date,
+  &-time,
+  &-location {
+    position: relative;
+    @include accent-text;
+    margin-left: rem-calc(32);
+    &:before {
+      display: inline-block;
+      @include eyebrow;
+      font-weight: 500;
+      margin-right: rem-calc(18);
+    }
+    &:after {
+      position: absolute;
+      top: 1px;
+      left: -32px;
+      display: inline-block;
+      font-family: $font-awesome;
+      font-weight: 400;
+      color: $ull-red;
+    }
+  }
+  &-date {
+    margin-top: 16px !important;
+    @include breakpoint(medium) {
+      margin-top: 20px !important;
+    }
+    &:before {
+      content: 'Date'
+    }
+    &:after {
+      content: "\f133";
+    }
+  }
+  &-time {
+    margin-top: 10px !important;
+    &:before {
+      content: 'Time'
+    }
+    &:after {
+      content: "\f017";
+    }
+  }
+  &-location {
+    margin-top: 10px !important;
+    &:before {
+      content: 'Location'
+    }
+    &:after {
+      content: "\f277";
+    }
+  }
+}
+
+.livewhale--event-set.slick-initialized {
+  .slick--previous {
+    display:  none !important; //overriding an inline style from Slick
+  }
+  .slick--next {
+    position: absolute;
+    right: -20px;
+    top: 160px;
+  }
+}
+
+/// event display of upcoming events
+
+.upcoming-events {
+  &__slick {
+    .slick--previous {
+      display:  none !important; //overriding an inline style from Slick
+    }
+    .slick--next {
+      position: absolute;
+      right: -20px;
+      top: 160px;
+    }
+    .slick-disabled {
+      opacity: 0;
+    }
+  }
+  &__slide {
+    padding-right: 40px;
+  }
+}

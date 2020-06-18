@@ -1,0 +1,19 @@
+{#
+  /**
+   * Template to display the utility menu.
+   *
+   * Variables:
+   *  - classes (array): Optional classes to add to the menu wrapper.
+   */
+#}
+{% import 'macros/sculpin-macros.html.twig' as sculpin_macros %}
+
+{%
+  set menu_classes = [
+    'utility-menu--second',
+  ]|merge(classes|default([]))
+%}
+
+<nav id="utility-menu--second" class="{{ menu_classes|join(' ') }}">
+  {{ page.utility_menu }}
+</nav>

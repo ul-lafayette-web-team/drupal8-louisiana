@@ -1,0 +1,334 @@
+////
+/// @group components
+/// Styles for tuition and fees
+////
+
+/// since this is effectively an accordion - it should match
+/// The animation duration, in ms. Should align with the value in accordion.js
+/// so that the border bottom doesn't appear too soon.
+/// @type Number
+$accordion-animation-duration: 400ms;
+
+/// overall layout and background panel with shadow
+
+.section--cost-table {
+  position: relative;
+  padding: rem-calc(20);
+  @include breakpoint(medium) {
+    padding: rem-calc(60 0 60 40);
+  }
+  @include breakpoint(large) {
+    padding: rem-calc(60 0 60 60);
+  }
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    box-shadow: 0 6px 11px rgba(0, 0, 0, 0.15), 0 10px 40px rgba(0, 0, 0, 0.1);
+    left: 0;
+    right: 0;   
+    @include breakpoint(medium) {
+      right: 33.333%
+    } 
+    @include breakpoint(large) {
+      right: 25%
+    }     
+  }
+  
+  .grid-x {
+    position: relative;
+    z-index: 2;
+    
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+}
+
+/// the columns
+.costs__textrow,
+.costs__accordion-button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @include breakpoint(medium) {
+    padding-right: 5vw;
+  }
+  @media (max-width: 1023px) {
+    flex-direction: column;
+  }
+  @include breakpoint(large) {
+    padding-right: 0;
+  }
+  .costs__amount {
+    margin-left: 40px;
+    margin-right: 0;
+    text-align: left;
+    @include breakpoint(medium) {
+      margin-right: 4rem;
+    }
+    @include breakpoint(large) {
+      margin-left: 0;
+      margin-right: 9rem;
+      width: 9rem;
+      min-width: 9rem;
+    }
+  }
+}
+
+// left column
+.costs {
+  &__accordion__content {     
+    display: none;
+    margin-left: 30px;
+    @include breakpoint(medium) {
+      margin-left: 40px;
+      margin-right: 60px;
+    }
+    @include breakpoint(large) {
+      margin-right: 150px;
+    }
+  }
+  &__name,
+  &__amount {
+    color: $black;
+    font-weight: 700;
+    @include line-heights(24, 35, 35);
+  }
+  &__name {
+    text-align: left;
+    @include font-sizes(16, 20, 20); 
+    margin-left: 30px;
+    @include breakpoint(medium) {
+      margin-left: 40px;
+    }
+  }
+  &__amount {
+    @include font-sizes(20, 20, 20);
+    text-align: right;
+    @media (max-width: 1023px) {
+      margin-top: rem-calc(12);
+    }
+    @include breakpoint(large) {
+      text-align: left;
+    }
+  }
+  &__breakdown__title {
+    font-size: rem-calc(13);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: rem-calc(30);
+  }
+  &__breakdown__body {
+    font-size: rem-calc(16);
+    line-height: rem-calc(24);
+  }
+}
+/// button rows
+.costs__accordion-button {
+  position: relative;
+  padding: 0;
+  background-color: transparent;
+  text-transform: none;
+  letter-spacing: 0;
+  &:before {
+    content: "\f107";
+    font-family: $font-awesome;
+    font-size: rem-calc(22);
+    color: $ull-red;
+    position: absolute;
+    left: 0;
+    top: 9px;
+    transition: transform 0.3s ease-out;
+    transform: rotateX(0deg);
+  }
+  &.engaged:before {
+    transform: rotateX(180deg);
+  }
+  .costs__name,
+  .costs__amount {
+    color: $ull-red;
+    pointer-events: none;
+  }
+  .costs__amount {
+    @media (max-width: 1023px) {
+      margin-top: rem-calc(12);
+    }
+  }
+  &:hover,
+  &:focus {
+    background-color: transparent !important;
+    .costs__name,
+    .costs__amount {
+      color: $black;
+    }
+    &:before {
+      color: $black;
+    }
+  }
+}
+/// drop-down that appears after a button
+.costs__highlight {
+  position: relative;
+  display: flex;
+  background-color: $ull-mist;
+  border: 2px solid $ull-teal-dusty;     
+  align-items: center;
+  @include margins-top(30, 0, 0);
+  @include breakpoint(medium) {
+    position: relative;
+    top: rem-calc(-18);
+    background-color: transparent;
+    border: none;
+    justify-content: space-between;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 50%;
+      left: -15px;
+      border-bottom: 2px solid $ull-teal-dusty; 
+    }
+  }
+  i {
+    height: 72px;
+    width: 70px;
+    font-size: 40px;
+    color: $ull-teal; 
+    text-align: center;
+    line-height: 72px;   
+    position: relative;
+    @include breakpoint(medium) {
+      left: -39px;
+    }
+    @include breakpoint(large) {
+      left: -35px;
+    }
+  }
+  span {
+    font-size: rem-calc(15);
+    line-height: rem-calc(19);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    padding: rem-calc(18 18 18 0);
+    width: calc(100% - 72px);
+    @include breakpoint(medium) {
+      width: auto;
+      padding: rem-calc(18);
+      background-color: $ull-mist;
+      border: 2px solid $ull-teal-dusty;    
+    }
+  }
+  &:hover,
+  &:focus {
+    color: $ull-teal;
+  }
+}
+/// total cost section
+.costs--total {
+  position: relative;
+  padding-top: 30px;
+  
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    border-bottom: 2px solid $ull-teal-dusty;
+    @include breakpoint(medium) {
+      right: 40%;
+    }
+    @include breakpoint(large) {
+      right: 33%;
+    }
+  }
+  .costs__name {
+    @include font-sizes(22, 32, 32);
+    @include line-heights(29, 42, 42);
+  }
+  .costs__amount {
+    font-size: rem-calc(26);
+    font-weight: 500;
+    line-height: rem-calc(48);
+  }
+}
+.disclaimer {
+  &__text {
+    margin-left: 30px;
+    @include breakpoint(medium) {
+      margin-left: 40px;
+      margin-right: 60px;
+    }  
+      
+  }
+  &__title {
+    font-size: rem-calc(13);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: rem-calc(30);
+  }
+  &__text {
+    font-size: rem-calc(16);
+    line-height: rem-calc(24);
+  }
+  &__desc {
+    margin-top: rem-calc(10);
+  }
+}
+.calculator-button {
+
+  margin-top: 20px;
+  margin-left: 30px;
+  @include breakpoint(medium) {
+    margin-top: 30px;
+    margin-left: 40px;
+  }
+  .btn {
+      width: 240px;
+  text-align: center;
+  }    
+}
+// navigating the multiple sets
+.section--cost-table__title {
+  @include margins-bottom(20,20,30);
+  @include breakpoint(1000) {
+    display: flex;
+    align-items: center;
+    h3 {
+      margin-right: 25px;
+    }
+  }
+}
+.tuition-fees__select {
+  appearance: none;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid $ull-teal-dusty;
+  background-image: url(/themes/louisiana/assets/img/bg-select-arrow.svg);
+  margin-bottom: 0;
+  @include breakpoint(768) {
+    width: 280px;
+    font-size: rem-calc(20);
+  }
+}
+.tuition-fees_set:not(.selected) {
+  display: none;
+}
+
+.section--banded.section--dusty-light.section--tuition-fees {
+  .section__content {
+    margin-bottom: 0;
+  }
+}

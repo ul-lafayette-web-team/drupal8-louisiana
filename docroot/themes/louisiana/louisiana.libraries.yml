@@ -1,0 +1,17 @@
+global:
+  version: 1.x
+  css:
+    theme:
+      assets/fonts/hco_fonts/hco_fonts.css: {}
+      '//fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap': { type: external }
+      assets/js/dist/app.css: {}
+      assets/css/theme.css: {}
+      assets/css/ull.css: {}
+  js:
+    assets/js/dist/modernizr.js: {}
+    assets/js/src/vendor/slick.min.js: {}
+    assets/js/dist/app.js: {}
+    assets/js/dist/ull.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

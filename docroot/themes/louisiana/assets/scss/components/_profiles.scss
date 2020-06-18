@@ -1,0 +1,553 @@
+.profile {
+  &__figure {
+    position: relative;
+    display: block;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    margin: 0;
+    background: $ull-teal-dusty-light url(/assets/img/ULL-logo-vertical.svg) no-repeat center center;
+    background-size: 75px 75px;
+    overflow: hidden;
+    
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &--contact .profile__figure {
+    width: 70px;
+    height: 70px;
+    background-size: 50px 50px;
+  }
+  &--contact .profile__text {
+    width: calc(100% - 90px);
+  }
+}
+.profile {
+  &__name.h4 {
+    @include font-sizes(22, 22, 22);
+    @include line-heights(29, 29, 29);
+    @include margins-top(10, 10, 20);
+    a {
+      color: $ull-red;
+      border-bottom: none;
+      &:hover,
+      &:focus {
+        color: $black;
+      }
+    }
+  }
+  &__titles,
+  &__contact {
+    ul {
+      @include margins-top(10, 10, 10);
+      list-style: none;
+      padding: 0;
+    }
+    li:not(:first-child) {
+      @include margins-top(10, 10, 10);
+    }
+  }
+  &__titles {
+    ul {
+      @include small-text;
+      font-weight: 700; 
+    }   
+  }
+  &__summary p {
+    @include accent-text;
+    @include margins-top(10, 10, 10);
+  }
+  &__contact {
+    @include margins-top(20, 20, 20);
+    @include paddings-top(20, 20, 20);
+    position: relative;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 60px;
+      height: 1px;
+      border-top: 2px solid $ull-teal-dusty;
+    }
+    ul {
+      @include margins-top(0,0,0);
+      @include accent-text;
+      font-weight: 400;
+    }
+    li {
+      position: relative;
+      margin-left: 30px;
+      i {
+        position: absolute;
+        top: 0;
+        left: -30px;
+        color: $ull-red;
+        font-size: 18px;
+      }
+      span {
+        display: block;
+      }
+      a {
+        display: block;
+        color: $ull-red;
+        border-bottom: none;
+        overflow: hidden;
+        white-space: nowrap; 
+        text-overflow: ellipsis;    
+        &:hover,
+        &:focus {
+          color: $black;
+          outline: none;
+        }    
+      }
+    }
+  }
+}
+.profile-detail .profile__contact li {
+  @include line-heights(24, 36, 36);
+  i {
+    top: 2px;
+    @include breakpoint(medium) {
+      top: 9px;
+    }
+    
+  }
+}
+.profile--contact {
+  .profile__text {
+    padding-bottom: 4px;
+  }
+  @include breakpoint(medium) {
+    display: flex;
+    
+    .profile__figure {
+      margin-right: 20px;
+    }
+    .profile__name.h4 {
+      margin-top: 0;
+    }
+  }
+}
+.profile-contact {
+  &__slick {
+    .slick--previous {
+      display:  none !important; //overriding an inline style from Slick
+    }
+    .slick--next {
+      position: absolute;
+      right: -20px;
+      top: 60px;
+    }
+    .slick-disabled {
+      opacity: 0;
+    }
+
+    @include breakpoint(medium) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__slide {
+    @include breakpoint(medium) {
+      width: 50%;
+      padding-right: 40px;
+      margin-bottom: 40px;
+    }
+    @include breakpoint(large) {
+      width: 33.3333%;
+    }
+  }
+}
+
+.section--white.section--profile-contact {
+  .section__content {
+    @include paddings-bottom(30, 0, 40);
+    margin-bottom: 0 !important;
+  }
+}
+/// styles for the slider display
+.profile-summary {
+  &__slick {
+//     @include margins-top(30,40,60);
+    
+    .slick--previous {
+      display:  none !important; //overriding an inline style from Slick
+    }
+    .slick--next {
+      position: absolute;
+      right: -20px;
+      top: 160px;
+      @include breakpoint(1288) {
+        right: -60px;
+      }
+    }
+    .slick-disabled {
+      opacity: 0;
+    }
+    .slick-list {
+      padding-bottom: 4px;
+    }
+  }
+  &__slide {
+    padding-right: 40px;
+  }
+}
+
+/// styles for the Find Your Counselor component
+
+.find-your-counselor__profile {
+  padding: 10px;
+  @include breakpoint(large) {
+    padding: 20px;
+  }
+  background: #FFFFFF;
+  box-shadow: 0 10px 20px 2px rgba(0,0,0,0.15);
+  
+  .profile {
+    position: relative;
+    &__figure {
+      width: 70px;
+      height: 70px;
+    }
+    &__name,
+    &__titles ul {
+      @include margins-top(10, 10, 10);
+    }
+    &__summary {
+      @include margins-top(10, 10, 15);
+      @include paddings-top(10, 10, 15);
+      position: relative;
+      
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 60px;
+        height: 1px;
+        border-top: 2px solid $ull-teal-dusty;
+      } 
+      & > p:first-child {
+        margin-top: 0;
+      }   
+    }
+  }
+}
+
+/// styles for the profile detail
+
+.profile-detail {
+  h1 {
+    @include margins-bottom(20,20,40);
+  }
+  .profile__figure {
+    width: 160px;
+    height: 160px;
+    @include margins-bottom(20,40,60);
+  
+    @include breakpoint(medium) {
+      width: 100%;
+      height: auto;
+      img {
+        position: relative;
+      }
+    }
+  }
+  .profile__types {
+    ul {
+      list-style: none;
+      padding-left: 0;
+      li {
+        display: inline-block;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .profile__departments {
+    margin-top: rem-calc(10);
+    ul {
+      list-style: none;
+      padding-left: 0;
+      li {
+        font-weight: 700;
+        @include font-sizes(16,16,20);
+        @include line-heights(24,24,35);
+        display: inline;
+        &:not(:only-child):not(:last-child) {
+          &:after {
+            content: ", ";
+          }
+        }
+      }
+    }
+  }
+  .profile__titles {
+    margin-top: rem-calc(10);
+    ul {
+      list-style: none;
+      padding-left: 0;
+       margin-top: 0;
+      li {
+        font-weight: 400;
+        @include font-sizes(16,16,20);
+        @include line-heights(24,24,35);
+        display: inline;
+        &:not(:only-child):not(:last-child) {
+          &:after {
+            content: ", ";
+          }
+        } 
+        @include breakpoint(medium) {
+          &:not(:first-child) {
+            margin-top: 0;
+          }
+        }       
+      }    
+    }
+  }
+  .profile__contact {
+    margin-top: rem-calc(15);
+    padding-top: 0;
+    margin-bottom: rem-calc(30);
+    &:before {
+      display: none;
+    }
+    ul {
+      @include small-text;
+      @include margins-top(0,0,0);
+    }
+   li {
+      @include breakpoint(medium) {
+        display: inline-block;
+        &:not(:first-child) {
+          margin-top: 0;
+        }
+        &:not(:last-child) {
+          margin-right: rem-calc(60);
+        }
+        a {
+          overflow: visible;
+        }
+      }
+    }
+  }
+}
+.profile__html-basic,
+.profile__html-full {
+  p, ul, ol {
+    &:first-child {
+      @include margins-top(10, 10, 20);
+    }
+  }
+}
+
+/// styles for directory listing
+
+.directory__listing--person,
+.directory__listing--org  {
+  .profile__name {
+    a {
+      @include red-link;
+    }
+  }
+  .profile__summary {
+    
+    h4 {
+      @include eyebrow;
+    }
+    p, ul, ol {
+      @include small-text;
+    }
+  }
+  .profile__types {
+    display: block;
+    margin-top: 1em;
+    @include breakpoint(medium) {
+      display: inline-block;
+    }
+    
+    ul {
+      display: inline-block;
+      list-style: none;
+      padding-left: 0;
+      li {
+        display: inline-block;
+        margin-right: 5px;
+      }
+    }
+  }  
+  .profile__positions {
+    @include margins-top(20, 0, 0);
+    display: block;
+    @include breakpoint(medium) {
+      display: inline-block;
+    }
+    font-weight: 700;
+    font-size: rem-calc(16);
+    ul {
+      display: inline-block;
+      list-style: none;
+      padding-left: 0;
+      li {
+        display: inline-block;
+        margin-right: 13px; // trying to visually get to 20px
+        &:first-child {
+          @include breakpoint(medium) {
+            margin-left: 7px; // trying to visually get to 20px
+          }
+        }
+      }
+    }    
+  }
+  .profile__contact {
+    @include margins-top(30, 0, 0);
+    padding-top: 0;
+    &:before {
+      display: none;
+    }
+    ul ul {
+      li {
+        margin-top: 0 !important;
+        margin-right: 1em;
+        margin-left: 0;
+        display: inline-block;
+        line-height: rem-calc(24);
+      }
+    }
+  }
+}
+.directory__listing--org {
+  .profile__summary {
+    margin-top: rem-calc(20);
+    padding-top: rem-calc(20);
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 60px;
+      height: 2px;
+      border-top: 2px solid $ull-teal-dusty;
+    }
+    h4 {
+      & + p,
+      & + ul,
+      & + ol {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+/// styles for the profile detail -- sidebar
+.profile__other-info {
+  background-color: $white;
+  box-shadow: 0 10px 20px 2px rgba(0,0,0,0.15);
+  @include margins-top(20,0,0);
+  padding: rem-calc(20);
+  @include breakpoint(large) {
+    padding: rem-calc(30);
+  }
+  & > h3 {
+    @include paddings-bottom(10,10,20);
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      height: 1px;
+      width: 60px;
+      border-bottom: 2px solid $ull-teal-dusty;
+    }
+  }
+  
+  dt {
+    @include eyebrow;
+    @include margins-top(10,10,20);
+  }
+  dd {
+    @include accent-text;
+    margin: rem-calc(10 0 0 0);
+    ul {
+      list-style: none;
+      padding-left: 0;
+      li {
+        display: inline-block;
+        &:not(:last-child):after {
+          content: ", ";
+        }
+        a {
+          @include red-link;
+        }
+      }
+    }
+    & > a {
+      overflow: hidden;
+      white-space: nowrap; 
+      text-overflow: ellipsis;
+      border: none;
+      color: $ull-red;
+      &:hover,
+      &:focus {
+        color: $black;
+        
+      }
+    }
+  }
+}
+
+.profile__courses-taught {
+  background-color: $ull-teal-dusty-light;
+  @include margins-top(20,20,40);
+  padding: rem-calc(20);
+  @include breakpoint(large) {
+    padding: rem-calc(30);
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+    @include small-text;
+    li:not(:first-child) {
+      padding-top: rem-calc(10);
+    }
+    li:not(:last-child) {
+      padding-bottom: rem-calc(10);
+      border-bottom: 2px solid $ull-teal-dusty;
+    }
+
+  }
+}
+
+.section--profile-summary {
+  .section__content{
+    @include margins-top(20,20,40);
+  }
+  .profile-summary__desc {
+    @include paddings-bottom(30,40,60);
+  }
+}
+// special exception when this reusable component appears on a directory page
+.program-detail-wrapper ~ .section--profile-summary.section--white,
+.directory-page .section--profile-summary.section--white {
+  background-color: $ull-teal-dusty-light;
+  @include paddings-top(40, 60, 100);
+  .profile__figure {
+    background-color: #fff;
+  }
+}

@@ -1,0 +1,50 @@
+{#
+  /**
+   * Template for each slide in the culture component.
+   *
+   * Variables:
+   *  - title (string): Culture Component title.
+   *  - image (string): Image URL. 
+   *  - video (string): Optional video URL.
+   *  - description (string): Optional description text.
+   *  - highlight (string): Optional highlight text.
+   *  - distance (string): Optional distance text.
+   *  - when (string): Optional when it happens text.   
+   */
+#}
+<div class="culture-component__slide">
+  <article class="culture-component__item">
+    <div class="culture-component-item__media">
+      <img src="{{ image }}" alt="placeholder" class="culture-component-item__image">
+      {% if video %}
+      <a href="{{ video }}" data-fancybox class="video-link--fancy culture-component-item__link">
+        <span class="show-for-sr">Click to play the video</span>
+        <span class="play-button"></span>
+      </a>
+      {% endif %}
+    </div>
+    <div class="culture-component-item__details">
+      <div class="grid-x">
+        <div class="cell small-12 medium-6">
+          <h3 class="h4">{{ title }}</h3>
+          {% if description %}
+          <p>{{ description }}</p>
+          {% endif %}
+        </div>
+        <div class="cell small-12 medium-6">
+        <ul>
+          {% if highlight %}
+          <li class="culture-component-item-details__highlight"><span class="eyebrow">Highlight</span><span>{{ highlight }}</span></li>
+          {% endif %}
+          {% if distance %}
+          <li class="culture-component-item-details__distance"><span class="eyebrow">Distance</span><span>{{ distance }}</span></li>
+          {% endif %}
+          {% if when %}
+          <li class="culture-component-item-details__when"><span class="eyebrow">When it Happens</span><span>{{ when }}</span></li>
+          {% endif %}
+        </ul>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
