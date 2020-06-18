@@ -1,0 +1,63 @@
+.process--other-audience-callouts {
+  margin-top: rem-calc(40);
+}
+
+.other-audience {
+  &__callouts {
+    list-style: none;
+    padding: 0;
+  
+    @include breakpoint(medium) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    li {
+      @include breakpoint(medium) {
+        width: calc(33.33333% - 6.6666px);        
+      }
+    }
+    li:not(:first-child) {
+      margin-top: rem-calc(20);
+      @include breakpoint(medium) {
+        margin-top: 0;
+      }
+    }     
+  }
+  &__callout {
+    display: block;
+    height: 100%;
+    background-color: $ull-teal-dusty-light;
+    border: none;
+    padding: rem-calc(20);
+
+  
+    h3 {
+      color: $ull-red;
+      line-height: calc(25 / 19);
+    }
+    p {
+      @include small-text;
+    }
+    &:hover,
+    &:focus {
+      background-color: $ull-mist;
+      p {
+        color: $black;
+      }
+    }
+    &.active {
+      pointer-events: none;
+      background-color: $ull-teal;
+      h3, p {
+        color: $white;
+      }
+    }
+  }
+}
+
+.process--other-information {
+  h3 {
+    @include margins-top(20, 20, 40);
+  }
+}

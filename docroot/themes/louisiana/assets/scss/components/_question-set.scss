@@ -1,0 +1,47 @@
+.section--question-set {
+  .section__content {
+    @include margins-top(0, 0, 0);
+    @include margins-bottom(0, 0, 0);    
+  }
+}
+
+.question-set {
+  
+  &__title {
+    font-family: $serif;
+    font-size: rem-calc(19);
+    line-height: rem-calc(25);
+    margin-bottom: rem-calc(10);
+  }
+  
+  &--group {
+    list-style: none;
+    padding: 0;
+  }
+  
+  &--item {
+    transition: all 0.3s linear;
+    position: relative;
+    
+    &:not(.selected) {
+      display:none;
+    }
+    &.selected {
+      display: block;
+    }
+  }
+}
+
+// When JavaScript doesn't load for some reason, show the content.
+:root:not(.oho-js) .question-set--item {
+  display: block;
+}
+
+.question-set__select {
+  appearance: none;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid $ull-teal-dusty;
+  background-image: url(/assets/img/bg-select-arrow.svg);
+  margin-bottom: rem-calc(40);
+}

@@ -1,0 +1,179 @@
+////
+/// @group pages
+/// Global listing page styles.
+////
+
+/// Form Styles
+/// -----------
+/*
+.listing {
+
+  form {
+    @include clearfix;
+    padding: 1em;
+    border: .0625em solid $gray;
+    background-color: $gray--light;
+  }
+
+  .form-item {
+    max-width: none;
+  }
+
+  label {
+    color: $text-color;
+  }
+
+  #{text-inputs()},
+  [type='file'],
+  [type='image'],
+  select {
+    width: 100%;
+  }
+
+  [data-drupal-selector='edit-reset'] {
+    @include btn-light;
+  }
+
+  // Display flex removes the additional spacing due to white-space between
+  // inline-block submits.
+  .form-actions {
+    display: flex;
+  }
+
+  [type='submit'] {
+    margin: 0;
+    padding: .625em 1em;
+
+    + [type='submit'] {
+      margin-left: 1em;
+    }
+  }
+
+  @include breakpoint(small) {
+
+    form {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    #{text-inputs()},
+    [type='file'],
+    [type='image'],
+    select {
+      margin-bottom: 0;
+    }
+
+    .form-item,
+    .form-actions {
+      max-width: 16em;
+      margin-bottom: 0;
+    }
+
+    .form-item {
+      flex: 0 1 auto;
+
+      + .form-item,
+      + .form-actions {
+        margin-left: 1em;
+      }
+    }
+
+    .form-actions {
+      flex: 0 0 auto;
+    }
+  }
+}
+*/
+
+/// Result Styles
+/// -------------
+.listing-item {
+  width: 100%;
+  margin-top: 2rem;
+
+  & + & {
+    padding-top: 2rem;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      border-top: 1px solid $ull-teal-dusty;
+      @include breakpoint(large) {
+        left: calc(8.33333%);
+        right: calc(8.33333%);
+      }
+    }
+  }
+
+  &__image {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    border-bottom: none;
+  }
+
+  &__title {
+    margin-bottom: .25rem;
+    @include line-heights(22, 29, 29);
+    a {
+      @include red-link;
+    }
+  }
+
+  &__teaser {
+    margin-bottom: .75rem;
+  }
+
+  &__type {
+    @include eyebrow;
+    
+    & + .listing-item__date {
+      display: inline-block;
+      margin-left: 0.5em;
+      padding-left: 0.5em;
+      border-left: 1px solid $black
+    }
+  }
+  
+  &__teaser {
+    @include small-text;
+    p:first-child {
+      @include margins-top(20, 0, 0);
+    }
+  }
+
+  
+  @include breakpoint (medium) {
+
+    &__image {
+      margin: 0;
+    }
+  }
+}
+
+.listing-item {
+  & + .pager {
+    @include breakpoint(large) {
+      max-width: 83.33333%;
+    }
+    @include margins-top(30,40,60);
+    margin-left: auto;
+    margin-right: auto;
+    @include paddings-top(30,40,60);
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0.9375rem;
+      left: 0.9375rem;
+      width: calc(100% - 1.875rem);
+      height: 1px;
+      border-top: 1px solid $ull-teal-dusty;
+    }
+  }
+}

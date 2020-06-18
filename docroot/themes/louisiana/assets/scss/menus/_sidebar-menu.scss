@@ -1,0 +1,257 @@
+////
+/// @group menus
+/// Sidebar menu styles.
+////
+
+/// All Breakpoints
+/// ---------------
+.sidebar-menu {
+  font-family: $sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: rem-calc(30);
+  h3 {
+    margin: 0;
+    letter-spacing: 0.88px;
+    text-transform: uppercase;
+    font-family: $sans-serif;
+    font-weight: 700;
+    font-size: rem-calc(14);
+    line-height: rem-calc(23);
+
+    a {
+      display: block;
+      padding: rem-calc(20 20 20 0);
+      color: $black;
+      border-bottom: none;
+      
+      &:hover {
+        color: $ull-red;
+      }
+    }
+
+  }
+}
+.sidebar-menu__container {
+  a[href*="//"]:not([href*="louisiana.edu"]):after {
+    content: "\00a0\00a0\f360";
+    font-family: $font-awesome;
+    font-weight: 400;
+    color: $ull-red;
+  } 
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  & > ul {
+    border-bottom: 2px solid $ull-teal-dusty;
+  }
+  & > ul > li {
+    position: relative;
+    border-top: 2px solid $ull-teal-dusty;
+    
+    &.menu-item--expanded {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    a {
+      position: relative;
+      display: inline-block;
+      padding: rem-calc(20 20 20 0);
+      transition: color $primary-transition;
+      border-bottom: none;
+      color: $ull-red;
+      &:hover {
+        color: $black;
+        &:after {
+          color: $black !important;
+        }
+      }
+      a.is-active {
+        font-weight: 700;
+      }
+    } 
+    &.menu-item--expanded a {
+      width: calc(100% - 4rem);
+    }
+  }
+  & > ul > li > ul {
+    width: 100%;
+    font-family: $serif;
+    font-weight: 300;
+    & > li {
+      a {
+        padding: rem-calc(10 10 10 15);
+        color: $ull-gray;
+      }
+      a.is-active {
+        font-weight: 700;
+      }
+      a:hover,
+      a:focus {
+        color: $ull-teal-dusty;
+      }
+    }
+  }
+  & > ul > li > ul > li > ul {
+    a {
+      padding: rem-calc(10 10 10 30);
+    }
+  }
+}
+.sidebar-menu {
+  &__toggle {
+    display: none;
+  }
+
+  .menu-item {
+
+    &__button {
+      left: auto;
+      border: none;
+      background-color: transparent;
+      width: 3.375rem;
+      margin: 0;
+      transform: none;
+      opacity: 1;
+      font-size: 0;
+      line-height: 0;
+      
+      &:before {
+        content: fa-content($fa-var-plus);
+        color: $gray--dark; 
+        font-size: rem-calc(16);
+        font-family: $font-awesome;
+      }
+    }
+
+    &--expanded > ul {
+      display: none;
+
+      // When JavaScript doesn't load for some reason, show all items.
+      :root:not(.oho-js) & {
+        display: block;
+      }
+    }
+
+    &--active-trail {
+
+      > a {
+        
+      }
+
+      > ul {
+        display: block;
+      }
+    }
+
+    &--open {
+
+      > .menu-item__button:before {
+        content: fa-content($fa-var-minus);
+      }
+    }
+  }
+
+  /// Mobile
+  /// ------
+  @include breakpoint(small down) {
+
+    &__toggle {
+      position: relative;
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: rem-calc(20);
+      transition: color $primary-transition;
+      color: $black;
+      background: $ull-teal-dusty-light;
+      border: 0;
+      border-bottom: 1px solid $ull-teal-dusty;
+      text-align: left;
+
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        background-color: $black;
+        position: absolute;
+        transition: background-color 0.3s ease-out;
+      }
+      &:before {
+        width: 16px;
+        height: 3px;
+        right: 20px;
+        top: calc(50% - 1.5px);
+      }
+      &:after {
+        width: 3px;
+        height: 16px;
+        right: 27.5px;
+        top: calc(50% - 8px);
+      }
+
+      .sidebar-menu-open & {
+        &::after {
+          background-color: transparent;
+        }
+      }
+
+    }
+
+    &__container {
+      display: none;
+    }
+  }
+
+  /// Desktop
+  /// -------
+  @include breakpoint(medium) {
+
+    &__container {
+      // Override any inline style set by jQuery's animations.
+      display: block !important; // stylelint-disable-line
+    }
+  }
+}
+
+/// Padding Levels
+/// --------------
+
+// A mixin to create padding selectors.
+// Set depth to the maximum number of visible levels to avoid extra output.
+@mixin padding-levels($depth) {
+  $selector: '';
+
+  @for $i from 0 through $depth {
+
+    & #{$selector} a {
+      padding-left: 1em + (1em * $i);
+    }
+    $selector: append($selector, #{' li'}); // stylelint-disable-line
+  }
+}
+
+.sidebar-menu--padding-levels {
+
+  li {
+    @include padding-levels(3);
+  }
+}
+
+/// UL Levels
+/// ---------
+.sidebar-menu--ul-levels {
+  border: 0;
+
+  ul {
+    padding-left: 1em;
+    border-left: 1px solid $primary-color;
+  }
+
+  a {
+    padding-left: 0;
+  }
+}

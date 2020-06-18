@@ -1,0 +1,116 @@
+////
+/// @group wrapper
+/// Sock styles.
+////
+
+.sock {
+  position: relative;
+  margin-top: 0;
+  background-color: $gray--dark;
+  padding-top: rem-calc(30);
+  @include breakpoint(medium) {
+    padding-top: 30vw;
+  } 
+  @include paddings-bottom(30, 0, 0);
+  overflow: hidden;
+  &__imagery {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    @media (max-width: 767px) {
+      height: 100%;
+    }
+  }
+  &__photo {
+    z-index: 1;
+    object-fit: cover;  
+  }
+  &__overlay {
+    z-index: 2;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.1) 50%, rgba(0,0,0,0));
+  }
+  &__illustration {
+    z-index: 3;
+    width: 100%;
+    .sock-drawing {
+      @media (max-width: 767px) {
+        display: none;
+      }
+      width: 58%;
+      margin: 12px 0 0 22%;
+    }
+  }
+  
+  
+  &__links {
+    position: relative;
+    z-index: 4;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      &:not(:first-child) {
+        @include margins-top(20, 0, 0);
+      }
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 .5em;
+      padding: 1em;
+      height: 100%;
+      text-decoration: none;
+      color: $white;
+      font-family: $sans-serif;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      @include font-sizes(14,18,24);
+      @include line-heights(17,21,27)
+      @include paddings-top(30,45,60);
+      @include paddings-bottom(30,45,60);
+      font-weight: 400;
+      border-bottom: none;
+      background-color: $ull-red;
+      transition: all 0.3s ease-out;
+      &:hover,
+      &:focus {
+        background-color: $ull-teal-dusty;
+        color: $black;
+      }
+    }
+  }
+}
+
+/// building
+.cls-1 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  &.draw {
+    animation: drawing 7.5s linear forwards;  
+  }
+  
+}
+.cls-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  &.draw {
+    animation: drawing 15s linear forwards;    
+  }
+  
+}
+
+@keyframes drawing {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}

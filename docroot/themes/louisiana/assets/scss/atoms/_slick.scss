@@ -1,0 +1,27 @@
+.slick-arrow,
+.fancy-arrow {
+  background-color: $white;
+  color: $ull-red;
+  font-size: 26px;
+  box-shadow: 0 2px 7px 0 rgba(0,0,0,0.20);
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  
+  &:not(.sidebar-menu__toggle):hover,
+  &:hover {
+  background-color: $ull-red;
+  color: $white;    
+  }
+}
+
+.organization__slick,
+.profile-contact__slick,
+.upcoming-events__slick,
+.livewhale--event-set {
+  .slick-track {
+    margin-left: 0;
+  }
+}

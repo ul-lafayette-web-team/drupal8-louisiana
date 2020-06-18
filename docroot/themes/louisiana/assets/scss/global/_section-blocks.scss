@@ -1,0 +1,92 @@
+////
+/// @group global
+/// Styles for sections blocks.
+////
+
+.section--banded {
+  @include paddings-top(30, 40, 80);
+  @include paddings-bottom(30, 40, 80);
+  
+  .section__content{
+    @include margins-top(30, 40, 60);
+    @include margins-bottom(30, 40, 60);
+  }
+  .section__all-link {
+    @include line-height-adjustment(20, 36);
+    
+    a.link-underline {
+      font-weight: 500;
+      text-transform: lowercase;
+    }
+  }
+}
+
+.section--banded.section--dusty,
+.section--banded.section--dusty-light {
+    @include paddings-bottom(33, 43, 80);  // to account for the all-link underline
+}
+.section--global-spacing {
+  @include margins-bottom(43, 6, 100);
+}
+
+// BLOCK GRID
+section [class*='block-grid-'] > li {
+  padding-bottom: 2.5rem;
+}
+
+/// combining colors
+
+.main-content-cols {
+    @include paddings-bottom(40, 60, 100); 
+}
+
+.section--white {
+  @include paddings-top(40, 60, 100);
+  @include paddings-bottom(43, 63, 100);  
+  
+  & + .section--white {
+    padding-top: 0;
+    
+    &.section--checkerbd,
+    &.section--question-set {
+      @include paddings-top(40, 60, 100);
+      
+      .grid-container {
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          top: -40px;
+          right: 20px;
+          left: 20px;
+          display: block;
+          height: 1px;
+          border-top: 2px solid $ull-teal-dusty;
+          @include breakpoint(medium) {
+            top: -60px;
+          }
+          @include breakpoint(large) {
+            top: -100px;
+          }
+        }
+      }
+    }
+  }
+  & + .section--org-contact {
+    padding-top: 0;
+  }
+}
+.section--dusty {
+  background: $ull-teal-dusty;
+  
+  & + .section--dusty {
+    padding-top: 0;
+  }
+}
+.section--dusty-light {
+  background: $ull-teal-dusty-light;
+
+  & + .section--dusty-light {
+    padding-top: 0;
+  }
+}

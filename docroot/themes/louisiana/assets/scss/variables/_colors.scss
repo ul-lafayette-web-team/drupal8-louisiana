@@ -1,0 +1,71 @@
+////
+/// @group variables
+/// Site-wide colors.
+////
+
+/// Color Definitions
+/// -----------------
+
+/// White and black. Using variables because sometimes these can be slightly
+/// lighter or darker than the absolute values, on a per-project basis.
+/// @type Color
+$white: #ffffff;
+$black: #000000;
+
+/// The color of text.
+/// @type Color
+$text-color: $black;
+
+/// The theme grays.
+/// @type Color
+$gray: #4d4d4d;
+$gray--dark: mix(#000000, $gray, 40%);
+$gray--light: mix(#ffffff, $gray, 40%);
+
+/// LOUISIANA VALUES
+
+$ull-red: #ce181e;
+$ull-red-rgb: rgb(206, 24, 30);
+$ull-red-alt: #b9151a;
+$ull-red-alt-rgb: rgb(185, 21, 26);
+$ull-red-dark: #610b0e;
+$ull-red-dark-rgb: rgb(97, 11, 14);
+
+$ull-black: #0a0203;
+$ull-black-rgb: rgb(10, 2, 3);
+$ull-gray: #4d4d4d;
+$ull-gray-rgb: rgb(77, 77, 77);
+
+$ull-mist: #dce4e6;
+$ull-mist-rgb: rgb(220, 228, 230);
+
+$ull-teal: #0097a7;
+$ull-teal-rgb: rgb(0, 151, 167);
+$ull-teal-dusty: #a1c4c9;
+$ull-teal-dusty-rgb: rgb(161, 196, 201);
+$ull-teal-dusty-dark: #367075;
+$ull-teal-dusty-dark-rgb: rgb(54, 112, 117);
+$ull-teal-dusty-light: #e9eff0;
+$ull-teal-dusty-light-rgb: rgb(233, 239, 240);
+
+/// The theme primary colors.
+/// @type Color
+$primary-color: $ull-red;
+$primary-color--dark: darken($primary-color, 10%);
+$primary-color--light: lighten($primary-color, 10%);
+
+/// Theme accent colors.
+/// @type Color
+$accent-green: #8dc63f;
+$accent-orange: #fe5000;
+$accent-red: #d13176;
+$accent-yellow: #ffe21a;
+
+/// Theme message colors.
+/// @type Color
+$message-success: #3c763d;
+$message-alert: #a94442;
+
+/// Color Aliases
+/// -------------
+$link-color: $text-color;

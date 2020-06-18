@@ -1,0 +1,43 @@
+////
+/// @group vendor
+/// Custom styles for Glide carousels.
+////
+
+.glide {
+  position: relative;
+
+  &__arrow {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    width: 3em;
+    height: 3em;
+    padding: 0;
+    transform: translateY(-50%);
+    border: 0;
+    font-size: 1.25rem;
+
+    &:after {
+      display: block;
+      padding: .5em;
+      font-family: $font-awesome;
+      line-height: 1.1;
+    }
+
+    &--prev {
+      left: 0;
+
+      &:after {
+        content: fa-content($fa-var-chevron-left);
+      }
+    }
+
+    &--next {
+      right: 0;
+
+      &:after {
+        content: fa-content($fa-var-chevron-right);
+      }
+    }
+  }
+}

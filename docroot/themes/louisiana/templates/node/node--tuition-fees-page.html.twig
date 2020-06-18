@@ -1,5 +1,21 @@
-{{ breadcrumbs }}
-<h1>{{ node.title.value }}</h1>
+<br/>
+<div class="grid-container page__title">
+  <div class="grid-x">
+    <div class="cell">
+      <h1>{{ node.title.value }}</h1>
+    </div>
+  </div>
+</div>
+
+<section class="hero--staggered">
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell">
+        {{ content.field_header_featured_news }}
+      </div>
+    </div>
+  </div>
+</section>
 
 {% if sidebar_nav %}
   <div class="cell initial-12 medium-3">
@@ -7,14 +23,149 @@
   </div>
 {% endif %}
 
-<div class="columns initial-12 medium-auto">
-  <article{{ attributes.addClass(classes) }}>
-    {% if content.field_intro_text|render %}
-      <div class="intro-text">{{ content.field_intro_text }}</div>
-    {% endif %}
-
-    <section class="clearfix">
-      {{ content.body }}
-    </section>
-  </article>
+<div class="grid-container">
+  <div class="cell medium-auto">
+    <article class="basic-page">
+      {% if content.field_intro_text|render %}
+        <div class="intro-text">{{ content.field_intro_text }}</div>
+      {% endif %}
+      <section class="clearfix full-wysiwyg">
+        {{ content.body }}
+      </section>
+      <section class="process--other-information">
+        <h3 class="h5">Costs for Other Students</h3>
+        {{ content.field_taf_other_applicant_links }}
+      </section>
+    </article>
+  </div>
 </div>
+
+{{ content.field_differentiators_section }}
+
+{% if content.field_tuition_fees_set|render %}
+<section class="section--wide-lined-title section--banded section--dusty-light section--tuition-fees">
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell">
+        <h2><span>{{ content.field_tuition_fees_title }}</span></h2>
+        <div class="section__content">
+          <section class="section--cost-table">
+            <div class="grid-x">
+              <div class="cell section--cost-table__title">
+                <h3>Tuition and Fees for</h3>
+                <label class="show-for-sr" for="tuitionFeesSelect">Where are you from?</label>
+                <select id="tuitionFeesSelect" class="tuition-fees__select form-control" name="">
+                  {% if content.field_tuition_fees_set.0['#paragraph'].
+                  field_tfs_audience_name.value|render %}
+                    <option value="tuition-fees-set-1">{{ content.field_tuition_fees_set.0['#paragraph'].
+                  field_tfs_audience_name.value }}</option>
+                  {% endif %}
+                  {% if content.field_tuition_fees_set.1['#paragraph'].
+                  field_tfs_audience_name.value|render %}                  
+                    <option value="tuition-fees-set-2">{{ content.field_tuition_fees_set.1['#paragraph'].field_tfs_audience_name.value }}</option>
+                  {% endif %}
+                  {% if content.field_tuition_fees_set.2['#paragraph'].
+                  field_tfs_audience_name.value|render %} 
+                    <option value="tuition-fees-set-3">{{ content.field_tuition_fees_set.2['#paragraph'].field_tfs_audience_name.value }}</option>
+                  {% endif %}
+                </select>
+              </div>
+            </div>
+
+{# Start First Set #}            
+            <article class="tuition-fees_set selected" id="tuition-fees-set-1">
+  {# Cost & Aid rows for first set #}
+            <div class="grid-container">
+              {% if content.field_tuition_fees_set[0] %}
+                  {% for key, item in content.field_tuition_fees_set if key|first != '#' %}
+                    {% if loop.first %}
+                          {{ item }}
+                    {% endif %}
+                  {% endfor %}
+              {% endif %}
+            </div>
+  {# Average Cost Total #}
+              <div class="grid-x costs--total">
+                <div class="cell small-12 medium-8 large-9">
+                  <div class="costs__textrow">
+                    <div class="costs__name">{{ content.field_tuition_fees_set.0['#paragraph'].field_tfs_average_cost_name.value }}<sup>*</sup></div>
+                    <div class="costs__amount">= {{ content.field_tuition_fees_set.0['#paragraph'].field_tfs_average_cost_number.value }}</div>
+                  </div>
+                  <div class="disclaimer__text">
+                    <div class="disclaimer__title">* {{ content.field_tuition_fees_set.0['#paragraph'].field_tfs_disclaimer_title.value }}</div>
+                    <div class="disclaimer__desc"><p>{{ content.field_tuition_fees_set.0['#paragraph'].field_tfs_disclaimer_text.value }}</p></div>
+                    <div class="calculator-button"><a class="btn" href="https://financialaid.louisiana.edu/sites/financialaid/files/NetPriceCalculator/npcalc.htm">Net Price Calculator</a></div>
+                  </div>                
+                </div>
+              </div>
+            </article>
+{# End First Set #}
+{# Start Second Set #}            
+            <article class="tuition-fees_set" id="tuition-fees-set-2">
+  {# Cost & Aid rows for first set #}
+            <div class="grid-container">
+              {% if content.field_tuition_fees_set[1] %}
+                  {% for key, item in content.field_tuition_fees_set if key|first != '#' %}
+                    {% if loop.index0 == 1 %}
+                          {{ item }}
+                    {% endif %}
+                  {% endfor %}
+              {% endif %}
+            </div>
+  {# Average Cost Total #}
+              <div class="grid-x costs--total">
+                <div class="cell small-12 medium-8 large-9">
+                  <div class="costs__textrow">
+                    <div class="costs__name">{{ content.field_tuition_fees_set.1['#paragraph'].field_tfs_average_cost_name.value }}<sup>*</sup></div>
+                    <div class="costs__amount">= {{ content.field_tuition_fees_set.1['#paragraph'].field_tfs_average_cost_number.value }}</div>
+                  </div>
+                  <div class="disclaimer__text">
+                    <div class="disclaimer__title">* {{ content.field_tuition_fees_set.1['#paragraph'].field_tfs_disclaimer_title.value }}</div>
+                    <div class="disclaimer__desc"><p>{{ content.field_tuition_fees_set.1['#paragraph'].field_tfs_disclaimer_text.value }}</p></div>
+                    <div class="calculator-button"><a class="btn" href="https://financialaid.louisiana.edu/sites/financialaid/files/NetPriceCalculator/npcalc.htm">Net Price Calculator</a></div>
+                  </div>                
+                </div>
+              </div>
+            </article>
+{# End Second Set #}
+{# Start Third Set #}            
+            <article class="tuition-fees_set" id="tuition-fees-set-3">
+  {# Cost & Aid rows for first set #}
+            <div class="grid-container">
+              {% if content.field_tuition_fees_set[2] %}
+                  {% for key, item in content.field_tuition_fees_set if key|first != '#' %}
+                    {% if loop.index0 == 2 %}
+                          {{ item }}
+                    {% endif %}
+                  {% endfor %}
+              {% endif %}
+            </div>
+  {# Average Cost Total #}
+              <div class="grid-x costs--total">
+                <div class="cell small-12 medium-8 large-9">
+                  <div class="costs__textrow">
+                    <div class="costs__name">{{ content.field_tuition_fees_set.2['#paragraph'].field_tfs_average_cost_name.value }}<sup>*</sup></div>
+                    <div class="costs__amount">= {{ content.field_tuition_fees_set.2['#paragraph'].field_tfs_average_cost_number.value }}</div>
+                  </div>
+                  <div class="disclaimer__text">
+                    <div class="disclaimer__title">* {{ content.field_tuition_fees_set.3['#paragraph'].field_tfs_disclaimer_title.value }}</div>
+                    <div class="disclaimer__desc"><p>{{ content.field_tuition_fees_set.3['#paragraph'].field_tfs_disclaimer_text.value }}</p></div>
+                    <div class="calculator-button"><a class="btn" href="https://financialaid.louisiana.edu/sites/financialaid/files/NetPriceCalculator/npcalc.htm">Net Price Calculator</a></div>
+                  </div>                
+                </div>
+              </div>
+            </article>
+{# End Third Set #}
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{{ content.field_questions_section }}
+
+{{ content.field_organizations_contact_feat }}

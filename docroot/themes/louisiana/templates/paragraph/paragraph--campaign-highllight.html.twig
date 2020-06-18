@@ -1,0 +1,17 @@
+{% import "@oho_base/includes/oho-macros.html.twig" as oho_macros %}
+<section class="section--campaign-highlight" style="background-image: url({{ content.field_background }}">
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell small-12 medium-6 medium-order-2 large-5 large-order-2">
+        {{ content.field_component_image }}
+      </div>
+      <div class="cell small-12 medium-6 medium-order-1 large-5 large-order-1">
+        <h2 class="h3">{{ content.field_component_title }}</h2>
+        {% if content.field_component_body|render %}
+          <p>{{ content.field_component_body }}</p>
+        {% endif %}
+        {{ oho_macros.link_field_link(content.field_component_link, 'btn') }}
+      </div>
+    </div>
+  </div>
+</section>

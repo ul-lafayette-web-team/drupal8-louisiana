@@ -1,0 +1,27 @@
+<section class="hero--staggered">
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell">
+      <article class="hero--staggered__item">
+        <div class="hero--staggered__media">
+          {{ content.field_news_image }}
+     {#
+          <a href="{{ content.field_news_video.uri.value }}" data-fancybox class=" video-link--fancy">
+            <span class="show-for-sr">Click to play the video</span>
+            <span class="play-button"></span>
+          </a>
+     #}
+        </div>
+        <div class="hero--staggered__text">
+          <div class="hero--staggered__quote">
+          {{ content.field_news_summary }}
+          </div>
+          <div class="news-story__title">
+            <h2 class="h4"><a href="{{ url }}" class="link-arrow">{{ node.title.value }}</a></h2>
+          </div>                    
+        </div>
+      </article>
+      </div>
+    </div>
+  </div>
+</section>

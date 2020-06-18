@@ -1,0 +1,99 @@
+////
+/// @group global
+/// Styles for tables.
+////
+
+/// Base Styles
+/// -----------
+table {
+  margin-bottom: 0;
+  border-collapse: collapse;
+  border-top: 1px solid $white;
+  font-family: $sans-serif;
+  
+  @include font-sizes(16, 16, 16);
+  @include line-heights(24, 24, 24);
+
+  &:not(:first-child) {
+    @include margins-top(20, 20, 40);
+  }
+
+  &[align='left'] { // stylelint-disable-line
+    float: none;
+
+    @include breakpoint(medium) {
+      float: left;
+      margin-right: 2em;
+    }
+  }
+
+  &[align='right'] { // stylelint-disable-line
+    float: none;
+
+    @include breakpoint(medium) {
+      float: right;
+      margin-left: 2em;
+    }
+  }
+}
+
+thead,
+tbody {
+  vertical-align: top;
+}
+
+thead {
+  color: $black;
+  border-right: 1px solid $white;
+  border-bottom: 6px solid $ull-red;
+  border-left: 1px solid $white;
+  font-size: 1.125rem;
+  
+  th {
+    background: $white;
+    text-align: left;
+  }
+}
+
+tbody {
+  border-top: 0;
+  border-left: 1px solid $white;
+}
+
+tr {
+  border-bottom: 1px solid $white;
+}
+
+th {
+  padding: 1em 1.25em;
+  border-right: 1px solid $white;
+  border-bottom: 0;
+  background: $ull-teal-dusty;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: rem-calc(24 16);
+  background-color: $ull-teal-dusty-light;
+  border-right: 1px solid $white;
+}
+
+/// Responsive Tables
+/// -----------------
+/// Works in conjunction with table.js. Adds scrolling and a scroll indicator.
+@include breakpoint (medium down) {
+
+  .mobile-table {
+    margin-bottom: 2.5rem;
+
+    &--scroll {
+      overflow-y: scroll;
+      box-shadow: -.625em 0 .625em -.75em rgba($black, .5) inset;
+    }
+
+    table {
+      margin-bottom: 0;
+    }
+  }
+}

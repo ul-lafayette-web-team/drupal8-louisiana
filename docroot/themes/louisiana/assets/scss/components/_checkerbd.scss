@@ -1,0 +1,82 @@
+/// first image on the right
+.section--checkerbd:not(.section--checkerbd-alt) {
+  @include breakpoint(medium) {
+    .checkerbd:nth-child(odd) {
+      .cell:first-child {
+        order: 2;
+      }
+      .cell:last-child {
+        order: 1;
+      }
+      .checkerbd__text {
+        margin-right: 40px;
+      }
+    }
+    .checkerbd:nth-child(even) {
+      .checkerbd__text {
+        margin-left: 40px;
+      }      
+    }
+  }
+}
+/// first image on the left
+.section--checkerbd-alt {
+  @include breakpoint(medium) {
+    .checkerbd:nth-child(even) {
+      .cell:first-child {
+        order: 2;
+      }
+      .cell:last-child {
+        order: 1;
+      }
+      .checkerbd__text {
+        margin-right: 40px;
+      }
+    }
+    .checkerbd:nth-child(odd) {
+      .checkerbd__text {
+        margin-left: 40px;
+      }      
+    }
+  }
+}
+.checkerbd {
+  &:not(:first-of-type) {
+    @include margins-top(30,40,60);
+  }
+  &__figure {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+  }
+  figcaption {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.9);
+    @include accent-text;
+    padding: 10px;
+  }
+  h2 {
+    @include margins-top(20,20,40);
+  }
+  h2 a {
+    color: $ull-red;
+    border-bottom: none;
+    &:hover, 
+    &:focus {
+      color: $black;
+    }
+  }
+  &__desc {
+    @include small-text;
+    
+    p:first-child {
+      @include margins-top(20,20,30);
+    }
+  }
+  .btn {
+    @include margins-top(20,20,30);
+  }
+}
