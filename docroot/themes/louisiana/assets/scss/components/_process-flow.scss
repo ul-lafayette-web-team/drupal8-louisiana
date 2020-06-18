@@ -1,0 +1,289 @@
+// layout
+.section--process-flow {
+  background-color: $ull-teal-dusty-light;
+  @include margins-top(30, 90, 90); // less by 10 because of margin of tabset
+  @include paddings-bottom(48, 80, 80);
+}
+.flow {
+  &__tabs {
+    position: relative;
+    display: none;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: calc(50% - 5px);
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background-color: $ull-red;
+    }
+    @include breakpoint(large) {
+      display: block;
+    }    
+  }
+  &__tabs > .grid-container {
+    padding-bottom: rem-calc(10);// so we can see the shadow
+  }
+  &__tabs--set {
+    position: relative;
+    z-index: 2;
+    margin-top: rem-calc(10);
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  &__tab {
+    flex: 1 1 auto;
+  }
+  // the sets of content
+  &__steps {
+    background-color: $ull-teal-dusty-light;
+    @include paddings-top(30, 60, 60);
+  }
+  &__step[aria-hidden="true"] {
+    @include breakpoint(large) {
+      display: none;
+    }
+  }
+}
+// alert boxes within the content
+.flow {
+  &-step__alert {
+    background-color: $white;
+    box-shadow: 0 10px 20px 2px rgba(0,0,0,0.15);
+    @include margins-bottom(30,0,0);
+    padding: rem-calc(20);
+    @include breakpoint(large) {
+      padding: rem-calc(30);
+    }
+  }
+  &-step-alert {
+    &__icon {
+      margin: 0;
+    }
+    &__title {
+      font-family: $sans-serif;
+      font-size: rem-calc(20);
+      line-height: rem-calc(35);
+    }
+    &__info {
+      margin-top: rem-calc(10);
+      @include small-text;
+    }
+  }
+}
+
+//
+// tabs styles
+//------------------
+.flow__tabs {
+  background-image: linear-gradient(to bottom, #fff, #fff 50%, $ull-teal-dusty-light 50%, $ull-teal-dusty-light);
+  &--set {
+    box-shadow: 0 2px 7px 0 rgba(0,0,0,0.20);
+  }
+}
+.flow {
+  &__tab {
+    position: relative;
+    border: none;
+    background-color: #fff;
+    box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.09);
+    &--content {
+      display: block;
+      padding: rem-calc(20 0);
+      text-align: center;
+      color: $ull-red;
+      
+      i {
+        display: inline-block;
+        margin: 0 auto;
+        &:before {
+          font-size: 26px;
+        }
+      }
+    }
+    &--text {
+      display: block;
+      text-transform: uppercase;
+      font-size: rem-calc(16);
+      font-weight: 500;
+      letter-spacing: 1.2px;
+    }
+  }
+  // inactive tabs
+  &__tab:hover,
+  &__tab:focus {
+    background-color: $ull-mist;
+  }
+  // last/apply tabs
+  &__tab:last-child {
+    background-color: $ull-red;
+    .flow__tab--content {
+      color: $white;
+    }
+    &:hover,
+    &:focus {
+      background-color: $ull-red-alt;
+    }
+  }
+}
+
+// this version is served to browsers that don't support clip-path
+.flow__tab[aria-selected="true"] {
+  pointer-events: none;
+  background-color: $ull-teal;
+  .flow__tab--content {
+    color: $white;
+  }  
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    height: 10px;    
+  }
+  &:before {
+    right: 50%;
+    left: 0;
+    background: linear-gradient(to bottom left, rgba(0,151,167,1), rgba(0,151,167,1) 45%, rgba(0,151,167,0.5) 50%, transparent 55%, transparent);    
+  }
+  &:after {
+    right: 0;
+    left: 50%;
+    background: linear-gradient(to bottom right,  rgba(0,151,167,1), rgba(0,151,167,1) 45%, rgba(0,151,167,0.5) 50%, transparent 55%, transparent);    
+  }
+}
+
+// this version takes precedence if clip-path is available 
+@supports (-webkit-clip-path: polygon(0 0, 100% 1%, 100% 92%, 50% 100%, 0 92%)) or (clip-path: polygon(0 0, 100% 1%, 100% 92%, 50% 100%, 0 92%)) {
+  .flow__tab[aria-selected="true"] {
+    background-color: $ull-teal;
+    &:before,
+    &:after {
+      display: none;
+    }    
+    .flow__tab--content {
+      position: relative;
+      z-index: 2;
+    }
+    .flow__tab--shape-wrap {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: -10px;
+      left: 0;
+      width: 100%;  
+      filter: drop-shadow(0 2px 7px rgba(0,0,0,0.20));    
+    }
+    .flow__tab--shape {
+      display: block;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background: $ull-teal;
+      color: $white;
+      clip-path: polygon(0 0, 100% 1%, 100% 92%, 50% 100%, 0 92%);
+    }  
+  }   
+}
+
+// flow steps accordion button
+.flow-step__title {
+  width: 100%;
+  padding: rem-calc(20);
+  background-color: $white;
+  color: $ull-red;
+  box-shadow: 0 2px 7px 0 rgba(0,0,0,0.20);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  position: relative;
+  i {
+    font-size: 26px;
+  }
+  span {
+    padding-left: 20px;
+    text-transform: uppercase;
+    font-size: rem-calc(16);
+    font-weight: 500;
+    letter-spacing: 1.2px;
+  }
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    background-color: $black;
+    position: absolute;
+    transition: background-color 0.3s ease-out;
+  }
+  &:before {
+    width: 30px;
+    height: 3px;
+    right: 20px;
+    top: calc(50% - 1.5px);
+  }
+  &:after {
+    width: 3px;
+    height: 30px;
+    right: 33.5px;
+    top: calc(50% - 15px);
+  }
+  @include breakpoint(large) {
+    display: none;
+  }
+}
+.flow__step:last-of-type .flow-step__title {
+  background-color: $ull-red;
+  color: $white;
+  &:before,
+  &:after {
+    background-color: $white;
+  }
+  &.engaged {
+    background-color: $ull-teal;
+    color: $white;
+    &:before {
+      background-color: $white;
+    } 
+    &:after {
+      background-color: transparent;
+    }    
+  }
+}
+.flow-step__title.engaged {
+  background-color: $ull-teal;
+  color: $white;
+  &:before {
+    background-color: $white;
+  } 
+  &:after {
+    background-color: transparent;
+  } 
+}
+// flow steps text styles
+.flow-step__content {
+  display: none;
+  @include paddings-bottom(30, 30, 0);
+  @include breakpoint(large) {
+    display: block !important; // included to override inline styles added by js
+  }
+  @include paddings-top(30,30,0);
+  h2 {
+    @include margins-bottom(30, 40, 40);
+  }
+  table {
+    width: 100%;
+  }
+}
+// next button
+.flow-step__next {
+  margin-top: rem-calc(40);
+  display: none;
+  @include breakpoint(large) {
+    display: block;
+  }
+}

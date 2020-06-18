@@ -4,3 +4,11 @@
  * @file
  * Functions to support theming in the University of Louisiana Lafayette theme.
  */
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function louisiana_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $suggestions[] = 'page__' . $node->bundle();
+  }
+}

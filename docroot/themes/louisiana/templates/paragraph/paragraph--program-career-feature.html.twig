@@ -1,0 +1,26 @@
+<section class="section--wide-lined-title section--banded section--dusty section--career-feature">
+  <div class="grid-container">
+    <div class="grid-x section__title">
+      <div class="cell">
+        <h2><span>{{ content.field_component_title }}</span></h2>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x section__content">
+      <div class="cell small-12 medium-7 career-feature__alumni-cell">
+        <div class="career-feature__alumni">
+          <div class="grid-x grid-padding-x">
+          {{ content.field_pcf_featured_alumni }}
+          </div>
+        </div>
+        {{ content.field_component_link }}
+      </div>
+      <div class="cell small-12 medium-5  career-feature__outcomes-cell">
+        <div class="career-feature__outcomes">
+          <h3 class="h4">{{ content.field_pcf_outcomes_title }}</h3>
+          <ul> 
+          {{ content.field_pcf_outcomes }}
+          </ul>
+        </div>
+      </div>  
+  </div>
+</section>

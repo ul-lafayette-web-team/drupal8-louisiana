@@ -1,43 +1,122 @@
-{% import "@oho_base/includes/oho-macros.html.twig" as oho_macros %}
-
-{% block content %}
+<div class="grid-container">
+  {% if content.field_news_story_subject_name|render %}
+  <article class="news news--detail story--detail">
+  {% else %}
   <article class="news news--detail">
+  {% endif %}
     <h1 class="news__title">{{ label }}</h1>
-    <p class="news__date date">{{ content.field_news_date }}</p>
-    {% if content.field_news_author|render %}
-      <p class="news__author">{{ content.field_news_author }}</p>
-    {% endif %}
+    <p class="news__author"><span>Written by</span><span class="news__author--name">{{ content.field_news_author }}</span></p>
+    <p class="news__date date"><span>Published</span><time>{{ content.field_news_date }}</time></p>
+    <figure class="news__featured-image featured-image">
+      {{ content.field_news_image }}
+      <a href="https://player.vimeo.com/external/264260655.sd.mp4?s=5bffe0d3766c547c7eb27d5f12b72b2f34ea5753&profile_id=165" data-fancybox class=" video-link--fancy">
+        <span class="show-for-sr">Click to play the video</span>
+        <span class="play-button"></span>
+      </a>
+    </figure>
 
-    {% if node.body.summary %}
-      <p class="news__intro-text intro-text">{{ node.body.summary }}</p>
-    {% endif %}
-
-    {% if content.field_news_video|render %}
-      <figure class="news__featured-image featured-image">
-        {{ content.field_news_video }}
-        {{ content.field_news_image }}
-      </figure>
-    {% elseif content.field_news_image|render %}
-      <figure class="news__featured-image featured-image">
-        {{ content.field_news_image }}
-      </figure>
-    {% endif %}
-
+    {% if content.field_news_story_subject_name|render %}
+      <div class="story__subject">
+        <div class="story__subject-box">
+          <div class="grid-x grid-padding-x">
+            <div class="cell medium-6">
+              <div class="story__subject__quote">
+                {{ content.field_news_summary }}
+              </div>
+            </div>
+            <div class="cell medium-6">
+              <div class="news-story__subject__title">            
+                <a class="link-arrow" href="{{ url }}">{{ label }}</a>
+              </div>
+              <div class="news-story__text">
+                {% if content.field_news_story_subject_image|render %}
+                <div class="news-story--subject__image">
+                  <figure class="news-story--subject__portait">
+                    {{ content.field_news_story_subject_image }}
+                  </figure>
+                </div>
+                {% endif %}
+                <div class="news-story--subject__details">
+                  <div class="news-story--subject__name">
+                    {{ content.field_news_story_subject_name }}
+                  </div>
+                  <dl class="news-story--subject__info">
+                  <dt>Graduation Year</dt>
+                  <dd class="news-story--subject__grad-year">{{ content.field_news_story_subject_g_year }}</dd>
+                  <dt>Major</dt>
+                  <dd class="news-story--subject__major">{{ content.field_news_story_subject_o_title }}</dd>
+                  <dt>Hometown</dt>
+                  <dd class="news-story--subject__hometown">{{ content.field_news_story_subject_home }}
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="clearfix">
+        <div class="grid-x grid-margin-x align-center">
+           <div class="cell large-8">
+             <div class="news__intro-text intro-text">{{ content.field_news_summary }}</div>
+            </div>
+            <div class="cell large-10">
+              <div class="story__component">
+                <div class="grid-x grid-padding-x">
+                  <div class="cell medium-4">
+                    <h2 class="h3">Where I'm From</h2>
+                      <div class="wysiwyg">
+                        {{ content.field_news_story_past }}
+                      </div>
+                  </div>
+                  <div class="cell medium-4">
+                    <h2 class="h3">Where I Am</h2>
+                      <div class="wysiwyg">
+                        {{ content.field_news_story_present }}
+                      </div>
+                  </div>
+                  <div class="cell medium-4">
+                    <h2 class="h3">Where I'm Going</h2>
+                      <div class="wysiwyg">
+                        {{ content.field_news_story_future }}
+                      </div>
+                  </div>
+              </div>
+            </div>            
+          </div>
+          <div class="cell large-8">
+            {{ content.body }}
+          </div>
+          {% if content.field_news_tags|render %}
+            <div class="tags news__tags">
+              <h2 class="tags__heading">News</h2>
+              {{ content.field_news_tags }}
+            </div>           
+          {% endif %}
+        </div>
+      </section>
+    {% else %}
     <section class="clearfix">
       <div class="grid-x grid-margin-x align-center">
         <div class="cell large-8">
+          <div class="news__intro-text intro-text">
+            {{ content.field_news_summary }}
+          </div>
           {{ content.body }}
+        <div class="cell medium-6">
+      <div class="news-story__subject__title">
+               {{ url }}
+             </div>
+           </div>
+          {% if content.field_news_tags|render %}
+          <div class="tags news__tags">
+            <h2 class="tags__heading">News</h2>
+            {{ content.field_news_tags }}
+          </div>
+          {% endif %}
         </div>
       </div>
     </section>
-
-    {% if news_tags %}
-      <div class="tags news__tags">
-        <h2 class="tags__heading show-for-sr">{{ 'Tags'|t }}:</h2>
-        {{ oho_macros.list(news_tags) }}
-      </div>
     {% endif %}
   </article>
-
-  {{ related_news }}
-{% endblock %}
+</div>
+{{ content.field_page_components }}

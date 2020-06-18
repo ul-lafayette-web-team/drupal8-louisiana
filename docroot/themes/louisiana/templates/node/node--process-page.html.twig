@@ -1,24 +1,307 @@
-{{ breadcrumbs }}
-<h1>{{ node.title.value }}</h1>
-
-{% if sidebar_nav %}
-  <div class="cell initial-12 medium-3">
-    {{ sidebar_nav }}
+<br/>
+<div class="grid-container page__title">
+  <div class="grid-x">
+    <div class="cell">
+      <h1>{{ node.title.value }}</h1>
+    </div>
   </div>
-{% endif %}
-
-<div class="columns initial-12 medium-auto">
-  <article{{ attributes.addClass(classes) }}>
-    {% if content.field_intro_text|render %}
-      <div class="intro-text">{{ content.field_intro_text }}</div>
-    {% endif %}
-
-    <section class="clearfix">
-      {{ content.body }}
-    </section>
-  </article>
 </div>
 
-{{ content.field_process_applicant_type_set }}
+<section class="hero--staggered">
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell">
+        {{ content.field_header_featured_news }}
+      </div>
+    </div>
+  </div>
+</section>
 
-{{ content.field_process_steps }}
+{% if sidebar_nav %}
+<div class="grid-container">
+  <div class="grid-x grid-padding-x">
+    <div class="cell medium-3">
+      {{ sidebar_nav }}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<div class="grid-container">
+  <div class="cell medium-auto">
+    <article class="basic-page">
+      {% if content.field_intro_text|render %}
+        <div class="intro-text">{{ content.field_intro_text }}</div>
+      {% endif %}
+      <section class="clearfix full-wysiwyg">
+        {{ content.body }}
+      </section>
+      <section class="process--other-information">
+        <h3 class="h5">Other Application Processes</h3>
+        {{ content.field_taf_other_applicant_links }}
+      </section>
+    </article>
+  </div>
+</div>
+
+{% if content.field_process_applicant_type_set[0] %}
+  <section class="process--other-audience-callouts">
+    <div class="grid-container">
+      {{ content.field_process_applicant_type_set }}
+    </div>
+  </section>
+{% endif %}
+
+
+{% if content.field_process_steps[0] %}
+<section class="section--process-flow">
+  <div class="flow__tabs">
+    <div class="grid-container">
+      <div class="flow__tabs--set">   
+        <a class="flow__tab" href="#step1" aria-selected="true">
+          {{ content.field_process_steps.0 }}
+        </a>
+        {% if content.field_process_steps[1] %} 
+        <a class="flow__tab" href="#step2" aria-selected="false">
+          {{ content.field_process_steps.1 }}
+        </a>
+        {% endif %}
+
+        {% if content.field_process_steps[2] %}
+        <a class="flow__tab" href="#step3" aria-selected="false">
+          {{ content.field_process_steps.2 }}
+        </a>
+        {% endif %}
+        {% if content.field_process_steps[3] %}
+        <a class="flow__tab" href="#step4" aria-selected="false">
+          {{ content.field_process_steps.3 }}
+        </a>
+        {% endif %}
+        {% if content.field_process_steps[4] %}
+        <a class="flow__tab" href="#step5" aria-selected="false">
+          {{ content.field_process_steps.4 }}
+        </a>
+        {% endif %}
+        {% if content.field_process_steps[5] %}
+        <a class="flow__tab" href="#step6" aria-selected="false">
+          {{ content.field_process_steps.5 }}
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="flow__steps">
+    <div class="grid-container">
+    
+      <div id="step-1" class="flow__step" aria-hidden="false">
+        <button class="flow-step__title">{{ content.field_process_steps.0['#paragraph'].field_component_icon.0.value }}<span>{{ content.field_process_steps.0['#paragraph'].field_component_title.0.value }}</span></button>
+        <div class="flow-step__content">
+          <div class="grid-x grid-padding-x">
+            <div class="cell">
+              <h2>{{ content.field_process_steps.0['#paragraph'].field_component_title.value }}</h2>
+            </div>
+            {% if content.field_process_steps.0['#paragraph'].field_ps_alert_title.value|render %}
+              <div class="cell small-12 medium-4 medium-order-2 large-3">
+                <article class="flow-step__alert">
+                  <figure class="flow-step-alert__icon">
+                    <img src="/themes/louisiana/assets/img/bullhorn.svg" alt="bullhorn icon">
+                  </figure>
+                  <h3 class="flow-step-alert__title">
+                    {{ content.field_process_steps.0['#paragraph'].field_ps_alert_title.value }}
+                    {{ content.field_process_steps.0['#paragraph'].field_ps_alert_title_link.value }}                    
+                  </h3>
+                  <div class="flow-step-alert__info">
+                    {{ content.field_process_steps.0['#paragraph'].field_ps_alert_information.value }}
+                  </div>
+                </article>
+              </div> 
+            {% endif %}
+            <div class="cell small-12 medium-8 medium-order-1 large-9">
+              {{ content.field_process_steps.0['#paragraph'].field_component_body.value|raw }} 
+            </div>
+            {% if content.field_process_steps.1['#paragraph'].field_ps_tab_title.value|render %}
+              <div class="cell small-order-3">
+                <div class="flow-step__next">
+                  <p>Next step:</p>
+                  <a href="#step-3" class="btn">{{ content.field_process_steps.1['#paragraph'].field_ps_tab_title.value }}</a>
+                </div>
+              </div>
+            {% endif %}
+          </div> <!-- grid-x grid-padding-x -->
+        </div> <!-- flow-step__content -->
+      </div> <!-- step-1 -->
+     
+      <div id="step-2" class="flow__step" aria-hidden="true">
+        <button class="flow-step__title">{{ content.field_process_steps.1['#paragraph'].field_component_icon.value }}<span>{{ content.field_process_steps.1['#paragraph'].field_ps_tab_title.value }}</span></button>
+        <div class="flow-step__content">
+          <div class="grid-x grid-padding-x">
+            <div class="cell">
+              <h2>{{ content.field_process_steps.1['#paragraph'].field_component_title.value }}</h2>
+            </div>
+            {% if content.field_process_steps.1['#paragraph'].field_ps_alert_title.value|render %}
+              <div class="cell small-12 medium-4 medium-order-2 large-3">
+                <article class="flow-step__alert">
+                  <figure class="flow-step-alert__icon">
+                    <img src="/themes/louisiana/assets/img/bullhorn.svg" alt="bullhorn icon">
+                  </figure>
+                  <h3 class="flow-step-alert__title">{{ content.field_process_steps.1['#paragraph'].field_ps_alert_title.value }}</h3>
+                  <div class="flow-step-alert__info">
+                    {{ content.field_process_steps.1['#paragraph'].field_ps_alert_information.value }}
+                  </div>
+                </article>
+              </div>
+            {% endif %}
+            <div class="cell small-12 medium-8 medium-order-1 large-9">
+              {{ content.field_process_steps.1['#paragraph'].field_component_body.value|raw }}
+            </div>
+            {% if content.field_process_steps.2['#paragraph'].field_ps_tab_title.value|render %}
+            <div class="cell small-order-3">
+              <div class="flow-step__next">
+                <p>Next step:</p>
+                <a href="#step-3" class="btn"> {{ content.field_process_steps.2['#paragraph'].field_ps_tab_title.value }}</a>
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <div id="step-3" class="flow__step" aria-hidden="true">
+        <button class="flow-step__title">{{ content.field_process_steps.2['#paragraph'].field_component_icon.value }}<span>{{ content.field_process_steps.2['#paragraph'].field_ps_tab_title.value }}</span></button>
+        <div class="flow-step__content">
+          <div class="grid-x grid-padding-x">
+            <div class="cell">
+              <h2>{{ content.field_process_steps.2['#paragraph'].field_component_title.value }}</h2>
+            </div>
+            {% if content.field_process_steps.2['#paragraph'].field_ps_alert_title.value|render %}
+              <div class="cell small-12 medium-4 medium-order-2 large-3">
+                <article class="flow-step__alert">
+                  <figure class="flow-step-alert__icon">
+                    <img src="/themes/louisiana/assets/img/bullhorn.svg" alt="bullhorn icon">
+                  </figure>
+                  <h3 class="flow-step-alert__title">{{ content.field_process_steps.2['#paragraph'].field_ps_alert_title.value }}</h3>
+                  <div class="flow-step-alert__info">
+                    {{ content.field_process_steps.2['#paragraph'].field_ps_alert_information.value }}
+                  </div>
+                </article>
+              </div>
+            {% endif %}
+            <div class="cell small-12 medium-8 medium-order-1 large-9">
+              {{ content.field_process_steps.2['#paragraph'].field_component_body.value|raw }}
+            </div>
+            {% if content.field_process_steps.3['#paragraph'].field_ps_tab_title.value|render %}
+              <div class="cell small-order-3">
+                <div class="flow-step__next">
+                  <p>Next step:</p>
+                  <a href="#step-4" class="btn">{{ content.field_process_steps.3['#paragraph'].field_ps_tab_title.value }}</a>
+                </div>
+              </div>
+            {% endif %}
+          </div> <!-- grid-x grid-padding-x -->      
+        </div> <!-- flow-step__content -->
+      </div> <!-- step-3 -->
+
+      <div id="step-4" class="flow__step" aria-hidden="true">
+        <button class="flow-step__title">{{ content.field_process_steps.3['#paragraph'].field_component_icon.value }}<span>{{ content.field_process_steps.3['#paragraph'].field_ps_tab_title.value }}</span></button>
+        <div class="flow-step__content">
+          <div class="grid-x grid-padding-x">
+            <div class="cell">
+              <h2>{{ content.field_process_steps.3['#paragraph'].field_component_title.value }}</h2>
+            </div>
+            {% if content.field_process_steps.3['#paragraph'].field_ps_alert_title.value|render %}
+              <div class="cell small-12 medium-4 medium-order-2 large-3">
+                <article class="flow-step__alert">
+                  <figure class="flow-step-alert__icon">
+                    <img src="/themes/louisiana/assets/img/bullhorn.svg" alt="bullhorn icon">
+                  </figure>
+                  <h3 class="flow-step-alert__title">{{ content.field_process_steps.3['#paragraph'].field_ps_alert_title.value }}</h3>
+                  <div class="flow-step-alert__info">
+                    {{ content.field_process_steps.3['#paragraph'].field_ps_alert_information.value }}
+                  </div>
+                </article>
+              </div>
+            {% endif %}
+            <div class="cell small-12 medium-8 medium-order-1 large-9">
+              {{ content.field_process_steps.3['#paragraph'].field_component_body.value|raw }}
+            </div>
+            {% if content.field_process_steps.4['#paragraph'].field_ps_tab_title.value|render %}
+              <div class="cell small-order-3">
+                <div class="flow-step__next">
+                  <p>Next step:</p>
+                  <a href="#step-5" class="btn">{{ content.field_process_steps.4['#paragraph'].field_ps_tab_title.value }}</a>
+                </div>
+              </div>
+            {% endif %}
+          </div> <!-- grid-x grid-padding-x -->      
+        </div> <!-- flow-step__content -->
+      </div> <!-- step-4 -->
+
+      <div id="step-5" class="flow__step" aria-hidden="true">
+        <button class="flow-step__title">{{ content.field_process_steps.4['#paragraph'].field_component_icon.value }}<span>{{ content.field_process_steps.4['#paragraph'].field_ps_tab_title.value }}</span></button>
+        <div class="flow-step__content">
+          <div class="grid-x grid-padding-x">
+            <div class="cell">
+              <h2>{{ content.field_process_steps.4['#paragraph'].field_component_title.value }}</h2>
+            </div>
+            {% if content.field_process_steps.4['#paragraph'].field_ps_alert_title.value|render %}
+              <div class="cell small-12 medium-4 medium-order-2 large-3">
+                <article class="flow-step__alert">
+                  <figure class="flow-step-alert__icon">
+                    <img src="/themes/louisiana/assets/img/bullhorn.svg" alt="bullhorn icon">
+                  </figure>
+                  <h3 class="flow-step-alert__title">{{ content.field_process_steps.4['#paragraph'].field_ps_alert_title.value }}</h3>
+                  <div class="flow-step-alert__info">
+                    {{ content.field_process_steps.4['#paragraph'].field_ps_alert_information.value }}
+                  </div>
+                </article>
+              </div>
+            {% endif %}
+            <div class="cell small-12 medium-8 medium-order-1 large-9">
+              {{ content.field_process_steps.4['#paragraph'].field_component_body.value|raw }}
+            </div>
+            {% if content.field_process_steps.5['#paragraph'].field_ps_tab_title.value|render %}
+              <div class="cell small-order-3">
+                <div class="flow-step__next">
+                  <p>Next step:</p>
+                  <a href="#step-6" class="btn">{{ content.field_process_steps.5['#paragraph'].field_ps_tab_title.value }}</a>
+                </div>
+              </div>
+            {% endif %}
+          </div> <!-- grid-x grid-padding-x -->      
+        </div> <!-- flow-step__content -->
+      </div> <!-- step-5 -->
+
+      <div id="step-6" class="flow__step" aria-hidden="true">
+        <button class="flow-step__title">{{ content.field_process_steps.5['#paragraph'].field_component_icon.value }}<span>{{ content.field_process_steps.5['#paragraph'].field_ps_tab_title.value }}</span></button>
+        <div class="flow-step__content">
+          <div class="grid-x grid-padding-x">
+            <div class="cell">
+              <h2>{{ content.field_process_steps.5['#paragraph'].field_component_title.value }}</h2>
+            </div>
+            {% if content.field_process_steps.5['#paragraph'].field_ps_alert_title.value|render %}
+              <div class="cell small-12 medium-4 medium-order-2 large-3">
+                <article class="flow-step__alert">
+                  <figure class="flow-step-alert__icon">
+                    <img src="/themes/louisiana/assets/img/bullhorn.svg" alt="bullhorn icon">
+                  </figure>
+                  <h3 class="flow-step-alert__title">{{ content.field_process_steps.5['#paragraph'].field_ps_alert_title.value }}</h3>
+                  <div class="flow-step-alert__info">
+                    {{ content.field_process_steps.5['#paragraph'].field_ps_alert_information.value }}
+                  </div>
+                </article>
+              </div>
+            {% endif %}
+            <div class="cell small-12 medium-8 medium-order-1 large-9">
+              {{ content.field_process_steps.5['#paragraph'].field_component_body.value|raw }}
+            </div>
+          </div> <!-- grid-x grid-padding-x -->      
+        </div> <!-- flow-step__content -->
+      </div> <!-- step-5 -->
+
+    </div> <!-- grid-container -->
+  </div> <!-- flow__steps -->
+</section>
+{% endif %}
+{{ content.field_differentiators_section }}
+{{ content.field_organizations_contact_feat }}

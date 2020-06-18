@@ -1,3 +1,55 @@
+<article class="landing-page landing-page--organization">
+    <article class="hero  section--global-spacing   hero--img">
+        <div class="hero__media">
+          {{ content.field_header_image }}
+        </div>      
+      <div class="hero__content">
+        <div class="grid-x grid-padding-x">
+          <div class="cell small-12 medium-8">
+            <div class="organization__title-strip">
+              <h1>{{ label }}</h1><div class="term-type">{{ content.field_organization_type }}</div>
+            </div>
+            <div class="intro-text"><p></p>{{ content.field_intro_text }}</div>
+            {{ content.body }}
+          </div>
+          <div class="cell small-12 medium-4">
+            <section class="organization__about-info">
+              <h2 class="h4">About</h2>
+              <div class="org-about-info__title"><h3>{{ content.field_organization_title }}</h3></div>
+              <div class="org-about-info__content">{{ content.field_organization_purpose }}</div>
+              <div class="org-about-info__title"><h3>Contact Information</h3></div>
+              <div class="org-about-info__content">
+                {{ content.field_organization_contact_info }}
+                <div class="organization__details">
+                  <ul>
+                    <li><i class="far fa-phone"></i><span>{{ content.field_organization_phone_number }}</span></li>
+                    {# <li><i class="far fa-envelope"></i><span><a href="mailto:{{ content.field_organization_email }}">{{ content.field_organization_email }}</a></span></li> #}
+                    <li><i class="far fa-envelope"></i><span>{{ content.field_organization_email }}</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="org-about-info__title"><h3>Social Media</h3></div>
+              <div class="org-about-info__content">
+                <div class="org-about-info__social">
+                 
+                </div>
+              </div>
+            </section>
+          </div>
+          </div>
+        </div>
+      </div>
+    </article>
+{{ content.field_page_components }}
+</article>
+
+
+
+
+
+
+
+{#
 <div class="row">
   <div class="columns small-12 medium-8">
     <h1>{{ label }}</h1>
@@ -37,3 +89,4 @@
     {% endif %}
   </div>
 </div>
+#}

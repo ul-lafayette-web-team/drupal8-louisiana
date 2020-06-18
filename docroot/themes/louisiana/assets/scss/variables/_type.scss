@@ -1,0 +1,33 @@
+////
+/// @group variables
+/// Site-wide typefaces.
+////
+
+/// Typeface Definitions
+/// --------------------
+
+/// Typefaces
+/// @type String
+$serif: 'Roboto Slab',courier,georgia,serif;  // stylelint-disable-line
+$sans-serif: 'HCo Gotham SSm',helvetica,sans-serif; // stylelint-disable-line
+$font-awesome: 'Font Awesome 5 Pro'; // stylelint-disable-line
+
+/*
+Gotham
+XLight 200
+Light 300 
+Book 400
+Medium 500
+Bold 700
+Black 800
+
+Montserrat
+Light 300
+Book 400
+Medium 500
+Bold 700
+
+Roboto Slab
+Light 300
+Bold 700
+*/

@@ -1,0 +1,13 @@
+<a href class="link-box oho-animate fade-in-up">
+  <div class="news-story__text">
+    <div class="news-story__eyebrow">
+      {% if content.field_news_type %}
+        <span class="news-story__type">{{ content.field_news_type }}</span>
+      {% endif %}
+      {% if content.field_news_date %}
+        <span class="news-story__publish-date">{{ content.field_news_date }}</span>
+      {% endif %}
+    </div>
+    <h3 class="h5">{{ node.title.value }}</h3>
+  </div>
+</a>

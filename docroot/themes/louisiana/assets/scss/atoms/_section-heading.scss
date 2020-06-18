@@ -1,0 +1,44 @@
+////
+/// @group components-micro
+/// Styles for section headings.
+////
+
+.section-heading {
+  margin-bottom: 30px;
+
+  &__heading {
+    margin-bottom: 10px;
+  }
+
+  &__subheading {
+    font-size: 20px;
+  }
+}
+
+
+.section--wide-lined-title {
+  
+  h2 {
+    @include wide-lined-title($white, $ull-teal-dusty);
+  }
+  
+  &.section--dusty h2 {
+    @include wide-lined-title($ull-teal-dusty, $white);
+  }
+  
+  &.section--dusty-light h2 {
+    @include wide-lined-title($ull-teal-dusty-light, $ull-teal-dusty);
+  }
+}
+
+// special exception when this reusable component appears on a directory page
+.directory-page {
+  .section--wide-lined-title {
+    &.section--profile-summary.section--white h2 {
+      @include wide-lined-title($ull-teal-dusty-light, $ull-teal-dusty);
+    }
+  }
+}
+.program-detail-wrapper ~ .section--profile-summary.section--white h2 {
+  @include wide-lined-title($ull-teal-dusty-light, $ull-teal-dusty);
+}

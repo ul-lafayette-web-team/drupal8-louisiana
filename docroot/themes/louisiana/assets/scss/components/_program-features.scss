@@ -1,0 +1,90 @@
+.program {
+  &__featured-items {
+    @include breakpoint(medium) {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+  }
+  &__featured-item--large {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(808) {
+      flex-direction: row-reverse;
+      flex-wrap: nowrap;
+    }
+    
+    figure {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      @include breakpoint(808) {
+        width: 41.66666%;
+        min-width: 41.66666%;
+      }
+    }
+    .program-featured__text {
+      position: relative;
+      z-index: 2;
+      background-color: $white;
+      box-shadow: 0 10px 20px 2px rgba(0,0,0,0.15);
+      padding: rem-calc(20);
+      @include breakpoint(large) {
+        padding: rem-calc(30);
+      }
+      
+      @include breakpoint(660) {
+        margin: rem-calc(-20 20 0);
+      }
+      @include breakpoint(808) {
+        margin: rem-calc(20 -22 20 0);
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+      }
+      p {
+        @include small-text;
+      }
+    }
+    .program-featured__inner {
+      @include breakpoint(808) {
+        width: 100%;
+        padding: rem-calc(30);
+        background-color: $white;
+        box-shadow: 0 10px 20px 2px rgba(0,0,0,0.15);        
+      }
+      p,
+      .btn {
+        margin-top: rem-calc(20) !important;
+        @include breakpoint(large) {
+          margin-top: rem-calc(30) !important;
+        }
+      }
+    }
+  }
+  &__featured-item--small {
+    @include margins-top(20,0,0);
+    background-color: $white;
+    padding: rem-calc(20 20 26);
+    @include breakpoint(medium) {
+      width: calc(33.3333% - 6.6666px);
+    }
+    @include breakpoint(large) {
+      padding: rem-calc(30);
+    }
+    p {
+      @include small-text;
+    }
+    .link-underline {
+      @include margins-top(10, 10, 20);
+      font-weight: 700;
+      text-transform: lowercase;
+    }
+  } 
+}
+
+.section--program-features {
+  .section__content {
+    @include margins-bottom(20,20,40);
+  }
+}

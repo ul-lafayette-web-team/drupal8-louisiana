@@ -1,5 +1,28 @@
-<section>
-  <h2>{{ content.field_component_title }}</h2>
-  {{ content.field_pfs_large_program_feature }}
-  {{ content.field_pfs_small_program_features }}
+<section class="section--wide-lined-title section--banded section--dusty-light section--program-features">
+  <div class="grid-container">
+    <div class="grid-x section__title">
+      <div class="cell">
+        <h2><span>{{ content.field_display_title }}</span></h2>
+      </div>
+    </div>
+    <div class="grid-x section__content">
+      <div class="program__featured-item--large">
+        {{ content.field_pfs_large_program_feature }}
+      </div>
+      <div class="program__featured-items">
+        <article class="program__featured-item--small">
+        {{ content.field_pfs_small_program_features.0['#node'].field_intro_text.value | raw }}
+        <a class="link-underline" href="{{ content.field_pfs_small_program_features.0['#node'].field_program_feature_cta_link.0.url }}">{{ content.field_pfs_small_program_features.0['#node'].field_program_feature_cta_link.0.title }}</a>
+        </article>
+        <article class="program__featured-item--small">
+        {{ content.field_pfs_small_program_features.1['#node'].field_intro_text.value | raw }}
+        <a class="link-underline" href="{{ content.field_pfs_small_program_features.1['#node'].field_program_feature_cta_link.0.url }}">{{ content.field_pfs_small_program_features.1['#node'].field_program_feature_cta_link.0.title }}</a>
+        </article>
+        <article class="program__featured-item--small">
+        {{ content.field_pfs_small_program_features.2['#node'].field_intro_text.value | raw }}
+        <a class="link-underline" href="{{ content.field_pfs_small_program_features.2['#node'].field_program_feature_cta_link.0.url }}">{{ content.field_pfs_small_program_features.2['#node'].field_program_feature_cta_link.0.title }}</a>
+        </article>        
+      </div>
+    </div>
+  </div>
 </section>

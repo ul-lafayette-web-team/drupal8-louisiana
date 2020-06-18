@@ -1,0 +1,86 @@
+{%
+  set page_classes = [
+    'page--general',
+  ]
+%}
+
+{%
+  set wrapper_classes = [
+    'page-wrapper',
+  ]
+%}
+
+{%
+  set content_classes = [
+    'main-content',
+  ]
+%}
+
+<div class="{{ page_classes|merge(preprocess_page_classes)|join(' ') }}">
+
+  {{ alert_message }}
+
+  {% if page.highlighted %}
+    <div class="system-region">
+      <div class="grid-container">
+        <div class="system-messages">
+          {{ page.highlighted }}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="header__bg"></div>
+  <header class="site-header ull-header">
+    <section class="ull-header--mobile">
+      <a class="ull-header__logo" href="/">
+        <img width="194" height="48" src="{{ base_path ~ directory }}/assets/img/ULL-logo-horizontal.svg" alt="{{ 'logo of University of Louisiana at Lafayette'|t }}">
+      </a>
+      <div class="ull-header__buttons">
+        <button class="ull-header__button--search" data-button-open-text="{{ 'Open the search panel'|t }}" data-button-close-text="{{ 'Close the search panel'|t }}" data-button-enable-at="1024" data-button-open-class="search-panel-open">
+          <span class="show-for-sr">{{ 'Open the search panel'|t }}</span>
+        </button>
+        <button class="ull-header__button--menu" data-button-open-text="{{ 'Open the main menu'|t }}" data-button-close-text="{{ 'Close the main menu'|t }}" data-button-enable-at="0" data-button-disable-at="1024" data-button-open-class="mobile-menu-open">
+          <span class="show-for-sr">{{ 'Open the main menu'|t }}</span>
+        </button>
+      </div><!-- /.ull-header__buttons -->
+    </section>
+
+    <section class="ull-header__dropdown">
+      <div class="ull-header__utility">
+        <div class="ull-header__container ull-header__container--utility">
+          <div class="ull-header__container ull-header__container--utility">
+            {{ page.secondary_nav }}
+
+            <button class="ull-header__button--search" data-button-open-text="{{ 'Open the search panel'|t }}" data-button-close-text="{{ 'Close the search panel'|t }}" data-button-enable-at="1024" data-button-open-class="search-panel-open">
+              <span><span class="show-for-sr">{{ 'Open the'|t }} </span>{{ 'Search'|t }}<span class="show-for-sr"> {{ 'panel'|t }}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ull-header__main " id="main-menu">
+        <div class="ull-header__container">
+          <nav class="ull-header__main-nav">
+            {{ page.primary_nav }}
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="ull-header__search">
+      {{ page.search }}
+    </section><!-- /.ull-header__search -->
+  </header>
+  {{ drupal_block('system_breadcrumb_block') }}
+  <div class="page-wrapper">
+    <main id="main-content" class="main-content">
+      {{ page.title }}
+      {{ page.content }}
+    </main>
+  </div>
+
+  {{ page.footer_upper }}
+
+  {{ page.footer_lower }}
+</div>

@@ -1,1 +1,16 @@
-{{ content.field_app_type_set_app_types }}
+<h2>{{ node.title.value }}</h2>
+
+{% if content.field_app_type_set_app_types[0] %}
+  <ul class="other-audience__callouts">
+    {% for key, item in content.field_app_type_set_app_types if key|first != '#' %}
+    	{% if loop.first %}
+    		<li><a href="{{ content.field_app_type_set_app_types.0['#paragraph'].field_applicant_type_link.0.value }}" class="other-audience__callout active">{{ item }}</a></li>
+        {% else %}
+    		<li><a href="{{ content.field_app_type_set_app_types.0['#paragraph'].field_applicant_type_link.0.value }}" class="other-audience__callout">{{ item }}</a></li>        	
+        {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}
+
+  {# content.field_process_steps.0['#paragraph'].field_component_icon.0.value #}
+</ul>

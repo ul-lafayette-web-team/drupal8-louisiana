@@ -1,0 +1,45 @@
+////
+/// @group components
+/// Styles for breadcrumbs.
+////
+
+/// Base Breadcrumbs
+/// ----------------
+.breadcrumbs {
+  @include margins-bottom(10, 20, 40); 
+  padding: rem-calc(20 0);
+  list-style: none;
+  border-bottom: 1px solid $ull-red;
+  font-family: $sans-serif;
+  font-size: rem-calc(14);
+  line-height: 1;
+  font-weight: 700;
+  
+  li {
+    display: inline-block;
+    position: relative;
+    &:nth-child(n+2):before {
+      position: relative;
+      top: 2px;
+      @include font-awesome;
+      font-weight: 700;
+      padding: 0 .666em;
+      content: fa-content($fa-var-chevron-right);
+      font-size: rem-calc(18);
+      color: $ull-teal;
+    }
+  }
+  a {
+    color: $ull-red;
+    border-bottom: none;
+  }
+}
+
+@include breakpoint(tiny down) {
+  .breadcrumbs li:nth-last-child(2):before {
+    content: fa-content($fa-var-chevron-left);
+  }
+  .breadcrumbs li:not(:nth-last-child(2)) {
+      display: none;
+  }
+}

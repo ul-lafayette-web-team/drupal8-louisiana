@@ -1,0 +1,57 @@
+  <section class="section--question-set section--banded section--white">
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x section__content">
+        <div class="cell small-12 medium-4">
+          <h2 class="question-set__title">{{ content.field_component_title }}:</h2>
+          <label class="show-for-sr" for="questionsetSelect">Categories of questions:</label>
+          <select id="questionsetSelect" class="question-set__select form-control" name="question-sets">               
+          	{% if content.field_qsection_qsets.0['#paragraph'].field_component_title.value|render %}    
+            <option value="question-set-1">{{ content.field_qsection_qsets.0['#paragraph'].field_component_title.value }}</option>
+            {% endif %}
+          	{% if content.field_qsection_qsets.1['#paragraph'].field_component_title.value|render %}   
+            <option value="question-set-2">{{ content.field_qsection_qsets.1['#paragraph'].field_component_title.value }}</option>
+            {% endif %}
+          	{% if content.field_qsection_qsets.2['#paragraph'].field_component_title.value|render %}   
+            <option value="question-set-3">{{ content.field_qsection_qsets.2['#paragraph'].field_component_title.value }}</option>
+            {% endif %}
+          	{% if content.field_qsection_qsets.3['#paragraph'].field_component_title.value|render %}   
+            <option value="question-set-4">{{ content.field_qsection_qsets.3['#paragraph'].field_component_title.value }}</option>
+            {% endif %}
+          	{% if content.field_qsection_qsets.4['#paragraph'].field_component_title.value|render %}   
+            <option value="question-set-5">{{ content.field_qsection_qsets.4['#paragraph'].field_component_title.value }}</option>   
+            {% endif %}         
+          </select>       
+        </div>  
+        <div class="cell small-12 medium-8">
+          <ul class="question-set--group">
+            <li class="question-set--item selected" id="question-set-1">
+              <section class="accordions">
+
+				{% for item in content.field_qsection_qsets | children(true) %}
+			      {% if loop.revindex0 == 0 %}
+			        {% if content.field_qsection_qsets[0] %}
+			          {{ item }}
+			        {% endif %}
+			      {% endif %}				  
+				{% endfor %}
+
+				{# content.field_qsection_qsets #}             
+              </section>
+            </li> 
+
+			{% for item in content.field_qsection_qsets | children(true) %}
+		      {% if loop.revindex0 != 0 %}
+		        {% if content.field_qsection_qsets[loop.revindex0] %}
+		            <li class="question-set--item" id="question-set-{{ loop.revindex }}">
+		              <section class="accordions">
+		          		{{ item }}
+		          	  </section>
+		          	</li>
+		        {% endif %}
+		      {% endif %}				  
+			{% endfor %}         
+          </ul>
+        </div>      
+      </div>   
+    </div>
+  </section>

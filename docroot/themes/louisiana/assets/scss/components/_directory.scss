@@ -1,0 +1,86 @@
+.directory {
+  
+  &__title-intro {
+    @include paddings-top(30,40,80);
+    @include paddings-bottom(30,40,40);
+  }
+  &__tabs ul.menu {
+    list-style: none;
+    padding-left: 0;
+    @include margins-bottom(30,40,80);
+    @include breakpoint(medium) {
+      border-bottom: 2px solid $ull-teal;
+    }    
+    
+    li {
+      margin: 0 -20px;
+      &:not(:first-child) {
+        @include margins-top(10, 0, 0);
+      }
+      @include breakpoint(medium) {
+        margin: 0 10px 0 0;
+        display: inline-block;
+      }
+    }
+    span {
+      display: block;
+      padding: rem-calc(20);
+      background-color: $ull-teal;
+      color: $white;
+      font-family: $serif;
+      font-weight: 700;
+      @include font-sizes(16, 16, 19);
+      @include line-heights(21, 21, 26);
+    }
+    a span {
+      display: block;
+      background-color: $ull-teal-dusty-light;
+      color: $ull-red;
+    }
+    a:hover,
+    a:focus {
+      span {
+        background-color: $ull-mist;
+      }
+    }
+  }
+  &__listing--group {
+    h2 {
+      font-family: $serif;
+      font-size: rem-calc(32);
+      line-height: 1;
+      padding-bottom: rem-calc(20);
+      border-bottom: 1px solid $ull-teal-dusty;
+    }
+  }
+  &__listing--person,
+  &__listing--org {
+    @include margins-top(30,40,60);
+    @include margins-bottom(30,40,60);
+  }
+}
+
+.directory__listing--person,
+.directory__listing--org {
+  & + .pager {
+    @include breakpoint(large) {
+      max-width: 83.33333%;
+    }
+    @include margins-top(30,40,60);
+    margin-left: auto;
+    margin-right: auto;
+    @include paddings-top(30,40,60);
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0.9375rem;
+      left: 0.9375rem;
+      width: calc(100% - 1.875rem);
+      height: 1px;
+      border-top: 1px solid $ull-teal-dusty;
+    }
+  }
+}

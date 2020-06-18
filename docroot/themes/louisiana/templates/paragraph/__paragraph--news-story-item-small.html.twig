@@ -1,0 +1,24 @@
+{#
+  /**
+   * Template to display a news/story feature.
+   *
+   * Variables:
+   *  - type (string): The type of item.
+   *  - date (string): The publishing date.
+   *  - title (string): The feature title.
+   */
+#}
+
+<a href class="link-box oho-animate fade-in-up">
+  <div class="news-story__text">
+    <div class="news-story__eyebrow">
+      {% if type %}
+        <span class="news-story__type">{{ type }}</span>
+      {% endif %}
+      {% if date %}
+        <span class="news-story__publish-date">{{ date }}</span>
+      {% endif %}
+    </div>
+    <h3 class="h5">{{ title }}</h3>
+  </div>
+</a>

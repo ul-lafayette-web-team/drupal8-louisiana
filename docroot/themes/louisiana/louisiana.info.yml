@@ -13,3 +13,6 @@ regions:
   content: Content
   footer_upper: 'Footer upper'
   footer_lower: 'Footer lower'
+
+libraries-override:
+  oho_base/global: louisiana/global
