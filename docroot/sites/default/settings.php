@@ -88,7 +88,19 @@
  * );
  * @endcode
  */
-$databases = [];
+$databases = array();
+  $databases['default']['default'] = array (
+    'database' => 'd8-la-test',
+    'username' => 'drupal',
+    'password' => 'rj5k8MFSGLk',
+    'host' => 'localhost',
+    'port' => '3306',
+    'driver' => 'mysql',
+    'prefix' => '',
+    'collation' => 'utf8mb4_general_ci',
+  );
+
+//$databases = [];
 
 /**
  * Customizing database settings.
@@ -251,7 +263,10 @@ $databases = [];
  *   );
  * @endcode
  */
-$config_directories = [];
+//$config_directories = [];
+$config_directories = array(
+	CONFIG_SYNC_DIRECTORY => 'sites/default/files/config_9DyC6uYxPDBnJKNZZfkHxebprUxSNuVfq5d8VM1zYGqpua9ah8fBmzKkh1lFSYNNNWfmR1e1rw/sync'
+	);
 
 /**
  * Settings:
