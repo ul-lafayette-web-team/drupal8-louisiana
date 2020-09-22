@@ -1,2 +1,12 @@
+{% set site_url = path("<current>")|trim %}
+{% set url_class = '' %}
+{% if content.field_applicant_type_link|render|render == site_url %}
+     {% set url_class = 'active' %}
+{% endif %}
+<li>
+<a class="other-audience__callout {{ url_class }}" href="{{ content.field_applicant_type_link }}">
 <h3 class="h5">{{ content.field_component_title }}</h3>
 {{ content.field_component_body }}
+</a>
+</li>
+

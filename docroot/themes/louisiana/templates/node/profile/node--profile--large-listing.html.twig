@@ -1,9 +1,4 @@
-{% import "@oho_base/includes/oho-macros.html.twig" as oho_macros %}
 <div class="row">
-  <div class="columns small-12 medium-3">
-    <a href="{{ url }}">{{ content.field_profile_image }}</a>
-  </div>
-
   <div class="columns small-12 medium-6">
     <h4 class="grid-list-item__title">
       <a href="{{ url }}">{{ label }}</a>
@@ -15,14 +10,18 @@
       content.field_profile_email|render %}
     <div class="columns small-12 medium-3">
       {% if content.field_profile_phone_number|render %}
-        <span class="fas fa-phone">
-          {{ content.field_profile_phone_number }}
-        </span>
+        <div>
+          <span class="fas fa-phone">
+            {{ content.field_profile_phone_number }}
+          </span>
+      </div>
       {% endif %}
       {% if content.field_profile_email|render %}
-        <span class="fas fa-envelope">
-          {{ content.field_profile_email }}
-        </span>
+        <div>
+          <span class="fas fa-envelope">
+            {{ content.field_profile_email }}
+          </span>
+      </div>
       {% endif %}
     </div>
   {% endif %}

@@ -1,0 +1,42 @@
+<article class="directory__listing--person">
+  <div class="grid-x grid-padding-x">
+    <div class="cell small-12 medium-7 large-6 large-offset-1">
+      <h3 class="profile__name">
+        <a href="{{ url }}">{{ label }}</a>
+      </h3>
+      {% if content.field_organization_purpose|render %}
+      <div class="profile__summary wysiwyg">
+        <h4>What We Do</h4>
+        <p>{{ content.field_organization_purpose }}</p>
+      </div>      
+      {% endif %}     
+      <div class="profile__types">
+      {% if content.field_organization_type[0] %}
+        <ul>
+          {% for key, item in content.field_organization_type if key|first != '#' %}
+            <li><div class="term-type">{{ item }}</div></li>
+          {% endfor %}
+        </ul>
+      {% endif %}        
+      </div>       
+    </div>
+    <div class="cell small-12 medium-5 large-4">
+      <div class="profile__contact">
+        <ul>
+          <li>
+            <i class="far fa-phone"></i>
+            <span>{{ content.field_organization_phone_number }}</span>
+          </li>
+          <li>
+            <i class="far fa-envelope"></i>
+            <span>{{ content.field_organization_email }}</span>
+          </li>  
+          <li>
+            <i class="far fa-map-signs"></i>
+            <span>{{ content.field_organization_location }}</span>        
+          </li>                  
+      </div>
+    </div>
+    
+  </div>
+</article>

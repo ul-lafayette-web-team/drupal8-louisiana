@@ -19,7 +19,7 @@
               <div class="org-about-info__content">{{ content.field_organization_purpose }}</div>
               <div class="org-about-info__title"><h3>Contact Information</h3></div>
               <div class="org-about-info__content">
-                {{ content.field_organization_contact_info }}
+                {{ content.field_organization_office_hours }}
                 <div class="organization__details">
                   <ul>
                     <li><i class="far fa-phone"></i><span>{{ content.field_organization_phone_number }}</span></li>
@@ -28,12 +28,15 @@
                   </ul>
                 </div>
               </div>
+
+              {% if content.field_org_social_media_links|render %}
               <div class="org-about-info__title"><h3>Social Media</h3></div>
               <div class="org-about-info__content">
                 <div class="org-about-info__social">
-                 
+                  {{ content.field_org_social_media_links }}
                 </div>
               </div>
+              {% endif %}
             </section>
           </div>
           </div>

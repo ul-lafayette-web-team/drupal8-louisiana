@@ -1,43 +1,81 @@
-{% import "@oho_base/includes/oho-macros.html.twig" as oho_macros %}
+<section class="profile-detail grid-x grid-padding-x">
+  <div class="cell small-12">
+    <h1>{{ label }}</h1>
+  </div>
+  <div class="cell small-12 medium-3">
+    <figure class="profile__figure">
+      {{ content.field_profile_image }}
+    </figure>
+  </div>
+  <div class="cell small-12 medium-9">
+    <div class="profile__types">
+      <ul>
+        <li class="term-type"> 
+          {{ content.field_profile_type }}
+        </li>
+    </ul>
+    </div>
+    <div class="profile__titles" style="font-size: 1.25rem; font-weight: 400">
+      {{ content.field_profile_position }}
+    </div>
+    <div class="profile__contact">
+      <ul>
+        <li>
+          <i class="far fa-phone"></i><span>{{ content.field_profile_phone_number }}</span>
+        </li>
+        <li>
+          <i class="far fa-envelope"></i><span>{{ content.field_profile_email }}</span>
+        </li>        
+        <li>
+          <i class="far fa-map-signs"></i><span>{{ content.field_profile_office_location }}</span>
+        </li> 
+      </ul>
+    </div>
+  </div>
+  <div class="cell small-12 medium-8">
+    <div class="intro-text">
+      {{ content.field_profile_summary }}
+    </div>
+    <h2>Biography</h2>
+    <div class="profile__html-basic wysiwyg">
+      {{ content.body }}
+    </div>
+  </div>
+</section>
 
-{% block content %}
-  <article class="profile profile--detail">
-    <h1 class="profile__title">{{ label }}</h1>
-    {{ oho_macros.field_list(content.field_profile_position) }}
+{#
+    <div class="grid-x grid-margin-x align-center">
+      <div class="cell large-4">
+        {{ content.field_profile_image }}
 
-    <section class="clearfix">
-      <div class="grid-x grid-margin-x align-center">
-        <div class="cell large-4">
-          {{ content.field_profile_image }}
-
-          {% if content.field_profile_phone_number|render or
-              content.field_profile_email|render or
-              content.field_profile_office_location|render %}
-            <div class="contact">
-              <h2>{{ 'Contact Information'|t }}</h2>
-              {% if content.field_profile_email|render %}
-                <span class="fas fa-envelope">
-                  {{ content.field_profile_email }}
-                </span>
-              {% endif %}
-              {% if content.field_profile_phone_number|render %}
-                <span class="fas fa-phone">
-                  {{ content.field_profile_phone_number }}
-                </span>
-              {% endif %}
-              {% if content.field_profile_office_location|render %}
-                <span class="far fa-map-marker-alt">
-                  {{ content.field_profile_office_location }}
-                </span>
-              {% endif %}
-            </div>
-          {% endif %}
-        </div>
-
-        <div class="cell large-8">
-          {{ content.body }}
-        </div>
+        {% if content.field_profile_phone_number|render or
+            content.field_profile_email|render or
+            content.field_profile_office_location|render %}
+          <div class="contact">
+            <h2>{{ 'Contact Information'|t }}</h2>
+            {% if content.field_profile_email|render %}
+              <span class="fas fa-envelope">
+                {{ content.field_profile_email }}
+              </span>
+            {% endif %}
+            {% if content.field_profile_phone_number|render %}
+              <span class="fas fa-phone">
+                {{ content.field_profile_phone_number }}
+              </span>
+            {% endif %}
+            {% if content.field_profile_office_location|render %}
+              <span class="far fa-map-marker-alt">
+                {{ content.field_profile_office_location }}
+              </span>
+            {% endif %}
+          </div>
+        {% endif %}
       </div>
-    </section>
-  </article>
-{% endblock %}
+
+      <div class="cell large-8">
+        {{ content.body }}
+      </div>
+    </div>
+  </section>
+</article>
+#}

@@ -1,5 +1,9 @@
+{% set background = "" %}
+{% if content.field_component_image|render %}
+  {% set background = "background: url(" ~ content.field_component_image|render ~ ")" %}
+{% endif %}
 <div class="cell small-12 medium-4">
-  <article class="differentiator">
+  <article class="differentiator" style="{{ background }}">
     {% if content.field_component_image|render %}
       {{ content.field_component_image }}
     {% elseif content.field_component_icon|render %}
@@ -16,7 +20,13 @@
                 {{ content.field_component_title }}
               </a>
             {% else %}
-              {{ content.field_component_title }}
+              {% if content.field_component_icon|render %}
+                <span class="make_red">
+                  {{ content.field_component_title }}
+                </span>
+              {% else %}
+                {{ content.field_component_title }} 
+              {% endif %}        
             {% endif %}
           </h3>
         </div>

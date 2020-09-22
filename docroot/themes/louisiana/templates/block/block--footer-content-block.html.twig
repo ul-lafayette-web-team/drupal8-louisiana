@@ -14,9 +14,26 @@
 
                   <div class="cell small-12 medium-6">
                     <div class="site-footer__contact">
-                      {{ content.field_fcb_phone_number }}
-                      {{ content.field_fcb_email }}
-                      {{ content.field_component_body }}
+                      <ul>
+                        <li>
+                          <i class="fal fa-phone"></i>
+                          <div class="site-footer__contact-text"> 
+                            {{ content.field_fcb_phone_number }}
+                          </div>
+                        </li>
+                        <li>
+                          <i class="fal fa-envelope"></i>
+                          <div class="site-footer__contact-text"> 
+                            {{ content.field_fcb_email }}
+                          </div>
+                        </li>
+                        <li>
+                          <i class="fal fa-map-marker-alt"></i>
+                          <div class="site-footer__contact-text"> 
+                            {{ content.field_component_body }}
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -35,21 +52,17 @@
             <div class="grid-x grid-padding-x">
               <div class="cell small-12 medium-6">
                 <div class="site-footer__main-nav">
-                  {{ main_nav }}
+                  {{ drupal_menu('main') }}
                 </div>
               </div>
 
               <div class="cell small-12 medium-6">
                 <div class="site-footer__links site-footer__links--primary">
-                  {{ oho_macros.link_field_list(content.field_fcb_primary_links) }}
+                  {{ drupal_menu('audience-menu') }}
                 </div>
-                <div class="site-footer__links site-footer__links--secondary">
-                  {{ oho_macros.link_field_list(content.field_fcb_secondary_links) }}
-                </div>
-              </div>
-
-              <div class="site-footer__social">
-                {{ oho_macros.field_list(content.field_fcb_social_media_links) }}
+                <div class="site-footer__social">
+                  {{ oho_macros.field_list(content.field_fcb_social_media_links) }}
+                </div>                
               </div>
             </div>
           </div>
@@ -59,8 +72,8 @@
 
     <div class="cell">
       <section class="site-footer__campaign-callout site-footer__campaign-callout--mobile">
-        <h2>{{ content.field_fcb_cc_title }}</h2>
-        {{ oho_macros.link_field_link(content.field_fcb_cc_link, 'btn') }}
+        <h2>This is the Title</h2>
+        <a href="#" classs="btn">This is the button. </a>
       </section>
     </div>
   </div>
@@ -71,7 +84,7 @@
     <div class="grid-x grid-margin-x">
       <div class="cell">
         <p>&copy; {{ copyright_year }} {{ 'University of Louisiana at Lafayette. All rights reserved.'|t }}</p>
-        {{ oho_macros.link_field_list(content.field_fcb_utility_links) }}
+        {{ drupal_menu('utility-menu') }}
       </div>
     </div>
   </div>

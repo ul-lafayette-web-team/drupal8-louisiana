@@ -1,0 +1,29 @@
+<article class="org-contact__organization">
+<div class="organization__name">
+    <h3 class="h4">
+      <a href="{{ url }}">{{ label }}</a>
+    </h3>
+    <div class="organization__details">
+  {% if content.field_organization_phone_number|render or
+      content.field_organization_email|render or
+      content.field_organization_location|render %}
+      <ul>
+      {% if content.field_organization_phone_number|render %}
+       <li><i class="fas fa-phone"></i>
+          <span>{{ content.field_organization_phone_number }}</span>
+       </li>
+      {% endif %}
+      {% if content.field_organization_email|render %}
+        <li><i class="fas fa-envelope"></i>
+          <span>{{ content.field_organization_email }}</span>
+        </li>
+      {% endif %}
+      {% if content.field_organization_location|render %}
+        <li><i class="far fa-map-marker-alt">
+          <span>{{ content.field_organization_location }}</span>
+        </i>
+      {% endif %}
+    </ul>
+  {% endif %}
+    </div>
+</div>
