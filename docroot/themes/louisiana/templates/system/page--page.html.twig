@@ -19,7 +19,7 @@
 <div class="{{ page_classes|merge(preprocess_page_classes)|join(' ') }}">
 
   {{ alert_message }}
-
+  {{ drupal_block('local_tasks_block') }}
   {% if page.highlighted %}
     <div class="system-region">
       <div class="grid-container">
