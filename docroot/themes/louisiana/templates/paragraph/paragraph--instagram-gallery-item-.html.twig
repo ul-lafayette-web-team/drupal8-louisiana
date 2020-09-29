@@ -2,7 +2,7 @@
         <a href="#image-video-grid__slide--{{ paragraph.id.value }}" data-fancybox="image-video-gallery"  class="image-video-grid__item">
           <div class="video-indicator">
             <i class="fas fa-circle"></i>
-            {% if content.field_video %}
+            {% if content.field_component_video|render %}
               <i class="fas fa-play"></i>
             {% else %}
               <i class="far fa-expand-arrows"></i>
@@ -17,7 +17,7 @@
           </div>
         </a>
         <figure class="image-video-grid__fancy" id="{{ node.id }}">
-          {% if content.field_component_video %}
+          {% if content.field_component_video|render %}
           <div class="iframe-wrapper">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/yAZi5p3Dljk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
@@ -28,5 +28,5 @@
             <figcaption class="image-video-grid-fancy__text">
               {{ content.field_component_title }}
             </figcaption>
-        </figure>        
+        </figure>
       </div><!-- /__slide -->
