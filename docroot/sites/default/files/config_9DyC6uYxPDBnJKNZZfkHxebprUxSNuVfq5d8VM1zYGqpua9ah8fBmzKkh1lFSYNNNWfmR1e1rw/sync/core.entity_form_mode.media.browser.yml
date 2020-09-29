@@ -1,0 +1,12 @@
+uuid: a3231c08-fec1-4eb1-a4bc-d653859155d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: NAc_neRLohPQDc1EHJw1_VC0G5QG7BhBzVx1Bv3D7v4
+id: media.browser
+label: Browser
+targetEntityType: media
+cache: true

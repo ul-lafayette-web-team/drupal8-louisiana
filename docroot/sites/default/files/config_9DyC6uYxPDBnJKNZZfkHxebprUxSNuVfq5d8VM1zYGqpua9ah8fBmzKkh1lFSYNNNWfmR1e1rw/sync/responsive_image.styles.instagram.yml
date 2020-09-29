@@ -1,0 +1,11 @@
+uuid: 352b9794-afbe-47b6-9642-fefa6246f54f
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.large
+id: instagram
+label: Instagram
+image_style_mappings: {  }
+breakpoint_group: responsive_image
+fallback_image_style: large

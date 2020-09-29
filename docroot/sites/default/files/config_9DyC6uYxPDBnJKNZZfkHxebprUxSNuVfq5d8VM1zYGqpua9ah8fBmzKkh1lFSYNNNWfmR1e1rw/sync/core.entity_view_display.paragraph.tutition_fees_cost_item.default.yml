@@ -1,0 +1,139 @@
+uuid: 76079774-6ed3-45bb-89c2-ba62414d9aac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tutition_fees_cost_item.field_component_body
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_breakdown_cost
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_breakdown_cost_2
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_breakdown_cost_3
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_breakdown_cost_4
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_breakdown_name
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_breakdown_name_2
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_breakdown_name_3
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_breakdown_name_4
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_cta_link
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_name
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_number
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_resource_links
+    - paragraphs.paragraphs_type.tutition_fees_cost_item
+  module:
+    - link
+    - text
+id: paragraph.tutition_fees_cost_item.default
+targetEntityType: paragraph
+bundle: tutition_fees_cost_item
+mode: default
+content:
+  field_component_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_taf_item_breakdown_cost:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_taf_item_breakdown_cost_2:
+    weight: 7
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_taf_item_breakdown_cost_3:
+    weight: 8
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_taf_item_breakdown_cost_4:
+    weight: 9
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_taf_item_breakdown_name:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_taf_item_breakdown_name_2:
+    weight: 10
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_taf_item_breakdown_name_3:
+    weight: 11
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_taf_item_breakdown_name_4:
+    weight: 12
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_taf_item_cta_link:
+    weight: 6
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+  field_taf_item_name:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_taf_item_number:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_taf_item_resource_links:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

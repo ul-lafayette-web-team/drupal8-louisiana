@@ -1,0 +1,25 @@
+uuid: 73c0f070-1682-459e-9904-4d6f0d9a6610
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_mode
+    - node.type.program
+  module:
+    - entity_reference_display
+id: node.program.field_display_mode
+field_name: field_display_mode
+entity_type: node
+bundle: program
+label: 'Display mode'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: large_feature
+default_value_callback: ''
+settings:
+  exclude: {  }
+  negate: 0
+field_type: entity_reference_display

@@ -1,0 +1,79 @@
+uuid: e4c52b63-6c1f-432d-a167-4a8ec4fd1733
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.process_step.field_component_body
+    - field.field.paragraph.process_step.field_component_icon
+    - field.field.paragraph.process_step.field_component_title
+    - field.field.paragraph.process_step.field_ps_alert_information
+    - field.field.paragraph.process_step.field_ps_alert_title
+    - field.field.paragraph.process_step.field_ps_alert_title_link
+    - field.field.paragraph.process_step.field_ps_tab_title
+    - paragraphs.paragraphs_type.process_step
+  module:
+    - fontawesome
+    - link
+    - text
+id: paragraph.process_step.default
+targetEntityType: paragraph
+bundle: process_step
+mode: default
+content:
+  field_component_body:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_component_icon:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: fontawesome_icon_widget
+    region: content
+  field_component_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ps_alert_information:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ps_alert_title:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ps_alert_title_link:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_ps_tab_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

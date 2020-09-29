@@ -1,0 +1,11 @@
+uuid: 22435bac-7beb-4def-9b20-586e5899d9f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.counselor_state
+id: taxonomy_vocabulary_counselor_state
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301

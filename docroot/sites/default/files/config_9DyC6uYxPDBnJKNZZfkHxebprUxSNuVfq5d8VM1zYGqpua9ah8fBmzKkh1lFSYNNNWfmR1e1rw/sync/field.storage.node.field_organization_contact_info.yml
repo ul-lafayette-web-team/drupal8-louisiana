@@ -1,0 +1,19 @@
+uuid: 219a708e-0f27-42ed-a720-03490c0dbbed
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_organization_contact_info
+field_name: field_organization_contact_info
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

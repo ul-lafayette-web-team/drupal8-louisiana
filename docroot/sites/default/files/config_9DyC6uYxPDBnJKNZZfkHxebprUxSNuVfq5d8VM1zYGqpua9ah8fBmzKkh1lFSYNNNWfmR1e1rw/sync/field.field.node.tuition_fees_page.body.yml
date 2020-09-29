@@ -1,0 +1,33 @@
+uuid: 3e4b0c2e-fa61-464e-9c1e-a7e28025d6c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.tuition_fees_page
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    full_html: '0'
+    basic_html: '0'
+    simple_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+_core:
+  default_config_hash: aRfQL1bqt6DO1D_55Z1gFv0sl7088GjqQXxHAgcRuVU
+id: node.tuition_fees_page.body
+field_name: body
+entity_type: node
+bundle: tuition_fees_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

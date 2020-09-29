@@ -1,0 +1,19 @@
+uuid: 00a8dd32-7021-43f1-b0f2-d694c79a8fcc
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_display
+    - node
+id: node.field_display_mode
+field_name: field_display_mode
+entity_type: node
+type: entity_reference_display
+settings: {  }
+module: entity_reference_display
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 493d891a-70b7-4a35-b1b8-2ffc21832338
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.subsection
+  enforced:
+    config:
+      - user.role.content_editor
+_core:
+  default_config_hash: _vbrJuvzqoDskjF1soWePwT9f2PRc9qnMa68dDNW7gA
+id: subsection-111523d41
+label: 'Content editor'
+weight: -8
+internal: true
+audience: outsider
+group_type: subsection
+permissions_ui: false
+permissions: {  }

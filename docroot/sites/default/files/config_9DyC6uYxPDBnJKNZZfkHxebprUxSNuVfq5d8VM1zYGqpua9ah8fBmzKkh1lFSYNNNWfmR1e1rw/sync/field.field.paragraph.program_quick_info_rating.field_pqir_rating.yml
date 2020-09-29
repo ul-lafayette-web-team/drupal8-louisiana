@@ -1,0 +1,23 @@
+uuid: 2a736d50-5c23-4e3b-881c-0030c7f1223c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pqir_rating
+    - paragraphs.paragraphs_type.program_quick_info_rating
+id: paragraph.program_quick_info_rating.field_pqir_rating
+field_name: field_pqir_rating
+entity_type: paragraph
+bundle: program_quick_info_rating
+label: 'Info Emphasis Rating'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 3
+  prefix: ''
+  suffix: ''
+field_type: integer

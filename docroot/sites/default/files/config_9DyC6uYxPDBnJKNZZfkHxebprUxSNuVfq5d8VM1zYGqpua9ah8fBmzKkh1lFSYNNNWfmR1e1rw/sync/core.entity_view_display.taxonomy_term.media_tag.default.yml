@@ -1,0 +1,23 @@
+uuid: b8ceae4c-6321-4a89-8706-1f5554793fd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.media_tag
+  module:
+    - text
+_core:
+  default_config_hash: vU4GctaQfMAyKH4TWyn6WZgFaZFRQ6_7GSdc7rEpYK8
+id: taxonomy_term.media_tag.default
+targetEntityType: taxonomy_term
+bundle: media_tag
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

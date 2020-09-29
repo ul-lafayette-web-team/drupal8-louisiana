@@ -1,0 +1,23 @@
+uuid: 7c8b0647-5b1a-4e83-bdc3-738041e24c9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_link
+    - paragraphs.paragraphs_type.find_your_counselor_feature
+  module:
+    - link
+id: paragraph.find_your_counselor_feature.field_component_link
+field_name: field_component_link
+entity_type: paragraph
+bundle: find_your_counselor_feature
+label: 'Featured CTA'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

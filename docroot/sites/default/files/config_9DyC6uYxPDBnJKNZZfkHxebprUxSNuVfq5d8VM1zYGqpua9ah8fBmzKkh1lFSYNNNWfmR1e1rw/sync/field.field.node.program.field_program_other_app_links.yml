@@ -1,0 +1,23 @@
+uuid: 3069a95f-c12b-4d46-86f7-a2e87ee6c574
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_other_app_links
+    - node.type.program
+  module:
+    - link
+id: node.program.field_program_other_app_links
+field_name: field_program_other_app_links
+entity_type: node
+bundle: program
+label: 'Links for Other Applicants'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

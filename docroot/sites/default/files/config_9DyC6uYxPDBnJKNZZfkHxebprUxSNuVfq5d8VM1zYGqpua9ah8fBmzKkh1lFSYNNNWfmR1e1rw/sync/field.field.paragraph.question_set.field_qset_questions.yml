@@ -1,0 +1,91 @@
+uuid: dc2115da-3f5b-4417-822e-f6180a3b0f5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_qset_questions
+    - paragraphs.paragraphs_type.question_item
+    - paragraphs.paragraphs_type.question_set
+  module:
+    - entity_reference_revisions
+id: paragraph.question_set.field_qset_questions
+field_name: field_qset_questions
+entity_type: paragraph
+bundle: question_set
+label: Questions
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      question_item: question_item
+    target_bundles_drag_drop:
+      question_item:
+        enabled: true
+        weight: 22
+      applicant_type:
+        weight: 23
+        enabled: false
+      checkerboard:
+        weight: 24
+        enabled: false
+      checkerboard_item:
+        weight: 25
+        enabled: false
+      culture_component:
+        weight: 26
+        enabled: false
+      differentiator:
+        weight: 27
+        enabled: false
+      differentiators_section:
+        weight: 28
+        enabled: false
+      gallery:
+        weight: 29
+        enabled: false
+      gallery_item:
+        weight: 30
+        enabled: false
+      livewhale_event_feature:
+        weight: 31
+        enabled: false
+      mega_menu_item:
+        weight: 32
+        enabled: false
+      news_tagged_feature:
+        weight: 33
+        enabled: false
+      organizations_contact_feature:
+        weight: 34
+        enabled: false
+      organizations_feature:
+        weight: 35
+        enabled: false
+      process_step:
+        weight: 36
+        enabled: false
+      profile_contact_feature:
+        weight: 37
+        enabled: false
+      profile_summary_feature:
+        weight: 38
+        enabled: false
+      program_features_section:
+        weight: 39
+        enabled: false
+      question_set:
+        weight: 40
+        enabled: false
+      questions_section:
+        weight: 41
+        enabled: false
+      social_media_link:
+        weight: 42
+        enabled: false
+field_type: entity_reference_revisions

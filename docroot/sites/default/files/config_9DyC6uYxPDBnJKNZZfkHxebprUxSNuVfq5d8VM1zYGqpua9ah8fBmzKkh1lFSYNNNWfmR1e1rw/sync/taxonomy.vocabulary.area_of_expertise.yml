@@ -1,0 +1,8 @@
+uuid: 0b2c7b8d-0d06-4afc-961c-898aa60a7797
+langcode: en
+status: true
+dependencies: {  }
+name: 'Area of Expertise'
+vid: area_of_expertise
+description: ''
+weight: 0

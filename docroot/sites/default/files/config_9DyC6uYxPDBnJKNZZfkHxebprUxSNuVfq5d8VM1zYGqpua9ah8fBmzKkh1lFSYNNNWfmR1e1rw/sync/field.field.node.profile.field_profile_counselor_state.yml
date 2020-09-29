@@ -1,0 +1,29 @@
+uuid: 2ecd45c8-b883-4ceb-96ce-185a8276df55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_counselor_state
+    - node.type.profile
+    - taxonomy.vocabulary.counselor_state
+id: node.profile.field_profile_counselor_state
+field_name: field_profile_counselor_state
+entity_type: node
+bundle: profile
+label: 'Counselor State'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      counselor_state: counselor_state
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

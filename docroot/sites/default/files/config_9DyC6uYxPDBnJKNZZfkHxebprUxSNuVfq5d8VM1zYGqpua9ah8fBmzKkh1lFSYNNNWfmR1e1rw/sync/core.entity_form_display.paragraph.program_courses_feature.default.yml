@@ -1,0 +1,51 @@
+uuid: 36998ee7-3113-43fe-b93c-8803473c6d06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.program_courses_feature.field_component_link
+    - field.field.paragraph.program_courses_feature.field_component_title
+    - field.field.paragraph.program_courses_feature.field_pcf_course_feature_years
+    - paragraphs.paragraphs_type.program_courses_feature
+  module:
+    - link_class
+    - paragraphs
+id: paragraph.program_courses_feature.default
+targetEntityType: paragraph
+bundle: program_courses_feature
+mode: default
+content:
+  field_component_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      link_class_mode: force_class
+      link_class_force: link-underline
+      link_class_select: ''
+    third_party_settings: {  }
+    type: link_class_field_widget
+    region: content
+  field_component_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_pcf_course_feature_years:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

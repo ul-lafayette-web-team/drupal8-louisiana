@@ -1,0 +1,23 @@
+uuid: f62dddab-aed2-47dc-a9fc-faf7a5f9e8f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ps_alert_title_link
+    - paragraphs.paragraphs_type.process_step
+  module:
+    - link
+id: paragraph.process_step.field_ps_alert_title_link
+field_name: field_ps_alert_title_link
+entity_type: paragraph
+bundle: process_step
+label: 'Step Alert Title Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

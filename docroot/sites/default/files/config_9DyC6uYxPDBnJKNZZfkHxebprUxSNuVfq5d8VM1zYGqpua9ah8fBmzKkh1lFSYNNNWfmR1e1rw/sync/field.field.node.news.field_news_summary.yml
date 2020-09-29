@@ -1,0 +1,29 @@
+uuid: 77ab2fc9-fe6b-4cb9-943d-ab726931b57b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_summary
+    - node.type.news
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    simple_html: simple_html
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: node.news.field_news_summary
+field_name: field_news_summary
+entity_type: node
+bundle: news
+label: 'News/Story Quote or Summary'
+description: 'Recommended length of 175 characters.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

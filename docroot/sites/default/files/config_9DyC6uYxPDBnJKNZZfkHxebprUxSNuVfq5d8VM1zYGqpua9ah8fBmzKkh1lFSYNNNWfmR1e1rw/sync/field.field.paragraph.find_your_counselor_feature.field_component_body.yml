@@ -1,0 +1,29 @@
+uuid: 30e8fe0e-c882-4373-89b3-c68a75b47995
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_body
+    - paragraphs.paragraphs_type.find_your_counselor_feature
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    full_html: '0'
+    simple_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: paragraph.find_your_counselor_feature.field_component_body
+field_name: field_component_body
+entity_type: paragraph
+bundle: find_your_counselor_feature
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,22 @@
+uuid: 9e8408bd-b2cf-4172-94ae-6e473c5d5954
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+    - node
+_core:
+  default_config_hash: 46i7BVWoVqrhG27vM3AjSA6-E_y89XzQDt3d7F78hAs
+id: group.field_subsection_home
+field_name: field_subsection_home
+entity_type: group
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

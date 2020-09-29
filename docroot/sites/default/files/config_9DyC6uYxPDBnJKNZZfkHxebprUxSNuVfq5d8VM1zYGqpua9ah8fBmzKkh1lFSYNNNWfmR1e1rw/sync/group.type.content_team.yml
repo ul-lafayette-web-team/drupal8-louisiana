@@ -1,0 +1,10 @@
+uuid: 9cda4e53-cc42-4e8c-9bdc-d86698338dbc
+langcode: en
+status: true
+dependencies: {  }
+id: content_team
+label: 'Content Team'
+description: ''
+creator_membership: true
+creator_wizard: true
+creator_roles: {  }

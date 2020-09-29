@@ -1,0 +1,31 @@
+uuid: a7cbf096-1c66-4caa-bf0b-863ed6b73207
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.program_quick_info_rating.field_component_title
+    - field.field.paragraph.program_quick_info_rating.field_pqir_rating
+    - paragraphs.paragraphs_type.program_quick_info_rating
+id: paragraph.program_quick_info_rating.default
+targetEntityType: paragraph
+bundle: program_quick_info_rating
+mode: default
+content:
+  field_component_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pqir_rating:
+    weight: 1
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden: {  }

@@ -1,0 +1,21 @@
+features:
+  comment_user_picture: true
+  favicon: 1
+  logo: true
+  name: true
+  node_user_picture: 1
+  comment_user_verification: true
+settings:
+  oho_base_breadcrumbs_display_home: true
+  oho_base_breadcrumbs_display_starting_level: 1
+langcode: en
+_core:
+  default_config_hash: 19el8ANU2n9ZekCP7xXTf9Uw5LIwBzYpX85Gsibtf5o
+logo:
+  use_default: 1
+favicon:
+  use_default: 0
+  path: 'public://favicon copy.ico'
+  mimetype: image/vnd.microsoft.icon
+oho_base_breadcrumbs_display_home: 0
+oho_base_breadcrumbs_display_starting_level: '1'

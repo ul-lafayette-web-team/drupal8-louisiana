@@ -1,0 +1,15 @@
+uuid: 4015b030-052d-43f3-b9ae-02fb77ce75e3
+langcode: en
+status: true
+dependencies: {  }
+name: ul_campaign_feature
+label: 'UL Campaign feature  1440×700'
+effects:
+  e85cd986-f967-4709-992a-d02e0af73d36:
+    uuid: e85cd986-f967-4709-992a-d02e0af73d36
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1440
+      height: 700
+      anchor: center-center

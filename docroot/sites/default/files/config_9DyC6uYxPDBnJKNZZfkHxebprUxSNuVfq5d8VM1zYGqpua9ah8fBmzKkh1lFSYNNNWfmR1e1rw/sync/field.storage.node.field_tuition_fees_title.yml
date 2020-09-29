@@ -1,0 +1,21 @@
+uuid: e083538c-b07a-49c1-b48f-77d25772da5f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_tuition_fees_title
+field_name: field_tuition_fees_title
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

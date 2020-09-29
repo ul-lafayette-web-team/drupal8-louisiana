@@ -1,0 +1,19 @@
+uuid: fa634627-4be1-4394-8992-8ab4fcc5e48c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_title
+    - paragraphs.paragraphs_type.find_your_counselor_feature
+id: paragraph.find_your_counselor_feature.field_component_title
+field_name: field_component_title
+entity_type: paragraph
+bundle: find_your_counselor_feature
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

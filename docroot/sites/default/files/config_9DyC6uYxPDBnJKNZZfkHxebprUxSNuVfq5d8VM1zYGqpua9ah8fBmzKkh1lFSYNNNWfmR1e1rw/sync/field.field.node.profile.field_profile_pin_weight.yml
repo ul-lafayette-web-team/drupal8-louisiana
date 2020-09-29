@@ -1,0 +1,25 @@
+uuid: c97aeac9-7e0c-4c98-82ea-352b765fa58a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_pin_weight
+    - node.type.profile
+id: node.profile.field_profile_pin_weight
+field_name: field_profile_pin_weight
+entity_type: node
+bundle: profile
+label: 'Pin Weight'
+description: 'If you checked the “Pin” field, select a weight for this Profile. A lower weight will result in a higher prominence in the feature listing.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: 5
+  prefix: ''
+  suffix: ''
+field_type: integer

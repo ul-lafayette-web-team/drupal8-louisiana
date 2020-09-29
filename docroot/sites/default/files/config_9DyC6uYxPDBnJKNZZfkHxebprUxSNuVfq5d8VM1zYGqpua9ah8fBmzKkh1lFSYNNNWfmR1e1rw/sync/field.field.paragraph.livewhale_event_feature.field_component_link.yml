@@ -1,0 +1,23 @@
+uuid: 41378ca2-ab5d-40d3-bcb9-82789d44a6fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_link
+    - paragraphs.paragraphs_type.livewhale_event_feature
+  module:
+    - link
+id: paragraph.livewhale_event_feature.field_component_link
+field_name: field_component_link
+entity_type: paragraph
+bundle: livewhale_event_feature
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

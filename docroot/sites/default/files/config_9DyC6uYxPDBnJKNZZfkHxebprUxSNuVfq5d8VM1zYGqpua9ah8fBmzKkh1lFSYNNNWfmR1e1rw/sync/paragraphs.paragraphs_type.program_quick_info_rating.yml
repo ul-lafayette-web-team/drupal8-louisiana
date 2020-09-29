@@ -1,0 +1,9 @@
+uuid: db49f71d-35db-4657-af1b-f6d1a06c77e2
+langcode: en
+status: true
+dependencies: {  }
+id: program_quick_info_rating
+label: 'Program Quick Info Rating'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

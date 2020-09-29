@@ -1,0 +1,45 @@
+uuid: 1a8e971d-4fa8-48fe-9be5-2a0faa65952f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.organization_profile_summary_fea.field_component_body
+    - field.field.paragraph.organization_profile_summary_fea.field_component_title
+    - field.field.paragraph.organization_profile_summary_fea.field_opsf_organization
+    - paragraphs.paragraphs_type.organization_profile_summary_fea
+  module:
+    - text
+id: paragraph.organization_profile_summary_fea.default
+targetEntityType: paragraph
+bundle: organization_profile_summary_fea
+mode: default
+content:
+  field_component_body:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_component_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_opsf_organization:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

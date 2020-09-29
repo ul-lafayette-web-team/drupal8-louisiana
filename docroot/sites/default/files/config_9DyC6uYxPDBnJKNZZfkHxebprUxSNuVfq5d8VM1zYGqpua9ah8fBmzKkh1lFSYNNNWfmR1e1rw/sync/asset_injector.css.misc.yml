@@ -1,0 +1,11 @@
+uuid: 5a6a0e52-b212-4727-92f8-ac426943adaf
+langcode: en
+status: true
+dependencies: {  }
+id: misc
+label: Misc
+code: ".tuition-fees__select {\r\n    background-image: url(/themes/louisiana/assets/img/bg-select-arrow.svg);\r\n}\r\n.kint {\r\n  /* position: relative;\r\n  z-index: 1111; */\r\n  display:none;\r\n}\r\n.costs__breakdown__body a {\r\n  color: #ce181e;\r\n  font-weight: bold;\r\n  text-decoration: none;\r\n  border: 0;\r\n}\r\n.costs__breakdown__body a:hover {\r\n  text-decoration: underline;\r\n}\r\n.taf_number {\r\n  margin-right: 5%;\r\n  float: right;\r\n}\r\n.site-search .form-submit, #edit-submit--3 { display: none; }\r\n.toolbar-fixed .ull-header__main, .has-alert .ull-header__main {\r\n    background: transparent;\r\n    background-size: auto;\r\n}\r\n.ull-header__main {\r\n    background: transparent;\r\n    background-size: auto;\r\n}\r\n.basic-page-cols { margin-top: 20px; }\r\n.full-wysiwyg { margin-top: 20px; }\r\n.page--general .page-wrapper {\r\n    margin-top: -2px;\r\n}\r\n.cookie-compliance-popup { display: none !important; }"
+media: all
+preprocess: false
+conditions: {  }
+conditions_require_all: true

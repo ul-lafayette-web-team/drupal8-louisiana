@@ -1,0 +1,40 @@
+uuid: 8aedb14e-cab2-4583-ab53-6710f50dac01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.organization_profile_summary_fea.field_component_body
+    - field.field.paragraph.organization_profile_summary_fea.field_component_title
+    - field.field.paragraph.organization_profile_summary_fea.field_opsf_organization
+    - paragraphs.paragraphs_type.organization_profile_summary_fea
+  module:
+    - text
+id: paragraph.organization_profile_summary_fea.default
+targetEntityType: paragraph
+bundle: organization_profile_summary_fea
+mode: default
+content:
+  field_component_body:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_component_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_opsf_organization:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

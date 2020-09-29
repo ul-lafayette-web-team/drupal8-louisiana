@@ -1,0 +1,19 @@
+uuid: 89c9beb9-848f-4339-aaf4-586ff3004991
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_story_subject_content
+    - node.type.news
+id: node.news.field_news_story_subject_content
+field_name: field_news_story_subject_content
+entity_type: node
+bundle: news
+label: 'Story Subject Open Field Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 40fe06b3-9cfe-4932-ab47-9b15c9ddc1f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.subsection
+  enforced:
+    config:
+      - user.role.content_publisher
+_core:
+  default_config_hash: CrOuensi1yU_FN4Dg7_H3f3hCskWEdf9cdOsS0gqolE
+id: subsection-106f51549
+label: 'Content publisher'
+weight: -7
+internal: true
+audience: outsider
+group_type: subsection
+permissions_ui: false
+permissions: {  }

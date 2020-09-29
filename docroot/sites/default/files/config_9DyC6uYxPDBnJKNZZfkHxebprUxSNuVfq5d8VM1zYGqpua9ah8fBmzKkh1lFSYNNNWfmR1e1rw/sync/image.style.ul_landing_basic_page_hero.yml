@@ -1,0 +1,15 @@
+uuid: 3458ce24-0dfe-41cc-ad1e-333cb0a8602a
+langcode: en
+status: true
+dependencies: {  }
+name: ul_landing_basic_page_hero
+label: 'UL Landing Basic page hero 2400×1080 '
+effects:
+  85eb43dc-a6e6-46d4-99a5-01e758570c4d:
+    uuid: 85eb43dc-a6e6-46d4-99a5-01e758570c4d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 2400
+      height: 1080
+      anchor: center-center

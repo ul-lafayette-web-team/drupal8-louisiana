@@ -1,0 +1,9 @@
+uuid: 56550699-6d5a-4c55-9115-8afb7bb2bb9f
+langcode: en
+status: true
+dependencies: {  }
+id: program_career_outcome
+label: 'Program Career Outcome'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

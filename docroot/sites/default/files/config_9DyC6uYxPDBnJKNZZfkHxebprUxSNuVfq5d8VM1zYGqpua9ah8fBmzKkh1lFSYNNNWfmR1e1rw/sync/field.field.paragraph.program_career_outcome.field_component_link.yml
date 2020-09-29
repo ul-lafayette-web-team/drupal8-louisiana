@@ -1,0 +1,23 @@
+uuid: 9e41ed4b-6b00-4cbf-8763-901d6ee5d86b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_link
+    - paragraphs.paragraphs_type.program_career_outcome
+  module:
+    - link
+id: paragraph.program_career_outcome.field_component_link
+field_name: field_component_link
+entity_type: paragraph
+bundle: program_career_outcome
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

@@ -1,0 +1,19 @@
+uuid: d0ee3566-e307-43dc-9f43-560554bf1c05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_title
+    - paragraphs.paragraphs_type.profile_summary_feature
+id: paragraph.profile_summary_feature.field_component_title
+field_name: field_component_title
+entity_type: paragraph
+bundle: profile_summary_feature
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

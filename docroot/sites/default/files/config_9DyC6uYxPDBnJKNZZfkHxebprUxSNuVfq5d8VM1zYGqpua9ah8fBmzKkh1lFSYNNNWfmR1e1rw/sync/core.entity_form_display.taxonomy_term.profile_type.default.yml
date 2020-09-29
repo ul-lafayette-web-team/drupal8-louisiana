@@ -1,0 +1,24 @@
+uuid: a998abf7-7b63-4803-8c32-76ca4e881a2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.profile_type
+_core:
+  default_config_hash: H7C6TpWfIZ9Wuhs8lQAuMdRZo5b5sAJ-YYyzDZMh6Ac
+id: taxonomy_term.profile_type.default
+targetEntityType: taxonomy_term
+bundle: profile_type
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

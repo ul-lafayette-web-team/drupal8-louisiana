@@ -1,0 +1,19 @@
+uuid: 88d232e4-e92a-4328-a4f0-446f9ad63c01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_video_url
+    - node.type.organization
+id: node.organization.field_header_video_url
+field_name: field_header_video_url
+entity_type: node
+bundle: organization
+label: 'Header Video URL'
+description: 'This is intended to be an ambient background video without sound. If a video is used, there should still be an image uploaded to serve as the poster image. If you would like to embed a playable video, please embed it in the Body Text area of the page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

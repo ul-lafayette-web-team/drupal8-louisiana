@@ -1,0 +1,9 @@
+uuid: 40ce39ef-8706-4a5d-bed7-96cd807761d1
+langcode: en
+status: true
+dependencies: {  }
+id: program_courses_feature
+label: 'Program Courses Feature'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: eb2c363a-9319-4510-9345-9f5a1d1b8cd2
+langcode: en
+status: true
+dependencies:
+  module:
+    - fontawesome
+    - paragraphs
+_core:
+  default_config_hash: Ca79udHHqAUteMa2Yju7ooOTYDnk6xlKRY0XZYEBAiY
+id: paragraph.field_component_icon
+field_name: field_component_icon
+entity_type: paragraph
+type: fontawesome_icon
+settings: {  }
+module: fontawesome
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

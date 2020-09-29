@@ -1,0 +1,72 @@
+uuid: bb8b18ce-ce5d-4813-abab-bb5c54e372cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.course_feature_year.field_cfy_professor_name
+    - field.field.paragraph.course_feature_year.field_cfy_profile
+    - field.field.paragraph.course_feature_year.field_cfy_quote_source
+    - field.field.paragraph.course_feature_year.field_component_body
+    - field.field.paragraph.course_feature_year.field_component_subtitle
+    - field.field.paragraph.course_feature_year.field_component_title
+    - paragraphs.paragraphs_type.course_feature_year
+  module:
+    - text
+id: paragraph.course_feature_year.default
+targetEntityType: paragraph
+bundle: course_feature_year
+mode: default
+content:
+  field_cfy_professor_name:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cfy_profile:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_cfy_quote_source:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_component_body:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_component_subtitle:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_component_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

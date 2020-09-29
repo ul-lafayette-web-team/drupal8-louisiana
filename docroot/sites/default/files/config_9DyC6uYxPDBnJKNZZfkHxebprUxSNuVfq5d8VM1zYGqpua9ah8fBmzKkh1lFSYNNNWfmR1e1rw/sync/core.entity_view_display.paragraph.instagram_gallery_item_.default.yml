@@ -1,0 +1,65 @@
+uuid: 2f2f9c00-d0f4-4c93-ab11-3303adde483e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.instagram_gallery_item_.field_component_image
+    - field.field.paragraph.instagram_gallery_item_.field_component_link
+    - field.field.paragraph.instagram_gallery_item_.field_component_subtitle
+    - field.field.paragraph.instagram_gallery_item_.field_component_title
+    - field.field.paragraph.instagram_gallery_item_.field_component_video
+    - paragraphs.paragraphs_type.instagram_gallery_item_
+  module:
+    - link
+    - media
+id: paragraph.instagram_gallery_item_.default
+targetEntityType: paragraph
+bundle: instagram_gallery_item_
+mode: default
+content:
+  field_component_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: media_thumbnail
+    region: content
+  field_component_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_component_subtitle:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_component_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_component_video:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

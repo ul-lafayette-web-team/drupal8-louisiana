@@ -1,0 +1,15 @@
+uuid: 8b8051cd-8c28-46ed-aaf3-e7087afdf0da
+langcode: en
+status: true
+dependencies: {  }
+name: program_news_feature
+label: 'Program News Feature'
+effects:
+  77862a89-8422-41d2-b12d-e5b48c62ee66:
+    uuid: 77862a89-8422-41d2-b12d-e5b48c62ee66
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 720
+      height: 480
+      anchor: center-center

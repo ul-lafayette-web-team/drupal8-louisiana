@@ -1,0 +1,45 @@
+uuid: e0e15ef7-c0ed-4cda-8b62-258757f5e12b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.profile_summary_program_feature.field_component_body
+    - field.field.paragraph.profile_summary_program_feature.field_component_title
+    - field.field.paragraph.profile_summary_program_feature.field_pspf_program
+    - paragraphs.paragraphs_type.profile_summary_program_feature
+  module:
+    - text
+id: paragraph.profile_summary_program_feature.default
+targetEntityType: paragraph
+bundle: profile_summary_program_feature
+mode: default
+content:
+  field_component_body:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_component_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_pspf_program:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

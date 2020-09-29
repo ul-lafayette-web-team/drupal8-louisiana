@@ -1,0 +1,12 @@
+uuid: 651ff848-6110-499c-8cde-80d714d3bdbd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: di8VXEdV66BOtikRfB5AcTqiYWJ6Xx89GOYlxEyU6ek
+id: node.small_feature
+label: 'Small Feature'
+targetEntityType: node
+cache: true

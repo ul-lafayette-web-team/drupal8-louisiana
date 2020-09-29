@@ -1,0 +1,23 @@
+uuid: e5a184c6-0e57-4c4e-9cf3-a1d58f7a2f0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.profile
+  module:
+    - metatag
+_core:
+  default_config_hash: gMBFN3tQnJIkLco5GHQtssUJqG2wFYBvTnuXe3fzdlc
+id: node.profile.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: profile
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

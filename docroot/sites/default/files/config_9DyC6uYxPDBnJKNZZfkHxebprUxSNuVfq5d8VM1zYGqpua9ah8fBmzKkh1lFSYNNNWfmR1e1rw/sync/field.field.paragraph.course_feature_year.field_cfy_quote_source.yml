@@ -1,0 +1,19 @@
+uuid: 516ebae7-9dfb-4002-b51f-dea2aba20444
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cfy_quote_source
+    - paragraphs.paragraphs_type.course_feature_year
+id: paragraph.course_feature_year.field_cfy_quote_source
+field_name: field_cfy_quote_source
+entity_type: paragraph
+bundle: course_feature_year
+label: 'Quote Source'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: b4af584b-61b4-48d5-a11c-965d8652cbdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_link
+    - paragraphs.paragraphs_type.organizations_contact_feature
+  module:
+    - link
+id: paragraph.organizations_contact_feature.field_component_link
+field_name: field_component_link
+entity_type: paragraph
+bundle: organizations_contact_feature
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

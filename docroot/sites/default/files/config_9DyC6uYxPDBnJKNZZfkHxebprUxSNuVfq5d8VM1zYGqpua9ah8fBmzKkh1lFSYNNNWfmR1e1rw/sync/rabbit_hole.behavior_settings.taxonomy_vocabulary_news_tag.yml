@@ -1,0 +1,11 @@
+uuid: 2573be2e-6f14-42a6-99ed-2e85a4661421
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: QTjMcpaynblRiTggrYg3ZfDGtoB2iqO3LEbO96NuzSA
+id: taxonomy_vocabulary_news_tag
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301

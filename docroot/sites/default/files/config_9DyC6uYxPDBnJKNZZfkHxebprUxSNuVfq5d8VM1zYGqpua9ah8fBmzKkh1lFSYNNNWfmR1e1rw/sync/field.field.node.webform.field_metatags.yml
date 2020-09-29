@@ -1,0 +1,25 @@
+uuid: ee90bb05-a120-4fdc-b9e9-0d8ab9e62055
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.webform
+  module:
+    - metatag
+_core:
+  default_config_hash: D4UoGeiYIoxK6VzZMGLrhH2KPygagOhgMFuyWA4NhI0
+id: node.webform.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: webform
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

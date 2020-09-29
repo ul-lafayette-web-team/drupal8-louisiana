@@ -1,0 +1,9 @@
+uuid: 28dc23e0-36a9-4098-8f93-5526676a560c
+langcode: en
+status: true
+dependencies: {  }
+id: organization_profile_summary_fea
+label: 'Organization Profile Summary Feature'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

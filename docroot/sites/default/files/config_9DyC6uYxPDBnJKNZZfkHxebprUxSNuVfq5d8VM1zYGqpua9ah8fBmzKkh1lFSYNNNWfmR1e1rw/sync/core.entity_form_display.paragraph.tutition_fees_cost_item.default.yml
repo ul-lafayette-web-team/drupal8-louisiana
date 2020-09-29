@@ -1,0 +1,157 @@
+uuid: 24df31d2-0aba-4f05-b6a4-c2f4b303b38b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tutition_fees_cost_item.field_component_body
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_breakdown_cost
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_breakdown_cost_2
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_breakdown_cost_3
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_breakdown_cost_4
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_breakdown_name
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_breakdown_name_2
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_breakdown_name_3
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_breakdown_name_4
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_cta_link
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_name
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_number
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_resource_links
+    - paragraphs.paragraphs_type.tutition_fees_cost_item
+  module:
+    - field_group
+    - link
+    - text
+third_party_settings:
+  field_group:
+    group_breakdown:
+      children:
+        - field_taf_item_breakdown_name
+        - field_taf_item_breakdown_cost
+        - field_taf_item_breakdown_name_2
+        - field_taf_item_breakdown_cost_2
+        - field_taf_item_breakdown_name_3
+        - field_taf_item_breakdown_cost_3
+        - field_taf_item_breakdown_name_4
+        - field_taf_item_breakdown_cost_4
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Breakdown
+      region: content
+id: paragraph.tutition_fees_cost_item.default
+targetEntityType: paragraph
+bundle: tutition_fees_cost_item
+mode: default
+content:
+  field_component_body:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_taf_item_breakdown_cost:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_taf_item_breakdown_cost_2:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_taf_item_breakdown_cost_3:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_taf_item_breakdown_cost_4:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_taf_item_breakdown_name:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_taf_item_breakdown_name_2:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_taf_item_breakdown_name_3:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_taf_item_breakdown_name_4:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_taf_item_cta_link:
+    weight: 13
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_taf_item_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_taf_item_number:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_taf_item_resource_links:
+    weight: 12
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true

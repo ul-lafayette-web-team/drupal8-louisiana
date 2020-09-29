@@ -1,0 +1,23 @@
+uuid: a8f9c9b3-0d99-4ffe-96ef-ff56d1fb0ee8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_link
+    - paragraphs.paragraphs_type.campaign_highllight
+  module:
+    - link
+id: paragraph.campaign_highllight.field_component_link
+field_name: field_component_link
+entity_type: paragraph
+bundle: campaign_highllight
+label: 'CTA Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

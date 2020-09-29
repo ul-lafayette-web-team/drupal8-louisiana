@@ -1,0 +1,36 @@
+uuid: 07034462-e791-40e9-a088-488c36ffdffa
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - group
+    - system
+  theme:
+    - louisiana
+id: groupoperations
+theme: louisiana
+region: content
+weight: -2
+provider: null
+plugin: group_operations
+settings:
+  id: group_operations
+  label: 'Group operations'
+  provider: group
+  label_display: visible
+  context_mapping:
+    group: '@group.group_route_context:group'
+visibility:
+  'entity_bundle:group':
+    id: 'entity_bundle:group'
+    bundles:
+      subsection: subsection
+    negate: false
+    context_mapping:
+      group: '@group.group_route_context:group'
+  request_path:
+    id: request_path
+    pages: "/group/*/members\r\n/group/*/nodes"
+    negate: false
+    context_mapping: {  }

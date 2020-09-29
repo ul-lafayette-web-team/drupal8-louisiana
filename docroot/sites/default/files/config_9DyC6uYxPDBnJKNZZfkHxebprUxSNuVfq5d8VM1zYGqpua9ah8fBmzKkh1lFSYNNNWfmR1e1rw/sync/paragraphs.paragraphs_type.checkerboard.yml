@@ -1,0 +1,11 @@
+uuid: 3d9eb615-fcf5-468b-bb5e-0f7cbe254702
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: c3Kf7WTFVHw2AZsW09PRPkkOUo2TiIkXgdpFtli_e6A
+id: checkerboard
+label: Checkerboard
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

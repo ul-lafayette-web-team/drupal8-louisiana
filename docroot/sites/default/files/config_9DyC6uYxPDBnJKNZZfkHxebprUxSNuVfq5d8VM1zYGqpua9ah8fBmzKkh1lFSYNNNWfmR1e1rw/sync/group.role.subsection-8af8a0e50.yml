@@ -1,0 +1,19 @@
+uuid: 2a8d2542-7ab7-4c23-8742-b653d363b26f
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.subsection
+  enforced:
+    config:
+      - user.role.content_admin
+_core:
+  default_config_hash: L-z4TUsZNgbyMXkipRiLhiTBxPAnI319t3iSCNtN3cc
+id: subsection-8af8a0e50
+label: 'Content admin'
+weight: -6
+internal: true
+audience: outsider
+group_type: subsection
+permissions_ui: false
+permissions: {  }

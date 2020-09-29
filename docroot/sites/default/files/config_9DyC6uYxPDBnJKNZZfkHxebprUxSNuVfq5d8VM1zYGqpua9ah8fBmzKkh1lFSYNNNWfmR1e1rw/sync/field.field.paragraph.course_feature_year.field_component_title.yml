@@ -1,0 +1,19 @@
+uuid: bf14410c-67be-4809-89f0-0c9fcc0fe397
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_title
+    - paragraphs.paragraphs_type.course_feature_year
+id: paragraph.course_feature_year.field_component_title
+field_name: field_component_title
+entity_type: paragraph
+bundle: course_feature_year
+label: 'Course Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

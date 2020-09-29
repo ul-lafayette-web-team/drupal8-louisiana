@@ -1,0 +1,19 @@
+uuid: 99c91199-e4a9-4761-852a-8340bc987fb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cf_distance
+    - node.type.culture_feature
+id: node.culture_feature.field_cf_distance
+field_name: field_cf_distance
+entity_type: node
+bundle: culture_feature
+label: 'Distance Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

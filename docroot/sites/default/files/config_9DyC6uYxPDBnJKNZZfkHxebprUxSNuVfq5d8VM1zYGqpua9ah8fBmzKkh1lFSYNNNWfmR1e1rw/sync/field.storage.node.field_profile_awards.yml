@@ -1,0 +1,19 @@
+uuid: 8f26ba16-0c5d-46ff-88db-7024036fbe9f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_profile_awards
+field_name: field_profile_awards
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

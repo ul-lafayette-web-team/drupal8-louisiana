@@ -1,0 +1,20 @@
+uuid: cd290aaa-e04f-462a-954f-d3f61312e13d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_ncf_news
+field_name: field_ncf_news
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

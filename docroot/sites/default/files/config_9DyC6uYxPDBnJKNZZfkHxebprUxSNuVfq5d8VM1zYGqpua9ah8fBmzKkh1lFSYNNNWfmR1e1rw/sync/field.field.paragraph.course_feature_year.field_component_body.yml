@@ -1,0 +1,29 @@
+uuid: 27c01d2a-7ab9-4ac5-8773-917e7463b5de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_body
+    - paragraphs.paragraphs_type.course_feature_year
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    simple_html: simple_html
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: paragraph.course_feature_year.field_component_body
+field_name: field_component_body
+entity_type: paragraph
+bundle: course_feature_year
+label: 'Quote About Course'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

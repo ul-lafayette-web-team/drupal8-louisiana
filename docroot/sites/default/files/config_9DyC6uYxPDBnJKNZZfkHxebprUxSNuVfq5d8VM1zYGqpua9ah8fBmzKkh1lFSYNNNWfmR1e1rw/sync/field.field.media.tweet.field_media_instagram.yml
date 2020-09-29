@@ -1,0 +1,21 @@
+uuid: 5bc822b5-3379-4c7a-a1b7-02e0368efb45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_instagram
+    - media.type.tweet
+_core:
+  default_config_hash: HpdXnAYqWxla3-PtjrOZfsjPv2eqYAMxoT6KL3lLPrI
+id: media.tweet.field_media_instagram
+field_name: field_media_instagram
+entity_type: media
+bundle: tweet
+label: 'Tweet URL'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

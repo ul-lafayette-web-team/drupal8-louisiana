@@ -1,0 +1,9 @@
+uuid: 5b0d8ae5-8a8d-4239-93c3-633c5a63f05e
+langcode: en
+status: true
+dependencies: {  }
+id: news_tagged_feature
+label: 'News/Story Tagged Feature'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

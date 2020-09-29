@@ -1,0 +1,23 @@
+uuid: 235efa20-2de4-4105-afc0-2c218e50e796
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_link
+    - paragraphs.paragraphs_type.program_featured_alumni
+  module:
+    - link
+id: paragraph.program_featured_alumni.field_component_link
+field_name: field_component_link
+entity_type: paragraph
+bundle: program_featured_alumni
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

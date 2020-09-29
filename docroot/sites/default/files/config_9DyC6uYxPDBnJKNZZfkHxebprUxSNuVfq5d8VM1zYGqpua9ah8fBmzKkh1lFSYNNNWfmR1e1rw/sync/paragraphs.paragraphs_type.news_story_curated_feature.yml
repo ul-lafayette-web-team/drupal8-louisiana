@@ -1,0 +1,9 @@
+uuid: 353f5a69-c5f0-486e-adb5-83e2e8977bc2
+langcode: en
+status: true
+dependencies: {  }
+id: news_story_curated_feature
+label: 'News/Story Curated Feature'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

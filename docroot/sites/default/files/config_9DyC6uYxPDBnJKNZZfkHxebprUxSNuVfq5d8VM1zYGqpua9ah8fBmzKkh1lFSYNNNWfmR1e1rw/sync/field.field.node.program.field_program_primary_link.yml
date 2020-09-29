@@ -1,0 +1,23 @@
+uuid: e4d1d1e6-843b-4fe0-bd6a-9704ca69042c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_primary_link
+    - node.type.program
+  module:
+    - link
+id: node.program.field_program_primary_link
+field_name: field_program_primary_link
+entity_type: node
+bundle: program
+label: 'Resources Primary CTA'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

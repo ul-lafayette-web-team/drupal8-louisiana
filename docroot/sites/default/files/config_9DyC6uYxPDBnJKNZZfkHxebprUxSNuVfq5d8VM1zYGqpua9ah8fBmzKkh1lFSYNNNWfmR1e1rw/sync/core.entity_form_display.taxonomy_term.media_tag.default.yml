@@ -1,0 +1,24 @@
+uuid: 6048eb67-a94e-499e-b73d-6e49e665cb07
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.media_tag
+_core:
+  default_config_hash: z2LRQeDI5l5d_ySgKt8JWeJMDrubS3z-ODoD6i5H3rE
+id: taxonomy_term.media_tag.default
+targetEntityType: taxonomy_term
+bundle: media_tag
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

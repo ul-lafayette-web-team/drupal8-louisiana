@@ -1,0 +1,21 @@
+uuid: 9ad5e0e9-4b98-4a4e-88ea-47b01abf93c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_title
+    - paragraphs.paragraphs_type.social_media_link
+_core:
+  default_config_hash: 3QCT2o6rLW_JpNgEEdlr2U708Nytv6U1mRPpmcXMHvI
+id: paragraph.social_media_link.field_component_title
+field_name: field_component_title
+entity_type: paragraph
+bundle: social_media_link
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

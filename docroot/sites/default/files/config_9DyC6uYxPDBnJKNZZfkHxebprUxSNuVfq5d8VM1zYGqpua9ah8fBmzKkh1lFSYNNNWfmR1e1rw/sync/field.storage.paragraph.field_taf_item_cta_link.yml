@@ -1,0 +1,19 @@
+uuid: 9431a07a-956c-44d7-933b-1269de626271
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_taf_item_cta_link
+field_name: field_taf_item_cta_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

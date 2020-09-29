@@ -1,0 +1,11 @@
+uuid: a0313aad-a8ff-4f21-8651-b436535338fb
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: HkkA0xtHNzV5xD6K_Yay1YhetQ5RZeP5rf9NnOfA11g
+id: node__webform
+label: 'Content: Webform'
+tags:
+  description: '[node:field_intro_text]'
+  og_description: '[node:field_intro_text]'

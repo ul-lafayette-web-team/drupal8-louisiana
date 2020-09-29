@@ -1,0 +1,23 @@
+uuid: 16428f40-04b3-484e-ad06-866ab6eb5e21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_taf_item_cta_link
+    - paragraphs.paragraphs_type.tuition_fees_aid_item
+  module:
+    - link
+id: paragraph.tuition_fees_aid_item.field_taf_item_cta_link
+field_name: field_taf_item_cta_link
+entity_type: paragraph
+bundle: tuition_fees_aid_item
+label: 'CTA Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

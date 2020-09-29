@@ -1,0 +1,20 @@
+uuid: dd9ed7b1-91ad-4d38-8e93-d2b3a65f6806
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_psf_profiles
+field_name: field_psf_profiles
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

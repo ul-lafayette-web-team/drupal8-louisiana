@@ -1,0 +1,23 @@
+uuid: cfac0245-4c51-4c0d-8834-50081a746c9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_link
+    - paragraphs.paragraphs_type.culture_component
+  module:
+    - link
+id: paragraph.culture_component.field_component_link
+field_name: field_component_link
+entity_type: paragraph
+bundle: culture_component
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

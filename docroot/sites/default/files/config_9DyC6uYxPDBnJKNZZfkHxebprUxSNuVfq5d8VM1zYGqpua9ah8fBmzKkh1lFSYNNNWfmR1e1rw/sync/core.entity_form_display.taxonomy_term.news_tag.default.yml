@@ -1,0 +1,24 @@
+uuid: 86d01d0a-841c-433e-8b0b-9f62d2d5500d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.news_tag
+_core:
+  default_config_hash: Tw7f-UaSbwiFq68aw10VBu_XR71PN2xlNgBvgmYVuys
+id: taxonomy_term.news_tag.default
+targetEntityType: taxonomy_term
+bundle: news_tag
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

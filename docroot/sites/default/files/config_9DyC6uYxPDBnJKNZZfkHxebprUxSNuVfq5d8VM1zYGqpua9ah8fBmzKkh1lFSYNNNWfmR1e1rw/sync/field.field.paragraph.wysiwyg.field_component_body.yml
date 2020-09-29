@@ -1,0 +1,29 @@
+uuid: 59d2fb5c-1cc6-4a46-913d-341b0f5c2420
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_body
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    full_html: full_html
+    basic_html: basic_html
+    simple_html: simple_html
+    restricted_html: restricted_html
+    plain_text: '0'
+id: paragraph.wysiwyg.field_component_body
+field_name: field_component_body
+entity_type: paragraph
+bundle: wysiwyg
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

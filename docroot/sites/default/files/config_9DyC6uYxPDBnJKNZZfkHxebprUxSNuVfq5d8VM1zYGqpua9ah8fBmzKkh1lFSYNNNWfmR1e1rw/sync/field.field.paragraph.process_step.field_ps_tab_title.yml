@@ -1,0 +1,19 @@
+uuid: 30170c1a-66fb-4e6f-a7c2-dfefca18edb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ps_tab_title
+    - paragraphs.paragraphs_type.process_step
+id: paragraph.process_step.field_ps_tab_title
+field_name: field_ps_tab_title
+entity_type: paragraph
+bundle: process_step
+label: 'Tab Title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

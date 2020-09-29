@@ -1,0 +1,27 @@
+uuid: 68f5136a-ba53-437c-b7c9-6f1e6cf9c63b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.utility-menu
+  module:
+    - menu_block
+  theme:
+    - louisiana
+id: utilitymenu
+theme: louisiana
+region: secondary_nav
+weight: -1
+provider: null
+plugin: 'menu_block:utility-menu'
+settings:
+  id: 'menu_block:utility-menu'
+  label: 'Utility Menu'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand: 0
+  parent: 'utility-menu:'
+  suggestion: utility_menu
+visibility: {  }

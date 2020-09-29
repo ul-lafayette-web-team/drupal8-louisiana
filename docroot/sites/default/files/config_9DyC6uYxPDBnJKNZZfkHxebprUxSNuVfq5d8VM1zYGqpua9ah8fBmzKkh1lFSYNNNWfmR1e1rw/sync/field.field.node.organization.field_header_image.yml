@@ -1,0 +1,31 @@
+uuid: 30babe13-363c-4050-8629-8565f1f3859d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_image
+    - media.type.image
+    - node.type.organization
+_core:
+  default_config_hash: z3A1dXpnaCVubI_ddeaMSaGx4JHb8y6wgEW0uA6mC9I
+id: node.organization.field_header_image
+field_name: field_header_image
+entity_type: node
+bundle: organization
+label: 'Header Image'
+description: 'Please upload an image with dimensions ?x?px.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

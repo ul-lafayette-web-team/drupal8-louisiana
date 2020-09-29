@@ -1,0 +1,21 @@
+uuid: 8234a81c-49e9-4723-874d-15a72cea2c9e
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - louisiana
+id: searchform
+theme: louisiana
+region: secondary_nav
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+  page_id: ''
+visibility: {  }

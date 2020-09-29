@@ -1,0 +1,23 @@
+uuid: 427bfa83-2b24-47fa-95a0-eb1a40a7e125
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_link
+    - paragraphs.paragraphs_type.profile_summary_feature
+  module:
+    - link
+id: paragraph.profile_summary_feature.field_component_link
+field_name: field_component_link
+entity_type: paragraph
+bundle: profile_summary_feature
+label: Button
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

@@ -1,0 +1,26 @@
+uuid: d57dea45-07d5-41d3-8209-ed05638a1b41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.checkerboard.field_checkerboard_items
+    - paragraphs.paragraphs_type.checkerboard
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: gCQULJu9Vso4lWJKrvBSGOmxIzLbEPAAToeVGMf8Xmc
+id: paragraph.checkerboard.default
+targetEntityType: paragraph
+bundle: checkerboard
+mode: default
+content:
+  field_checkerboard_items:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

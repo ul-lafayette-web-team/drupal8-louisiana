@@ -1,0 +1,11 @@
+uuid: 4eca1cf5-0aed-4ddf-a765-289ed565b9d1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: FvDZCjGdxD2VSkiAYwQXs1VgQMCtppExqotX83agpHk
+id: node__tuition_fees_page
+label: 'Content: Tuition & Fees Page'
+tags:
+  description: '[node:field_intro_text]'
+  og_description: '[node:field_intro_text]'

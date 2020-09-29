@@ -1,0 +1,21 @@
+uuid: f6d60fae-8fe9-440c-bc6f-9b9a8c660bdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.subsection
+_core:
+  default_config_hash: lmNnXSYgednatvgSJeXqwx8SedLReSe7lHYesH8WdHE
+id: subsection-outsider
+label: Outsider
+weight: -101
+internal: true
+audience: outsider
+group_type: subsection
+permissions_ui: true
+permissions:
+  - 'view group'
+  - 'view group_node:page entity'
+  - 'view group_node:page content'
+  - 'view group_node:landing_page entity'
+  - 'view group_node:landing_page content'

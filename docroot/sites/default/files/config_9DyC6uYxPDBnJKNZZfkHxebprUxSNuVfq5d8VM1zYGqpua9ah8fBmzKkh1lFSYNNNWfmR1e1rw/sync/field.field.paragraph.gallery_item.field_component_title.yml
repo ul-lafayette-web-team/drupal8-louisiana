@@ -1,0 +1,21 @@
+uuid: faa01267-f06b-4718-9c46-b2dd175d542b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_title
+    - paragraphs.paragraphs_type.gallery_item
+_core:
+  default_config_hash: PRsbyawPz0wjQbj3Phft2E9-AtBP_b15qMU7-4jC1U4
+id: paragraph.gallery_item.field_component_title
+field_name: field_component_title
+entity_type: paragraph
+bundle: gallery_item
+label: Caption
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

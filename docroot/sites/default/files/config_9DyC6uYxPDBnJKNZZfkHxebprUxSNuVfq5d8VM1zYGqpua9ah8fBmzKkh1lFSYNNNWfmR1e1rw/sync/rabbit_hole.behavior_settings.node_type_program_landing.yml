@@ -1,0 +1,11 @@
+uuid: d74307c7-3ef8-4cae-ab87-a7ff521d9077
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: I3OShvPD4hRjebEIO2HUqMK_UEoF1PSVgMN3zYpKGEE
+id: node_type_program_landing
+action: display_page
+allow_override: 0
+redirect: ''
+redirect_code: 301

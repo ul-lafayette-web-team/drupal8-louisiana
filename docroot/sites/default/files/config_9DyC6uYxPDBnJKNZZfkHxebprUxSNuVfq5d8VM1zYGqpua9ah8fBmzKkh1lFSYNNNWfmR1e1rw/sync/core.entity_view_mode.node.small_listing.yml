@@ -1,0 +1,12 @@
+uuid: 23cb6eb8-cf05-4379-aac1-0b4533a752dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: S43SCS088Ldk4fntEQdvzccUloXnlFxcDJj3rJtz6fI
+id: node.small_listing
+label: 'Small Listing'
+targetEntityType: node
+cache: true

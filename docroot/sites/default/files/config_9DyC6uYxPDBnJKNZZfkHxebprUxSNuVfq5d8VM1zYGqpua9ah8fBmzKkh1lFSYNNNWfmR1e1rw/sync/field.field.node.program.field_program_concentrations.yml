@@ -1,0 +1,19 @@
+uuid: 10a5ba88-ab95-490a-bc02-c72d947e21d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_concentrations
+    - node.type.program
+id: node.program.field_program_concentrations
+field_name: field_program_concentrations
+entity_type: node
+bundle: program
+label: Concentrations
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

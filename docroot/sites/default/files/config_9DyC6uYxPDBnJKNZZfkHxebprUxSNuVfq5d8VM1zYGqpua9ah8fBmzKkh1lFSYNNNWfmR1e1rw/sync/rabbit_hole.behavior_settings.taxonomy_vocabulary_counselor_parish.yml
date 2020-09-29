@@ -1,0 +1,11 @@
+uuid: a6f76b80-8fd3-46f1-9cfb-77eac7df0840
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.counselor_parish
+id: taxonomy_vocabulary_counselor_parish
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301

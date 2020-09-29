@@ -1,0 +1,11 @@
+uuid: ec985917-e911-436a-8917-2de042c03812
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.area_of_expertise
+id: taxonomy_vocabulary_area_of_expertise
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301

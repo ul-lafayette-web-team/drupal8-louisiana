@@ -1,0 +1,86 @@
+uuid: c84d31a4-acfa-4f58-a1f8-f8f1fd59de44
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.tuition
+    - field.field.paragraph.tutition_fees_cost_item.field_component_body
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_breakdown_cost
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_breakdown_name
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_cta_link
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_name
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_number
+    - field.field.paragraph.tutition_fees_cost_item.field_taf_item_resource_links
+    - paragraphs.paragraphs_type.tutition_fees_cost_item
+  module:
+    - link
+    - text
+id: paragraph.tutition_fees_cost_item.tuition
+targetEntityType: paragraph
+bundle: tutition_fees_cost_item
+mode: tuition
+content:
+  field_component_body:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_taf_item_breakdown_cost:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_taf_item_breakdown_name:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_taf_item_cta_link:
+    weight: 6
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_taf_item_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_taf_item_number:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_taf_item_resource_links:
+    weight: 5
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

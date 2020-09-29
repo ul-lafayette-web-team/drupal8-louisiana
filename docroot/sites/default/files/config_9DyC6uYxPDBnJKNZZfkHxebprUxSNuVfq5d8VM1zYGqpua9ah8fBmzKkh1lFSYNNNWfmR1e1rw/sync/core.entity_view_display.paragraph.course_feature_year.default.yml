@@ -1,0 +1,67 @@
+uuid: 33b70110-7bc4-4e6d-99e3-bcf8959eded9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.course_feature_year.field_cfy_professor_name
+    - field.field.paragraph.course_feature_year.field_cfy_profile
+    - field.field.paragraph.course_feature_year.field_cfy_quote_source
+    - field.field.paragraph.course_feature_year.field_component_body
+    - field.field.paragraph.course_feature_year.field_component_subtitle
+    - field.field.paragraph.course_feature_year.field_component_title
+    - paragraphs.paragraphs_type.course_feature_year
+  module:
+    - text
+id: paragraph.course_feature_year.default
+targetEntityType: paragraph
+bundle: course_feature_year
+mode: default
+content:
+  field_cfy_professor_name:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cfy_profile:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_cfy_quote_source:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_component_body:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_component_subtitle:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_component_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

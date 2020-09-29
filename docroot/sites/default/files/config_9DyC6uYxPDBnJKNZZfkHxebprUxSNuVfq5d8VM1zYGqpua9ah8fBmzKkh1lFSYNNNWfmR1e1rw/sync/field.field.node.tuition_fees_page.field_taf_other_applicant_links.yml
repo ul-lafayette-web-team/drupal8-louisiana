@@ -1,0 +1,23 @@
+uuid: bce9b6b0-e4f0-46a1-976e-015d903c8214
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_taf_other_applicant_links
+    - node.type.tuition_fees_page
+  module:
+    - link
+id: node.tuition_fees_page.field_taf_other_applicant_links
+field_name: field_taf_other_applicant_links
+entity_type: node
+bundle: tuition_fees_page
+label: 'Links for Other Applicants'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

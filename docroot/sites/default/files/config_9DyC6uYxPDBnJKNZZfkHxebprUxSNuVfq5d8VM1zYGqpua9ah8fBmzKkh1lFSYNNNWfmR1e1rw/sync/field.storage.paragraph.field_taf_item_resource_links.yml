@@ -1,0 +1,19 @@
+uuid: cdcc2f8c-9eb2-426a-a8d9-cc0d0fb75bc2
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_taf_item_resource_links
+field_name: field_taf_item_resource_links
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 6
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

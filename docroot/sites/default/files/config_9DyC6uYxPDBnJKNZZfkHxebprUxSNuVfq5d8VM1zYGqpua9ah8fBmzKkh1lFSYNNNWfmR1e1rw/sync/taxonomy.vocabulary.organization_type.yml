@@ -1,0 +1,10 @@
+uuid: 92c6c55e-257c-4314-9bcc-3081a49991ba
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 0PAubE8qT_0n_2vNfyN4wuKTB8-21up7l_6TFzDIkFs
+name: 'Organization Type'
+vid: organization_type
+description: ''
+weight: 0

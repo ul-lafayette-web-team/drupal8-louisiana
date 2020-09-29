@@ -1,0 +1,118 @@
+uuid: 6abb7179-eea9-4f7e-af23-b15fb17af1f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.large_feature
+    - field.field.node.culture_feature.field_cf_description
+    - field.field.node.culture_feature.field_cf_distance
+    - field.field.node.culture_feature.field_cf_distance_link
+    - field.field.node.culture_feature.field_cf_highlight
+    - field.field.node.culture_feature.field_cf_highlight_link
+    - field.field.node.culture_feature.field_cf_image
+    - field.field.node.culture_feature.field_cf_video
+    - field.field.node.culture_feature.field_cf_when
+    - field.field.node.culture_feature.field_cf_when_link
+    - image.style.large_culture_feature
+    - node.type.culture_feature
+  module:
+    - image
+    - link
+    - text
+    - user
+    - video_embed_field
+id: node.culture_feature.large_feature
+targetEntityType: node
+bundle: culture_feature
+mode: large_feature
+content:
+  field_cf_description:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_cf_distance:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cf_distance_link:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_cf_highlight:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cf_highlight_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_cf_image:
+    type: image
+    weight: 8
+    region: content
+    label: hidden
+    settings:
+      image_style: large_culture_feature
+      image_link: ''
+    third_party_settings: {  }
+  field_cf_video:
+    weight: 1
+    label: hidden
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: true
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
+  field_cf_when:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cf_when_link:
+    weight: 7
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  content_moderation_control: true
+  links: true

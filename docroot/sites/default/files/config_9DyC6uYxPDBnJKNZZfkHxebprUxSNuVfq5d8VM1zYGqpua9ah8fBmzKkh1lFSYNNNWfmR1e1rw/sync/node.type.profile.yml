@@ -1,0 +1,19 @@
+uuid: bd768c38-9e81-4c3c-93b9-67fdb5e99a5e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: sqm2wXCg-fJwS6X5fKLqKQLMr1kn1OKQDpP09-Umr3g
+name: Profile
+type: profile
+description: 'Used to create person profiles.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

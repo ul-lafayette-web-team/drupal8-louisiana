@@ -1,0 +1,20 @@
+uuid: 949d4e42-7a82-4730-b7ae-075cf2dada98
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_pcf_organization
+field_name: field_pcf_organization
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,31 @@
+uuid: cd5fbc4c-efac-405d-8c84-9c8a608b66cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_image
+    - media.type.image
+    - node.type.profile
+_core:
+  default_config_hash: qm5p9V3IfgTmcjIQi00ac9y-RX496MPuSclcsheFQcc
+id: node.profile.field_profile_image
+field_name: field_profile_image
+entity_type: node
+bundle: profile
+label: 'Profile Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

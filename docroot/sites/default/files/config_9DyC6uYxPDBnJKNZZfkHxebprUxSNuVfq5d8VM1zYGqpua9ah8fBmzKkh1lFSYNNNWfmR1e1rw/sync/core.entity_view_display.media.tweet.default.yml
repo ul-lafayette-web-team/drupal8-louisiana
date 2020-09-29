@@ -1,0 +1,30 @@
+uuid: 971c0235-328b-40b0-a8a2-e7e3e9361865
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.tweet.field_media_instagram
+    - field.field.media.tweet.field_media_tags
+    - media.type.tweet
+  module:
+    - media_entity_twitter
+_core:
+  default_config_hash: dUFFOvnsWZy87AGLvnT3H4QoXpv3E0Kz2rw2QjFJeXw
+id: media.tweet.default
+targetEntityType: media
+bundle: tweet
+mode: default
+content:
+  field_media_instagram:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: twitter_embed
+    region: content
+hidden:
+  created: true
+  field_media_tags: true
+  name: true
+  thumbnail: true
+  uid: true

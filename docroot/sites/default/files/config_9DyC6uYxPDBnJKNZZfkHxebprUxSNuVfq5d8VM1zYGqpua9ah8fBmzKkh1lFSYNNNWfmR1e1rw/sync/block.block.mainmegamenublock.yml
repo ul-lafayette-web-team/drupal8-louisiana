@@ -1,0 +1,25 @@
+uuid: 5a2bd9f2-715e-492d-8450-0f9f01b7331d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:mega_menu_block:ec4faafd-0468-410b-8f5f-872b511d4624'
+  module:
+    - block_content
+  theme:
+    - louisiana
+id: mainmegamenublock
+theme: louisiana
+region: primary_nav
+weight: 0
+provider: null
+plugin: 'block_content:ec4faafd-0468-410b-8f5f-872b511d4624'
+settings:
+  id: 'block_content:ec4faafd-0468-410b-8f5f-872b511d4624'
+  label: 'Main Mega Menu Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

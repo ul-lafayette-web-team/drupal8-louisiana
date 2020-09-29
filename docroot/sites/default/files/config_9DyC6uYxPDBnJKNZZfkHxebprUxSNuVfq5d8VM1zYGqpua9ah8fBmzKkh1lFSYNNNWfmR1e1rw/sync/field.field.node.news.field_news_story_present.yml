@@ -1,0 +1,29 @@
+uuid: 2db8d3b5-8ab6-45f8-916a-7a147ecf19ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_story_present
+    - node.type.news
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    simple_html: simple_html
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: node.news.field_news_story_present
+field_name: field_news_story_present
+entity_type: node
+bundle: news
+label: 'Where I Am'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

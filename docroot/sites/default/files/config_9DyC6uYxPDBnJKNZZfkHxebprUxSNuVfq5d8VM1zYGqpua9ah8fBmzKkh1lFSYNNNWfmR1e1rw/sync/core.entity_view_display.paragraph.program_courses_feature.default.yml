@@ -1,0 +1,47 @@
+uuid: fd4f453d-b21d-4ce6-9177-41d95b567760
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.program_courses_feature.field_component_link
+    - field.field.paragraph.program_courses_feature.field_component_title
+    - field.field.paragraph.program_courses_feature.field_pcf_course_feature_years
+    - paragraphs.paragraphs_type.program_courses_feature
+  module:
+    - entity_reference_revisions
+    - link
+id: paragraph.program_courses_feature.default
+targetEntityType: paragraph
+bundle: program_courses_feature
+mode: default
+content:
+  field_component_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_component_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pcf_course_feature_years:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,23 @@
+uuid: 15ebb7f8-e8cb-4cf3-86a3-b303b5c03054
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_link
+    - paragraphs.paragraphs_type.program_courses_feature
+  module:
+    - link
+id: paragraph.program_courses_feature.field_component_link
+field_name: field_component_link
+entity_type: paragraph
+bundle: program_courses_feature
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

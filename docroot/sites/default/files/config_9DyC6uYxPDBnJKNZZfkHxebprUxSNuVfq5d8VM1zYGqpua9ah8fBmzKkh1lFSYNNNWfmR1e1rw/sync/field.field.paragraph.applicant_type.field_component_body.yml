@@ -1,0 +1,29 @@
+uuid: 97678ee5-8cd5-4f53-aad7-5f3742ca603c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_body
+    - paragraphs.paragraphs_type.applicant_type
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    simple_html: simple_html
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: paragraph.applicant_type.field_component_body
+field_name: field_component_body
+entity_type: paragraph
+bundle: applicant_type
+label: 'Applicant Type Description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

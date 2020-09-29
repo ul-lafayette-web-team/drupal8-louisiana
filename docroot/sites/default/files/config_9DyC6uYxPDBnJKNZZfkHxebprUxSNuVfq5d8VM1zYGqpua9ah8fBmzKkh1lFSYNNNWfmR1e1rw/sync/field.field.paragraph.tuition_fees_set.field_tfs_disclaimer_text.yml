@@ -1,0 +1,19 @@
+uuid: 9944bb62-609b-47b5-84a1-0b46e382741b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tfs_disclaimer_text
+    - paragraphs.paragraphs_type.tuition_fees_set
+id: paragraph.tuition_fees_set.field_tfs_disclaimer_text
+field_name: field_tfs_disclaimer_text
+entity_type: paragraph
+bundle: tuition_fees_set
+label: 'Disclaimer Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

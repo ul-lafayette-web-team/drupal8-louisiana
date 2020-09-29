@@ -1,0 +1,65 @@
+uuid: bfd0c28f-8cd2-4f97-839e-29fdc3df2cc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.instagram_gallery_item_.field_component_image
+    - field.field.paragraph.instagram_gallery_item_.field_component_link
+    - field.field.paragraph.instagram_gallery_item_.field_component_subtitle
+    - field.field.paragraph.instagram_gallery_item_.field_component_title
+    - field.field.paragraph.instagram_gallery_item_.field_component_video
+    - paragraphs.paragraphs_type.instagram_gallery_item_
+  module:
+    - link
+id: paragraph.instagram_gallery_item_.default
+targetEntityType: paragraph
+bundle: instagram_gallery_item_
+mode: default
+content:
+  field_component_image:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_component_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_component_subtitle:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_component_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_component_video:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

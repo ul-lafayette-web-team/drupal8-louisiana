@@ -1,0 +1,34 @@
+uuid: ca213c85-694f-466e-b7a3-110cdd020ed7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.program_career_outcome.field_component_link
+    - field.field.paragraph.program_career_outcome.field_component_title
+    - paragraphs.paragraphs_type.program_career_outcome
+  module:
+    - link
+id: paragraph.program_career_outcome.default
+targetEntityType: paragraph
+bundle: program_career_outcome
+mode: default
+content:
+  field_component_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_component_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

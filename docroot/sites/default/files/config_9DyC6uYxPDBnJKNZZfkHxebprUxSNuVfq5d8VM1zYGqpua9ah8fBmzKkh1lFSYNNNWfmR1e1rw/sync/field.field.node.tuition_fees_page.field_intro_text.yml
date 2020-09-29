@@ -1,0 +1,31 @@
+uuid: 66270a40-32e0-47b7-8d6e-c913a86c0425
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intro_text
+    - node.type.tuition_fees_page
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    simple_html: simple_html
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+_core:
+  default_config_hash: 5zNULtTi7kNHqIahL4JyziTzSj-HBrq9rGUwTfDGTcE
+id: node.tuition_fees_page.field_intro_text
+field_name: field_intro_text
+entity_type: node
+bundle: tuition_fees_page
+label: 'Intro Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

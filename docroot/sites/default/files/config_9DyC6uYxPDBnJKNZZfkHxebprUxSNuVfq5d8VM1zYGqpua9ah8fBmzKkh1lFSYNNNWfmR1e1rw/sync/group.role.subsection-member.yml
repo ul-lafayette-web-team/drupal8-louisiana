@@ -1,0 +1,45 @@
+uuid: eae6a787-bd8b-4186-88d4-625092539faa
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.subsection
+_core:
+  default_config_hash: u27Xg5mQs5HX5QJc-pUIMsElpR8s6TYJIddeXEsYxQs
+id: subsection-member
+label: Member
+weight: -100
+internal: true
+audience: member
+group_type: subsection
+permissions_ui: true
+permissions:
+  0: 'view group'
+  1: 'view group_node:page entity'
+  2: 'view group_node:page content'
+  3: 'view group_node:landing_page entity'
+  4: 'view group_node:landing_page content'
+  6: 'view group_membership content'
+  7: 'access group_node overview'
+  8: 'create group_node:page entity'
+  9: 'delete any group_node:page entity'
+  10: 'delete own group_node:page entity'
+  11: 'update any group_node:page entity'
+  12: 'update own group_node:page entity'
+  14: 'view unpublished group_node:page entity'
+  15: 'create group_node:page content'
+  16: 'delete any group_node:page content'
+  17: 'delete own group_node:page content'
+  18: 'update any group_node:page content'
+  19: 'update own group_node:page content'
+  21: 'create group_node:landing_page entity'
+  22: 'delete any group_node:landing_page entity'
+  23: 'delete own group_node:landing_page entity'
+  24: 'update any group_node:landing_page entity'
+  25: 'update own group_node:landing_page entity'
+  27: 'view unpublished group_node:landing_page entity'
+  28: 'create group_node:landing_page content'
+  29: 'delete any group_node:landing_page content'
+  30: 'delete own group_node:landing_page content'
+  31: 'update any group_node:landing_page content'
+  32: 'update own group_node:landing_page content'

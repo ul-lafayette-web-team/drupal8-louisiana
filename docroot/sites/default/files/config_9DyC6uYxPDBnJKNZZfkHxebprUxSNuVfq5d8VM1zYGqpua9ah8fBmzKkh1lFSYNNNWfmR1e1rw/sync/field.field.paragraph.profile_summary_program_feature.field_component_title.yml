@@ -1,0 +1,19 @@
+uuid: 03ba3aa1-6b0d-4eb9-a902-329798bb96ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_title
+    - paragraphs.paragraphs_type.profile_summary_program_feature
+id: paragraph.profile_summary_program_feature.field_component_title
+field_name: field_component_title
+entity_type: paragraph
+bundle: profile_summary_program_feature
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

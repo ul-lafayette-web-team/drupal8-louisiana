@@ -1,0 +1,17 @@
+uuid: f1462ff8-4938-4862-aaab-5275d532b61e
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.content_team
+  enforced:
+    config:
+      - user.role.site_admin
+id: content_team-bf4b46c3a
+label: 'Site admin'
+weight: -5
+internal: true
+audience: outsider
+group_type: content_team
+permissions_ui: false
+permissions: {  }

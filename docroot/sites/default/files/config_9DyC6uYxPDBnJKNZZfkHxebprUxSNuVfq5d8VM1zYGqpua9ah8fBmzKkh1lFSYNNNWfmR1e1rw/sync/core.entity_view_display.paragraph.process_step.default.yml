@@ -1,0 +1,82 @@
+uuid: f794edac-f0c3-40ad-95a4-d2f80d2ce919
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.process_step.field_component_body
+    - field.field.paragraph.process_step.field_component_icon
+    - field.field.paragraph.process_step.field_component_title
+    - field.field.paragraph.process_step.field_ps_alert_information
+    - field.field.paragraph.process_step.field_ps_alert_title
+    - field.field.paragraph.process_step.field_ps_alert_title_link
+    - field.field.paragraph.process_step.field_ps_tab_title
+    - paragraphs.paragraphs_type.process_step
+  module:
+    - fontawesome
+    - link
+    - text
+id: paragraph.process_step.default
+targetEntityType: paragraph
+bundle: process_step
+mode: default
+content:
+  field_component_body:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_component_icon:
+    weight: 2
+    label: hidden
+    settings:
+      layers: false
+    third_party_settings: {  }
+    type: fontawesome_icon_formatter
+    region: content
+  field_component_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ps_alert_information:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ps_alert_title:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ps_alert_title_link:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_ps_tab_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

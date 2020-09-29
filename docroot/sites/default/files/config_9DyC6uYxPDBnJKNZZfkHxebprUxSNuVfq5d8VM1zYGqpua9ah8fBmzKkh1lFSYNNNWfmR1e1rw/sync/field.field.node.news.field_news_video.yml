@@ -1,0 +1,31 @@
+uuid: 085e2dc9-a308-460a-8a15-85797352b2cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_video
+    - media.type.video
+    - node.type.news
+_core:
+  default_config_hash: 0twURty4jL0sOETkmKc2cAcrUZMD8st8VogxAf1gkFI
+id: node.news.field_news_video
+field_name: field_news_video
+entity_type: node
+bundle: news
+label: 'News Video'
+description: 'If you input a video, please also upload a cover image.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video: video
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

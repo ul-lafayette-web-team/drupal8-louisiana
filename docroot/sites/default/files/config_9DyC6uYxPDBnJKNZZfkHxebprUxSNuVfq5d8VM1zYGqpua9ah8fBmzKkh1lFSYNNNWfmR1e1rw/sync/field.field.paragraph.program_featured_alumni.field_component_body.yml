@@ -1,0 +1,29 @@
+uuid: 3b563aa6-1723-45ce-8eee-2375f2e0307b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_body
+    - paragraphs.paragraphs_type.program_featured_alumni
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    simple_html: simple_html
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: paragraph.program_featured_alumni.field_component_body
+field_name: field_component_body
+entity_type: paragraph
+bundle: program_featured_alumni
+label: Quote
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

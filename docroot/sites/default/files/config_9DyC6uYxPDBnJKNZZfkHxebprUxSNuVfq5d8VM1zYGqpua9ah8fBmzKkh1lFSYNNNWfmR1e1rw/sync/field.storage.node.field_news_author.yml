@@ -1,0 +1,23 @@
+uuid: 9644481c-6812-42c9-8198-d9b5f5d1ec8d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: ejDCPhn_6UTMHvtLOqZy-oa104x5vEtPZwbFj22pqvU
+id: node.field_news_author
+field_name: field_news_author
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

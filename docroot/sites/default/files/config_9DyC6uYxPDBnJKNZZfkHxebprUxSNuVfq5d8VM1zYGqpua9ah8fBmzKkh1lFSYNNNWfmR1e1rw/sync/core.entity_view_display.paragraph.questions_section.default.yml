@@ -1,0 +1,33 @@
+uuid: 0858a98f-a82b-4dc4-ab6b-d1b2531abf86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.questions_section.field_component_title
+    - field.field.paragraph.questions_section.field_qsection_qsets
+    - paragraphs.paragraphs_type.questions_section
+  module:
+    - entity_reference_revisions
+id: paragraph.questions_section.default
+targetEntityType: paragraph
+bundle: questions_section
+mode: default
+content:
+  field_component_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_qsection_qsets:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

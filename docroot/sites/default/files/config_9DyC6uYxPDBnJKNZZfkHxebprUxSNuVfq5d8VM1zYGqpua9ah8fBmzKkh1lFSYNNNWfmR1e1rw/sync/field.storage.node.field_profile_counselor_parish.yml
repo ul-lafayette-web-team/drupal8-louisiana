@@ -1,0 +1,20 @@
+uuid: 725fea6a-da5d-419f-88fd-03d607cc332c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_profile_counselor_parish
+field_name: field_profile_counselor_parish
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

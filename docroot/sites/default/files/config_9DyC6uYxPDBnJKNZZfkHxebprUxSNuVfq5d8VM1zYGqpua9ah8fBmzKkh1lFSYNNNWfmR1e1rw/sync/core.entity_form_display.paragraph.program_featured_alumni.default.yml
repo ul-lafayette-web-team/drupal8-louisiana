@@ -1,0 +1,76 @@
+uuid: 3970f14d-bbde-4a9a-920c-4f36d8e34c70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.program_featured_alumni.field_component_body
+    - field.field.paragraph.program_featured_alumni.field_component_image
+    - field.field.paragraph.program_featured_alumni.field_component_link
+    - field.field.paragraph.program_featured_alumni.field_component_subtitle
+    - field.field.paragraph.program_featured_alumni.field_component_title
+    - field.field.paragraph.program_featured_alumni.field_outcome_or_job
+    - paragraphs.paragraphs_type.program_featured_alumni
+  module:
+    - link_class
+    - text
+id: paragraph.program_featured_alumni.default
+targetEntityType: paragraph
+bundle: program_featured_alumni
+mode: default
+content:
+  field_component_body:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_component_image:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_component_link:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      link_class_mode: force_class
+      link_class_force: link-underline
+      link_class_select: ''
+    third_party_settings: {  }
+    type: link_class_field_widget
+    region: content
+  field_component_subtitle:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_component_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_outcome_or_job:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

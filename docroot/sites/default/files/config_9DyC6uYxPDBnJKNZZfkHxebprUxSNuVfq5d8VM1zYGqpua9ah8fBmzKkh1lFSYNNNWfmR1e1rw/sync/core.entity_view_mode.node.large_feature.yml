@@ -1,0 +1,12 @@
+uuid: a087de38-52f6-4529-b7d2-ed8640120583
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: FbzPoLT52tyqqnL5LHfxNGJYhib5ZreQ7THBGmfxrks
+id: node.large_feature
+label: 'Large Feature'
+targetEntityType: node
+cache: true

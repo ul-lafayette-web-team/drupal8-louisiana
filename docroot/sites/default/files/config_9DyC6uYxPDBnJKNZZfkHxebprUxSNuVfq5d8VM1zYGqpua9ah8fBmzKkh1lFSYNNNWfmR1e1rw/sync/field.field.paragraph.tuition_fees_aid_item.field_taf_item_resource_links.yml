@@ -1,0 +1,23 @@
+uuid: 817dbd74-960f-4ca2-a7cd-3508b7a55140
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_taf_item_resource_links
+    - paragraphs.paragraphs_type.tuition_fees_aid_item
+  module:
+    - link
+id: paragraph.tuition_fees_aid_item.field_taf_item_resource_links
+field_name: field_taf_item_resource_links
+entity_type: paragraph
+bundle: tuition_fees_aid_item
+label: 'Resource Links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

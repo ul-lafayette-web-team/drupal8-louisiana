@@ -1,0 +1,171 @@
+uuid: d43a2735-8f35-4b17-ab08-73f93c01e725
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_components
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.campaign_highllight
+    - paragraphs.paragraphs_type.checkerboard
+    - paragraphs.paragraphs_type.culture_component
+    - paragraphs.paragraphs_type.differentiators_section
+    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.news_story_curated_feature
+    - paragraphs.paragraphs_type.news_tagged_feature
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_page_components
+field_name: field_page_components
+entity_type: node
+bundle: landing_page
+label: 'Page Components'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      campaign_highllight: campaign_highllight
+      checkerboard: checkerboard
+      culture_component: culture_component
+      differentiators_section: differentiators_section
+      gallery: gallery
+      news_story_curated_feature: news_story_curated_feature
+      news_tagged_feature: news_tagged_feature
+      wysiwyg: wysiwyg
+    target_bundles_drag_drop:
+      applicant_type:
+        weight: 28
+        enabled: false
+      brand_feature:
+        weight: 29
+        enabled: false
+      campaign_highllight:
+        enabled: true
+        weight: 30
+      checkerboard:
+        enabled: true
+        weight: 31
+      checkerboard_item:
+        weight: 32
+        enabled: false
+      culture_component:
+        enabled: true
+        weight: 33
+      differentiator:
+        weight: 34
+        enabled: false
+      differentiators_section:
+        enabled: true
+        weight: 35
+      gallery:
+        enabled: true
+        weight: 36
+      gallery_item:
+        weight: 37
+        enabled: false
+      instagram_gallery:
+        weight: 38
+        enabled: false
+      instagram_gallery_item_:
+        weight: 39
+        enabled: false
+      livewhale_event_feature:
+        weight: 40
+        enabled: false
+      mega_menu_item:
+        weight: 41
+        enabled: false
+      news_story_curated_feature:
+        enabled: true
+        weight: 42
+      news_tagged_feature:
+        enabled: true
+        weight: 43
+      organizations_contact_feature:
+        weight: 44
+        enabled: false
+      organizations_feature:
+        weight: 45
+        enabled: false
+      page_components:
+        weight: 46
+        enabled: false
+      process_step:
+        weight: 47
+        enabled: false
+      course_feature_year:
+        weight: 48
+        enabled: false
+      profile_contact_feature:
+        weight: 48
+        enabled: false
+      profile_summary_feature:
+        weight: 49
+        enabled: false
+      program_features_section:
+        weight: 50
+        enabled: false
+      question_item:
+        weight: 51
+        enabled: false
+      find_your_counselor_feature:
+        weight: 52
+        enabled: false
+      question_set:
+        weight: 52
+        enabled: false
+      questions_section:
+        weight: 53
+        enabled: false
+      social_media_link:
+        weight: 54
+        enabled: false
+      organization_profile_summary_fea:
+        weight: 63
+        enabled: false
+      profile_additional_link:
+        weight: 66
+        enabled: false
+      profile_summary_program_feature:
+        weight: 69
+        enabled: false
+      program_career_feature:
+        weight: 70
+        enabled: false
+      program_career_outcome:
+        weight: 71
+        enabled: false
+      program_courses_feature:
+        weight: 72
+        enabled: false
+      program_differentiators_section:
+        weight: 73
+        enabled: false
+      program_featured_alumni:
+        weight: 74
+        enabled: false
+      program_quick_info_rating:
+        weight: 76
+        enabled: false
+      program_requirement:
+        weight: 77
+        enabled: false
+      tuition_fees_aid_item:
+        weight: 82
+        enabled: false
+      tuition_fees_set:
+        weight: 83
+        enabled: false
+      tutition_fees_cost_item:
+        weight: 84
+        enabled: false
+      wysiwyg:
+        enabled: true
+        weight: 86
+field_type: entity_reference_revisions

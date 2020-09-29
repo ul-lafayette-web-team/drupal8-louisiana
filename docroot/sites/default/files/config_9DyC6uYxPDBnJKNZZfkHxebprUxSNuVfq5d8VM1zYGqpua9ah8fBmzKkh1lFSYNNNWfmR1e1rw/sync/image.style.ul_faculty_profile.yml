@@ -1,0 +1,15 @@
+uuid: 472dd83e-59ce-433a-a529-b4ae8137f539
+langcode: en
+status: true
+dependencies: {  }
+name: ul_faculty_profile
+label: 'UL Faculty profile 300×300'
+effects:
+  69f99f0c-57e4-41d0-b886-7df9e3100b7e:
+    uuid: 69f99f0c-57e4-41d0-b886-7df9e3100b7e
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      anchor: center-center

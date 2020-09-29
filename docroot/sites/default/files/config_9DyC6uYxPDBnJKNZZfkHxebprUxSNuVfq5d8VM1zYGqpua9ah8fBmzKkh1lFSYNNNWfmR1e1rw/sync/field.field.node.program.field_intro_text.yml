@@ -1,0 +1,31 @@
+uuid: 88394fbc-ab3c-4f4e-8840-2c76bb7e2d1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intro_text
+    - node.type.program
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    simple_html: simple_html
+    full_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+_core:
+  default_config_hash: owN6IoaPc3uIGrazYb1LxdR1mB7z2KSZ51ug97Z6uw4
+id: node.program.field_intro_text
+field_name: field_intro_text
+entity_type: node
+bundle: program
+label: 'Who is this program for?'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

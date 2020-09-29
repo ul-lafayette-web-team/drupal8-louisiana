@@ -1,0 +1,25 @@
+uuid: 9c90391f-8f49-4959-b026-548892825907
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_link
+    - paragraphs.paragraphs_type.social_media_link
+  module:
+    - link
+_core:
+  default_config_hash: SCHL_g-fnXczgrpw6HqJ7OFC3_67txpFY-dU1uCjkj8
+id: paragraph.social_media_link.field_component_link
+field_name: field_component_link
+entity_type: paragraph
+bundle: social_media_link
+label: Link
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

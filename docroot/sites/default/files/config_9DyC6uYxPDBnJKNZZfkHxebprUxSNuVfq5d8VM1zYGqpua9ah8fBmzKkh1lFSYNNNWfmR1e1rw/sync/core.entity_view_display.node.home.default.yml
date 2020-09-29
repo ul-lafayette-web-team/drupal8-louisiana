@@ -1,0 +1,137 @@
+uuid: ef1e9752-7169-4c5b-b132-f959007e312d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.home.field_culture_component
+    - field.field.node.home.field_header_image
+    - field.field.node.home.field_header_subtitle
+    - field.field.node.home.field_header_title
+    - field.field.node.home.field_header_video
+    - field.field.node.home.field_header_video_url
+    - field.field.node.home.field_home_brand_features
+    - field.field.node.home.field_home_campaign_highlight
+    - field.field.node.home.field_home_instagram_gallery
+    - field.field.node.home.field_livewhale_event_feature
+    - field.field.node.home.field_metatags
+    - field.field.node.home.field_news_curated_feature
+    - node.type.home
+  module:
+    - entity_reference_revisions
+    - media
+    - user
+_core:
+  default_config_hash: aQyXstegKPdUJYubS14vPRLAAfbsNE2JvX04wqBByXw
+id: node.home.default
+targetEntityType: node
+bundle: home
+mode: default
+content:
+  content_moderation_control:
+    weight: -20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_culture_component:
+    type: entity_reference_revisions_entity_view
+    weight: 8
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_header_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: media_thumbnail
+    region: content
+  field_header_subtitle:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_header_title:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_header_video:
+    type: entity_reference_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_header_video_url:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_home_brand_features:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_home_campaign_highlight:
+    type: entity_reference_revisions_entity_view
+    weight: 7
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_home_instagram_gallery:
+    type: entity_reference_revisions_entity_view
+    weight: 10
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_livewhale_event_feature:
+    type: entity_reference_revisions_entity_view
+    weight: 11
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_news_curated_feature:
+    type: entity_reference_revisions_entity_view
+    weight: 9
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_metatags: true

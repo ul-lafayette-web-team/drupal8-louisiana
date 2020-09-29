@@ -1,0 +1,19 @@
+uuid: 958568d4-20c4-453c-869b-af904aac0936
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ps_alert_information
+    - paragraphs.paragraphs_type.process_step
+id: paragraph.process_step.field_ps_alert_information
+field_name: field_ps_alert_information
+entity_type: paragraph
+bundle: process_step
+label: 'Step Alert Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

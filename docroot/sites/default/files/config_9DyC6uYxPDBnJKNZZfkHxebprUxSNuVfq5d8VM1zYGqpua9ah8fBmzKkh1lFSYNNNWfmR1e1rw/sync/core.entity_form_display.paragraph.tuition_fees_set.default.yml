@@ -1,0 +1,127 @@
+uuid: 0a75d5be-61ff-4250-b479-97ce7c23c67e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tuition_fees_set.field_component_title
+    - field.field.paragraph.tuition_fees_set.field_tfs_aid_items
+    - field.field.paragraph.tuition_fees_set.field_tfs_audience_name
+    - field.field.paragraph.tuition_fees_set.field_tfs_average_cost_name
+    - field.field.paragraph.tuition_fees_set.field_tfs_average_cost_number
+    - field.field.paragraph.tuition_fees_set.field_tfs_cost_items
+    - field.field.paragraph.tuition_fees_set.field_tfs_disclaimer_text
+    - field.field.paragraph.tuition_fees_set.field_tfs_disclaimer_title
+    - field.field.paragraph.tuition_fees_set.field_tfs_net_price_calc_link
+    - field.field.paragraph.tuition_fees_set.field_tfs_total_name
+    - field.field.paragraph.tuition_fees_set.field_tfs_total_number
+    - paragraphs.paragraphs_type.tuition_fees_set
+  module:
+    - link_class
+    - paragraphs
+id: paragraph.tuition_fees_set.default
+targetEntityType: paragraph
+bundle: tuition_fees_set
+mode: default
+content:
+  field_component_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tfs_aid_items:
+    type: entity_reference_paragraphs
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_tfs_audience_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tfs_average_cost_name:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tfs_average_cost_number:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tfs_cost_items:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_tfs_disclaimer_text:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tfs_disclaimer_title:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tfs_net_price_calc_link:
+    weight: 10
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      link_class_mode: force_class
+      link_class_force: btn
+      link_class_select: ''
+    third_party_settings: {  }
+    type: link_class_field_widget
+    region: content
+  field_tfs_total_name:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tfs_total_number:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

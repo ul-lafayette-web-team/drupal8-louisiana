@@ -1,0 +1,19 @@
+uuid: 27c98c34-164c-4384-992c-435f17bd129a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_taf_item_breakdown_cost_4
+    - paragraphs.paragraphs_type.tutition_fees_cost_item
+id: paragraph.tutition_fees_cost_item.field_taf_item_breakdown_cost_4
+field_name: field_taf_item_breakdown_cost_4
+entity_type: paragraph
+bundle: tutition_fees_cost_item
+label: 'Cost Item Breakdown Cost 4'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

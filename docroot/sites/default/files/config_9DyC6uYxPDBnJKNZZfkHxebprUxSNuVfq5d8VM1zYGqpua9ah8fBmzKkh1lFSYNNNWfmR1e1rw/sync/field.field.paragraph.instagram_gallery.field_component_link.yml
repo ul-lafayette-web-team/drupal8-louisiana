@@ -1,0 +1,23 @@
+uuid: be716f4a-5096-414f-89fd-04b9b059d7ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_link
+    - paragraphs.paragraphs_type.instagram_gallery
+  module:
+    - link
+id: paragraph.instagram_gallery.field_component_link
+field_name: field_component_link
+entity_type: paragraph
+bundle: instagram_gallery
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

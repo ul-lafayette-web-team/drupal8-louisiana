@@ -1,0 +1,19 @@
+uuid: e2830caf-1570-4ad5-aa9d-27e2d01594dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.subsection
+  enforced:
+    config:
+      - user.role.site_admin
+_core:
+  default_config_hash: 2w-6UoficWOdhWJyvg7dk6ZEhcdAv9sh2LwltBboK4E
+id: subsection-bf4b46c3a
+label: 'Site admin'
+weight: -5
+internal: true
+audience: outsider
+group_type: subsection
+permissions_ui: false
+permissions: {  }

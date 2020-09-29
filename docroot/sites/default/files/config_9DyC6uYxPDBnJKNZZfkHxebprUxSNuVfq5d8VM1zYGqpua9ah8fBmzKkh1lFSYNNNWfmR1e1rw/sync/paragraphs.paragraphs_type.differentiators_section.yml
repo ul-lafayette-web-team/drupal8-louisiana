@@ -1,0 +1,11 @@
+uuid: b3afb4a6-fca8-4eb8-8b6f-d1aba7d3fe37
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: QgFjv6lRUJ_XN7zlZ_3Qk_SrVBkDkpW2-W1RXnTlcpM
+id: differentiators_section
+label: 'Differentiators Section'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

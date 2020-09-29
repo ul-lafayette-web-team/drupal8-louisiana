@@ -1,0 +1,33 @@
+uuid: 52f59e1d-e9cf-4142-bb7d-6d4ce14e1d4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.checkerboard.field_checkerboard_items
+    - paragraphs.paragraphs_type.checkerboard
+  module:
+    - paragraphs
+_core:
+  default_config_hash: Q0U5KPV2Jl0kLYj6NQnWapX64VcnStXQ7nw2e7zsgj0
+id: paragraph.checkerboard.default
+targetEntityType: paragraph
+bundle: checkerboard
+mode: default
+content:
+  field_checkerboard_items:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: checkerboard_item
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  moderation_state: true
+  status: true
+  uid: true

@@ -1,0 +1,11 @@
+uuid: ff7f4500-bae1-413c-b23c-fe32a5dad5a8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: cMZzb8_qy_My5eUBlQTO7gXL5z0U9kDH5FYh5-3VxxE
+id: differentiator
+label: Differentiator
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

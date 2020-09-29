@@ -1,0 +1,19 @@
+uuid: 59c16abf-5838-4e96-ba6e-2fe3e037c800
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_program_other_app_links
+field_name: field_program_other_app_links
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

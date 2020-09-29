@@ -1,0 +1,19 @@
+uuid: 38b77745-4c03-4e4e-9fdc-9e7be067db63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cfy_professor_name
+    - paragraphs.paragraphs_type.course_feature_year
+id: paragraph.course_feature_year.field_cfy_professor_name
+field_name: field_cfy_professor_name
+entity_type: paragraph
+bundle: course_feature_year
+label: 'Professor Name'
+description: 'Please input either a “Professor Name” or a “Professor Profile”.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

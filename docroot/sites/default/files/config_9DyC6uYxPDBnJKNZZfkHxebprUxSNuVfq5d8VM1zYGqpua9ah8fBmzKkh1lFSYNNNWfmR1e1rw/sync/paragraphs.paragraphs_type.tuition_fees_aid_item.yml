@@ -1,0 +1,9 @@
+uuid: 30b9d690-ac8a-48ab-96e6-50edb2b7ccfa
+langcode: en
+status: true
+dependencies: {  }
+id: tuition_fees_aid_item
+label: 'Tuition & Fees Aid Item'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

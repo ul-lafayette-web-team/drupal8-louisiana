@@ -1,0 +1,25 @@
+uuid: c69a2758-3826-4748-a91d-d5b08a9b690a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b82d5cd9-a334-4c76-a687-0e8946dead66'
+  module:
+    - block_content
+  theme:
+    - louisiana
+id: test
+theme: louisiana
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:b82d5cd9-a334-4c76-a687-0e8946dead66'
+settings:
+  id: 'block_content:b82d5cd9-a334-4c76-a687-0e8946dead66'
+  label: Test
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

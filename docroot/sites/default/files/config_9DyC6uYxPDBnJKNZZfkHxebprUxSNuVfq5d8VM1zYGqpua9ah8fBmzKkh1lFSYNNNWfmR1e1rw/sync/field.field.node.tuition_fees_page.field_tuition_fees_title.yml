@@ -1,0 +1,19 @@
+uuid: 81e3dc52-7022-4731-99dc-3d4d7b113645
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tuition_fees_title
+    - node.type.tuition_fees_page
+id: node.tuition_fees_page.field_tuition_fees_title
+field_name: field_tuition_fees_title
+entity_type: node
+bundle: tuition_fees_page
+label: 'Tuition & Fees Title'
+description: 'Title for the Tuition & Fees section'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

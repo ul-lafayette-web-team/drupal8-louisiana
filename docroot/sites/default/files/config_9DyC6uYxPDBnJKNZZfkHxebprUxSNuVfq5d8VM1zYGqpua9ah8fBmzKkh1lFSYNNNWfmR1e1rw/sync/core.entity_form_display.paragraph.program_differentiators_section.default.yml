@@ -1,0 +1,61 @@
+uuid: 22339054-11c8-463d-90ba-caea86e8f721
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.program_differentiators_section.field_component_link
+    - field.field.paragraph.program_differentiators_section.field_component_title
+    - field.field.paragraph.program_differentiators_section.field_pds_differentiator
+    - field.field.paragraph.program_differentiators_section.field_pds_quick_info_ratings
+    - paragraphs.paragraphs_type.program_differentiators_section
+  module:
+    - link
+    - paragraphs
+id: paragraph.program_differentiators_section.default
+targetEntityType: paragraph
+bundle: program_differentiators_section
+mode: default
+content:
+  field_component_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_component_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_pds_differentiator:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_pds_quick_info_ratings:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

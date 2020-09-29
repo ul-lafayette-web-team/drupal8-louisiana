@@ -1,0 +1,10 @@
+uuid: 32811f47-ec4f-40e1-bd2d-7c274d6c7cb1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Q6mMnEHAZzhMoOZawiO-yYr7LwcnG3CmqQvoyiRS76M
+name: 'Profile Type'
+vid: profile_type
+description: ''
+weight: 0

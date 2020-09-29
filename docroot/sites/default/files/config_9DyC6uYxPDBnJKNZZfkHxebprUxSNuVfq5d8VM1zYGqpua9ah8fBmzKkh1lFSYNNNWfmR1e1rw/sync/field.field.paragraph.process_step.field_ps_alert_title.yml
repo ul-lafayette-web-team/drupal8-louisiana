@@ -1,0 +1,19 @@
+uuid: f180a899-795b-485a-8603-f695fd2b4454
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ps_alert_title
+    - paragraphs.paragraphs_type.process_step
+id: paragraph.process_step.field_ps_alert_title
+field_name: field_ps_alert_title
+entity_type: paragraph
+bundle: process_step
+label: 'Step Alert Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

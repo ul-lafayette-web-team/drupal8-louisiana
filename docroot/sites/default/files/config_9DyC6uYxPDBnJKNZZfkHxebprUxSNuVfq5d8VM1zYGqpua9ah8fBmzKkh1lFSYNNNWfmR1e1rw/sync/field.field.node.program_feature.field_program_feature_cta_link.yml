@@ -1,0 +1,23 @@
+uuid: 79b75b57-0e41-4c65-8605-18b65043cc95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_feature_cta_link
+    - node.type.program_feature
+  module:
+    - link
+id: node.program_feature.field_program_feature_cta_link
+field_name: field_program_feature_cta_link
+entity_type: node
+bundle: program_feature
+label: 'CTA Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

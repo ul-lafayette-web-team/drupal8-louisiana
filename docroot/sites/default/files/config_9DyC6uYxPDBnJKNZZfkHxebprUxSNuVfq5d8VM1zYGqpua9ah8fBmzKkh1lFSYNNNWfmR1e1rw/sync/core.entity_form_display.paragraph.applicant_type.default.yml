@@ -1,0 +1,44 @@
+uuid: 82edce37-f8dc-4803-8d57-32228132df40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.applicant_type.field_applicant_type_link
+    - field.field.paragraph.applicant_type.field_component_body
+    - field.field.paragraph.applicant_type.field_component_title
+    - paragraphs.paragraphs_type.applicant_type
+  module:
+    - link
+    - text
+id: paragraph.applicant_type.default
+targetEntityType: paragraph
+bundle: applicant_type
+mode: default
+content:
+  field_applicant_type_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_component_body:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_component_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

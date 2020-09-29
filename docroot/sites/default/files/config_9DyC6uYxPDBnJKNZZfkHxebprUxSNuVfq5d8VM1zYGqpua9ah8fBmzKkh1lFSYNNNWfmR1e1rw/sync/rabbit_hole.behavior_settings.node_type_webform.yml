@@ -1,0 +1,11 @@
+uuid: ea249a91-a1c8-4c9f-9e56-4e2b8e8e1e86
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: szI91t2YPy9Ez-6sHYhQ7EUj6eMAgger9APzCJQvxsg
+id: node_type_webform
+action: display_page
+allow_override: 0
+redirect: ''
+redirect_code: 301

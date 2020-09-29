@@ -1,0 +1,19 @@
+uuid: a5aaf0dc-9c6d-4186-8f02-a2aa196c01b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_ps_alert_title_link
+field_name: field_ps_alert_title_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

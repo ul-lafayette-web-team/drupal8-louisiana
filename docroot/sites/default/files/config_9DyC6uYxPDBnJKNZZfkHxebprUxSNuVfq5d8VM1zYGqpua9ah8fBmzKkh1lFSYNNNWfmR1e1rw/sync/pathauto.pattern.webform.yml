@@ -1,0 +1,24 @@
+uuid: 313a252e-d66b-4cb9-a1b3-9fbf58630d80
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: fKkqEYcvIhbfn27fNf5v6vrOMuvrbOdwxxTbXUgmxb4
+id: webform
+label: Webform
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parent:url:path]/[node:title]'
+selection_criteria:
+  82f3f63d-0df2-4df1-9382-7911c4d4a368:
+    id: node_type
+    bundles:
+      webform: webform
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 82f3f63d-0df2-4df1-9382-7911c4d4a368
+selection_logic: and
+weight: -5
+relationships: {  }

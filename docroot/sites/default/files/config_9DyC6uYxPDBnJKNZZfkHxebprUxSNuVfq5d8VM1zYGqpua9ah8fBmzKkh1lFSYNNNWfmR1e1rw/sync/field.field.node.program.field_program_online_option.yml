@@ -1,0 +1,23 @@
+uuid: f4372219-6ed7-4fde-97c9-3ad79209a5f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_online_option
+    - node.type.program
+id: node.program.field_program_online_option
+field_name: field_program_online_option
+entity_type: node
+bundle: program
+label: 'Online Option?'
+description: 'If yes, add a URL to the Online Option URL field.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

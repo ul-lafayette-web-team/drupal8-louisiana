@@ -1,0 +1,25 @@
+uuid: 41c34f13-46fd-40df-b39f-8f86a09b31c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_subsection_menu
+    - group.type.subsection
+_core:
+  default_config_hash: PtKkalkn2Gcx_hncczHVIZaB1IEsy3e-1VSFOxSbNIE
+id: group.subsection.field_subsection_menu
+field_name: field_subsection_menu
+entity_type: group
+bundle: subsection
+label: 'Subsection Menu'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:menu'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

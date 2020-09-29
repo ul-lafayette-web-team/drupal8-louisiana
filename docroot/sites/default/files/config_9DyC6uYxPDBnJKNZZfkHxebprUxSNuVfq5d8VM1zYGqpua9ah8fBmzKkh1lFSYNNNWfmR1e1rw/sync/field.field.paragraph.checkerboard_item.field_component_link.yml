@@ -1,0 +1,25 @@
+uuid: 3d4ae439-7f18-483d-a038-7117423f517d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_link
+    - paragraphs.paragraphs_type.checkerboard_item
+  module:
+    - link
+_core:
+  default_config_hash: ExxBvXACqM9LPT092ji6eOPwQUTgCoSiX4QvmQ4LUHI
+id: paragraph.checkerboard_item.field_component_link
+field_name: field_component_link
+entity_type: paragraph
+bundle: checkerboard_item
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

@@ -1,0 +1,9 @@
+uuid: f7dbe35e-6bf9-4b81-84f6-772bb352a781
+langcode: en
+status: true
+dependencies: {  }
+id: tuition_fees_set
+label: 'Tuition & Fees Set'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

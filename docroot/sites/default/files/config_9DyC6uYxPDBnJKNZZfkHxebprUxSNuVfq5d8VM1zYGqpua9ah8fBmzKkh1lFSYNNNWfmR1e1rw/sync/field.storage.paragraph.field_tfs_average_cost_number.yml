@@ -1,0 +1,21 @@
+uuid: 503f1948-be25-4549-99cb-da491af7b8d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_tfs_average_cost_number
+field_name: field_tfs_average_cost_number
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

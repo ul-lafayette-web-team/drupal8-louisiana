@@ -1,0 +1,28 @@
+uuid: 6ffd5256-5a38-450a-97ea-a98c1c93a04a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_featured_news
+    - node.type.news
+    - node.type.tuition_fees_page
+id: node.tuition_fees_page.field_header_featured_news
+field_name: field_header_featured_news
+entity_type: node
+bundle: tuition_fees_page
+label: 'Featured News/Story'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      news: news
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,25 @@
+uuid: 9e8e06a7-2964-4d0e-a47a-470daf6f9e38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_link
+    - paragraphs.paragraphs_type.differentiators_section
+  module:
+    - link
+_core:
+  default_config_hash: rFz5Qd8XuyEcPBskHK_mA4Ze-28fo0kU7nS_JZCB3gc
+id: paragraph.differentiators_section.field_component_link
+field_name: field_component_link
+entity_type: paragraph
+bundle: differentiators_section
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

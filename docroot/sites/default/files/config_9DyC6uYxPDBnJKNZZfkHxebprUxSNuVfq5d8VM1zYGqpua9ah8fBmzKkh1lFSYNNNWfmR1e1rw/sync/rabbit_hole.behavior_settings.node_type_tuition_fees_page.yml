@@ -1,0 +1,11 @@
+uuid: 59a6553e-d6f9-4542-8d3f-9a8b771155f1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: LORBgGeTo7r85FOWQvKYCothgT42cODpCjLchFKbo0I
+id: node_type_tuition_fees_page
+action: display_page
+allow_override: 0
+redirect: ''
+redirect_code: 301

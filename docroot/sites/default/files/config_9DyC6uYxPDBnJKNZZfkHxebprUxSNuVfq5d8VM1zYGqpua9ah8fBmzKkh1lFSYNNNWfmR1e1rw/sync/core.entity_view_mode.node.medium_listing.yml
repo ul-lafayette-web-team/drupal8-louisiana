@@ -1,0 +1,12 @@
+uuid: cdb57097-0697-4f98-b86f-eec2ff25fdef
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: UcjEFVuniGJlA-qeDpvy6yjdGxHtnBmfv-jvueSV7XE
+id: node.medium_listing
+label: 'Medium Listing'
+targetEntityType: node
+cache: true

@@ -1,0 +1,8 @@
+uuid: e8f2da36-1207-48dd-97a8-dfd521a46817
+langcode: en
+status: true
+dependencies: {  }
+name: 'Counselor State'
+vid: counselor_state
+description: ''
+weight: 0

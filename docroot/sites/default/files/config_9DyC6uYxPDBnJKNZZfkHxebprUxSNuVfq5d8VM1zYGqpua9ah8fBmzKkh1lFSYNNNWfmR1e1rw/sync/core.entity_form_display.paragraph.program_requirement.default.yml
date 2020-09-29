@@ -1,0 +1,34 @@
+uuid: 41dae4d7-30e1-4082-a08c-85dd8dfb677b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.program_requirement.field_component_body
+    - field.field.paragraph.program_requirement.field_component_title
+    - paragraphs.paragraphs_type.program_requirement
+  module:
+    - text
+id: paragraph.program_requirement.default
+targetEntityType: paragraph
+bundle: program_requirement
+mode: default
+content:
+  field_component_body:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_component_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

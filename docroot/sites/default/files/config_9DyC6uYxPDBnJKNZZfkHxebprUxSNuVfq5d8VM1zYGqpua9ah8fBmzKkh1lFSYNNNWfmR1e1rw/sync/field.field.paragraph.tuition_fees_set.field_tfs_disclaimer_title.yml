@@ -1,0 +1,19 @@
+uuid: 03401e8f-2fbd-4a08-acfb-f99576483f41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tfs_disclaimer_title
+    - paragraphs.paragraphs_type.tuition_fees_set
+id: paragraph.tuition_fees_set.field_tfs_disclaimer_title
+field_name: field_tfs_disclaimer_title
+entity_type: paragraph
+bundle: tuition_fees_set
+label: 'Disclaimer Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

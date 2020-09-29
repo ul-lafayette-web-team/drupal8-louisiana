@@ -1,0 +1,11 @@
+uuid: b75cd5fe-b302-46d9-b551-7606bc88cb90
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.news_story_type
+id: taxonomy_vocabulary_news_story_type
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301

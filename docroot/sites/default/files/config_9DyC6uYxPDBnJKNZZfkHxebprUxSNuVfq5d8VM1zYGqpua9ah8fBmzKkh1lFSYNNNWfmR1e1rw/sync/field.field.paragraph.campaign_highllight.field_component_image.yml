@@ -1,0 +1,28 @@
+uuid: 10fa92d8-c0d7-438d-9992-bad3f716deca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_image
+    - media.type.image
+    - paragraphs.paragraphs_type.campaign_highllight
+id: paragraph.campaign_highllight.field_component_image
+field_name: field_component_image
+entity_type: paragraph
+bundle: campaign_highllight
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

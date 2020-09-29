@@ -1,0 +1,45 @@
+uuid: bbf5a5fd-1ae2-4f95-a45f-78f07d4e4506
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.applicant_type.field_applicant_type_link
+    - field.field.paragraph.applicant_type.field_component_body
+    - field.field.paragraph.applicant_type.field_component_title
+    - paragraphs.paragraphs_type.applicant_type
+  module:
+    - link
+    - text
+id: paragraph.applicant_type.default
+targetEntityType: paragraph
+bundle: applicant_type
+mode: default
+content:
+  field_applicant_type_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_component_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_component_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

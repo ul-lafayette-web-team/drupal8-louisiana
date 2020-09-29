@@ -1,0 +1,55 @@
+uuid: 433b27be-45dd-4e8f-87b8-2d3f6667a021
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.subsection.field_subsection_home
+    - field.field.group.subsection.field_subsection_logo
+    - field.field.group.subsection.field_subsection_menu
+    - group.type.subsection
+  module:
+    - image
+_core:
+  default_config_hash: 2e1kHeK_-KM3X3-xiNqC55dA1OICnC_LMf11nYgWXgE
+id: group.subsection.default
+targetEntityType: group
+bundle: subsection
+mode: default
+content:
+  field_subsection_home:
+    weight: -4
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_subsection_logo:
+    weight: -1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_subsection_menu:
+    weight: -3
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  label:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  changed: true
+  created: true
+  uid: true

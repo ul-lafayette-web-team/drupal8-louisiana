@@ -1,0 +1,51 @@
+uuid: 4356f8a7-6d96-41a2-b5c4-bc1810909cd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.instagram_gallery.field_component_link
+    - field.field.paragraph.instagram_gallery.field_component_title
+    - field.field.paragraph.instagram_gallery.field_instagram_gallery_items
+    - paragraphs.paragraphs_type.instagram_gallery
+  module:
+    - link_class
+    - paragraphs
+id: paragraph.instagram_gallery.default
+targetEntityType: paragraph
+bundle: instagram_gallery
+mode: default
+content:
+  field_component_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      link_class_mode: force_class
+      link_class_force: link-underline
+      link_class_select: ''
+    third_party_settings: {  }
+    type: link_class_field_widget
+    region: content
+  field_component_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_instagram_gallery_items:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,9 @@
+uuid: 95e34024-b53c-40f4-8532-7b65506584fe
+langcode: en
+status: true
+dependencies: {  }
+id: profile_summary_feature
+label: 'Profile Summary Feature'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

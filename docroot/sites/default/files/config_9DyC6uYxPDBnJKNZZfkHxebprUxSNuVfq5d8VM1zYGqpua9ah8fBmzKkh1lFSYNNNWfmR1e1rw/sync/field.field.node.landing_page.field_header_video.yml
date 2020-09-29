@@ -1,0 +1,31 @@
+uuid: dd56a01c-70fa-46a9-b220-bf328da32202
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_video
+    - media.type.video
+    - node.type.landing_page
+_core:
+  default_config_hash: Por9DI-n57PfdQCfGDQB8tkP6VpmTyuNW_3W9PiX5ag
+id: node.landing_page.field_header_video
+field_name: field_header_video
+entity_type: node
+bundle: landing_page
+label: 'Header Video'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video: video
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

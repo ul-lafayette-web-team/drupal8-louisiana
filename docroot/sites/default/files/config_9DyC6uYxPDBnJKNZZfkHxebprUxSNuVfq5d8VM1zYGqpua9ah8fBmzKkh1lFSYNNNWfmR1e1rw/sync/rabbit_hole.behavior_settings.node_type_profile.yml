@@ -1,0 +1,13 @@
+uuid: 625302d5-9a24-4682-aef3-09fa4b783657
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.profile
+_core:
+  default_config_hash: eS2h5ruUUSM-C8WsBAP9V9Qs5unZ_b9kHarnmdy3ZWc
+id: node_type_profile
+action: display_page
+allow_override: 0
+redirect: ''
+redirect_code: 301

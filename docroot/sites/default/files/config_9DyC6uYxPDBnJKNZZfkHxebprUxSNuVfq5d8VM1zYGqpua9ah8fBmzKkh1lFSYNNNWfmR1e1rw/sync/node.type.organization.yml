@@ -1,0 +1,19 @@
+uuid: 9213427b-7b26-4893-a9ee-1d4081bd790e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: RhZ8pw1Y8NkCdS_K1QxDf9ZykGjMLcOgzE9WNTvouDc
+name: Organization
+type: organization
+description: 'Used to create organization pages.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

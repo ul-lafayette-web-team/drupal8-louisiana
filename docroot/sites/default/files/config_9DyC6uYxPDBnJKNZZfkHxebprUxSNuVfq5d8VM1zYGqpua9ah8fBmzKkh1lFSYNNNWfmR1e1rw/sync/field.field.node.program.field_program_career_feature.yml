@@ -1,0 +1,148 @@
+uuid: 467cd01c-f722-4088-ad2a-100162511889
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_career_feature
+    - node.type.program
+    - paragraphs.paragraphs_type.program_career_feature
+  module:
+    - entity_reference_revisions
+id: node.program.field_program_career_feature
+field_name: field_program_career_feature
+entity_type: node
+bundle: program
+label: 'Program Career Feature'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      program_career_feature: program_career_feature
+    target_bundles_drag_drop:
+      program_requirement:
+        weight: 41
+        enabled: false
+      applicant_type:
+        weight: 42
+        enabled: false
+      brand_feature:
+        weight: 43
+        enabled: false
+      campaign_highllight:
+        weight: 44
+        enabled: false
+      checkerboard:
+        weight: 45
+        enabled: false
+      checkerboard_item:
+        weight: 46
+        enabled: false
+      course_feature_year:
+        weight: 47
+        enabled: false
+      culture_component:
+        weight: 48
+        enabled: false
+      differentiator:
+        weight: 49
+        enabled: false
+      differentiators_section:
+        weight: 50
+        enabled: false
+      find_your_counselor_feature:
+        weight: 51
+        enabled: false
+      gallery:
+        weight: 52
+        enabled: false
+      gallery_item:
+        weight: 53
+        enabled: false
+      instagram_gallery:
+        weight: 54
+        enabled: false
+      instagram_gallery_item_:
+        weight: 55
+        enabled: false
+      livewhale_event_feature:
+        weight: 56
+        enabled: false
+      mega_menu_item:
+        weight: 57
+        enabled: false
+      news_story_curated_feature:
+        weight: 58
+        enabled: false
+      news_tagged_feature:
+        weight: 59
+        enabled: false
+      organizations_contact_feature:
+        weight: 60
+        enabled: false
+      organizations_feature:
+        weight: 61
+        enabled: false
+      page_components:
+        weight: 62
+        enabled: false
+      process_step:
+        weight: 63
+        enabled: false
+      profile_contact_feature:
+        weight: 64
+        enabled: false
+      profile_summary_feature:
+        weight: 65
+        enabled: false
+      profile_summary_program_feature:
+        weight: 66
+        enabled: false
+      program_career_feature:
+        enabled: true
+        weight: 67
+      program_career_outcome:
+        weight: 68
+        enabled: false
+      program_courses_feature:
+        weight: 69
+        enabled: false
+      program_differentiators_section:
+        weight: 70
+        enabled: false
+      program_featured_alumni:
+        weight: 71
+        enabled: false
+      program_features_section:
+        weight: 72
+        enabled: false
+      program_quick_info_rating:
+        weight: 73
+        enabled: false
+      question_item:
+        weight: 74
+        enabled: false
+      question_set:
+        weight: 75
+        enabled: false
+      questions_section:
+        weight: 76
+        enabled: false
+      social_media_link:
+        weight: 77
+        enabled: false
+      tuition_fees_aid_item:
+        weight: 78
+        enabled: false
+      tuition_fees_set:
+        weight: 79
+        enabled: false
+      tutition_fees_cost_item:
+        weight: 80
+        enabled: false
+field_type: entity_reference_revisions

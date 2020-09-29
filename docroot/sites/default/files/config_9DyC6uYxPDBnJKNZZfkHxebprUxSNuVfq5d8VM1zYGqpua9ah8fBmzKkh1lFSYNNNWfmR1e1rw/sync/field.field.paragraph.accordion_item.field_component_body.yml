@@ -1,0 +1,29 @@
+uuid: 6c058ee1-16fe-4eba-830a-abd53f1b4acc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_body
+    - paragraphs.paragraphs_type.accordion_item
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    full_html: '0'
+    simple_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: paragraph.accordion_item.field_component_body
+field_name: field_component_body
+entity_type: paragraph
+bundle: accordion_item
+label: Answer
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

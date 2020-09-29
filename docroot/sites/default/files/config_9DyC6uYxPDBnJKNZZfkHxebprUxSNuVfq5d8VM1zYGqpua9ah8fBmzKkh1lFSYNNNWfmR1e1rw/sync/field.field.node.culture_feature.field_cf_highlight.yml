@@ -1,0 +1,19 @@
+uuid: 08cb4732-0af7-4441-b9c2-8e03ec541e7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cf_highlight
+    - node.type.culture_feature
+id: node.culture_feature.field_cf_highlight
+field_name: field_cf_highlight
+entity_type: node
+bundle: culture_feature
+label: 'Highlight Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

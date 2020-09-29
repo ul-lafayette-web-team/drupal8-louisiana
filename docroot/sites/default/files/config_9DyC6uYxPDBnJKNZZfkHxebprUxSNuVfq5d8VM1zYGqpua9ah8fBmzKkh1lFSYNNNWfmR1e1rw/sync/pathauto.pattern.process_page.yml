@@ -1,0 +1,24 @@
+uuid: 553b918d-40a5-410d-a9b5-3f1c763cd00f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 7Oq13Vy-4b36YcYwOCsjubrlO3SqzaQjMueI0bIGrQU
+id: process_page
+label: 'Process Page'
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parent:url:path]/[node:title]'
+selection_criteria:
+  65efa714-f0d9-457a-8c06-affd777e5559:
+    id: node_type
+    bundles:
+      process_page: process_page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 65efa714-f0d9-457a-8c06-affd777e5559
+selection_logic: and
+weight: -5
+relationships: {  }

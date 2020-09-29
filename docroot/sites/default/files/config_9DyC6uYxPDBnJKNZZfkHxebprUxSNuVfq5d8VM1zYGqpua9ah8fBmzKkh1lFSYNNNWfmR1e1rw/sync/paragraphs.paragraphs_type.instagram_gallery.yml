@@ -1,0 +1,9 @@
+uuid: 8ea405af-d192-4fa3-9422-f345d8dd276e
+langcode: en
+status: true
+dependencies: {  }
+id: instagram_gallery
+label: 'Instagram Gallery'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

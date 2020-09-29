@@ -1,0 +1,15 @@
+uuid: 8f736e00-6df5-4495-9a28-ce9af12297e7
+langcode: en
+status: true
+dependencies: {  }
+name: ul_gallery
+label: 'UL Gallery 761×508'
+effects:
+  08bbd8ac-d7a4-4655-8aba-e4ae87f9d21c:
+    uuid: 08bbd8ac-d7a4-4655-8aba-e4ae87f9d21c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 761
+      height: 508
+      anchor: center-center

@@ -1,0 +1,29 @@
+uuid: ff3d2ccb-39cf-41e3-aa03-7aab807e5635
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_story_future
+    - node.type.news
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    simple_html: simple_html
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: node.news.field_news_story_future
+field_name: field_news_story_future
+entity_type: node
+bundle: news
+label: 'Where I''m Going'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

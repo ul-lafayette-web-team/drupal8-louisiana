@@ -1,0 +1,68 @@
+uuid: cce710ac-78c0-45fe-a463-e402d4e47a4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.program_feature.field_feature_display_title
+    - field.field.node.program_feature.field_intro_text
+    - field.field.node.program_feature.field_program_feature_cta_link
+    - field.field.node.program_feature.field_program_feature_image
+    - field.field.node.program_feature.field_program_feature_video
+    - node.type.program_feature
+  module:
+    - link
+    - text
+    - user
+id: node.program_feature.default
+targetEntityType: node
+bundle: program_feature
+mode: default
+content:
+  field_feature_display_title:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_intro_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_program_feature_cta_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_program_feature_image:
+    type: entity_reference_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_program_feature_video:
+    type: entity_reference_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  content_moderation_control: true
+  links: true

@@ -1,0 +1,12 @@
+uuid: 9c4de298-1ed6-4ba5-9ffa-4bcd453eab5d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: iBLj8XsJx16uNWzvnBqZb_2QWT6HCZ1KpqxAoWRigAE
+id: node.medium_feature
+label: 'Medium Feature'
+targetEntityType: node
+cache: true

@@ -1,0 +1,21 @@
+uuid: 98ed917b-d520-4d1b-a7d1-af07a4f518b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_icon
+    - paragraphs.paragraphs_type.process_step
+  module:
+    - fontawesome
+id: paragraph.process_step.field_component_icon
+field_name: field_component_icon
+entity_type: paragraph
+bundle: process_step
+label: 'Step Icon'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: fontawesome_icon

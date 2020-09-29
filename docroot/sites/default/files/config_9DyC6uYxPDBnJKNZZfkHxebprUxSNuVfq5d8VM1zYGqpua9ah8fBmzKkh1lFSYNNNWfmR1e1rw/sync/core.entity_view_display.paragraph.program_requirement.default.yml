@@ -1,0 +1,31 @@
+uuid: bf82731f-5fc0-43e6-be91-6cf1902bcaa7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.program_requirement.field_component_body
+    - field.field.paragraph.program_requirement.field_component_title
+    - paragraphs.paragraphs_type.program_requirement
+  module:
+    - text
+id: paragraph.program_requirement.default
+targetEntityType: paragraph
+bundle: program_requirement
+mode: default
+content:
+  field_component_body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_component_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

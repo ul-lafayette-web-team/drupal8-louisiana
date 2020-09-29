@@ -1,0 +1,14 @@
+uuid: 6fcfa5a2-984b-4b36-b17e-feb078eb58b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.page_components
+id: paragraph.page_components.default
+targetEntityType: paragraph
+bundle: page_components
+mode: default
+content: {  }
+hidden:
+  created: true
+  status: true

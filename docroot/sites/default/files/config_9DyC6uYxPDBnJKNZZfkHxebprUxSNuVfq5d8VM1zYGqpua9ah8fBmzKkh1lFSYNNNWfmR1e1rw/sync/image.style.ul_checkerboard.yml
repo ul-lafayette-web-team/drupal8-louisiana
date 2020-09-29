@@ -1,0 +1,15 @@
+uuid: 537142cd-df2e-46a0-b396-fe777f320614
+langcode: en
+status: true
+dependencies: {  }
+name: ul_checkerboard
+label: 'UL Checkerboard  760×500'
+effects:
+  76ebfd61-a33e-4da7-a8d4-e6abece5c06e:
+    uuid: 76ebfd61-a33e-4da7-a8d4-e6abece5c06e
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 760
+      height: 500
+      anchor: center-center

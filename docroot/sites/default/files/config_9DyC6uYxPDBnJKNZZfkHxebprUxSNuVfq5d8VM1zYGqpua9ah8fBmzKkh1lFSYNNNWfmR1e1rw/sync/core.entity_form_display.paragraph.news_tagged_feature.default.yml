@@ -1,0 +1,34 @@
+uuid: 35633ec6-4660-453f-9da8-9847351078b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_tagged_feature.field_component_title
+    - field.field.paragraph.news_tagged_feature.field_ntf_news_tag
+    - paragraphs.paragraphs_type.news_tagged_feature
+id: paragraph.news_tagged_feature.default
+targetEntityType: paragraph
+bundle: news_tagged_feature
+mode: default
+content:
+  field_component_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ntf_news_tag:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,12 @@
+uuid: ac16b791-dfd9-4962-9131-e59ac93d8a59
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8xA8ansQaQt3_fAbZOlYXZNnokGIP-hhnjW4UQ643tw
+id: node__landing_page
+label: 'Content: Landing Page'
+tags:
+  description: '[node:field_intro_text]'
+  og_image: '[node:field_header_image:entity:field_media_image:entity:url]'
+  og_description: '[node:field_intro_text]'

@@ -1,0 +1,45 @@
+uuid: 7bbb1ce9-acd3-4cf5-a855-8418fb58ebe7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.organizations_contact_feature.field_component_link
+    - field.field.paragraph.organizations_contact_feature.field_component_title
+    - field.field.paragraph.organizations_contact_feature.field_ocf_organizations
+    - paragraphs.paragraphs_type.organizations_contact_feature
+  module:
+    - link
+id: paragraph.organizations_contact_feature.default
+targetEntityType: paragraph
+bundle: organizations_contact_feature
+mode: default
+content:
+  field_component_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_component_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ocf_organizations:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

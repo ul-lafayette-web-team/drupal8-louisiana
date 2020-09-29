@@ -1,0 +1,15 @@
+uuid: 779d9a95-bc2c-4567-99d2-215804ca8bd1
+langcode: en
+status: true
+dependencies: {  }
+name: ul_hero_studnet_spotlight
+label: 'UL Hero student spotlight 1444×968 '
+effects:
+  b0b3b4de-8a40-4f76-95a8-7e1a1b680502:
+    uuid: b0b3b4de-8a40-4f76-95a8-7e1a1b680502
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1444
+      height: 968
+      anchor: center-center

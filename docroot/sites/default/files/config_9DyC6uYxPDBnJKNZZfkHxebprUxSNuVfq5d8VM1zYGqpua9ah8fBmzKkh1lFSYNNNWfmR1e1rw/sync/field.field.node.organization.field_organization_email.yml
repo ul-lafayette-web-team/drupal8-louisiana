@@ -1,0 +1,21 @@
+uuid: 3fa3d83c-ae66-4d18-8ee6-6044158604b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organization_email
+    - node.type.organization
+_core:
+  default_config_hash: Gq0KL3pWV_0TpYC7EtfJ-yAmhhIgo0vnSAhV06cwlDs
+id: node.organization.field_organization_email
+field_name: field_organization_email
+entity_type: node
+bundle: organization
+label: 'Contact Email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

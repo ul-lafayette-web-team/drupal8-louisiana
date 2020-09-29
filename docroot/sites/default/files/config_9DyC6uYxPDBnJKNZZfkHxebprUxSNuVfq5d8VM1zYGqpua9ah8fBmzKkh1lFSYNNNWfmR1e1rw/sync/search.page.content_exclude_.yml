@@ -1,0 +1,16 @@
+uuid: 5bcacec6-7184-4d3a-8411-2926d78e0a0b
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_exclude
+id: content_exclude_
+label: 'Content (Exclude)'
+path: content
+weight: 0
+plugin: search_exclude_node_search
+configuration:
+  rankings: {  }
+  excluded_bundles:
+    applicant_type_set: applicant_type_set
+    culture_feature: culture_feature

@@ -1,0 +1,120 @@
+uuid: f46fbe45-8ee5-45e9-af2b-9b8a4f5332d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tuition_fees_set.field_component_title
+    - field.field.paragraph.tuition_fees_set.field_tfs_aid_items
+    - field.field.paragraph.tuition_fees_set.field_tfs_audience_name
+    - field.field.paragraph.tuition_fees_set.field_tfs_average_cost_name
+    - field.field.paragraph.tuition_fees_set.field_tfs_average_cost_number
+    - field.field.paragraph.tuition_fees_set.field_tfs_cost_items
+    - field.field.paragraph.tuition_fees_set.field_tfs_disclaimer_text
+    - field.field.paragraph.tuition_fees_set.field_tfs_disclaimer_title
+    - field.field.paragraph.tuition_fees_set.field_tfs_net_price_calc_link
+    - field.field.paragraph.tuition_fees_set.field_tfs_total_name
+    - field.field.paragraph.tuition_fees_set.field_tfs_total_number
+    - paragraphs.paragraphs_type.tuition_fees_set
+  module:
+    - entity_reference_revisions
+    - link
+id: paragraph.tuition_fees_set.default
+targetEntityType: paragraph
+bundle: tuition_fees_set
+mode: default
+content:
+  field_component_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tfs_aid_items:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_tfs_audience_name:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tfs_average_cost_name:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tfs_average_cost_number:
+    weight: 7
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tfs_cost_items:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_tfs_disclaimer_text:
+    weight: 9
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tfs_disclaimer_title:
+    weight: 8
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tfs_net_price_calc_link:
+    weight: 10
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_tfs_total_name:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tfs_total_number:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

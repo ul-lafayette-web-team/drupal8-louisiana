@@ -1,0 +1,10 @@
+uuid: 4b3a5ec2-a324-4c14-bdfe-7e760f6166d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.program_news_feature
+label: 'Program News Feature'
+targetEntityType: node
+cache: true

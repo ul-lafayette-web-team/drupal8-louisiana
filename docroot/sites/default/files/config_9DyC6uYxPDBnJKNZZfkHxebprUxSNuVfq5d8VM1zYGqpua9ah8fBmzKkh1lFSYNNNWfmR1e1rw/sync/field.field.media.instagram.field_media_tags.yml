@@ -1,0 +1,31 @@
+uuid: 966530fe-2564-40b7-bb9d-f1d9477ba1df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_tags
+    - media.type.instagram
+    - taxonomy.vocabulary.media_tag
+_core:
+  default_config_hash: vv3FgFwgx-FFodi8l1PNPnb6xr-4YVVUb_XaZ-oT6BU
+id: media.instagram.field_media_tags
+field_name: field_media_tags
+entity_type: media
+bundle: instagram
+label: 'Media Tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      media_tag: media_tag
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

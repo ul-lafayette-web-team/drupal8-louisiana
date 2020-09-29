@@ -1,0 +1,33 @@
+uuid: 3830fc54-db66-4783-8e0f-a6f41de580c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.organization
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    full_html: '0'
+    basic_html: '0'
+    simple_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+_core:
+  default_config_hash: D5U_eGTjTdU9fFR4dmhAVp_CaePdfFuHFpCqup95Zi8
+id: node.organization.body
+field_name: body
+entity_type: node
+bundle: organization
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

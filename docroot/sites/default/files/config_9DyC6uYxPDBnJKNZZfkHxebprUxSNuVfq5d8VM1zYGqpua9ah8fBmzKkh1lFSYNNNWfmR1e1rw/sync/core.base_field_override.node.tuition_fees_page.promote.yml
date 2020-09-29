@@ -1,0 +1,24 @@
+uuid: 2d228250-7b27-4817-b409-b3409acd5cc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tuition_fees_page
+_core:
+  default_config_hash: 2HJJdw7KuhMkyKyli3Si8gRGLuaExTHuXF6UXkqzuAs
+id: node.tuition_fees_page.promote
+field_name: promote
+entity_type: node
+bundle: tuition_fees_page
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

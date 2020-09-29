@@ -1,0 +1,34 @@
+uuid: 90d92db4-d3c1-4f88-ab03-926b32166baa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.profile_additional_link.field_component_link
+    - field.field.paragraph.profile_additional_link.field_component_title
+    - paragraphs.paragraphs_type.profile_additional_link
+  module:
+    - link
+id: paragraph.profile_additional_link.default
+targetEntityType: paragraph
+bundle: profile_additional_link
+mode: default
+content:
+  field_component_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_component_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

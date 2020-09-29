@@ -1,0 +1,10 @@
+uuid: efa0d4b1-f2bf-47c4-938b-c00484cfb236
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: cE6yO4bie2s0EDHwaeJVWQQq08vKIddVwJ0RGJfpwKs
+id: main
+label: 'Main Menu'
+description: ''
+locked: true

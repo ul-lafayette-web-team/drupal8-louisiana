@@ -1,0 +1,28 @@
+uuid: 66cce766-a185-436b-a507-cddded69ead1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ncf_news
+    - node.type.news
+    - paragraphs.paragraphs_type.news_story_curated_feature
+id: paragraph.news_story_curated_feature.field_ncf_news
+field_name: field_ncf_news
+entity_type: paragraph
+bundle: news_story_curated_feature
+label: News/Story
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      news: news
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

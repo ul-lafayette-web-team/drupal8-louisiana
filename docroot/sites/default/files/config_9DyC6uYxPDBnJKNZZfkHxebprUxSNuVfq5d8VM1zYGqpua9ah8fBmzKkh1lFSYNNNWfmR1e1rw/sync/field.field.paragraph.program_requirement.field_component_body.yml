@@ -1,0 +1,29 @@
+uuid: 225286e8-7cd9-48cf-a048-47a49137a023
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_body
+    - paragraphs.paragraphs_type.program_requirement
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    full_html: '0'
+    simple_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: paragraph.program_requirement.field_component_body
+field_name: field_component_body
+entity_type: paragraph
+bundle: program_requirement
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,9 @@
+uuid: 199fde5d-0ea4-43ab-be9c-14923a00b7bb
+langcode: en
+status: true
+dependencies: {  }
+id: profile_summary_program_feature
+label: 'Profile Summary Program Feature'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

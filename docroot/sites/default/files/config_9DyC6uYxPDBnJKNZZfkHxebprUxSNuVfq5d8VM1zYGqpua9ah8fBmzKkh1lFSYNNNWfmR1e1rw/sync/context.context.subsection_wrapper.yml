@@ -1,0 +1,103 @@
+uuid: 680033d8-64d2-4d60-822f-a2a281461178
+langcode: en
+status: true
+dependencies:
+  module:
+    - oho_group
+    - system
+_core:
+  default_config_hash: C8eOzIAmx6RGAJ9N02cxX_w7vzmzVdaZGwzntiSQU34
+name: subsection_wrapper
+label: 'Subsection Wrapper'
+group: 'Subsection Wrapper'
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  group_content:
+    id: group_content
+    group_types:
+      subsection: subsection
+    negate: 0
+    uuid: 8efc50cd-2c64-49bd-806a-96627c740d39
+    context_mapping:
+      node: '@node.node_route_context:node'
+  current_theme:
+    id: current_theme
+    theme: louisiana
+    negate: 0
+    uuid: c7e8d7eb-a96b-428b-848b-998e6a60e84c
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      60f752c2-bce9-4ad6-820d-5f046e4a69ba:
+        id: group_view_block
+        label: 'Group View Block'
+        provider: oho_group
+        label_display: 0
+        group_type: subsection
+        view_mode: default
+        region: primary_nav
+        weight: '0'
+        context_mapping:
+          node: '@node.node_route_context:node'
+        theme: oho_base
+        css_class: ''
+        unique: 0
+        context_id: subsection_wrapper
+        uuid: 60f752c2-bce9-4ad6-820d-5f046e4a69ba
+      76e694fe-d555-401a-a020-4396bfb83906:
+        id: 'menu_block:utility-menu'
+        label: 'Utility Menu'
+        provider: menu_block
+        label_display: 0
+        level: '1'
+        depth: '1'
+        expand: 0
+        parent: 'utility-menu:'
+        suggestion: utility_menu
+        region: secondary_nav
+        weight: '-1'
+        context_mapping: {  }
+        theme: louisiana
+        css_class: ''
+        unique: 1
+        context_id: subsection_wrapper
+        uuid: 76e694fe-d555-401a-a020-4396bfb83906
+      cf8e2554-36a7-4aa7-b862-df586bb71606:
+        id: 'menu_block:audience-menu'
+        label: 'Audience menu'
+        provider: menu_block
+        label_display: 0
+        level: '1'
+        depth: '1'
+        expand: 0
+        parent: 'audience-menu:'
+        suggestion: audience_menu
+        region: secondary_nav
+        weight: '0'
+        context_mapping: {  }
+        theme: louisiana
+        css_class: ''
+        unique: 1
+        context_id: subsection_wrapper
+        uuid: cf8e2554-36a7-4aa7-b862-df586bb71606
+      ff7d5565-55cf-47a0-86d8-7dee34d8be51:
+        id: search_form_block
+        label: 'Search form'
+        provider: search
+        label_display: 0
+        region: secondary_nav
+        weight: '1'
+        context_mapping: {  }
+        theme: louisiana
+        css_class: ''
+        unique: 1
+        context_id: subsection_wrapper
+        uuid: ff7d5565-55cf-47a0-86d8-7dee34d8be51
+    id: blocks
+    saved: false
+    uuid: b77a4c46-6439-4546-864d-a5ad0d73588c
+    include_default_blocks: 0
+weight: 0

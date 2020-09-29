@@ -1,0 +1,255 @@
+uuid: b3034990-2daf-4eae-a196-bb901969111b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.program.body
+    - field.field.node.program.field_checkerboard
+    - field.field.node.program.field_display_mode
+    - field.field.node.program.field_header_featured_news
+    - field.field.node.program.field_intro_text
+    - field.field.node.program.field_metatags
+    - field.field.node.program.field_organizations_contact
+    - field.field.node.program.field_program_career_feature
+    - field.field.node.program.field_program_colleges
+    - field.field.node.program.field_program_concentrations
+    - field.field.node.program.field_program_courses_feature
+    - field.field.node.program.field_program_credit_hours
+    - field.field.node.program.field_program_degree
+    - field.field.node.program.field_program_dept_schools
+    - field.field.node.program.field_program_diff_section
+    - field.field.node.program.field_program_features_section
+    - field.field.node.program.field_program_online_option
+    - field.field.node.program.field_program_online_option_url
+    - field.field.node.program.field_program_other_app_links
+    - field.field.node.program.field_program_primary_link
+    - field.field.node.program.field_program_profile_feature
+    - field.field.node.program.field_program_requirements
+    - field.field.node.program.field_program_secondary_links
+    - field.field.node.program.field_program_tracks
+    - node.type.program
+  module:
+    - entity_reference_revisions
+    - link
+    - options
+    - text
+    - user
+_core:
+  default_config_hash: c9dapZpCMRn-g57x3dLAlNDw1bG21yLD-m5X-XftK84
+id: node.program.default
+targetEntityType: node
+bundle: program
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_checkerboard:
+    type: entity_reference_revisions_entity_view
+    weight: 24
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_display_mode:
+    type: list_default
+    weight: 23
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_header_featured_news:
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: program_news_feature
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_intro_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_organizations_contact:
+    type: entity_reference_revisions_entity_view
+    weight: 20
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_program_career_feature:
+    type: entity_reference_revisions_entity_view
+    weight: 16
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_program_colleges:
+    weight: 7
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_program_concentrations:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_program_courses_feature:
+    type: entity_reference_revisions_entity_view
+    weight: 14
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_program_credit_hours:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_program_degree:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_program_dept_schools:
+    weight: 8
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_program_diff_section:
+    type: entity_reference_revisions_entity_view
+    weight: 13
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_program_features_section:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_program_online_option:
+    weight: 9
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_program_online_option_url:
+    weight: 10
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_program_other_app_links:
+    weight: 12
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_program_primary_link:
+    weight: 19
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_program_profile_feature:
+    type: entity_reference_revisions_entity_view
+    weight: 15
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_program_requirements:
+    type: entity_reference_revisions_entity_view
+    weight: 17
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_program_secondary_links:
+    weight: 18
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_program_tracks:
+    weight: 3
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  content_moderation_control: true
+  field_metatags: true
+  links: true

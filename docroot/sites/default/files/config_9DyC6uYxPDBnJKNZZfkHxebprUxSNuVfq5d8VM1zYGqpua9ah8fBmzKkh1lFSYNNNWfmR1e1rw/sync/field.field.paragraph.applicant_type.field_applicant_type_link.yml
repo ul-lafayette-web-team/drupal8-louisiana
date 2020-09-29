@@ -1,0 +1,23 @@
+uuid: 3c1ec343-629f-453e-be2d-a7860e261385
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_applicant_type_link
+    - paragraphs.paragraphs_type.applicant_type
+  module:
+    - link
+id: paragraph.applicant_type.field_applicant_type_link
+field_name: field_applicant_type_link
+entity_type: paragraph
+bundle: applicant_type
+label: 'Applicant Type Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

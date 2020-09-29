@@ -1,0 +1,17 @@
+uuid: 6960b3ee-7822-4077-858c-cd890af7d73e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Applicant Type Set'
+type: applicant_type_set
+description: 'Used on process pages.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

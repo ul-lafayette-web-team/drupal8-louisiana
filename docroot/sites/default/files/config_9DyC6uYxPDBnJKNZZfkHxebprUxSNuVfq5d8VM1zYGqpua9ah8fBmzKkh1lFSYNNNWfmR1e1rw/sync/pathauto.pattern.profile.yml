@@ -1,0 +1,24 @@
+uuid: 20a113d2-3e3c-4550-86d9-21e9ea923ad9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: uunSvJs78uI-gOrNPXUIffQaPcxEYs1CiQS4CXgIHdQ
+id: profile
+label: Profile
+type: 'canonical_entities:node'
+pattern: '/directory/people/[node:title]'
+selection_criteria:
+  ca82a9c8-d936-4429-b752-95a3031f8a08:
+    id: node_type
+    bundles:
+      profile: profile
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ca82a9c8-d936-4429-b752-95a3031f8a08
+selection_logic: and
+weight: -5
+relationships: {  }

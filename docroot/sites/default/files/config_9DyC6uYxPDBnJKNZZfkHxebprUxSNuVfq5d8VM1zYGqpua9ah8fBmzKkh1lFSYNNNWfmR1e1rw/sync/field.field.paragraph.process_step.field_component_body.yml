@@ -1,0 +1,29 @@
+uuid: 1d1935e1-ac9d-494a-b10b-4cabaac71499
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_body
+    - paragraphs.paragraphs_type.process_step
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    full_html: full_html
+    basic_html: '0'
+    simple_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: paragraph.process_step.field_component_body
+field_name: field_component_body
+entity_type: paragraph
+bundle: process_step
+label: 'Step Information Area'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

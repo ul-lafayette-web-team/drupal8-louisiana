@@ -1,0 +1,55 @@
+uuid: 02386195-99aa-404d-8758-012f87eb2e20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.brand_feature.field_component_body
+    - field.field.paragraph.brand_feature.field_component_image
+    - field.field.paragraph.brand_feature.field_component_link
+    - field.field.paragraph.brand_feature.field_component_title
+    - paragraphs.paragraphs_type.brand_feature
+  module:
+    - link
+    - text
+id: paragraph.brand_feature.default
+targetEntityType: paragraph
+bundle: brand_feature
+mode: default
+content:
+  field_component_body:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_component_image:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_component_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_component_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

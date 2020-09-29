@@ -1,0 +1,15 @@
+uuid: 8a1e09a7-3c0f-437d-869a-91255bbea0d4
+langcode: en
+status: true
+dependencies: {  }
+name: ul_news
+label: 'UL News 1200×800'
+effects:
+  c0d60d15-41f3-4bbe-9a22-9567a19d511b:
+    uuid: c0d60d15-41f3-4bbe-9a22-9567a19d511b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 800
+      anchor: center-center

@@ -1,0 +1,9 @@
+uuid: e16410a7-4e5c-4eb9-959d-1f2e174876cf
+langcode: en
+status: true
+dependencies: {  }
+id: culture_component
+label: 'Culture Component'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

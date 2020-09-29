@@ -1,0 +1,66 @@
+uuid: 274a140d-7bef-4816-8ea8-fbf15b52408c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.campaign_highllight.field_background
+    - field.field.paragraph.campaign_highllight.field_component_body
+    - field.field.paragraph.campaign_highllight.field_component_image
+    - field.field.paragraph.campaign_highllight.field_component_link
+    - field.field.paragraph.campaign_highllight.field_component_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.campaign_highllight
+  module:
+    - image
+    - link
+    - text
+id: paragraph.campaign_highllight.default
+targetEntityType: paragraph
+bundle: campaign_highllight
+mode: default
+content:
+  field_background:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_component_body:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_component_image:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_component_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_component_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

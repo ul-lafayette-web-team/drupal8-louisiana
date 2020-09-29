@@ -1,0 +1,28 @@
+uuid: 76cf964f-a599-4fa3-87b5-4671edeaa302
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_image
+    - media.type.instagram
+    - paragraphs.paragraphs_type.instagram_gallery_item_
+id: paragraph.instagram_gallery_item_.field_component_image
+field_name: field_component_image
+entity_type: paragraph
+bundle: instagram_gallery_item_
+label: Image
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      instagram: instagram
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

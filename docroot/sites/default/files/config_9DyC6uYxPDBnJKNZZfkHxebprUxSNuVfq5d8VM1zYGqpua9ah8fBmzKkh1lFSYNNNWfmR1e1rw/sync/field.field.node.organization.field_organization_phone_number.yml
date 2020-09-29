@@ -1,0 +1,23 @@
+uuid: 72e0946e-bc05-4d20-8a20-8e70ab4ea2c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organization_phone_number
+    - node.type.organization
+  module:
+    - telephone
+_core:
+  default_config_hash: mOsT2TvMjPZCAaI4EX_A_blXmd1vr1r_G1xVfeAv3u4
+id: node.organization.field_organization_phone_number
+field_name: field_organization_phone_number
+entity_type: node
+bundle: organization
+label: 'Contact Phone Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

@@ -1,0 +1,127 @@
+uuid: 91d272f0-8e20-430d-8643-2a3f38caa07d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_diff_section
+    - node.type.program
+    - paragraphs.paragraphs_type.program_differentiators_section
+  module:
+    - entity_reference_revisions
+id: node.program.field_program_diff_section
+field_name: field_program_diff_section
+entity_type: node
+bundle: program
+label: 'Program Differentiators Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      program_differentiators_section: program_differentiators_section
+    target_bundles_drag_drop:
+      program_quick_info_rating:
+        weight: 34
+        enabled: false
+      applicant_type:
+        weight: 35
+        enabled: false
+      brand_feature:
+        weight: 36
+        enabled: false
+      campaign_highllight:
+        weight: 37
+        enabled: false
+      checkerboard:
+        weight: 38
+        enabled: false
+      checkerboard_item:
+        weight: 39
+        enabled: false
+      culture_component:
+        weight: 40
+        enabled: false
+      differentiator:
+        weight: 41
+        enabled: false
+      differentiators_section:
+        weight: 42
+        enabled: false
+      find_your_counselor_feature:
+        weight: 43
+        enabled: false
+      gallery:
+        weight: 44
+        enabled: false
+      gallery_item:
+        weight: 45
+        enabled: false
+      instagram_gallery:
+        weight: 46
+        enabled: false
+      instagram_gallery_item_:
+        weight: 47
+        enabled: false
+      livewhale_event_feature:
+        weight: 48
+        enabled: false
+      mega_menu_item:
+        weight: 49
+        enabled: false
+      news_story_curated_feature:
+        weight: 50
+        enabled: false
+      news_tagged_feature:
+        weight: 51
+        enabled: false
+      organizations_contact_feature:
+        weight: 52
+        enabled: false
+      organizations_feature:
+        weight: 53
+        enabled: false
+      page_components:
+        weight: 54
+        enabled: false
+      process_step:
+        weight: 55
+        enabled: false
+      profile_contact_feature:
+        weight: 56
+        enabled: false
+      profile_summary_feature:
+        weight: 57
+        enabled: false
+      program_differentiators_section:
+        enabled: true
+        weight: 58
+      program_features_section:
+        weight: 59
+        enabled: false
+      question_item:
+        weight: 60
+        enabled: false
+      question_set:
+        weight: 61
+        enabled: false
+      questions_section:
+        weight: 62
+        enabled: false
+      social_media_link:
+        weight: 63
+        enabled: false
+      tuition_fees_aid_item:
+        weight: 64
+        enabled: false
+      tuition_fees_set:
+        weight: 65
+        enabled: false
+      tutition_fees_cost_item:
+        weight: 66
+        enabled: false
+field_type: entity_reference_revisions

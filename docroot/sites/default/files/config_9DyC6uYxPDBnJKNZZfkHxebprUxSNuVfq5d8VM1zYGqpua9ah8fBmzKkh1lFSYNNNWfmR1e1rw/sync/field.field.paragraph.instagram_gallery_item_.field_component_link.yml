@@ -1,0 +1,23 @@
+uuid: 897661d8-fe61-47b1-bc89-f54885747c54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_link
+    - paragraphs.paragraphs_type.instagram_gallery_item_
+  module:
+    - link
+id: paragraph.instagram_gallery_item_.field_component_link
+field_name: field_component_link
+entity_type: paragraph
+bundle: instagram_gallery_item_
+label: 'Source Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

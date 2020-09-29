@@ -1,0 +1,18 @@
+uuid: 4010bbf2-16e8-47df-96b5-cbc6e682b797
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_profile_pinned
+field_name: field_profile_pinned
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

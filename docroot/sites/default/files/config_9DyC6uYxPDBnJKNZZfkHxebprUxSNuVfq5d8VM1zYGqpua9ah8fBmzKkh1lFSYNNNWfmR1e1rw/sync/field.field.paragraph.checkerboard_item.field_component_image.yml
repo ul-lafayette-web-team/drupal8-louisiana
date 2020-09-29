@@ -1,0 +1,31 @@
+uuid: 9e75aa5d-0117-4138-b80a-8f50d90be439
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_image
+    - media.type.image
+    - paragraphs.paragraphs_type.checkerboard_item
+_core:
+  default_config_hash: HwMniQP9Ipy-Ux5ejnX00BcQUSiLl86zQft324IM8a4
+id: paragraph.checkerboard_item.field_component_image
+field_name: field_component_image
+entity_type: paragraph
+bundle: checkerboard_item
+label: Image
+description: 'Please upload an image with dimensions ?x?px.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

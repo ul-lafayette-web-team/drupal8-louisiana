@@ -1,0 +1,9 @@
+uuid: 09b72c78-9a93-4ad2-9a45-e9633292d2b1
+langcode: en
+status: true
+dependencies: {  }
+id: tutition_fees_cost_item
+label: 'Tuition & Fees Cost Item'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

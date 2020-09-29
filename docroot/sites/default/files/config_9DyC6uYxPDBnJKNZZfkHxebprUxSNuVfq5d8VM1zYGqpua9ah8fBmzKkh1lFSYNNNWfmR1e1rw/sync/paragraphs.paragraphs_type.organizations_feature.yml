@@ -1,0 +1,9 @@
+uuid: 002352e1-5059-4bc7-9245-9c84f819b81c
+langcode: en
+status: true
+dependencies: {  }
+id: organizations_feature
+label: 'Organizations Feature'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

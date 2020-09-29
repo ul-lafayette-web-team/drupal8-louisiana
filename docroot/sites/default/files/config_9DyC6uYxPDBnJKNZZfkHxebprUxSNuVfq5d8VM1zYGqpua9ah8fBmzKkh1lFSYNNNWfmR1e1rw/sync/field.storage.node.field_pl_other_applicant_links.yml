@@ -1,0 +1,19 @@
+uuid: b8981c50-b9ab-488b-9e6f-c992a25a678c
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_pl_other_applicant_links
+field_name: field_pl_other_applicant_links
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

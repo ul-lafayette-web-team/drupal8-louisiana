@@ -1,0 +1,4 @@
+enabled: 0
+message:
+  value: "<p>This is a test alert!</p>\r\n"
+  format: full_html

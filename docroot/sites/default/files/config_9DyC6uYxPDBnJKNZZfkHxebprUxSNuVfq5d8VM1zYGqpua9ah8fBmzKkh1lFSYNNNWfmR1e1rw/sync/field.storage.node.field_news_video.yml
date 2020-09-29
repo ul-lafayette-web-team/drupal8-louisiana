@@ -1,0 +1,22 @@
+uuid: 08d6823d-aac2-439e-8698-366eeacf7eb5
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+_core:
+  default_config_hash: S45BVMcwm2jiJSUQhXwaQu95oEAPg8pnst8dxVzdb8Q
+id: node.field_news_video
+field_name: field_news_video
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

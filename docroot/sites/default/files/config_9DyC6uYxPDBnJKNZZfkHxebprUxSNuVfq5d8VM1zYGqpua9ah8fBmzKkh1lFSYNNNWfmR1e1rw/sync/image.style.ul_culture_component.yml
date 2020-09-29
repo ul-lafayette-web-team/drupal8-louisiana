@@ -1,0 +1,15 @@
+uuid: 33471fcd-9558-4e71-a853-fe8992c92368
+langcode: en
+status: true
+dependencies: {  }
+name: ul_culture_component
+label: 'UL Culture Component 780×450'
+effects:
+  0518a04c-7319-4e29-9a51-21a8be0c7b48:
+    uuid: 0518a04c-7319-4e29-9a51-21a8be0c7b48
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 780
+      height: 450
+      anchor: center-center

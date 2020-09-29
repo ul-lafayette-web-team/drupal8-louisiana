@@ -1,0 +1,29 @@
+uuid: 360bf998-782b-44a0-8cee-9a4124329ad5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ntf_news_tag
+    - paragraphs.paragraphs_type.news_tagged_feature
+    - taxonomy.vocabulary.news_tag
+id: paragraph.news_tagged_feature.field_ntf_news_tag
+field_name: field_ntf_news_tag
+entity_type: paragraph
+bundle: news_tagged_feature
+label: 'News/Story Tag'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      news_tag: news_tag
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

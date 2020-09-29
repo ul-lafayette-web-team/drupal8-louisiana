@@ -1,0 +1,118 @@
+uuid: e09e4d23-25bf-44e1-9b07-bb65303d085b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tfs_cost_items
+    - paragraphs.paragraphs_type.tuition_fees_set
+    - paragraphs.paragraphs_type.tutition_fees_cost_item
+  module:
+    - entity_reference_revisions
+id: paragraph.tuition_fees_set.field_tfs_cost_items
+field_name: field_tfs_cost_items
+entity_type: paragraph
+bundle: tuition_fees_set
+label: 'Cost Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      tutition_fees_cost_item: tutition_fees_cost_item
+    target_bundles_drag_drop:
+      tuition_fees_set:
+        weight: 30
+        enabled: false
+      applicant_type:
+        weight: 31
+        enabled: false
+      tutition_fees_cost_item:
+        enabled: true
+        weight: 31
+      brand_feature:
+        weight: 32
+        enabled: false
+      campaign_highllight:
+        weight: 33
+        enabled: false
+      checkerboard:
+        weight: 34
+        enabled: false
+      checkerboard_item:
+        weight: 35
+        enabled: false
+      culture_component:
+        weight: 36
+        enabled: false
+      differentiator:
+        weight: 37
+        enabled: false
+      differentiators_section:
+        weight: 38
+        enabled: false
+      gallery:
+        weight: 39
+        enabled: false
+      gallery_item:
+        weight: 40
+        enabled: false
+      instagram_gallery:
+        weight: 41
+        enabled: false
+      instagram_gallery_item_:
+        weight: 42
+        enabled: false
+      livewhale_event_feature:
+        weight: 43
+        enabled: false
+      mega_menu_item:
+        weight: 44
+        enabled: false
+      news_story_curated_feature:
+        weight: 45
+        enabled: false
+      news_tagged_feature:
+        weight: 46
+        enabled: false
+      organizations_contact_feature:
+        weight: 47
+        enabled: false
+      organizations_feature:
+        weight: 48
+        enabled: false
+      page_components:
+        weight: 49
+        enabled: false
+      process_step:
+        weight: 50
+        enabled: false
+      profile_contact_feature:
+        weight: 51
+        enabled: false
+      profile_summary_feature:
+        weight: 52
+        enabled: false
+      program_features_section:
+        weight: 53
+        enabled: false
+      question_item:
+        weight: 54
+        enabled: false
+      question_set:
+        weight: 55
+        enabled: false
+      questions_section:
+        weight: 56
+        enabled: false
+      social_media_link:
+        weight: 57
+        enabled: false
+      tuition_fees_aid_item:
+        weight: 58
+        enabled: false
+field_type: entity_reference_revisions

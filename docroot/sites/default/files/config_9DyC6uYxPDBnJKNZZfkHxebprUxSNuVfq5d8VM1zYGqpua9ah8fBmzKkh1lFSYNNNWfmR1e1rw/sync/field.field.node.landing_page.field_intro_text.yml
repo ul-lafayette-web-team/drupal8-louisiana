@@ -1,0 +1,31 @@
+uuid: cdc65f04-7f2d-4073-b04b-316ee7cf595a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intro_text
+    - node.type.landing_page
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    simple_html: simple_html
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+_core:
+  default_config_hash: nQk2LYFffEW5b8Bbm_fDGk_zr-76IR9Mh1YrjBcHGAQ
+id: node.landing_page.field_intro_text
+field_name: field_intro_text
+entity_type: node
+bundle: landing_page
+label: 'Intro Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

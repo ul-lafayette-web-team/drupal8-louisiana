@@ -1,0 +1,19 @@
+uuid: e99a76a6-be84-4d60-8f25-de78b73f10d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.subsection
+  enforced:
+    config:
+      - user.role.administrator
+_core:
+  default_config_hash: kcjKwLJbdEvgYXHUo4lO5qvqryWJt2OCgigyLCplE9w
+id: subsection-a416e6833
+label: Administrator
+weight: 2
+internal: true
+audience: outsider
+group_type: subsection
+permissions_ui: false
+permissions: {  }

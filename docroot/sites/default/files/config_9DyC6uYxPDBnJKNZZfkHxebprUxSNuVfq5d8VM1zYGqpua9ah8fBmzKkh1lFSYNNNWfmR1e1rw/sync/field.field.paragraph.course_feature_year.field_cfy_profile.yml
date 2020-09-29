@@ -1,0 +1,28 @@
+uuid: f11e4a2e-4735-42ed-90ec-49257753d401
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cfy_profile
+    - node.type.profile
+    - paragraphs.paragraphs_type.course_feature_year
+id: paragraph.course_feature_year.field_cfy_profile
+field_name: field_cfy_profile
+entity_type: paragraph
+bundle: course_feature_year
+label: 'Professor Profile'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      profile: profile
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

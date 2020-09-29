@@ -1,0 +1,8 @@
+uuid: e1fa5875-403a-4848-9cba-1446c87b3efd
+langcode: en
+status: true
+dependencies: {  }
+name: 'News/Story Topic'
+vid: news_story_topic
+description: ''
+weight: 0

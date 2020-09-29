@@ -1,0 +1,20 @@
+uuid: c16b3e9e-03cc-4517-867d-d791b5d927b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+id: paragraph.field_pds_quick_info_ratings
+field_name: field_pds_quick_info_ratings
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 6
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

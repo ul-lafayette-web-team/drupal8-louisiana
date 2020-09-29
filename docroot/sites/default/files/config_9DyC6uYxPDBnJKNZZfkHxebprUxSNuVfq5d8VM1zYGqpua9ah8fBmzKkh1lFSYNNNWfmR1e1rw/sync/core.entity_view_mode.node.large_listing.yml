@@ -1,0 +1,12 @@
+uuid: 0944cff9-5591-440c-ba34-7e3514285149
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: KGHpklIwQEphVlVMs6vEeIx9H3ubzLbtIXIt1qvs1YA
+id: node.large_listing
+label: 'Large Listing'
+targetEntityType: node
+cache: true

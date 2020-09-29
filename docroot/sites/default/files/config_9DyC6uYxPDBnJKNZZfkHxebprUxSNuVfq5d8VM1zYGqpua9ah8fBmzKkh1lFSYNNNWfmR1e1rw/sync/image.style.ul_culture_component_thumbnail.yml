@@ -1,0 +1,15 @@
+uuid: 3903c60a-1e93-49c9-843a-bb15bf573c12
+langcode: en
+status: true
+dependencies: {  }
+name: ul_culture_component_thumbnail
+label: 'UL Culture Component Thumbnail'
+effects:
+  8a4e6406-729d-43fa-bf6a-9708d9d39573:
+    uuid: 8a4e6406-729d-43fa-bf6a-9708d9d39573
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 260
+      height: 150
+      anchor: center-center

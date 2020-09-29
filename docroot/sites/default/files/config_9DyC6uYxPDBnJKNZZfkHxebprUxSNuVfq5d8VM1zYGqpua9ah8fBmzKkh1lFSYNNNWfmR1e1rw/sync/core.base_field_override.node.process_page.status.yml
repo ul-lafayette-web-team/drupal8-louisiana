@@ -1,0 +1,24 @@
+uuid: 603a1483-49e9-4e8b-b0e7-ce28d87f568e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.process_page
+_core:
+  default_config_hash: Vo_tnP1KOR244PVV-tNIIJ5KTBUtlZSA1wO6Upzepdw
+id: node.process_page.status
+field_name: status
+entity_type: node
+bundle: process_page
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

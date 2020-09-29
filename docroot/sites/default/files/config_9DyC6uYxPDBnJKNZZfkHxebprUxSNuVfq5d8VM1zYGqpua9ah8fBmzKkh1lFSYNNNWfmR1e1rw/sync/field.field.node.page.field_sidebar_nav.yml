@@ -1,0 +1,25 @@
+uuid: 739b88d8-774f-4c8a-a652-b6dea216cc15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar_nav
+    - node.type.page
+_core:
+  default_config_hash: dJq1u5pr8S-HRKl-ON4p2aBaBXgQbDBDnc6hRJ1CITY
+id: node.page.field_sidebar_nav
+field_name: field_sidebar_nav
+entity_type: node
+bundle: page
+label: 'Enable Sidebar Nav'
+description: 'If this box is checked, the sidebar nav will be displayed.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

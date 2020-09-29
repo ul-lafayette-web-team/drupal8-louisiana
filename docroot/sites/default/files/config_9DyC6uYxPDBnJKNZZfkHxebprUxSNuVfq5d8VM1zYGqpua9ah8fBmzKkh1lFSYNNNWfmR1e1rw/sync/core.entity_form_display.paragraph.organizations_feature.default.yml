@@ -1,0 +1,45 @@
+uuid: d775e5fe-3034-4f32-af1e-c9b032ad7b38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.organizations_feature.field_component_link
+    - field.field.paragraph.organizations_feature.field_component_title
+    - field.field.paragraph.organizations_feature.field_of_organizations
+    - paragraphs.paragraphs_type.organizations_feature
+  module:
+    - link
+id: paragraph.organizations_feature.default
+targetEntityType: paragraph
+bundle: organizations_feature
+mode: default
+content:
+  field_component_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_component_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_of_organizations:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

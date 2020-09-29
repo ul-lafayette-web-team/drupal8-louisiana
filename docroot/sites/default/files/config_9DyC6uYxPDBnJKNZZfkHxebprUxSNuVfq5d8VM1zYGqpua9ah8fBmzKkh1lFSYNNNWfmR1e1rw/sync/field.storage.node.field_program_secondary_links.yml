@@ -1,0 +1,19 @@
+uuid: e5eb8594-43c6-424c-974b-a2f17e3c6495
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_program_secondary_links
+field_name: field_program_secondary_links
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 8
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

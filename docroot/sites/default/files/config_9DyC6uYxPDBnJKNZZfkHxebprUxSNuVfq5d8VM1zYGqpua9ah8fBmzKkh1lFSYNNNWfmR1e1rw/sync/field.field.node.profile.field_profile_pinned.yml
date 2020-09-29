@@ -1,0 +1,23 @@
+uuid: b8adede1-ca62-4e83-8ce6-4fe448682099
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_pinned
+    - node.type.profile
+id: node.profile.field_profile_pinned
+field_name: field_profile_pinned
+entity_type: node
+bundle: profile
+label: 'Pin this Profile?'
+description: 'If the box is checked, this profile will be pinned to the beginning of dynamically generated Profile features.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -1,0 +1,76 @@
+uuid: 40837cf4-6e2d-44d5-a37b-0fdf17f8823b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.program_landing.body
+    - field.field.node.program_landing.field_differentiators_section
+    - field.field.node.program_landing.field_intro_text
+    - field.field.node.program_landing.field_metatags
+    - field.field.node.program_landing.field_organizations_contact_feat
+    - field.field.node.program_landing.field_pl_other_applicant_links
+    - node.type.program_landing
+  module:
+    - entity_reference_revisions
+    - link
+    - text
+    - user
+_core:
+  default_config_hash: ypiaAoVkO12wuwuHkc7VxA1CMkBIBhI02DXsVBnRrPA
+id: node.program_landing.default
+targetEntityType: node
+bundle: program_landing
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_differentiators_section:
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_intro_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_organizations_contact_feat:
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_pl_other_applicant_links:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  field_metatags: true
+  links: true

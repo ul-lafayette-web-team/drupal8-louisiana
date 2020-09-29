@@ -1,0 +1,9 @@
+uuid: ca62ab3d-f619-4b09-b2ce-51186e30263d
+langcode: en
+status: true
+dependencies: {  }
+id: brand_feature
+label: 'Brand Feature'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

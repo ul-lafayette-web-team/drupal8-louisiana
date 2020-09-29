@@ -1,0 +1,9 @@
+uuid: e98bbb35-82fe-443b-ab7f-feda64df0922
+langcode: en
+status: true
+dependencies: {  }
+id: program_requirement
+label: 'Program Requirement'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

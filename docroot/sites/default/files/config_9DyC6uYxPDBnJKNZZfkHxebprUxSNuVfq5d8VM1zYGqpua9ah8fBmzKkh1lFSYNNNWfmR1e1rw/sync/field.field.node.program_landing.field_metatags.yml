@@ -1,0 +1,23 @@
+uuid: cd8ab34b-eca9-474d-ad07-3706a8eec3bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.program_landing
+  module:
+    - metatag
+_core:
+  default_config_hash: vnOMAU_dkPoPNkhR1L8CwbqRCfjpS9X5TFCxnxQPaVM
+id: node.program_landing.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: program_landing
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

@@ -1,0 +1,29 @@
+uuid: fa8c121d-0bea-4c71-9f64-05adcad7ffaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_body
+    - paragraphs.paragraphs_type.tutition_fees_cost_item
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    simple_html: simple_html
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: paragraph.tutition_fees_cost_item.field_component_body
+field_name: field_component_body
+entity_type: paragraph
+bundle: tutition_fees_cost_item
+label: 'Cost Item Explanation'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

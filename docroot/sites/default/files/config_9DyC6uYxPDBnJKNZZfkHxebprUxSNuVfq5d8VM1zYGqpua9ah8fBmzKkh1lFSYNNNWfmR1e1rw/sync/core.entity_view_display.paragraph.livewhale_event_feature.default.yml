@@ -1,0 +1,45 @@
+uuid: 3a49079b-ef42-4346-b2fa-33e3a42cda55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.livewhale_event_feature.field_component_embed
+    - field.field.paragraph.livewhale_event_feature.field_component_link
+    - field.field.paragraph.livewhale_event_feature.field_component_title
+    - paragraphs.paragraphs_type.livewhale_event_feature
+  module:
+    - link
+    - text
+id: paragraph.livewhale_event_feature.default
+targetEntityType: paragraph
+bundle: livewhale_event_feature
+mode: default
+content:
+  field_component_embed:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_component_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_component_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

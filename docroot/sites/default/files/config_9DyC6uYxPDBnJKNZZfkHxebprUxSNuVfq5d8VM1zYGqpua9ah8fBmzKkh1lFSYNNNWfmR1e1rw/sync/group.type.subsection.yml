@@ -1,0 +1,13 @@
+uuid: fad37aab-5a84-4c80-bd52-feb5fc282efd
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2CfRAFvRXi0p2lvv_1FQWj1JdAex5RUIT1SonxplnW4
+id: subsection
+label: Subsection
+description: 'Used to build a subsection of the site and identify all of the subsection''s pages.'
+creator_membership: true
+creator_wizard: false
+creator_roles:
+  - subsection-admin

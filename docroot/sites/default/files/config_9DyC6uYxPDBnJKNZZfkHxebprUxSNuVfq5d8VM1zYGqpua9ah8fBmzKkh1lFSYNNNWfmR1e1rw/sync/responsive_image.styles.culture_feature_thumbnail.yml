@@ -1,0 +1,11 @@
+uuid: 1e44ac77-6c53-40fd-9f17-6af4052ea6c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.medium
+id: culture_feature_thumbnail
+label: 'Culture Feature Thumbnail'
+image_style_mappings: {  }
+breakpoint_group: responsive_image
+fallback_image_style: medium

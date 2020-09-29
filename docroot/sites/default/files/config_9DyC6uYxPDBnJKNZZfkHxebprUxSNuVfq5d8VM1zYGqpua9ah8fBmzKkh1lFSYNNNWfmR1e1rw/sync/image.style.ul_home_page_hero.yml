@@ -1,0 +1,15 @@
+uuid: 8aa4c18a-6fe7-4e98-b606-6b290f3fac48
+langcode: en
+status: true
+dependencies: {  }
+name: ul_home_page_hero
+label: 'UL Home page hero 2400×1350'
+effects:
+  5301b362-0ee0-4e9e-af43-c1747d345d27:
+    uuid: 5301b362-0ee0-4e9e-af43-c1747d345d27
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 2400
+      height: 1350
+      anchor: center-center

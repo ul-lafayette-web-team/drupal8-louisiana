@@ -1,0 +1,21 @@
+uuid: e3c11933-b4a1-49de-bb78-4a4e6fec4030
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organization_location
+    - node.type.organization
+_core:
+  default_config_hash: n73EQ7vg1UpYyeq3Hl_YSkPy77s52700yRWI7XWF_YA
+id: node.organization.field_organization_location
+field_name: field_organization_location
+entity_type: node
+bundle: organization
+label: 'Office Location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

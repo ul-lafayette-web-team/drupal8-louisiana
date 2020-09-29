@@ -1,0 +1,28 @@
+uuid: 23d0a2e1-381c-4ae7-8d9f-6a161e330e8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pcf_organization
+    - node.type.organization
+    - paragraphs.paragraphs_type.profile_contact_feature
+id: paragraph.profile_contact_feature.field_pcf_organization
+field_name: field_pcf_organization
+entity_type: paragraph
+bundle: profile_contact_feature
+label: Organization
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

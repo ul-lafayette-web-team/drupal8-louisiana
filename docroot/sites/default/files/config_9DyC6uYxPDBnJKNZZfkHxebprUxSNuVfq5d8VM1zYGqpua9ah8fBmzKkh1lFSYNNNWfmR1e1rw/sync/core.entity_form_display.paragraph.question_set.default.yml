@@ -1,0 +1,38 @@
+uuid: b8e6b4fe-8737-47fc-b81e-59eb14f9ea83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.question_set.field_component_title
+    - field.field.paragraph.question_set.field_qset_questions
+    - paragraphs.paragraphs_type.question_set
+  module:
+    - paragraphs
+id: paragraph.question_set.default
+targetEntityType: paragraph
+bundle: question_set
+mode: default
+content:
+  field_component_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_qset_questions:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

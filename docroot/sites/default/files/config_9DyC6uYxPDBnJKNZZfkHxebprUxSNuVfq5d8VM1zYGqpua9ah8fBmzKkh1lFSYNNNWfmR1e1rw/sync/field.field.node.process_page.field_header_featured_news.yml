@@ -1,0 +1,28 @@
+uuid: 44d38e29-2978-4349-91a6-f59555098594
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_featured_news
+    - node.type.news
+    - node.type.process_page
+id: node.process_page.field_header_featured_news
+field_name: field_header_featured_news
+entity_type: node
+bundle: process_page
+label: 'Featured News/Story'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      news: news
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

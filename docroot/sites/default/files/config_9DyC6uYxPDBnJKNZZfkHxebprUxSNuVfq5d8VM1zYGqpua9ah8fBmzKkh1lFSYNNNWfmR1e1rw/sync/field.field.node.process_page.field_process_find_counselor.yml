@@ -1,0 +1,121 @@
+uuid: 3096738c-5eed-4762-8cce-5402ae687a8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_process_find_counselor
+    - node.type.process_page
+    - paragraphs.paragraphs_type.find_your_counselor_feature
+  module:
+    - entity_reference_revisions
+id: node.process_page.field_process_find_counselor
+field_name: field_process_find_counselor
+entity_type: node
+bundle: process_page
+label: 'Find Your Counselor Feature'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      find_your_counselor_feature: find_your_counselor_feature
+    target_bundles_drag_drop:
+      find_your_counselor_feature:
+        enabled: true
+        weight: 32
+      applicant_type:
+        weight: 33
+        enabled: false
+      brand_feature:
+        weight: 34
+        enabled: false
+      campaign_highllight:
+        weight: 35
+        enabled: false
+      checkerboard:
+        weight: 36
+        enabled: false
+      checkerboard_item:
+        weight: 37
+        enabled: false
+      culture_component:
+        weight: 38
+        enabled: false
+      differentiator:
+        weight: 39
+        enabled: false
+      differentiators_section:
+        weight: 40
+        enabled: false
+      gallery:
+        weight: 41
+        enabled: false
+      gallery_item:
+        weight: 42
+        enabled: false
+      instagram_gallery:
+        weight: 43
+        enabled: false
+      instagram_gallery_item_:
+        weight: 44
+        enabled: false
+      livewhale_event_feature:
+        weight: 45
+        enabled: false
+      mega_menu_item:
+        weight: 46
+        enabled: false
+      news_story_curated_feature:
+        weight: 47
+        enabled: false
+      news_tagged_feature:
+        weight: 48
+        enabled: false
+      organizations_contact_feature:
+        weight: 49
+        enabled: false
+      organizations_feature:
+        weight: 50
+        enabled: false
+      page_components:
+        weight: 51
+        enabled: false
+      process_step:
+        weight: 52
+        enabled: false
+      profile_contact_feature:
+        weight: 53
+        enabled: false
+      profile_summary_feature:
+        weight: 54
+        enabled: false
+      program_features_section:
+        weight: 55
+        enabled: false
+      question_item:
+        weight: 56
+        enabled: false
+      question_set:
+        weight: 57
+        enabled: false
+      questions_section:
+        weight: 58
+        enabled: false
+      social_media_link:
+        weight: 59
+        enabled: false
+      tuition_fees_aid_item:
+        weight: 60
+        enabled: false
+      tuition_fees_set:
+        weight: 61
+        enabled: false
+      tutition_fees_cost_item:
+        weight: 62
+        enabled: false
+field_type: entity_reference_revisions

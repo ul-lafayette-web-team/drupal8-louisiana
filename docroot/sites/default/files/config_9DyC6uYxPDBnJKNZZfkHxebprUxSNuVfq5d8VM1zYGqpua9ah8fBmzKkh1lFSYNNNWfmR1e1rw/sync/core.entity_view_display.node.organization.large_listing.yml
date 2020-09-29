@@ -1,0 +1,83 @@
+uuid: d32b8683-7d81-4850-a009-69085dc0649b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.large_listing
+    - field.field.node.organization.body
+    - field.field.node.organization.field_display_mode
+    - field.field.node.organization.field_field_livewhale_event_feat
+    - field.field.node.organization.field_header_image
+    - field.field.node.organization.field_header_video_url
+    - field.field.node.organization.field_intro_text
+    - field.field.node.organization.field_org_profile_summary_feat
+    - field.field.node.organization.field_org_social_media_links
+    - field.field.node.organization.field_organization_contact_info
+    - field.field.node.organization.field_organization_email
+    - field.field.node.organization.field_organization_location
+    - field.field.node.organization.field_organization_location_link
+    - field.field.node.organization.field_organization_office_hours
+    - field.field.node.organization.field_organization_phone_number
+    - field.field.node.organization.field_organization_purpose
+    - field.field.node.organization.field_organization_title
+    - field.field.node.organization.field_organization_type
+    - field.field.node.organization.field_page_components
+    - node.type.organization
+  module:
+    - telephone
+    - text
+    - user
+_core:
+  default_config_hash: '-FP1y4yy3L1IC_Fs3TuJ0nEa8gKK34y7VIDn-__lnRU'
+id: node.organization.large_listing
+targetEntityType: node
+bundle: organization
+mode: large_listing
+content:
+  body:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_organization_email:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_organization_location:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_organization_phone_number:
+    weight: 1
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+hidden:
+  content_moderation_control: true
+  field_display_mode: true
+  field_field_livewhale_event_feat: true
+  field_header_image: true
+  field_header_video_url: true
+  field_intro_text: true
+  field_org_profile_summary_feat: true
+  field_org_social_media_links: true
+  field_organization_contact_info: true
+  field_organization_location_link: true
+  field_organization_office_hours: true
+  field_organization_purpose: true
+  field_organization_title: true
+  field_organization_type: true
+  field_page_components: true
+  links: true

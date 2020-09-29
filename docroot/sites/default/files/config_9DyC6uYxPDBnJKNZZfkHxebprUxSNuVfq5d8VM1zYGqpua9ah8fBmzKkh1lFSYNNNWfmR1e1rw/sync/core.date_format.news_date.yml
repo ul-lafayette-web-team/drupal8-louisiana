@@ -1,0 +1,10 @@
+uuid: a48ed0b3-a461-4e4e-9229-e69037b57c4e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 0eCHxscnDrDqTWiTA56P8LeS9S81W9WStbu2iyVJq0M
+id: news_date
+label: 'News Date'
+locked: false
+pattern: 'F j, Y'

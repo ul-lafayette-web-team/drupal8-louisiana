@@ -1,0 +1,10 @@
+uuid: 859bd70c-4533-4140-bd88-06f67d7db528
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.tuition
+label: Tuition
+targetEntityType: paragraph
+cache: true

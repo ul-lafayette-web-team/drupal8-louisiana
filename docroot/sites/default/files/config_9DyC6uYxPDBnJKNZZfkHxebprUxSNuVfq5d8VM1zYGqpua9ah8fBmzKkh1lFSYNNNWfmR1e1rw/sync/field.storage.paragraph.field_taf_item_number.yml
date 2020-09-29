@@ -1,0 +1,21 @@
+uuid: 3bcdf3d5-ee76-4fb8-81a2-5172cc0116fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_taf_item_number
+field_name: field_taf_item_number
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

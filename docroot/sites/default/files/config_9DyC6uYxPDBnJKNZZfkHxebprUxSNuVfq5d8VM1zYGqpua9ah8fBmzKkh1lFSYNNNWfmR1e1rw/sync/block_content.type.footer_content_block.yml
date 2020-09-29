@@ -1,0 +1,10 @@
+uuid: 6410fd8f-40ce-4514-ab9a-8d69c26da281
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: DbqqGurY99ertJHfCdzBGij7HENtqlNKzAtgOfOFzpw
+id: footer_content_block
+label: 'Footer Content Block'
+revision: 1
+description: ''

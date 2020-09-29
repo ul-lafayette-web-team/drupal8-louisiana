@@ -1,0 +1,28 @@
+uuid: 6d26f33f-d645-4fcb-b76a-462077c2a40c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_opsf_organization
+    - node.type.organization
+    - paragraphs.paragraphs_type.organization_profile_summary_fea
+id: paragraph.organization_profile_summary_fea.field_opsf_organization
+field_name: field_opsf_organization
+entity_type: paragraph
+bundle: organization_profile_summary_fea
+label: Organization
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

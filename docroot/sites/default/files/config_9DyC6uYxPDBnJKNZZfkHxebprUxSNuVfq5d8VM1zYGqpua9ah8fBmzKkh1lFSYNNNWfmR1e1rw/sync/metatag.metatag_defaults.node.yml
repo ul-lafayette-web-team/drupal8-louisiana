@@ -1,0 +1,15 @@
+uuid: 3ef5326e-6a45-434e-a75e-7ad5068eb3be
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Cgdyioh9nSDYInvS_K1kjynnjuSepx55MbhFZ5yxcoU
+id: node
+label: Content
+tags:
+  title: '[node:title] | [site:name]'
+  canonical_url: '[node:url]'
+  description: '[node:summary]'
+  og_url: '[node:url]'
+  og_description: '[node:summary]'
+  og_title: '[node:title]'

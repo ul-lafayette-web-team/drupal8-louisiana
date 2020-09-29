@@ -1,0 +1,19 @@
+uuid: aa74b98b-b88a-4cc9-bb67-35c0aad72ee4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_profile_research
+field_name: field_profile_research
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: f5c080cb-3bcd-4d2c-9d71-faee7da4c979
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pl_other_applicant_links
+    - node.type.program_landing
+  module:
+    - link
+id: node.program_landing.field_pl_other_applicant_links
+field_name: field_pl_other_applicant_links
+entity_type: node
+bundle: program_landing
+label: 'Links for Other Applicants'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

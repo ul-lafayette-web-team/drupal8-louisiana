@@ -1,0 +1,24 @@
+uuid: d7a3510d-cf11-4c40-9b25-c2680c6d8800
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.organization_type
+_core:
+  default_config_hash: hxyaRJaNHCGexgQmK7idss2Hqu_Uug7woC8tyW7kTyQ
+id: taxonomy_term.organization_type.default
+targetEntityType: taxonomy_term
+bundle: organization_type
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

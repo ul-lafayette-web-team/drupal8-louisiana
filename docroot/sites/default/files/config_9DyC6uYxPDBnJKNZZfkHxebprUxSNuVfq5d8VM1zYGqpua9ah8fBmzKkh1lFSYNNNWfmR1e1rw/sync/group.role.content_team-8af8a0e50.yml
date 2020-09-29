@@ -1,0 +1,17 @@
+uuid: 08310013-95b6-413d-8b80-f4c8f78f6d60
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.content_team
+  enforced:
+    config:
+      - user.role.content_admin
+id: content_team-8af8a0e50
+label: 'Content admin'
+weight: -6
+internal: true
+audience: outsider
+group_type: content_team
+permissions_ui: false
+permissions: {  }

@@ -1,0 +1,19 @@
+uuid: 7f0232ac-ff3c-470c-b853-1f23891e1da0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_program_dept_schools
+field_name: field_program_dept_schools
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

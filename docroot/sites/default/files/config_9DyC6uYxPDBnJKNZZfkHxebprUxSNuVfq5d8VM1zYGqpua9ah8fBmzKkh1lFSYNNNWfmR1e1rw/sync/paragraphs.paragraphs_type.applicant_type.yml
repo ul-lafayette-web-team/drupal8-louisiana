@@ -1,0 +1,9 @@
+uuid: 1975710a-6bd3-4adf-80cb-68d6865f8be1
+langcode: en
+status: true
+dependencies: {  }
+id: applicant_type
+label: 'Applicant Type'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

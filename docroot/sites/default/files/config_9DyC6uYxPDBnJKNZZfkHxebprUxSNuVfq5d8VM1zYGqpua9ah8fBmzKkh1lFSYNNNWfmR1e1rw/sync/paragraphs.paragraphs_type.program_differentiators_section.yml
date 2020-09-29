@@ -1,0 +1,9 @@
+uuid: b8951df7-0d07-49bb-95a8-e32f48235be2
+langcode: en
+status: true
+dependencies: {  }
+id: program_differentiators_section
+label: 'Program Differentiators Section'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

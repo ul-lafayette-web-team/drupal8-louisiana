@@ -1,0 +1,28 @@
+uuid: 8d08bc80-d0f9-4e34-9cad-adf6697624ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_video
+    - media.type.instagram
+    - paragraphs.paragraphs_type.instagram_gallery_item_
+id: paragraph.instagram_gallery_item_.field_component_video
+field_name: field_component_video
+entity_type: paragraph
+bundle: instagram_gallery_item_
+label: Video
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      instagram: instagram
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

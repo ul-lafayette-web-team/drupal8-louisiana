@@ -1,0 +1,23 @@
+uuid: 3359eeb9-843a-4cdd-b218-978f8a71e7bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_icon
+    - paragraphs.paragraphs_type.differentiator
+  module:
+    - fontawesome
+_core:
+  default_config_hash: 5d6qPzHVFoXA_X-YWUFfyyEL5MzUJLGfGqhnh5xLV5A
+id: paragraph.differentiator.field_component_icon
+field_name: field_component_icon
+entity_type: paragraph
+bundle: differentiator
+label: Icon
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: fontawesome_icon

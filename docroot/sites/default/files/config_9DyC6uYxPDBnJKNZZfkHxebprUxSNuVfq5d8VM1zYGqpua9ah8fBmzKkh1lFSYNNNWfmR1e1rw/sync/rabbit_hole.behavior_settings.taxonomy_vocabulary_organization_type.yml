@@ -1,0 +1,11 @@
+uuid: 3950adba-dff3-4986-a2da-01abd99fe328
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: hpJ2A4K91XkEMHsru0KMLgpuWEaU0M40JgBymf6diio
+id: taxonomy_vocabulary_organization_type
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301

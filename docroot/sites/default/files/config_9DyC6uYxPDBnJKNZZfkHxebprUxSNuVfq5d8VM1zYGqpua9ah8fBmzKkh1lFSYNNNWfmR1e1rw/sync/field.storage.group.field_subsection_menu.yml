@@ -1,0 +1,22 @@
+uuid: 361af125-5d93-4a77-ac6e-9b8373da635a
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+    - system
+_core:
+  default_config_hash: maGruObBlIQZcIlT_BBX4J5LY-cdME0-_B5b4dVDyOg
+id: group.field_subsection_menu
+field_name: field_subsection_menu
+entity_type: group
+type: entity_reference
+settings:
+  target_type: menu
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

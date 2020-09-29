@@ -1,0 +1,23 @@
+uuid: 5bff9dbe-1dde-4386-ab40-c6ee61936054
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: c3tX1YNBoJVa2UMtfzAhCAyKjiWX6bb2YQVd8opCvAU
+id: paragraph.field_differentiator_value
+field_name: field_differentiator_value
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

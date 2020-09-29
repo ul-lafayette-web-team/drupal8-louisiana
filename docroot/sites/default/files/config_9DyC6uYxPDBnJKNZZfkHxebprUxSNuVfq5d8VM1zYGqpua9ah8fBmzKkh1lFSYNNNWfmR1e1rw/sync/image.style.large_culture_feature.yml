@@ -1,0 +1,15 @@
+uuid: 7920f65a-0e10-4596-81bb-80d45982efd1
+langcode: en
+status: true
+dependencies: {  }
+name: large_culture_feature
+label: 'Large Culture Feature'
+effects:
+  06426ec2-85f6-4170-81bd-e87fab82e1dd:
+    uuid: 06426ec2-85f6-4170-81bd-e87fab82e1dd
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 780
+      height: 450
+      anchor: center-center

@@ -1,0 +1,9 @@
+uuid: 9db1da99-e016-4051-9438-18c2660e2f1f
+langcode: en
+status: true
+dependencies: {  }
+id: page_components
+label: 'Page Components'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

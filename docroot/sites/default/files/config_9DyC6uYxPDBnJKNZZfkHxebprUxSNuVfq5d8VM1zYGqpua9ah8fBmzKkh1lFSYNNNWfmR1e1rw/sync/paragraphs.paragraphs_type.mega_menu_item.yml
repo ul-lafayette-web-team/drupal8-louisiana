@@ -1,0 +1,9 @@
+uuid: ab528994-2f0e-452a-9f71-bf85aa6475f0
+langcode: en
+status: true
+dependencies: {  }
+id: mega_menu_item
+label: 'Mega Menu Item'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

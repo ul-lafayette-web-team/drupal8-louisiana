@@ -1,0 +1,44 @@
+uuid: 27ac77e6-dfe6-4cd5-a870-bbdfbae7db03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.find_your_counselor_feature.field_component_body
+    - field.field.paragraph.find_your_counselor_feature.field_component_link
+    - field.field.paragraph.find_your_counselor_feature.field_component_title
+    - paragraphs.paragraphs_type.find_your_counselor_feature
+  module:
+    - link
+    - text
+id: paragraph.find_your_counselor_feature.default
+targetEntityType: paragraph
+bundle: find_your_counselor_feature
+mode: default
+content:
+  field_component_body:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_component_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_component_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

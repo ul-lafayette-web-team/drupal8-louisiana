@@ -1,0 +1,19 @@
+uuid: 906c92e7-2fc8-4096-a44c-5c232278d34c
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_cf_distance_link
+field_name: field_cf_distance_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

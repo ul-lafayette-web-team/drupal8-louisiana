@@ -1,0 +1,55 @@
+uuid: ebb4409c-b806-498d-bcd7-a5be8d383d4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.brand_feature.field_component_body
+    - field.field.paragraph.brand_feature.field_component_image
+    - field.field.paragraph.brand_feature.field_component_link
+    - field.field.paragraph.brand_feature.field_component_title
+    - paragraphs.paragraphs_type.brand_feature
+  module:
+    - link
+    - text
+id: paragraph.brand_feature.default
+targetEntityType: paragraph
+bundle: brand_feature
+mode: default
+content:
+  field_component_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_component_image:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_component_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_component_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

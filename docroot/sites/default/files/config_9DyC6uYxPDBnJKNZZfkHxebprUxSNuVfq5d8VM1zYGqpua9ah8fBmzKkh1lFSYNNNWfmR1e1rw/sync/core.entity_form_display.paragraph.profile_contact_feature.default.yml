@@ -1,0 +1,34 @@
+uuid: 9f6a6344-511a-4007-9b3e-59aae0dce319
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.profile_contact_feature.field_component_title
+    - field.field.paragraph.profile_contact_feature.field_pcf_organization
+    - paragraphs.paragraphs_type.profile_contact_feature
+id: paragraph.profile_contact_feature.default
+targetEntityType: paragraph
+bundle: profile_contact_feature
+mode: default
+content:
+  field_component_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_pcf_organization:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

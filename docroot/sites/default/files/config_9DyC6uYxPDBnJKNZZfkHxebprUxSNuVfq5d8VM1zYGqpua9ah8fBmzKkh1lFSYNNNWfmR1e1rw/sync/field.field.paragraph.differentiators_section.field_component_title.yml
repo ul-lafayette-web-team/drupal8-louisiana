@@ -1,0 +1,21 @@
+uuid: bdcf9cfc-dc79-4a48-9829-7b2b75cfff6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_title
+    - paragraphs.paragraphs_type.differentiators_section
+_core:
+  default_config_hash: XtqoTHRKszm46kkH-9u3K3NxB9rJMNDoBbzami_OiQc
+id: paragraph.differentiators_section.field_component_title
+field_name: field_component_title
+entity_type: paragraph
+bundle: differentiators_section
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

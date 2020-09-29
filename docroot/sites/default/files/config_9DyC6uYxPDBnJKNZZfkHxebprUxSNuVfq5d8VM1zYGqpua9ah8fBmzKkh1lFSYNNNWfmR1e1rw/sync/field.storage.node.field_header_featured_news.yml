@@ -1,0 +1,19 @@
+uuid: 26f2c0a0-1d87-47a5-99fa-90514373efe1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_header_featured_news
+field_name: field_header_featured_news
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

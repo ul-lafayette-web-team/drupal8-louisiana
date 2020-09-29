@@ -1,0 +1,9 @@
+uuid: 6f1fd5e7-4576-438a-97bf-5a1ef90ed1b2
+langcode: en
+status: true
+dependencies: {  }
+id: livewhale_event_feature
+label: 'Livewhale Event Feature'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

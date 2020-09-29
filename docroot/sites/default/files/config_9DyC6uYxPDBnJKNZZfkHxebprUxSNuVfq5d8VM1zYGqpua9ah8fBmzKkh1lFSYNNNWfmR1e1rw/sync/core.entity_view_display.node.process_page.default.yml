@@ -1,0 +1,112 @@
+uuid: f725225d-4d98-424e-b020-342e46ca859f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.process_page.body
+    - field.field.node.process_page.field_differentiators_section
+    - field.field.node.process_page.field_header_featured_news
+    - field.field.node.process_page.field_intro_text
+    - field.field.node.process_page.field_metatags
+    - field.field.node.process_page.field_organizations_contact_feat
+    - field.field.node.process_page.field_process_applicant_type_set
+    - field.field.node.process_page.field_process_find_counselor
+    - field.field.node.process_page.field_process_steps
+    - field.field.node.process_page.field_taf_other_applicant_links
+    - node.type.process_page
+  module:
+    - entity_reference_revisions
+    - link
+    - text
+    - user
+_core:
+  default_config_hash: iKwF-5NLsgGsA-oLZuirC4mxFlU9tUkYHGaRhZMtc00
+id: node.process_page.default
+targetEntityType: node
+bundle: process_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_differentiators_section:
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_header_featured_news:
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: medium_feature
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_intro_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_organizations_contact_feat:
+    weight: 8
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_process_applicant_type_set:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_process_find_counselor:
+    type: entity_reference_revisions_entity_view
+    weight: 7
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_process_steps:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_taf_other_applicant_links:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  content_moderation_control: true
+  field_metatags: true
+  links: true

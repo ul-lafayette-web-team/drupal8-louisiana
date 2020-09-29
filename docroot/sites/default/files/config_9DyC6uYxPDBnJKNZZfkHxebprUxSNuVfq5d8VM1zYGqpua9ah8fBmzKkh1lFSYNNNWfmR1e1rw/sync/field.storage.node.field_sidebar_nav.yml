@@ -1,0 +1,20 @@
+uuid: ca4b5abb-9149-4958-bd01-efdadfe7f543
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: _vN3shm3_RJvBNOc_oZp_jEtDcWmIH44FDPmQI1M1MY
+id: node.field_sidebar_nav
+field_name: field_sidebar_nav
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

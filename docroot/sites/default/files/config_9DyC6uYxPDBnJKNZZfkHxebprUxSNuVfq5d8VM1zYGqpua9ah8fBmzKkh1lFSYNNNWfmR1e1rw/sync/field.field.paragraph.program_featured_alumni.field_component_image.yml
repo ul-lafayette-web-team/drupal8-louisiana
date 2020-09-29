@@ -1,0 +1,28 @@
+uuid: 805e1288-9f2a-4dd1-9ec1-7c716e915286
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_component_image
+    - media.type.image
+    - paragraphs.paragraphs_type.program_featured_alumni
+id: paragraph.program_featured_alumni.field_component_image
+field_name: field_component_image
+entity_type: paragraph
+bundle: program_featured_alumni
+label: Photo
+description: 'Please upload an image with dimensions ?x?px.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

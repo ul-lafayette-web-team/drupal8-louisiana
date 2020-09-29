@@ -1,0 +1,23 @@
+uuid: e8a8c643-7001-4e6b-b341-beb9365fcf88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_online_option_url
+    - node.type.program
+  module:
+    - link
+id: node.program.field_program_online_option_url
+field_name: field_program_online_option_url
+entity_type: node
+bundle: program
+label: 'Online Option URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

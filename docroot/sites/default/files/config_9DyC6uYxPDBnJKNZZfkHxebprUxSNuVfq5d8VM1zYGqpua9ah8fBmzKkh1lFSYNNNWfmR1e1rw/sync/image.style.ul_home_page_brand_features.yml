@@ -1,0 +1,15 @@
+uuid: d7444195-c280-4e1c-92d4-088d6bad2a17
+langcode: en
+status: true
+dependencies: {  }
+name: ul_home_page_brand_features
+label: 'UL Home page brand features 650×352 '
+effects:
+  17d08699-f5ff-41b5-b338-8bdfb0d7e815:
+    uuid: 17d08699-f5ff-41b5-b338-8bdfb0d7e815
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 650
+      height: 352
+      anchor: center-center

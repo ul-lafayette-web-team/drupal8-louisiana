@@ -1,0 +1,29 @@
+uuid: d48e0d49-c1cd-43e7-a267-9769fa69b848
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_story_past
+    - node.type.news
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    simple_html: simple_html
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: node.news.field_news_story_past
+field_name: field_news_story_past
+entity_type: node
+bundle: news
+label: 'Where I''m From'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

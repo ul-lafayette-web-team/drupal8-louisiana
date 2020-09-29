@@ -1,0 +1,89 @@
+uuid: c77c0f55-9c76-47db-ae6c-878fc0b9a93a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.program_news_feature
+    - field.field.node.news.body
+    - field.field.node.news.field_gallery
+    - field.field.node.news.field_metatags
+    - field.field.node.news.field_news_author
+    - field.field.node.news.field_news_date
+    - field.field.node.news.field_news_featured
+    - field.field.node.news.field_news_image
+    - field.field.node.news.field_news_story_future
+    - field.field.node.news.field_news_story_past
+    - field.field.node.news.field_news_story_present
+    - field.field.node.news.field_news_story_subject_content
+    - field.field.node.news.field_news_story_subject_g_year
+    - field.field.node.news.field_news_story_subject_home
+    - field.field.node.news.field_news_story_subject_image
+    - field.field.node.news.field_news_story_subject_name
+    - field.field.node.news.field_news_story_subject_o_title
+    - field.field.node.news.field_news_story_topic
+    - field.field.node.news.field_news_summary
+    - field.field.node.news.field_news_tagged_feature
+    - field.field.node.news.field_news_tags
+    - field.field.node.news.field_news_type
+    - field.field.node.news.field_news_video
+    - field.field.node.news.field_news_video_url
+    - image.style.program_news_feature
+    - node.type.news
+  module:
+    - media
+    - text
+    - user
+_core:
+  default_config_hash: xYQkw0ORHVlo0qTM9YarLGFBqLWhChoYDBp_B9uzvxQ
+id: node.news.program_news_feature
+targetEntityType: node
+bundle: news
+mode: program_news_feature
+content:
+  field_news_image:
+    type: media_thumbnail
+    weight: 0
+    label: hidden
+    settings:
+      image_style: program_news_feature
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  field_news_summary:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_news_video_url:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  body: true
+  content_moderation_control: true
+  field_gallery: true
+  field_metatags: true
+  field_news_author: true
+  field_news_date: true
+  field_news_featured: true
+  field_news_story_future: true
+  field_news_story_past: true
+  field_news_story_present: true
+  field_news_story_subject_content: true
+  field_news_story_subject_g_year: true
+  field_news_story_subject_home: true
+  field_news_story_subject_image: true
+  field_news_story_subject_name: true
+  field_news_story_subject_o_title: true
+  field_news_story_topic: true
+  field_news_tagged_feature: true
+  field_news_tags: true
+  field_news_type: true
+  field_news_video: true
+  links: true

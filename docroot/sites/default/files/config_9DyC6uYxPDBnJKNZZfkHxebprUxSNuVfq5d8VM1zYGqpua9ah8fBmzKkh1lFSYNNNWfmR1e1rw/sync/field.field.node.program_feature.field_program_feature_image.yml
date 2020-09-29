@@ -1,0 +1,28 @@
+uuid: fcd4618e-fcfc-43e1-b63f-35d0ceb2316f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_feature_image
+    - media.type.image
+    - node.type.program_feature
+id: node.program_feature.field_program_feature_image
+field_name: field_program_feature_image
+entity_type: node
+bundle: program_feature
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

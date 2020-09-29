@@ -1,0 +1,19 @@
+uuid: fa57045f-81fa-41db-a63f-345943d60cea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_taf_item_breakdown_cost_4
+    - paragraphs.paragraphs_type.tuition_fees_aid_item
+id: paragraph.tuition_fees_aid_item.field_taf_item_breakdown_cost_4
+field_name: field_taf_item_breakdown_cost_4
+entity_type: paragraph
+bundle: tuition_fees_aid_item
+label: 'Aid Item Breakdown Cost 4'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

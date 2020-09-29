@@ -1,0 +1,28 @@
+uuid: 83c6ad60-38ae-4a0c-a5f3-681850aca908
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_psf_profiles
+    - node.type.profile
+    - paragraphs.paragraphs_type.profile_summary_feature
+id: paragraph.profile_summary_feature.field_psf_profiles
+field_name: field_psf_profiles
+entity_type: paragraph
+bundle: profile_summary_feature
+label: Profiles
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      profile: profile
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

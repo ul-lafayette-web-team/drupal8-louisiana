@@ -1,0 +1,86 @@
+uuid: b0603a88-21de-45e3-a718-6acccc8d3094
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.campaign_highllight.field_background
+    - field.field.paragraph.campaign_highllight.field_component_body
+    - field.field.paragraph.campaign_highllight.field_component_image
+    - field.field.paragraph.campaign_highllight.field_component_link
+    - field.field.paragraph.campaign_highllight.field_component_title
+    - paragraphs.paragraphs_type.campaign_highllight
+  module:
+    - image_url_formatter
+    - link
+    - smart_trim
+id: paragraph.campaign_highllight.default
+targetEntityType: paragraph
+bundle: campaign_highllight
+mode: default
+content:
+  field_background:
+    weight: 4
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+      url_type: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+  field_component_body:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 600
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: full
+      trim_options: {  }
+    third_party_settings: {  }
+    type: smart_trim
+    region: content
+  field_component_image:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_component_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_component_title:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 600
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: full
+      trim_options: {  }
+    third_party_settings: {  }
+    type: smart_trim
+    region: content
+hidden: {  }

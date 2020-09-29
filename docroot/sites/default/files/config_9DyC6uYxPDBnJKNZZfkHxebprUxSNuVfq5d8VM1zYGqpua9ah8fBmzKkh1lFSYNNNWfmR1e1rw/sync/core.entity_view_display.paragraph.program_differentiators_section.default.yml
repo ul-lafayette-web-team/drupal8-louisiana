@@ -1,0 +1,57 @@
+uuid: 486c7caf-bf6c-44c3-9b50-ce32f45c29e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.program_differentiators_section.field_component_link
+    - field.field.paragraph.program_differentiators_section.field_component_title
+    - field.field.paragraph.program_differentiators_section.field_pds_differentiator
+    - field.field.paragraph.program_differentiators_section.field_pds_quick_info_ratings
+    - paragraphs.paragraphs_type.program_differentiators_section
+  module:
+    - entity_reference_revisions
+    - link
+id: paragraph.program_differentiators_section.default
+targetEntityType: paragraph
+bundle: program_differentiators_section
+mode: default
+content:
+  field_component_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_component_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pds_differentiator:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_pds_quick_info_ratings:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

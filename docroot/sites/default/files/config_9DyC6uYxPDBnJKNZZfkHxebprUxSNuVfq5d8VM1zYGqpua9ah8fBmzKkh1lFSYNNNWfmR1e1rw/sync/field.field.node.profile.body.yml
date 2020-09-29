@@ -1,0 +1,33 @@
+uuid: 44532713-d68b-4bff-91ba-6afdeef9af65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.profile
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    full_html: '0'
+    simple_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+_core:
+  default_config_hash: 1h1bwk8fvt-m4-IIpBDrrZPKYglcSuTkWsCMgDeZLDg
+id: node.profile.body
+field_name: body
+entity_type: node
+bundle: profile
+label: Biography
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

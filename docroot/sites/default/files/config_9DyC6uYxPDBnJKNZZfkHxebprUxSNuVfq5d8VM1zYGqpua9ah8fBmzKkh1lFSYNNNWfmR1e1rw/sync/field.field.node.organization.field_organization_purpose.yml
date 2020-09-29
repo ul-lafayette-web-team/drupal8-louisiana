@@ -1,0 +1,29 @@
+uuid: e9773455-a285-443e-aa3e-5c1c011f6094
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organization_purpose
+    - node.type.organization
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    plain_text: plain_text
+    full_html: '0'
+    basic_html: '0'
+    simple_html: '0'
+    restricted_html: '0'
+id: node.organization.field_organization_purpose
+field_name: field_organization_purpose
+entity_type: node
+bundle: organization
+label: 'What We Do Information'
+description: 'This should be short and concise.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

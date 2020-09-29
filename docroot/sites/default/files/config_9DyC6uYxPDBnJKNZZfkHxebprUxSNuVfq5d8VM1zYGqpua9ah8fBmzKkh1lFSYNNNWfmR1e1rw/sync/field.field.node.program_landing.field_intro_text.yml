@@ -1,0 +1,31 @@
+uuid: f0470d00-ea2e-4c95-84cb-4146233a7d7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intro_text
+    - node.type.program_landing
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    simple_html: simple_html
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+_core:
+  default_config_hash: eSkC-Ef5g8rlBR93H9XR9KT4R1pIcRD4zo6X0R-gvNo
+id: node.program_landing.field_intro_text
+field_name: field_intro_text
+entity_type: node
+bundle: program_landing
+label: 'Intro Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

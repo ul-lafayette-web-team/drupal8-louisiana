@@ -1,0 +1,97 @@
+uuid: 063552bc-5157-45dc-828e-d19621820706
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_home_campaign_highlight
+    - node.type.home
+    - paragraphs.paragraphs_type.campaign_highllight
+  module:
+    - entity_reference_revisions
+id: node.home.field_home_campaign_highlight
+field_name: field_home_campaign_highlight
+entity_type: node
+bundle: home
+label: 'Campaign Highlight'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      campaign_highllight: campaign_highllight
+    target_bundles_drag_drop:
+      campaign_highllight:
+        enabled: true
+        weight: 24
+      applicant_type:
+        weight: 25
+        enabled: false
+      brand_feature:
+        weight: 26
+        enabled: false
+      checkerboard:
+        weight: 27
+        enabled: false
+      checkerboard_item:
+        weight: 28
+        enabled: false
+      culture_component:
+        weight: 29
+        enabled: false
+      differentiator:
+        weight: 30
+        enabled: false
+      differentiators_section:
+        weight: 31
+        enabled: false
+      gallery:
+        weight: 32
+        enabled: false
+      gallery_item:
+        weight: 33
+        enabled: false
+      livewhale_event_feature:
+        weight: 34
+        enabled: false
+      mega_menu_item:
+        weight: 35
+        enabled: false
+      news_tagged_feature:
+        weight: 36
+        enabled: false
+      organizations_contact_feature:
+        weight: 37
+        enabled: false
+      organizations_feature:
+        weight: 38
+        enabled: false
+      process_step:
+        weight: 39
+        enabled: false
+      profile_contact_feature:
+        weight: 40
+        enabled: false
+      profile_summary_feature:
+        weight: 41
+        enabled: false
+      program_features_section:
+        weight: 42
+        enabled: false
+      question_item:
+        weight: 43
+        enabled: false
+      question_set:
+        weight: 44
+        enabled: false
+      questions_section:
+        weight: 45
+        enabled: false
+      social_media_link:
+        weight: 46
+        enabled: false
+field_type: entity_reference_revisions

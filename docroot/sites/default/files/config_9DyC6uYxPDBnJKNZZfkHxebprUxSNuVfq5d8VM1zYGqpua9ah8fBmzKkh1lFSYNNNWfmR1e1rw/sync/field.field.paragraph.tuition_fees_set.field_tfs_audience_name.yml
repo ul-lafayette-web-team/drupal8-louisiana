@@ -1,0 +1,19 @@
+uuid: 3d490db0-f139-42ff-9d9a-b245e1c89400
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tfs_audience_name
+    - paragraphs.paragraphs_type.tuition_fees_set
+id: paragraph.tuition_fees_set.field_tfs_audience_name
+field_name: field_tfs_audience_name
+entity_type: paragraph
+bundle: tuition_fees_set
+label: 'Audience Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

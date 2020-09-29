@@ -1,0 +1,23 @@
+uuid: 84778001-f72c-4a93-af3c-6f5b3e9a0d01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cf_when_link
+    - node.type.culture_feature
+  module:
+    - link
+id: node.culture_feature.field_cf_when_link
+field_name: field_cf_when_link
+entity_type: node
+bundle: culture_feature
+label: 'When It Happens Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

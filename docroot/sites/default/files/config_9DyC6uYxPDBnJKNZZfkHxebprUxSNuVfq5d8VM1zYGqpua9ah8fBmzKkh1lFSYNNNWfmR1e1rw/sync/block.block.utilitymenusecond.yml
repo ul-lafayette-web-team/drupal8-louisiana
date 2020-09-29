@@ -1,0 +1,27 @@
+uuid: 2de1e2fd-e4af-4c34-a105-0cb5b6545990
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.utility-menu-second
+  module:
+    - menu_block
+  theme:
+    - louisiana
+id: utilitymenusecond
+theme: louisiana
+region: secondary_nav
+weight: 0
+provider: null
+plugin: 'menu_block:utility-menu-second'
+settings:
+  id: 'menu_block:utility-menu-second'
+  label: 'Utility Menu Second'
+  provider: menu_block
+  label_display: visible
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'utility-menu-second:'
+  suggestion: utility_menu_second
+visibility: {  }

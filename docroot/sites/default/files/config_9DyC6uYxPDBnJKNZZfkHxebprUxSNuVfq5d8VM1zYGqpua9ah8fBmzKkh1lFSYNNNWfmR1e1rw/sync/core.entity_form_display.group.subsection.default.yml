@@ -1,0 +1,67 @@
+uuid: ea2367e6-02f6-429a-a3d1-84573276d6c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.subsection.field_subsection_home
+    - field.field.group.subsection.field_subsection_logo
+    - field.field.group.subsection.field_subsection_menu
+    - group.type.subsection
+    - image.style.thumbnail
+  module:
+    - image
+_core:
+  default_config_hash: _vDHKoKhgDHsDhaozRpzFfyNTXtm8OW6VEKWc6AwJ5o
+id: group.subsection.default
+targetEntityType: group
+bundle: subsection
+mode: default
+content:
+  field_subsection_home:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_subsection_logo:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_subsection_menu:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+hidden:
+  path: true
