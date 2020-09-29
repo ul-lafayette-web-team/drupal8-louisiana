@@ -22,7 +22,7 @@
           <iframe width="560" height="315" src="https://www.youtube.com/embed/yAZi5p3Dljk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           {% else %}
-            <img src="{{ content.field_component_image }}" alt="something">
+            {{ content.field_component_image }}
 
           {% endif %}
             <figcaption class="image-video-grid-fancy__text">
