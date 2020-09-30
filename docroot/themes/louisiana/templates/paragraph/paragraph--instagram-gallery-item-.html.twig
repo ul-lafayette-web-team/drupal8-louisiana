@@ -19,7 +19,7 @@
         <figure class="image-video-grid__fancy" id="image-video-grid__slide--{{ paragraph.id.value }}">
           {% if content.field_component_video|render %}
           <div class="iframe-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/yAZi5p3Dljk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            {{ content.field_component_video }}
           </div>
           {% else %}
             {{ content.field_component_image }}
