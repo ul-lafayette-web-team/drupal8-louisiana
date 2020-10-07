@@ -9,8 +9,12 @@
         <div class="grid-x">
           <div class="cell small-12 large-9">
             <h1>{{ node.title.value }}</h1>
-            {{ content.field_intro_text }}
-            <div class="wysiwyg">{{ content.body }}<div>
+            <div class="wysiwyg">
+              <div class="intro-text">
+                {{ content.field_intro_text }}
+              </div>
+              {{ content.body }}
+            <div>
           </div>
         </div>
       </div>
