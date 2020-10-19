@@ -5,6 +5,7 @@ namespace Drupal\auto_entitylabel\Plugin\Derivative;
 use Drupal\Component\Plugin\Derivative\DeriverBase;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Plugin\Discovery\ContainerDeriverInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -12,21 +13,23 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class AutoEntityLabelConfigTask extends DeriverBase implements ContainerDeriverInterface {
 
+  use StringTranslationTrait;
+
   /**
-   * The entity manager.
+   * The entity type manager.
    *
    * @var \Drupal\Core\Entity\EntityTypeManagerInterface
    */
-  protected $entityManager;
+  protected $entityTypeManager;
 
   /**
    * Creates an FieldUiLocalTask object.
    *
-   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_manager
-   *   The entity manager.
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+   *   The entity type manager service.
    */
-  public function __construct(EntityTypeManagerInterface $entity_manager) {
-    $this->entityManager = $entity_manager;
+  public function __construct(EntityTypeManagerInterface $entity_type_manager) {
+    $this->entityTypeManager = $entity_type_manager;
   }
 
   /**
@@ -34,7 +37,7 @@ class AutoEntityLabelConfigTask extends DeriverBase implements ContainerDeriverI
    */
   public static function create(ContainerInterface $container, $base_plugin_id) {
     return new static(
-      $container->get('entity.manager')
+      $container->get('entity_type.manager')
     );
   }
 
@@ -44,7 +47,7 @@ class AutoEntityLabelConfigTask extends DeriverBase implements ContainerDeriverI
   public function getDerivativeDefinitions($base_plugin_definition) {
     $this->derivatives = [];
 
-    foreach ($this->entityManager->getDefinitions() as $entity_type_id => $entity_type) {
+    foreach ($this->entityTypeManager->getDefinitions() as $entity_type_id => $entity_type) {
       // Special handling of Taxonomy. See https://www.drupal.org/node/2822546
       if ($entity_type_id == "taxonomy_vocabulary") {
         $base_route = "entity.{$entity_type_id}.overview_form";
@@ -55,7 +58,7 @@ class AutoEntityLabelConfigTask extends DeriverBase implements ContainerDeriverI
       if ($entity_type->hasLinkTemplate('auto-label')) {
         $this->derivatives["$entity_type_id.auto_label_tab"] = [
           'route_name' => "entity.{$entity_type_id}.auto_label",
-          'title' => 'Automatic label',
+          'title' => $this->t('Automatic label'),
           'base_route' => $base_route,
           'weight' => 100,
         ];

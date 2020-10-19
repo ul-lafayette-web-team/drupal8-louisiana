@@ -3,7 +3,6 @@
 namespace Drupal\auto_entitylabel\Form;
 
 use Drupal\auto_entitylabel\AutoEntityLabelManager;
-use Drupal\Core\Config\ConfigFactory;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Session\AccountInterface;
@@ -15,14 +14,6 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Class AutoEntityLabelForm.
- *
- * @property \Drupal\Core\Config\ConfigFactoryInterface config_factory
- * @property \Drupal\Core\Entity\EntityTypeManagerInterface entity_manager
- * @property String entityType
- * @property String entityBundle
- * @property \Drupal\auto_entitylabel\AutoEntityLabelManager
- *   auto_entity_label_manager
- * @package Drupal\auto_entitylabel\Controller
  */
 class AutoEntityLabelForm extends ConfigFormBase {
 
@@ -38,10 +29,19 @@ class AutoEntityLabelForm extends ConfigFormBase {
    */
   protected $configFactory;
 
-  protected $entityManager;
+  /**
+   * The entity type manager service.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
+  protected $entityTypeManager;
 
-  // @codingStandardsIgnoreLine
-  protected $route_match;
+  /**
+   * The route matcher.
+   *
+   * @var \Drupal\Core\Routing\RouteMatchInterface
+   */
+  protected $routeMatch;
 
   /**
    * Module handler.
@@ -72,19 +72,19 @@ class AutoEntityLabelForm extends ConfigFormBase {
   protected $entityBundle;
 
   /**
-   * The entity provider machine name.
+   * The entity type that our config entity describes bundles of.
    *
    * @var string
    */
-  protected $entityTypeProvider;
+  protected $entityTypeBundleOf;
 
   /**
    * AutoEntityLabelController constructor.
    *
    * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
    *   Config Factory.
-   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_manager
-   *   Entity Manager.
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+   *   The entity type manager service.
    * @param \Drupal\Core\Routing\RouteMatchInterface $route_match
    *   Route Match.
    * @param \Drupal\Core\Extension\ModuleHandlerInterface $moduleHandler
@@ -92,16 +92,22 @@ class AutoEntityLabelForm extends ConfigFormBase {
    * @param \Drupal\Core\Session\AccountInterface $user
    *   Account Interface.
    */
-  public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entity_manager, RouteMatchInterface $route_match, ModuleHandlerInterface $moduleHandler, AccountInterface $user) {
+  public function __construct(
+    ConfigFactoryInterface $config_factory,
+    EntityTypeManagerInterface $entity_type_manager,
+    RouteMatchInterface $route_match,
+    ModuleHandlerInterface $moduleHandler,
+    AccountInterface $user
+  ) {
     parent::__construct($config_factory);
-    $this->entityManager = $entity_manager;
-    $this->route_match = $route_match;
-    $route_options = $this->route_match->getRouteObject()->getOptions();
+    $this->entityTypeManager = $entity_type_manager;
+    $this->routeMatch = $route_match;
+    $route_options = $this->routeMatch->getRouteObject()->getOptions();
     $array_keys = array_keys($route_options['parameters']);
     $this->entityType = array_shift($array_keys);
-    $entity_type = $this->route_match->getParameter($this->entityType);
+    $entity_type = $this->routeMatch->getParameter($this->entityType);
     $this->entityBundle = $entity_type->id();
-    $this->entityTypeProvider = $entity_type->getEntityType()->getProvider();
+    $this->entityTypeBundleOf = $entity_type->getEntityType()->getBundleOf();
     $this->moduleHandler = $moduleHandler;
     $this->user = $user;
   }
@@ -133,9 +139,9 @@ class AutoEntityLabelForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
-    return new static (
+    return new static(
       $container->get('config.factory'),
-      $container->get('entity.manager'),
+      $container->get('entity_type.manager'),
       $container->get('current_route_match'),
       $container->get('module_handler'),
       $container->get('current_user')
@@ -149,7 +155,7 @@ class AutoEntityLabelForm extends ConfigFormBase {
    *   The compiled config name.
    */
   protected function getConfigName() {
-    return 'auto_entitylabel.settings.' . $this->entityTypeProvider . '.' . $this->entityBundle;
+    return 'auto_entitylabel.settings.' . $this->entityTypeBundleOf . '.' . $this->entityBundle;
   }
 
   /**
@@ -169,6 +175,28 @@ class AutoEntityLabelForm extends ConfigFormBase {
       AutoEntityLabelManager::PREFILLED => $this->t('Automatically prefill the label'),
     ];
 
+    // Create an array for description of the options.
+    $options_description = [
+      AutoEntityLabelManager::DISABLED => [
+        '#description' => $this->t('Selecting this option will disable the auto labels for the entity.'),
+      ],
+      AutoEntityLabelManager::ENABLED => [
+        '#description' => $this->t('Selecting this option will hide the title field and will generate a new option based on the pattern provided below.'),
+      ],
+      AutoEntityLabelManager::OPTIONAL => [
+        '#description' => $this->t('Selecting this option will make the label field optional and will generate a label if the label field is left empty.'),
+      ],
+      AutoEntityLabelManager::PREFILLED => [
+        '#description' => $this->t('Selecting this option will prefills the label field with the generated pattern provided below. This option provides limited token support because it only prefills the label and it will not be able to replace all the tokens like current node based tokens for ex: [node:nid] because that token has not been generated yet.'),
+      ],
+    ];
+    // Shared across most of the settings on this page.
+    $invisible_state = [
+      'invisible' => [
+        ':input[name="status"]' => ['value' => AutoEntityLabelManager::DISABLED],
+      ],
+    ];
+
     $form['auto_entitylabel'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Automatic label generation for @type', ['@type' => $this->entityBundle]),
@@ -180,6 +208,7 @@ class AutoEntityLabelForm extends ConfigFormBase {
       '#default_value' => $config->get('status') ?: 0,
       '#options' => $options,
     ];
+    $form['auto_entitylabel']['status'] += $options_description;
 
     $form['auto_entitylabel']['pattern'] = [
       '#type' => 'textarea',
@@ -187,42 +216,34 @@ class AutoEntityLabelForm extends ConfigFormBase {
       '#description' => $this->t('Leave blank for using the per default generated label. Otherwise this string will be used as label. Use the syntax [token] if you want to insert a replacement pattern.'),
       '#default_value' => $config->get('pattern') ?: '',
       '#attributes' => ['class' => ['pattern-label']],
+      '#states' => $invisible_state,
     ];
-
-    // Don't allow editing of the pattern if PHP is used, but the users lacks
-    // permission for PHP.
-    if ($config->get('php') && !$this->user->hasPermission('use PHP for auto entity labels')) {
-      $form['auto_entitylabel']['pattern']['#disabled'] = TRUE;
-      $form['auto_entitylabel']['pattern']['#description'] = $this->t('You are not allowed the configure the pattern for the label, because you do not have the %permission permission.', ['%permission' => $this->t('Use PHP for automatic entity label patterns')]);
-    }
 
     // Display the list of available placeholders if token module is installed.
     if ($this->moduleHandler->moduleExists('token')) {
-      $token_info = $this->moduleHandler->invoke($this->entityTypeProvider, 'token_info');
-      $token_types = isset($token_info['types']) ? array_keys($token_info['types']) : [];
+      // Special treatment for Core's taxonomy_vocabulary and taxonomy_term.
+      $token_type = strtr($this->entityTypeBundleOf, ['taxonomy_' => '']);
       $form['auto_entitylabel']['token_help'] = [
-        '#theme' => 'token_tree_link',
-        '#token_types' => $token_types,
-        '#dialog' => TRUE,
+        // #states needs a container to work, put token replacement link inside
+        '#type' => 'container',
+        '#states' => $invisible_state,
+        'token_link' => [
+          '#theme' => 'token_tree_link',
+          '#token_types' => [$token_type],
+          '#dialog' => TRUE,
+        ],
       ];
     }
     else {
       $form['auto_entitylabel']['pattern']['#description'] .= ' ' . $this->t('To get a list of available tokens install <a href=":drupal-token" target="blank">Token</a> module.', [':drupal-token' => 'https://www.drupal.org/project/token']);
     }
 
-    $form['auto_entitylabel']['php'] = [
-      '#access' => $this->user->hasPermission('use PHP for auto entity labels'),
-      '#type' => 'checkbox',
-      '#title' => $this->t('Evaluate PHP in pattern.'),
-      '#description' => $this->t('Put PHP code above that returns your string, but make sure you surround code in <code>&lt;?php</code> and <code>?&gt;</code>. Note that <code>$entity</code> and <code>$language</code> are available and can be used by your code.'),
-      '#default_value' => $config->get('php'),
-    ];
-
     $form['auto_entitylabel']['escape'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Escape special characters.'),
-      '#description' => $this->t('Check this to escape all special characters.'),
+      '#title' => $this->t('Remove special characters.'),
+      '#description' => $this->t('Check this to remove all special characters.'),
       '#default_value' => $config->get('escape'),
+      '#states' => $invisible_state,
     ];
 
     $form['#attached']['library'][] = 'auto_entitylabel/auto_entitylabel.admin';
@@ -236,12 +257,12 @@ class AutoEntityLabelForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $config = $this->configFactory->getEditable($this->getConfigName());
     $form_state->cleanValues();
-    foreach (['status', 'pattern', 'php', 'escape'] as $key) {
+    foreach (['status', 'pattern', 'escape'] as $key) {
       $config->set($key, $form_state->getValue($key));
     }
 
     /** @var \Drupal\Core\Config\Entity\ConfigEntityStorage $storage */
-    $storage = $this->entityManager->getStorage($this->entityType);
+    $storage = $this->entityTypeManager->getStorage($this->entityType);
     /** @var \Drupal\Core\Config\Entity\ConfigEntityType $entity_type */
     $entity_type = $storage->getEntityType();
     $prefix = $entity_type->getConfigPrefix();

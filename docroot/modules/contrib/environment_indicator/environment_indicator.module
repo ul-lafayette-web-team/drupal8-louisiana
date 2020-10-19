@@ -9,7 +9,6 @@ use Drupal\Core\Cache\Cache;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Url;
 use Drupal\environment_indicator\Entity\EnvironmentIndicator;
-use Drupal\Component\Utility\Html;
 
 /**
  * Implements hook_help().
@@ -180,8 +179,8 @@ function _environment_indicator_parse_style($style) {
 function environment_indicator_toolbar() {
   $active_environment = \Drupal::config('environment_indicator.indicator');
   $title = $active_environment->get('name');
-  $permission = \Drupal::currentUser()
-    ->hasPermission('access environment indicator');
+  $currentUser = Drupal::currentUser();
+  $permission = $currentUser->hasPermission('access environment indicator');
   $items['environment_indicator'] = [
     '#attached' => [
       'library' => ['environment_indicator/drupal.environment_indicator'],
@@ -236,6 +235,7 @@ function environment_indicator_toolbar() {
       '#access' => $permission,
       'configure' => [
         '#type' => 'link',
+        '#access' => $currentUser->hasPermission('administer environment indicator settings'),
         '#title' => t('Configure'),
         '#url' => Url::fromRoute('environment_indicator.settings'),
         '#weight' => 100,
@@ -285,6 +285,12 @@ function _environment_indicator_switcher_links() {
   }
   $current = Url::fromRoute('<current>');
   $current_path = $current->toString();
+  $environment_entities = array_filter(
+    $environment_entities,
+    function (EnvironmentIndicator $entity) {
+      return $entity->status();
+    }
+  );
   return array_map(function (EnvironmentIndicator $entity) use ($current_path) {
     return [
       'attributes' => [
@@ -310,8 +316,8 @@ function _environment_indicator_switcher_links() {
 function _environment_indicator_external_integration_is_enabled($integration) {
   if ($integration == 'toolbar') {
     $access = \Drupal::moduleHandler()->moduleExists('toolbar');
-    $access = $access && in_array('toolbar', \Drupal::config('environment_indicator.settings')
-      ->get('toolbar_integration'));
+    $toolbar_integration = \Drupal::config('environment_indicator.settings')->get('toolbar_integration') ?? [];
+    $access = $access && in_array('toolbar', $toolbar_integration);
     $access = $access && \Drupal::currentUser()
       ->hasPermission('access toolbar');
     return $access;
