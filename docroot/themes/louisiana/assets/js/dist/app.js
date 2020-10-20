@@ -24525,9 +24525,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function tuitionFees() {
   $('.costs__accordion-button').click(function (event) {
-    $(event.target).toggleClass('engaged').siblings('.costs__accordion__content').clearQueue();
-    $(event.target).toggleClass('engaged').siblings('.costs__accordion__content').stop();
-    $(event.target).toggleClass('engaged').siblings('.costs__accordion__content').slideToggle();
+    $(event.target).toggleClass('engaged').siblings('.costs__accordion__content').Open();
+
   });
   $('.costs__highlight').hover(function () {
     $(this).find('.fa-asterisk').addClass('fa-spin');
