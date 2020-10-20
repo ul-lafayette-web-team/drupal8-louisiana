@@ -19980,7 +19980,7 @@ __webpack_require__.r(__webpack_exports__);
 
   Object(_modules_tuition_fees__WEBPACK_IMPORTED_MODULE_30__["default"])();
   /**
-   * Slick for the Multiple Components : Profile Summary, 
+   * Slick for the Multiple Components : Profile Summary,
    */
 
   Object(_modules_slick_four_up__WEBPACK_IMPORTED_MODULE_26__["default"])();
@@ -19990,12 +19990,12 @@ __webpack_require__.r(__webpack_exports__);
 
   Object(_modules_slick_culture_component__WEBPACK_IMPORTED_MODULE_23__["default"])();
   /**
-   * Slick & Fancybox for the Image Video Gallery 
+   * Slick & Fancybox for the Image Video Gallery
    */
 
   Object(_modules_image_video_gallery__WEBPACK_IMPORTED_MODULE_27__["default"])();
   /**
-   * Slick for the Image Video Gallery 
+   * Slick for the Image Video Gallery
    */
 
   Object(_modules_slick_profile_contact__WEBPACK_IMPORTED_MODULE_28__["default"])();
@@ -22836,7 +22836,7 @@ function processFlow() {
 
     var $this = $(this); // Current picker
 
-    var $picker = $this.parents('.section--process-flow'); // Index number, add one for zero index 
+    var $picker = $this.parents('.section--process-flow'); // Index number, add one for zero index
 
     var tabCount = $(this).index() + 1; // Current active tab
     //  var $current = $picker.find('[aria-hidden="false"]');
@@ -22854,7 +22854,7 @@ function processFlow() {
   $('.flow-step__title').click(function () {
     $(this).next('.flow-step__content').slideToggle();
     $(this).toggleClass('engaged');
-  }); // click a next button and go to the next tab      
+  }); // click a next button and go to the next tab
 
   $('.flow-step__next a.btn').click(function (event) {
     event.preventDefault();
@@ -22948,14 +22948,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_find__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find__WEBPACK_IMPORTED_MODULE_0__);
 
 function programCourses() {
-  // tabs down the side 
+  // tabs down the side
   $('.courses__tab').click(function (event) {
     event.preventDefault();
     $(this).toggleClass('engaged'); // Clicked element
 
     var $this = $(this); // Current picker
 
-    var $picker = $this.parents('.courses__tabs-set'); // Index number, add one for zero index 
+    var $picker = $this.parents('.courses__tabs-set'); // Index number, add one for zero index
 
     var tabCount = $(this).index() + 1; // Current active tab
     //  var $current = $picker.find('[aria-hidden="false"]');
@@ -23442,17 +23442,17 @@ function SlickGalleryImageVideo() {
 
   /*
     galleryImageVideoFancy( $('[data-fancybox="gallery-image-video"]') );
-    
+
     function galleryImageVideoFancy(element) {
       element.fancybox({
         infobar : false,
         buttons : false,
         arrows: false,
         smallBtn: false,
-        touch: false, 
+        touch: false,
         afterLoad : function( instance, current ) {
           if ( instance.group.length > 1 && current.$content ) {
-          current.$content.append('<a data-fancybox-prev class="fancy-arrow fancy--previous" href="javascript:;"><span class="show-for-sr">Previous slide</span><i class="fas fa-chevron-left"></i></a><a data-fancybox-next class="fancy-arrow fancy--next" href="javascript:;"><span class="show-for-sr">Next slide</span><i class="fas fa-chevron-right"></i></a>');          
+          current.$content.append('<a data-fancybox-prev class="fancy-arrow fancy--previous" href="javascript:;"><span class="show-for-sr">Previous slide</span><i class="fas fa-chevron-left"></i></a><a data-fancybox-next class="fancy-arrow fancy--next" href="javascript:;"><span class="show-for-sr">Next slide</span><i class="fas fa-chevron-right"></i></a>');
           }
           current.$content.after('<button type="button" data-fancybox-close class="button-close" href="javascript:;"><span class="show-for-sr">Close the current slide</span><i class="fal fa-times"></i></button>');
         },
@@ -23460,7 +23460,7 @@ function SlickGalleryImageVideo() {
           $('.button-previous').remove();
           $('.button-next').remove();
           $('.button-close').remove();
-        }           
+        }
       })
     };
   */
@@ -24525,6 +24525,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function tuitionFees() {
   $('.costs__accordion-button').click(function (event) {
+    $(event.target).toggleClass('engaged').siblings('.costs__accordion__content').clearQueue();
+    $(event.target).toggleClass('engaged').siblings('.costs__accordion__content').stop();
     $(event.target).toggleClass('engaged').siblings('.costs__accordion__content').slideToggle();
   });
   $('.costs__highlight').hover(function () {
@@ -24567,7 +24569,7 @@ function UllHeader() {
   });
   $desktopSearchTrigger.click(function (event) {
     $(event.target).parents('body').toggleClass('mobile-search-open').removeClass('mobile-menu-open');
-  }); // main navigation dropdowns  
+  }); // main navigation dropdowns
 
   var $ullNavTrigger = $('.ull-header__main-nav > ul.menu > li > a');
   $ullNavTrigger.click(function (event) {
@@ -24575,7 +24577,7 @@ function UllHeader() {
       event.preventDefault();
       $(event.target).toggleClass('engaged').siblings('.ull-header__mega-menu').slideToggle();
     }
-  }); // close button in desktop search panel  
+  }); // close button in desktop search panel
 
   $('.ull-header-search__close').click(function (event) {
     $(event.target).parents('body').removeClass('mobile-search-open');
