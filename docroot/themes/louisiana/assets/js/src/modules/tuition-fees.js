@@ -3,9 +3,9 @@ export default function tuitionFees() {
     $(event.target)
       .toggleClass('engaged')
       .siblings('.costs__accordion__content')
-      .slideToggle();
+      // .slideToggle();
   });
-  
+
   $('.costs__highlight').hover(
     function(){
       $(this).find('.fa-asterisk').addClass('fa-spin');
@@ -17,6 +17,6 @@ export default function tuitionFees() {
   $('#tuitionFeesSelect').on('change', function(e) {
     $('.tuition-fees_set').removeClass('selected')
     $('#' + $(e.currentTarget).val()).addClass("selected");
-  })  
-  
+  })
+
 }
