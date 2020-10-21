@@ -19902,7 +19902,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_image_video_gallery__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./modules/image-video-gallery */ "./source/assets/js/src/modules/image-video-gallery.js");
 /* harmony import */ var _modules_slick_profile_contact__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./modules/slick-profile-contact */ "./source/assets/js/src/modules/slick-profile-contact.js");
 /* harmony import */ var _modules_slick_gallery_image_video__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./modules/slick-gallery-image-video */ "./source/assets/js/src/modules/slick-gallery-image-video.js");
-/* harmony import */ var _modules_tuition_fees__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./modules/tuition-fees */ "./source/assets/js/src/modules/tuition-fees.js");
+/* harmony import */ //var _modules_tuition_fees__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./modules/tuition-fees */ "./source/assets/js/src/modules/tuition-fees.js");
 /* harmony import */ var _modules_question_set__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./modules/question-set */ "./source/assets/js/src/modules/question-set.js");
 /* harmony import */ var _modules_process_flow__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./modules/process-flow */ "./source/assets/js/src/modules/process-flow.js");
 /* harmony import */ var _modules_program_career_feature__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./modules/program-career-feature */ "./source/assets/js/src/modules/program-career-feature.js");
