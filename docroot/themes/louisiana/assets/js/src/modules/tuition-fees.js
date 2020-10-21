@@ -1,8 +1,8 @@
 export default function tuitionFees() {
   $('.costs__accordion-button').click(event => {
     $(event.target)
-      .toggleClass('engaged')
-      .siblings('.costs__accordion__content')
+      //.toggleClass('engaged')
+      //.siblings('.costs__accordion__content')
       // .slideToggle();
   });
 
