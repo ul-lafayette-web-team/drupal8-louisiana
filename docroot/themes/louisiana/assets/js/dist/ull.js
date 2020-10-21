@@ -1,5 +1,5 @@
 jQuery('.costs__accordion-button').click(function (event) {
-        //jQuery(event.target).toggleClass('engaged').siblings('.costs__accordion__content').slideToggle();
+        jQuery(event.target).toggleClass('engaged').siblings('.costs__accordion__content').slideToggle();
         });
         jQuery('.costs__highlight').hover(function () {
         jQuery(this).find('.fa-asterisk').addClass('fa-spin');
