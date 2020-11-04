@@ -13,7 +13,7 @@
     "homepage": "https://drupal.org/project/twig_remove_html_comments",
     "license": "GPL-2.0-or-later",
     "require": {
-        "drupal/core": "^8.7"
+        "drupal/core": "^8.8 || ^9"
     },
     "conflict": {
         "drupal/drupal": "*"

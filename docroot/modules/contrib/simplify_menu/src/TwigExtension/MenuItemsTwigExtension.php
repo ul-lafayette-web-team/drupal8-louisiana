@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\simplify_menu\TwigExtension;
 
 use Drupal\simplify_menu\MenuItems;
@@ -14,14 +16,14 @@ class MenuItemsTwigExtension extends \Twig_Extension {
   /**
    * MenuItems definition.
    *
-   * @var MenuItems
+   * @var \Drupal\simplify_menu\MenuItems
    */
   protected $menuItems;
 
   /**
    * MenuItemsTwigExtension constructor.
    *
-   * @param MenuItems $menuItems
+   * @param \Drupal\simplify_menu\MenuItems $menuItems
    *   The MenuItems service.
    */
   public function __construct(MenuItems $menuItems) {
@@ -31,7 +33,7 @@ class MenuItemsTwigExtension extends \Twig_Extension {
   /**
    * {@inheritdoc}
    */
-  public function getFunctions() {
+  public function getFunctions(): array {
     return [
       new \Twig_SimpleFunction('simplify_menu',
       function ($menuId = NULL) {
@@ -45,7 +47,7 @@ class MenuItemsTwigExtension extends \Twig_Extension {
   /**
    * {@inheritdoc}
    */
-  public function getName() {
+  public function getName(): string {
     return 'simplify_menu';
   }
 

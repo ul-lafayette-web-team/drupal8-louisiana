@@ -36,6 +36,13 @@ field.value.webform:
     close:
       type: string
       label: 'Webform close date/time'
+    # @todo Figure how and if this can be moved to webform_access.schema.yml.
+    webform_access_group:
+      type: sequence
+      label: 'Access groups'
+      sequence:
+        type: string
+        label: 'Access group'
 
 field.widget.settings.webform_entity_reference_autocomplete:
   type: mapping
@@ -61,6 +68,13 @@ field.widget.settings.webform_entity_reference_select:
     default_data:
       type: boolean
       label: 'Default submission data'
+    webforms:
+      type: sequence
+      label: 'Webforms'
+      sequence:
+        type: string
+        label: 'Webform'
+
 field.formatter.settings.webform_entity_reference_entity_view:
   type: mapping
   label: 'Display the referenced webform with default submission data.'

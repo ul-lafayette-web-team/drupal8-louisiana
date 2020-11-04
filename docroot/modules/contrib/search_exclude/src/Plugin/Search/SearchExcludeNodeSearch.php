@@ -2,6 +2,8 @@
 
 namespace Drupal\search_exclude\Plugin\Search;
 
+use Drupal\comment\CommentInterface;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\NodeInterface;
 use Drupal\node\Plugin\Search\NodeSearch;
@@ -127,4 +129,36 @@ class SearchExcludeNodeSearch extends NodeSearch {
     $this->configuration['excluded_bundles'] = array_filter($form_state->getValue('excluded_bundles'));
     parent::submitConfigurationForm($form, $form_state);
   }
+
+  /**
+   * Check if the entity needs to be re-indexed.
+   *
+   * If the $entity is a comment, the reindexing will aply to the associated
+   * node, otherwise the node itself. This will trigger a re-indexing only if
+   * the node type is not configured to be excluded by this plugin.
+   *
+   * @param \Drupal\Core\Entity\EntityInterface $entity
+   *   Either a node or a comments entity.
+   */
+  public function reIndex(EntityInterface $entity) {
+    if ($entity instanceof CommentInterface) {
+      if ($entity->getCommentedEntityTypeId() !== 'node') {
+        return;
+      }
+      $node = $entity->getCommentedEntity();
+    }
+    else if ($entity instanceof NodeInterface) {
+      $node = $entity;
+    }
+    else {
+      return;
+    }
+
+    /** @var \Drupal\node\NodeInterface $node */
+    if (in_array($node->getType(), $this->configuration['excluded_bundles'])) {
+      return;
+    }
+    search_mark_for_reindex('search_exclude_node_search', $node->id());
+  }
+
 }

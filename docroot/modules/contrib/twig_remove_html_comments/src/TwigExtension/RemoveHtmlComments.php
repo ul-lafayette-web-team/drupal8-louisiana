@@ -1,16 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\twig_remove_html_comments\TwigExtension;
 
+use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
-use Twig_Extension;
 
 /**
  * Provides a Twig filter that removes HTML comments from input.
  *
  * @package Drupal\twig_remove_html_comments\TwigExtension
  */
-class RemoveHtmlComments extends Twig_Extension {
+class RemoveHtmlComments extends AbstractExtension {
 
   /**
    * Generates a list of all Twig filters that this extension defines.

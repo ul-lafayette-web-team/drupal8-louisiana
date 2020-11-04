@@ -1,3 +1,7 @@
+# Composer
+vendor
+composer.lock
+
 # OS X
 .DS_Store
 .AppleDouble
@@ -61,14 +65,14 @@ tramp
 .idea/
 .vscode/
 
-#XHProf
+# XHProf
 xhprof_*
 
-#Netbeans IDE
+# Netbeans IDE
 nbproject
 nbproject/*
 
-#Exports
+# Exports
 *.gz
 *.sql
 *.zip
