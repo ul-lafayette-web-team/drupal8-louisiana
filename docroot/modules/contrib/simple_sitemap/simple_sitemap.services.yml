@@ -51,13 +51,14 @@ services:
   simple_sitemap.sitemap_writer:
     class: Drupal\simple_sitemap\Plugin\simple_sitemap\SitemapGenerator\SitemapWriter
     public: true
+    arguments:
+      - '@router.route_provider'
 
   simple_sitemap.entity_helper:
     class: Drupal\simple_sitemap\EntityHelper
     public: true
     arguments:
       - '@entity_type.manager'
-      - '@database'
       - '@entity_type.bundle.info'
 
   simple_sitemap.form_helper:

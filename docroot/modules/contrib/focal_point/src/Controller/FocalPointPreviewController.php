@@ -4,9 +4,9 @@ namespace Drupal\focal_point\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\focal_point\Plugin\Field\FieldWidget\FocalPointImageWidget;
-use Drupal\image\Entity\ImageStyle;
 use Drupal\file\Entity\File;
 use Drupal\Core\Session\AccountInterface;
+use Drupal\image\ImageStyleInterface;
 use Symfony\Component\Validator\Exception\InvalidArgumentException;
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Entity\EntityStorageInterface;
@@ -56,7 +56,7 @@ class FocalPointPreviewController extends ControllerBase {
   public function __construct(ImageFactory $image_factory, RequestStack $request_stack) {
     $this->imageFactory = $image_factory;
     $this->request = $request_stack->getCurrentRequest();
-    $this->fileStorage = $this->entityManager()->getStorage('file');
+    $this->fileStorage = $this->entityTypeManager()->getStorage('file');
   }
 
   /**
@@ -125,11 +125,10 @@ class FocalPointPreviewController extends ControllerBase {
     else {
       // There are no styles that use a focal point effect to preview.
       $image_styles_url = Url::fromRoute('entity.image_style.collection')->toString();
-      drupal_set_message(
+      $this->messenger()->addWarning(
         $this->t('You must have at least one <a href=":url">image style</a> defined that uses a focal point effect in order to preview.',
           [':url' => $image_styles_url]
-        ),
-        'warning'
+        )
       );
     }
 
@@ -142,15 +141,13 @@ class FocalPointPreviewController extends ControllerBase {
       '#derivative_image_note' => $derivative_image_note,
     ];
 
-    $html = render($output);
-
     $options = [
       'dialogClass' => 'popup-dialog-class',
       'width' => '80%',
     ];
     $response = new AjaxResponse();
     $response->addCommand(
-      new OpenModalDialogCommand($this->t('Images preview'), $html, $options)
+      new OpenModalDialogCommand($this->t('Images preview'), $output, $options)
     );
 
     return $response;
@@ -235,7 +232,7 @@ class FocalPointPreviewController extends ControllerBase {
   /**
    * Create the URL for a preview image including a query parameter.
    *
-   * @param \Drupal\image\Entity\ImageStyle $style
+   * @param \Drupal\image\ImageStyleInterface $style
    *   The image style being previewed.
    * @param \Drupal\file\Entity\File $image
    *   The image being previewed.
@@ -246,7 +243,7 @@ class FocalPointPreviewController extends ControllerBase {
    * @return \Drupal\Core\GeneratedUrl|string
    *   The URL of the preview image.
    */
-  protected function buildUrl(ImageStyle $style, File $image, $focal_point_value) {
+  protected function buildUrl(ImageStyleInterface $style, File $image, $focal_point_value) {
     $url = $style->buildUrl($image->getFileUri());
     $url .= (strpos($url, '?') !== FALSE ? '&' : '?') . 'focal_point_preview_value=' . $focal_point_value;
 

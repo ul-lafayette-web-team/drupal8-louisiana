@@ -15,7 +15,6 @@ use Drupal\Core\Session\AccountProxyInterface;
 class FormHelper {
   use StringTranslationTrait;
 
-  const PRIORITY_DEFAULT = 0.5;
   const PRIORITY_HIGHEST = 10;
   const PRIORITY_DIVIDER = 10;
 
@@ -85,6 +84,20 @@ class FormHelper {
     'monthly',
     'yearly',
     'never',
+  ];
+
+  protected static $cronIntervals = [
+    1,
+    3,
+    6,
+    12,
+    24,
+    48,
+    72,
+    96,
+    120,
+    144,
+    168,
   ];
 
   /**
@@ -207,6 +220,13 @@ class FormHelper {
     }
 
     return TRUE;
+  }
+
+  /**
+   * @return bool
+   */
+  public function entityIsNew() {
+    return !empty($entity = $this->getFormEntity()) ? $entity->isNew() : TRUE;
   }
 
   /**
@@ -394,7 +414,7 @@ class FormHelper {
         $this->setEntityTypeId($entity_type_id);
         $this->setBundleName($this->entityHelper->getEntityInstanceBundleName($form_entity));
         // New menu link's id is '' instead of NULL, hence checking for empty.
-        $this->setInstanceId(!empty($form_entity->id()) ? $form_entity->id() : NULL);
+        $this->setInstanceId(!$this->entityIsNew() ? $form_entity->id() : NULL);
         break;
 
       default:
@@ -406,7 +426,7 @@ class FormHelper {
   /**
    * Gets the object entity of the form if available.
    *
-   * @return \Drupal\Core\Entity\Entity|false
+   * @return \Drupal\Core\Entity\EntityBase|false
    *   Entity or FALSE if non-existent or if form operation is
    *   'delete'.
    */
@@ -418,6 +438,7 @@ class FormHelper {
       && in_array($form_object->getOperation(), self::$allowedFormOperations)) {
       return $form_object->getEntity();
     }
+
     return FALSE;
   }
 
@@ -437,17 +458,6 @@ class FormHelper {
     $this->settings = NULL;
 
     return $this;
-  }
-
-  /**
-   * Gets new entity Id after entity creation.
-   * To be used in an entity form submit.
-   *
-   * @return int
-   *   Entity ID.
-   */
-  public function getFormEntityId() {
-    return $this->formState->getFormObject()->getEntity()->id();
   }
 
   /**
@@ -569,5 +579,26 @@ class FormHelper {
    */
   public static function isValidChangefreq($changefreq) {
     return in_array($changefreq, self::$changefreqValues);
+  }
+
+  /**
+   * @return array
+   */
+  public static function getCronIntervalOptions() {
+    /** @var \Drupal\Core\Datetime\DateFormatter $formatter */
+    $formatter = \Drupal::service('date.formatter');
+    $intervals = array_flip(self::$cronIntervals);
+    foreach ($intervals as $interval => &$label) {
+      $label = $formatter->formatInterval($interval * 60 * 60);
+    }
+
+    return [0 => t('On every cron run')] + $intervals;
+  }
+
+  /**
+   * @return string
+   */
+  public static function getDonationText() {
+    return '<div class="description">' . t('If you would like to say thanks and support the development of this module, a <a target="_blank" href="@url">donation</a> will be much appreciated.', ['@url' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5AFYRSBLGSC3W']) . '</div>';
   }
 }
