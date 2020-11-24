@@ -19978,7 +19978,7 @@ __webpack_require__.r(__webpack_exports__);
    * Tuition-Fees buttons
    */
 
-  Object(_modules_tuition_fees__WEBPACK_IMPORTED_MODULE_30__["default"])();
+  //Object(_modules_tuition_fees__WEBPACK_IMPORTED_MODULE_30__["default"])();
   /**
    * Slick for the Multiple Components : Profile Summary,
    */
