@@ -9,10 +9,10 @@
     <p class="news__date date"><span>Published</span><time>{{ content.field_news_date }}</time></p>
     <figure class="news__featured-image featured-image">
       {{ content.field_news_image }}
-      <a href="https://player.vimeo.com/external/264260655.sd.mp4?s=5bffe0d3766c547c7eb27d5f12b72b2f34ea5753&profile_id=165" data-fancybox class=" video-link--fancy">
+      {# <a href="https://player.vimeo.com/external/264260655.sd.mp4?s=5bffe0d3766c547c7eb27d5f12b72b2f34ea5753&profile_id=165" data-fancybox class=" video-link--fancy">
         <span class="show-for-sr">Click to play the video</span>
         <span class="play-button"></span>
-      </a>
+      </a>#}
     </figure>
 
     {% if content.field_news_story_subject_name|render %}
@@ -26,7 +26,7 @@
             </div>
             <div class="cell medium-6">
               <div class="news-story__subject__title">            
-                <a class="link-arrow" href="{{ url }}">{{ label }}</a>
+                {# <a class="link-arrow" href="{{ url }}">{{ label }}</a> #}
               </div>
               <div class="news-story__text">
                 {% if content.field_news_story_subject_image|render %}

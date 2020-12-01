@@ -1,0 +1,36 @@
+{#
+  /**
+   * Template to display the news/story feature.
+   *
+   * This is the reusable component and includes links to templates for featured items and small items
+   *
+   */
+#}
+{%
+  set news_story_feature_classes = [
+    'section--news-tagged-feature',
+    'section--wide-lined-title',
+    'section--banded',
+    'section--dusty-light'
+  ]|merge(classes|default([]))
+%}
+<section class="{{ news_story_feature_classes|join(' ') }}">
+    <div class="grid-container">
+      <div class="grid-x">
+        <div class="cell">
+          <h2><span>{{ content.field_component_title }}</span></h2>
+        </div>
+      </div>
+    </div>
+  <div class="section__content">
+    <div class="grid-container">Coming Soon</div>
+  </div>
+  <div class="grid-container">
+    <div class="grid-x section__all-link">
+      <div class="cell">
+        <a href="/news" class="link-underline">All News &amp; Stories</a>
+      </div>
+    </div>
+  </div>
+</section>
+

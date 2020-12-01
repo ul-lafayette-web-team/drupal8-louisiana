@@ -1,11 +1,13 @@
 {% set background = "" %}
+{% set class = "" %}
 {% if content.field_component_image|render %}
-  {% set background = "background: url(" ~ content.field_component_image|render ~ ")" %}
+  {% set background = "background-image: url(" ~ file_url(paragraph.field_component_image.entity.field_media_image.entity.fileuri) ~ ")" %}
+  {% set class="differentiator--with-photo" %}
 {% endif %}
 <div class="cell small-12 medium-4">
-  <article class="differentiator" style="{{ background }}">
+  <article class="differentiator {{ class }}" style="{{ background }}">
     {% if content.field_component_image|render %}
-      {{ content.field_component_image }}
+
     {% elseif content.field_component_icon|render %}
       {{ content.field_component_icon }}
     {% else %}

@@ -1,11 +1,14 @@
-{% import "@oho_base/includes/oho-macros.html.twig" as oho_macros %}
-<section class="sock">
-  <img src="{{ base_path ~ directory }}/assets/img/sock-cropped.jpg" alt="building" class="sock__imagery sock__photo">
-  <div class="sock__imagery sock__overlay"></div>
-  <div class="sock__imagery sock__illustration">
-    {% include '@louisiana/includes/sock-drawing.html.twig' %}
-  </div>
+{% import "@oho_base/includes/oho-macros.html.twig" as oho_macros %} 
+<section class="sock section-dusty"> 
+  <video loop="" muted="" autoplay="autoplay" class="sock__imagery sock__photo" style="top:-1px">
+    <source src="{{ base_path ~ directory }}/assets/img/ull-website-footer.mp4"> 
+  </video> 
+{#  <div class="sock__imagery sock__overlay"></div>
+  <img src="{{ base_path ~ directory }}/assets/img/sock-cropped.jpg" alt="building" class="sock__imagery 
+sock__photo">
+#}
   <div class="grid-container">
-    {{ oho_macros.link_field_list(content.field_fctab_cta_links, 'sock__links grid-x grid-margin-x', 'cell medium-4') }}
-  </div>
+    {{ oho_macros.link_field_list(content.field_fctab_cta_links, 'sock__links grid-x grid-margin-x', 'cell 
+medium-4') }}
+  </div> 
 </section>
