@@ -220,3 +220,7 @@ form .js-form-type-textfield label {
     font-weight: 700;
     line-height: 1.7;
 }
+.news__featured-image {
+    text-align: center;
+    display: block;
+}

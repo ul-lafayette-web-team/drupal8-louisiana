@@ -3,9 +3,12 @@
     <div class="hero__media">
         <div class="video-feature">
           <video autoplay=autoplay id="hero" loop muted {# poster="{{video_poster}}" #}>
-            <source src="https://player.vimeo.com/external/367032013.hd.mp4?s=cf9603fc8ae1cd11aa03261fa08a1f1079869a94&profile_id=175">
+            <source src="{{ content.field_header_video_url }}">
           </video>
         </div>
+    </div>
+    <div class="hero__content">
+      <h1>{{ content.field_header_title }}</h1>
     </div>
   </section>
   <section class="section--brand-features">
@@ -14,7 +17,6 @@
       {{ content.field_home_brand_features }}
     </ul>
   </section>
-
   {{ content.field_home_campaign_highlight }}
   
   <section class="section--news-story-feature section--wide-lined-title section--banded section--dusty-light">
@@ -22,13 +24,10 @@
   </section>
   
   {{ content.field_culture_component }}
-
   <section class="section--banded section--white section--livewhale">
     {{ content.field_livewhale_event_feature }}
   </section>
   
   <section class="section--image-video-gallery section--wide-lined-title section--banded section--dusty">
     {{ content.field_home_instagram_gallery }}
-  </section>
-
-</article>
+  </section> </article>
