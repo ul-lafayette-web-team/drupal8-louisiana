@@ -9,12 +9,12 @@
     <p class="news__date date"><span>Published</span><time>{{ content.field_news_date }}</time></p>
     <figure class="news__featured-image featured-image">
       {{ content.field_news_image }}
-      {# if content.field_news_video|render #}
+      {% if content.field_news_video|render %}
         <a href="{{ node.field_news_video|file_url }}" data-fancybox class=" video-link--fancy">
           <span class="show-for-sr">Click to play the video</span>
           <span class="play-button"></span>
         </a>
-      {# endif #}
+      {% endif %}
     </figure>
     {% if content.field_news_story_subject_name|render %}
       <div class="story__subject">
@@ -90,7 +90,7 @@
           <div class="cell large-8">
             {{ content.body }}
           </div>
-          {% if content.field_news_tags|render %}
+          {% if content.field_news_story_topic|render %}
             <div class="tags news__tags">
               <h2 class="tags__heading">News</h2>
               {{ content.field_news_story_topic }}
@@ -111,10 +111,10 @@
                {# url #}
              </div>
            </div>
-          {% if content.field_news_tags|render %}
+          {% if content.field_news_story_topic|render %}
           <div class="tags news__tags">
             <h2 class="tags__heading">News</h2>
-            {{ content.field_news_tags }}
+            {{ content.field_news_story_topic }}
           </div>
           {% endif %}
         </div>
