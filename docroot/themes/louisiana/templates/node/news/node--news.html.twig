@@ -5,7 +5,8 @@
   <article class="news news--detail">
   {% endif %}
     <h1 class="news__title">{{ label }}</h1>
-    <p class="news__author"><span>Written by</span><span class="news__author--name">{{ content.field_news_author }}</span></p>
+    <p class="news__author"><span>Written by</span><span class="news__author--name">{{ 
+content.field_news_author }}</span></p>
     <p class="news__date date"><span>Published</span><time>{{ content.field_news_date }}</time></p>
     <figure class="news__featured-image featured-image">
       {{ content.field_news_image }}
@@ -43,9 +44,11 @@
                   </div>
                   <dl class="news-story--subject__info">
                   <dt>Graduation Year</dt>
-                  <dd class="news-story--subject__grad-year">{{ content.field_news_story_subject_g_year }}</dd>
+                  <dd class="news-story--subject__grad-year">{{ content.field_news_story_subject_g_year 
+}}</dd>
                   <dt>Major</dt>
-                  <dd class="news-story--subject__major">{{ content.field_news_story_subject_o_title }}</dd>
+                  <dd class="news-story--subject__major">{{ content.field_news_story_subject_o_title 
+}}</dd>
                   <dt>Hometown</dt>
                   <dd class="news-story--subject__hometown">{{ content.field_news_story_subject_home }}
                   </dl>
@@ -89,13 +92,19 @@
           </div>
           <div class="cell large-8">
             {{ content.body }}
+            {% if content.field_news_story_topic|render %}
+              <div class="tags news__tags">
+                <h2 class="tags__heading">News</h2>
+                {% if content.field_news_story_topic[0] %}
+                  <ul>
+                    {% for key, item in content.field_news_story_topic if key|first != '#' %}
+                      <li>{{ item }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </div>
+            {% endif %}
           </div>
-          {% if content.field_news_story_topic|render %}
-            <div class="tags news__tags">
-              <h2 class="tags__heading">News</h2>
-              {{ content.field_news_story_topic }}
-            </div>
-          {% endif %}
         </div>
       </section>
     {% else %}
@@ -106,19 +115,26 @@
             {{ content.field_news_summary }}
           </div>
           {{ content.body }}
-        <div class="cell medium-6">
-      <div class="news-story__subject__title">
+          <div class="cell medium-6">
+            <div class="news-story__subject__title">
                {# url #}
              </div>
            </div>
-          {% if content.field_news_story_topic|render %}
-          <div class="tags news__tags">
-            <h2 class="tags__heading">News</h2>
-            {{ content.field_news_story_topic }}
-          </div>
-          {% endif %}
+           {% if content.field_news_story_topic|render %}
+             <div class="tags news__tags">
+               <h2 class="tags__heading">News</h2>
+               {% if content.field_news_story_topic[0] %}
+                 <ul>
+                   {% for key, item in content.field_news_story_topic if key|first != '#' %}
+                     <li>{{ item }}</li>
+                   {% endfor %}
+                 </ul>
+               {% endif %}
+             </div>
+           {% endif %}
         </div>
       </div>
     </section>
     {% endif %}
-  </article> </div> {{ content.field_page_components }} {{ kint(node.field_news_video) }}
+  </article> </div>
+  {{ content.field_page_components }}
