@@ -14,5 +14,5 @@ function louisiana_theme_suggestions_page_alter(array &$suggestions, array $vari
 }
 function louisiana_preprocess_paragraph(&$variables){
    $node = \Drupal::request()->attributes->get('node');
-   $variables['nodetitle'] = $node->getTitle();
+   if ($node) { $variables['nodetitle'] = $node->getTitle(); }
 }
