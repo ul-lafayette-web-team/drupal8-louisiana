@@ -222,5 +222,8 @@ form .js-form-type-textfield label {
 }
 .news__featured-image {
     text-align: center;
-    display: block;
+    display: block:
+}
+form .js-form-type-select .form-select {
+    background: url(/themes/louisiana/assets/img/bg-select-arrow.svg) no-repeat 95% 50%;
 }

@@ -1,0 +1,36 @@
+{#
+  /**
+   * Template to display the news large listing view mode.
+   */
+#}
+<article class="listing-item">
+  <div class="grid-x grid-margin-x align-center">
+    <div class="cell initial-12 medium-4 large-3 ">
+      <a class="listing-item__image" href>
+	{{ content.field_news_image }}
+      </a>
+    </div>
+    <div class="cell initial-12 medium-4 large-4">
+      <div class="listing-item__content">
+        <h3 class="h4 listing-item__title"><a href="{{ url }}">{{ label }}</a></h3>
+        <p><span class="listing-item__type">{{ content.field_news_type }}</span><span class="listing-item__date date"><time datetime="2018-04-29T12:00:00Z">{{ content.field_news_date }}</time></span></p>
+      </div>
+    </div>
+    <div class="cell initial-12 medium-4 large-4">
+      <div class="listing-item__teaser">
+        {{ content.field_news_summary }}
+      </div>
+      {% if content.field_news_story_topic|render %}
+      <div class="listing-item__tags tags">
+        <h2 class="tags__heading show-for-sr">Tags:</h2>
+        {% if content.field_news_story_topic[0] %}
+           <ul>
+             {% for key, item in content.field_news_story_topic if key|first != '#' %}
+               <li>{{ item }}</li>
+             {% endfor %}
+           </ul>
+        {% endif %}
+      </div>
+      {% endif %}
+  </div>
+</article>

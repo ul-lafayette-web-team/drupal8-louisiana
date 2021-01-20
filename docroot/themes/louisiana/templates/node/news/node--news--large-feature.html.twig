@@ -12,10 +12,16 @@
       </div>
       <h3>{{ node.title.value }}</h3>
       <p>{{ content.body }}</p>
-      {% if content.field_news_tags %}
+      {% if content.field_news_story_topic|render %}
       <div class="listing-item__tags tags">
         <h2 class="tags__heading show-for-sr">Tags:</h2>
-        {{ content.field_news_tags }}
+        {% if content.field_news_story_topic[0] %}
+          <ul>
+            {% for key, item in content.field_news_story_topic if key|first != '#' %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
       </div>
       {% endif %}
     </div>
