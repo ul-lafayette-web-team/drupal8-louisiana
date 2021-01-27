@@ -3,11 +3,15 @@
   <span class="show-for-sr">Click to exapnd this slide</span>
   <figure class="gallery-image-video__item " >
     {{ content.field_component_image }}
-    <figcaption>{{ content.field_component_title }}</figcaption>
+    {% if content.field_component_title|render %}
+      <figcaption>{{ content.field_component_title }}</figcaption>
+    {% endif %}
   </figure>     
   </a>
   <figure class="gallery-image-video__item--fancy" id="gallery-one">
     {{ content.field_component_image }}
-    <figcaption>{{ content.field_component_title }}</figcaption>
+    {% if content.field_component_title|render %}
+      <figcaption>{{ content.field_component_title }}</figcaption>
+    {% endif %}
   </figure>  
 </div>

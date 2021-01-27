@@ -5,9 +5,13 @@
   <article class="news news--detail">
   {% endif %}
     <h1 class="news__title">{{ label }}</h1>
-    <p class="news__author"><span>Written by</span><span class="news__author--name">{{ 
+    {% if content.field_news_author|render %}
+      <p class="news__author"><span>Written by</span><span class="news__author--name">{{ 
 content.field_news_author }}</span></p>
-    <p class="news__date date"><span>Published</span><time>{{ content.field_news_date }}</time></p>
+    {% endif %}
+    {% if content.field_news_date|render %}
+      <p class="news__date date"><span>Published</span><time>{{ content.field_news_date }}</time></p>
+    {% endif %}
     <figure class="news__featured-image featured-image">
       {{ content.field_news_image }}
       {% if content.field_news_video|render %}
@@ -43,9 +47,11 @@ content.field_news_author }}</span></p>
                     {{ content.field_news_story_subject_name }}
                   </div>
                   <dl class="news-story--subject__info">
-                  <dt>Graduation Year</dt>
-                  <dd class="news-story--subject__grad-year">{{ content.field_news_story_subject_g_year 
+                  {% if content.field_news_story_subject_g_year|render %}
+                    <dt>Graduation Year</dt>
+                    <dd class="news-story--subject__grad-year">{{ content.field_news_story_subject_g_year 
 }}</dd>
+                  {% endif %}
                   <dt>Major</dt>
                   <dd class="news-story--subject__major">{{ content.field_news_story_subject_o_title 
 }}</dd>
@@ -137,4 +143,4 @@ content.field_news_author }}</span></p>
     </section>
     {% endif %}
   </article> </div>
-  {{ content.field_page_components }}
+  {{ content.field_gallery }}
