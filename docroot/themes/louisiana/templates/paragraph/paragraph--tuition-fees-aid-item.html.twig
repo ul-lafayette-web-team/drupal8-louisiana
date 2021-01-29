@@ -3,7 +3,7 @@
 {% if content.field_component_body|render %}
   <button type="button" class="costs__accordion-button">
     <div class="costs__name">{{ content.field_taf_item_name }}</div>
-    <div class="costs__amount">- {{ content.field_taf_item_number }}</div>
+    <div class="costs__amount">{{ content.field_taf_item_number }}</div>
     <span class="show-for-sr">Click to <span>show</span> background information</span>
   </button> 
   <div class="costs__accordion__content">  
@@ -26,7 +26,7 @@
 
   <div class="costs__textrow">
     <div class="costs__name">{{ content.field_taf_item_name }}</div>
-    <div class="costs__amount">- {{ content.field_taf_item_number }}</div>
+    <div class="costs__amount">{{ content.field_taf_item_number }}</div>
   </div>  
   
 {% endif %} 
