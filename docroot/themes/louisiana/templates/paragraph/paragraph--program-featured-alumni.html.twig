@@ -1,3 +1,7 @@
+{% if content.field_component_title|render %}
+  <div class="cell small-12 medium-7 career-feature__alumni-cell">
+    <div class="career-feature__alumni">
+      <div class="grid-x grid-padding-x">
 {% if content.field_component_image|render is not empty %}
 <div class="cell small-12 large-4">
   <figure class="career-feature-alumni__photo">
@@ -5,6 +9,7 @@
   </figure>
 </div>
 {% endif %}
+{% if content.field_component_title|render %}
 <div class="cell small-12 large-8">
   <h3>{{ content.field_component_title }}</h3>
   <p class="career-feature-alumni__quote">{{ content.field_component_body }}</p>
@@ -12,3 +17,8 @@
   <div class="career-feature-alumni__outcome">{{ content.field_outcome_or_job }}</div>
   {{ content.field_component_link }}
 </div>
+{% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}

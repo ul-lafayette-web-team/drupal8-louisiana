@@ -1,12 +1,13 @@
-{{ breadcrumbs }}
+<div style="margin-top: 30px" class="page-wrapper grid-container">
 <h1>{{ node.title.value }}</h1>
 
 <article class="program-landing">
   {% if content.field_intro_text|render %}
-    <div class="intro-text">{{ content.field_intro_text }}</div>
+    <div class="intro-text"> <p></p> {{ content.field_intro_text }}</div>
   {% endif %}
 
   {{ content.body }}
 </article>
 
 {{ program_listing }}
+</div>

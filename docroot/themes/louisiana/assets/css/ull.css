@@ -134,9 +134,10 @@ article {
     display: block;
     text-align: center;
     color: #ce181e;
+    margin-top: 30px;
 }
 .differentiator__text .differentiator__title h3.h5 .make_red {
-    color: #ce181e;
+    /* color: #ce181e; */
 }
 .differentiator__title h4 a {
     margin-top: 2.5rem;
@@ -149,6 +150,9 @@ article {
 .differentiator__desc p {
     display: block:
     text-align: justify;
+}
+.differentiator--with-photo .differentiator__text {
+    position: absolute;
 }
 .organization__title-strip .term-type a {
     text-decoration: none;
@@ -222,8 +226,23 @@ form .js-form-type-textfield label {
 }
 .news__featured-image {
     text-align: center;
-    display: block:
+    display: block;
 }
 form .js-form-type-select .form-select {
     background: url(/themes/louisiana/assets/img/bg-select-arrow.svg) no-repeat 95% 50%;
 }
+.full-wysiwyg a, .wysiwyg a{
+    color: #000000;
+}
+.link-underline { font-weight: bold; }
+.profile-detail { margin-bottom: 50px; }
+.profile__departments ul li a { border: 0; }
+.ull-header__search .site-search .search-block-form input.form-search { padding: 0.5em; }
+.gallery__description { 
+  caption-side: bottom;
+  color: #2e2e2e;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 20px } 
+.career-feature__outcomes-cell { margin-top: 30px; }
+.program__other-prog-links div { display: inline; }

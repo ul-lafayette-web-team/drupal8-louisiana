@@ -1,9 +1,15 @@
 <article class="landing-page">
   <article class="hero section--global-spacing hero--img">
     <div class="hero__media">
+    {% if content.field_header_video|render %}
+      <div class="video-feature">
+        <video id="hero" loop="" muted="" poster="http://placehold.it/768x480" autoplay="autoplay" >
+          <source src="{{ content.field_header_video }}&html5=True">
+        </video>
+      </div>
+    {% endif %}
       {{ content.field_header_image }}
     </div>
-
     {% if content.field_intro_text|render %}
       <div class="hero__content">
         <div class="grid-x">
@@ -19,6 +25,4 @@
           </div>
         </div>
       </div>
-    {% endif %}
-</article>
-{{ content.field_page_components }}
+    {% endif %} </article> {{ content.field_page_components }}

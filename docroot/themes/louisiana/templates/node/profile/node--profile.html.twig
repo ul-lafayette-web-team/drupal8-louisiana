@@ -15,20 +15,41 @@
         </li>
     </ul>
     </div>
+    <div class="profile__departments" style="font-size: 1.25rem; font-weight: 400">
+{% if content.field_profile_organizations[0] %}
+  <ul>
+    {% for key, item in content.field_profile_organizations if key|first != '#' %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+    </div>
     <div class="profile__titles" style="font-size: 1.25rem; font-weight: 400">
-      {{ content.field_profile_position }}
+      {% if content.field_profile_position[0] %}
+        <ul>
+        {% for key, item in content.field_profile_position if key|first != '#' %}
+          <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
     </div>
     <div class="profile__contact">
       <ul>
+{% if content.field_profile_phone_number|render %}
         <li>
           <i class="far fa-phone"></i><span>{{ content.field_profile_phone_number }}</span>
         </li>
+{% endif %}
+{% if content.field_profile_email|render %}
         <li>
           <i class="far fa-envelope"></i><span>{{ content.field_profile_email }}</span>
         </li>        
+{% endif %}
+{% if content.field_profile_office_location|render %}
         <li>
           <i class="far fa-map-signs"></i><span>{{ content.field_profile_office_location }}</span>
         </li> 
+{% endif %}
       </ul>
     </div>
   </div>
@@ -36,31 +57,38 @@
     <div class="intro-text">
       {{ content.field_profile_summary }}
     </div>
+    {% if content.body|render %}
     <h2>Biography</h2>
     <div class="profile__html-basic wysiwyg">
       {{ content.body }}
     </div>
+    {% endif %}
+    {% if content.field_profile_education|render %}
     <h2>Education</h2>
     <div class="profile__html-basic wysiwyg">
       {{ content.field_profile_education }}
     </div>
+    {% endif %}
+    {% if content.field_profile_research|render %}
     <h2>Student Research/Collaboration</h2>
     <div class="profile__html-basic wysiwyg">
       {{ content.field_profile_research }}
     </div>
+    {% endif %}
+    {% if content.field_profile_publications|render %}
     <h2>Publications</h2>
     <div class="profile__html-basic wysiwyg">
       {{ content.field_profile_publications }}
     </div>    
+    {% endif %}
+    {% if content.field_profile_awards|render %}
     <h2>Awards & Recognition</h2>
     <div class="profile__html-basic wysiwyg">
       {{ content.field_profile_awards }}
     </div>
+    {% endif %}
     <div class="profile__html-basic wysiwyg">
       {{ content.field_profile_other_info_text }}
     </div> 
-  </div>
-  <div class="cell small-12 medium-4">
-
   </div>
 </section>
