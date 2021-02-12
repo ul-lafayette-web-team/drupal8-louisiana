@@ -13,5 +13,9 @@ function lafayette_wrapper_preprocess_block(&$vars) {
       $vars['content']['#block_content']->bundle() == 'footer_content_block') {
     // Get the copyright year.
     $vars['copyright_year'] = date('Y');
+    // Build the top level links of the main menu
+    $vars['main_menu'] = \Drupal::service('oho_nav.oho_nav_builder')->buildFixedMenuNav('main', 1, 1);
+    $vars['audience_menu'] = \Drupal::service('oho_nav.oho_nav_builder')->buildFixedMenuNav('audience-menu', 1, 1);
+    $vars['utility_menu'] = \Drupal::service('oho_nav.oho_nav_builder')->buildFixedMenuNav('utility-menu', 1, 1);
   }
 }

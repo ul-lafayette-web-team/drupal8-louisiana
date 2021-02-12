@@ -249,3 +249,18 @@ form .js-form-type-select .form-select {
 .sidebar-menu__container a.is-active {
   font-weight: 700;
 }
+.site-footer__main-nav .sidebar-menu__container > ul,
+.site-footer__links .sidebar-menu__container > ul,
+.site-footer--footer .sidebar-menu__container > ul {
+  border: none;
+}
+.site-footer__main-nav .sidebar-menu__container > ul > li,
+.site-footer__links .sidebar-menu__container > ul > li,
+.site-footer--footer .sidebar-menu__container > ul > li {
+  border: none;
+}
+.site-footer__main-nav .sidebar-menu__container > ul > li a,
+.site-footer__links .sidebar-menu__container > ul > li a,
+.site-footer--footer .sidebar-menu__container > ul > li a {
+  padding: 0;
+}

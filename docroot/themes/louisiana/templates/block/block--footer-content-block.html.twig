@@ -17,19 +17,19 @@
                       <ul>
                         <li>
                           <i class="fal fa-phone"></i>
-                          <div class="site-footer__contact-text"> 
+                          <div class="site-footer__contact-text">
                             {{ content.field_fcb_phone_number }}
                           </div>
                         </li>
                         <li>
                           <i class="fal fa-envelope"></i>
-                          <div class="site-footer__contact-text"> 
+                          <div class="site-footer__contact-text">
                             {{ content.field_fcb_email }}
                           </div>
                         </li>
                         <li>
                           <i class="fal fa-map-marker-alt"></i>
-                          <div class="site-footer__contact-text"> 
+                          <div class="site-footer__contact-text">
                             {{ content.field_component_body }}
                           </div>
                         </li>
@@ -52,17 +52,17 @@
             <div class="grid-x grid-padding-x">
               <div class="cell small-12 medium-6">
                 <div class="site-footer__main-nav">
-                  {{ drupal_menu('main') }}
+                  {{ main_menu }}
                 </div>
               </div>
 
               <div class="cell small-12 medium-6">
                 <div class="site-footer__links site-footer__links--primary">
-                  {{ drupal_menu('audience-menu') }}
+                  {{ audience_menu }}
                 </div>
                 <div class="site-footer__social">
                   {{ oho_macros.field_list(content.field_fcb_social_media_links) }}
-                </div>                
+                </div>
               </div>
             </div>
           </div>
@@ -84,7 +84,7 @@
     <div class="grid-x grid-margin-x">
       <div class="cell">
         <p>&copy; {{ copyright_year }} {{ 'University of Louisiana at Lafayette. All rights reserved.'|t }}</p>
-        {{ drupal_menu('utility-menu') }}
+        {{ utility_menu }}
       </div>
     </div>
   </div>
