@@ -12,6 +12,7 @@ function oho_nav_theme($existing, $type, $theme, $path) {
   return [
     'oho_nav' => [
       'variables' => [
+        'type' => NULL,
         'nav' => NULL,
         'nav_title' => [],
       ],
@@ -20,12 +21,22 @@ function oho_nav_theme($existing, $type, $theme, $path) {
 }
 
 /**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function oho_nav_theme_suggestions_oho_nav(array $variables) {
+  $suggestions = [];
+  if (!empty($variables['type'])) {
+    $suggestions[] = 'oho_nav__' . $variables['type'];
+  }
+  return $suggestions;
+}
+
+/**
  * Implements hook_theme_suggestions_HOOK() for "block".
  */
 function oho_nav_theme_suggestions_block(array $variables) {
   $suggestions = [];
 
-  // Check if this is a oho_nav_block block.
   if (isset($variables['elements']['#base_plugin_id']) && $variables['elements']['#base_plugin_id'] == 'oho_menu_block') {
     // Add a base menu block suggestion.
     $suggestions[] = 'block__oho_nav_block';

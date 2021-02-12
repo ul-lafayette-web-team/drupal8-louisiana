@@ -23,7 +23,7 @@ function lafayette_subsection_preprocess_group(&$vars) {
       // Build the menu.
       $group_menu = '';
       if (\Drupal::moduleHandler()->moduleExists('oho_nav')) {
-        $group_menu = \Drupal::service('oho_nav.oho_nav_builder')->buildFixedMenuNav($menu_name, 1, 2, TRUE);
+        $group_menu = \Drupal::service('oho_nav.oho_nav_builder')->buildFixedMenuNav($menu_name, 1, 2);
       }
       $vars['group_menu'] = render($group_menu);
     }
