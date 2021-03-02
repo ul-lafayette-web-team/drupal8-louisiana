@@ -269,6 +269,12 @@ a.link-arrow:hover {
 a.costs__highlight:hover { 
   border: 0; 
 }
+.section--news-story-feature a {
+  color: black;
+}
+.section--news-story-feature a:hover {
+  border: 0;
+}
 .grid-margin-x > .large-8 {
   margin-top: 30px;
 }
