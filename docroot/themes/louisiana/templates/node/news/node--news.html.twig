@@ -49,11 +49,15 @@ content.field_news_author }}</span></p>
                     <dd class="news-story--subject__grad-year">{{ content.field_news_story_subject_g_year 
 }}</dd>
                   {% endif %}
-                  <dt>Major</dt>
-                  <dd class="news-story--subject__major">{{ content.field_news_story_subject_o_title 
+                  {% if content.field_news_story_subject_o_title|render %}
+                    <dt>Major</dt>
+                    <dd class="news-story--subject__major">{{ content.field_news_story_subject_o_title 
 }}</dd>
-                  <dt>Hometown</dt>
-                  <dd class="news-story--subject__hometown">{{ content.field_news_story_subject_home }}
+                  {% endif %}
+                  {% if content.field_news_story_subject_home|render %}
+                    <dt>Hometown</dt>
+                    <dd class="news-story--subject__hometown">{{ content.field_news_story_subject_home }}</dd>
+                  {% endif %}
                   </dl>
                 </div>
               </div>
@@ -63,6 +67,7 @@ content.field_news_author }}</span></p>
       </div>
       <section class="clearfix">
         <div class="grid-x grid-margin-x align-center">
+          {% if ( content.field_news_story_past|render ) or ( content.field_news_story_present|render ) or ( content.field_news_story_future|render ) %}
             <div class="cell large-10">
               <div class="story__component">
                 <div class="grid-x grid-padding-x">
@@ -89,10 +94,11 @@ content.field_news_author }}</span></p>
                           {{ content.field_news_story_future }}
                         </div>
                     </div>
-                  {% endif %}
-              </div>
-            </div>
-          </div>
+                  {% endif %} 
+               </div>
+             </div>
+           </div>
+          {% endif %}
           <div class="cell large-8">
             {{ content.body }}
             {% if content.field_news_story_topic|render %}

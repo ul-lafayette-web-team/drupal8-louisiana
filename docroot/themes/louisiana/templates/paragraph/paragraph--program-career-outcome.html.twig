@@ -1,1 +1,9 @@
-<li>{{ content.field_component_title }}</li>
+<li>
+{% if content.field_component_link|render %}
+  <a class="link-arrow" href="{{ content.field_component_link }}">
+{% endif %}
+{{ content.field_component_title }}
+{% if content.field_component_link|render %}
+  </a>
+{% endif %}
+</li>

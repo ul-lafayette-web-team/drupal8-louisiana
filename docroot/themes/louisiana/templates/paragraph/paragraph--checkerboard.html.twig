@@ -1,5 +1,7 @@
 <section class="section--global-spacing section--checkerbd section--banded section--white">
   <div class="grid-container">
-    {{ content.field_checkerboard_items }}
-  </div>
+    {% if content.field_component_title|render %}
+      <div class="grid-x" style="margin-bottom: 3.75rem"><div class="cell"><h2 class="opt-title"><span class="opt-title">{{ content.field_component_title }}</span></h2></div></div>
+    {% endif %}
+      {{ content.field_checkerboard_items }}  </div>
 </section>

@@ -37,6 +37,13 @@
                 </div>
               </div>
               {% endif %}
+
+              {% if content.field_org_people_directory|render %}
+              <div class="org-about-info__title">
+                {{ content.field_org_people_directory }}
+              </div>
+              {% endif %}
+
             </section>
           </div>
           </div>

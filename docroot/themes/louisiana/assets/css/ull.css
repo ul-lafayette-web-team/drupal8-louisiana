@@ -234,7 +234,7 @@ form .js-form-type-select .form-select {
 .full-wysiwyg a, .wysiwyg a{
     color: #000000;
 }
-.link-underline { font-weight: bold; }
+.link-underline { font-weight: bold; color: black }
 .profile-detail { margin-bottom: 50px; }
 .profile__departments ul li a { border: 0; }
 .ull-header__search .site-search .search-block-form input.form-search { padding: 0.5em; }
@@ -246,3 +246,54 @@ form .js-form-type-select .form-select {
   margin-top: 20px } 
 .career-feature__outcomes-cell { margin-top: 30px; }
 .program__other-prog-links div { display: inline; }
+
+a, .full-wysiwyg a, .wysiwyg a {
+  text-decoration: none;
+  color: #ce181e;
+  border-bottom: none;
+}
+a:hover, .full-wysiwyg a:hover, .wysiwyg a:hover {
+  color: #ce181e;
+  border-bottom: 1px solid #ce181e;
+}
+a.link-underline:hover {
+  border: 0;
+}
+a.link-arrow {
+  color: black;
+}
+a.link-arrow:hover {
+  text-decoration: none;
+  border: 0;
+}
+a.costs__highlight:hover { 
+  border: 0; 
+}
+.grid-margin-x > .large-8 {
+  margin-top: 30px;
+}
+.section--checkerbd span.opt-title {
+  position: relative;
+  display: inline-block;
+  background: #ffffff;
+  padding-right: 18px;
+}
+.section--checkerbd h2.opt-title {
+  position: relative;
+  z-index: 8;
+  font-size: 1.5rem;
+  line-height: 1.9375rem;
+  font-weight: 400;
+}
+.section--checkerbd h2.opt-title::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: calc(50% - 1px);
+  right: 0;
+  left: 0;
+  height: 1px;
+  border-bottom: 2px solid #a1c4c9;
+  transition: all 0.3s ease-out;
+}
+
