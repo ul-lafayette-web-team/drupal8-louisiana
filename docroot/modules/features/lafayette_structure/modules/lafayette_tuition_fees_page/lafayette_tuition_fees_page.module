@@ -18,7 +18,7 @@ function lafayette_tuition_fees_page_preprocess_node(&$vars) {
       // Build the sidebar nav.
       $sidebar_nav = '';
       if (\Drupal::moduleHandler()->moduleExists('oho_nav')) {
-        $sidebar_nav = \Drupal::service('oho_nav.oho_nav_builder')->buildRelativeLevelNav(1, 2, [], ['type' => 'root']);
+        $sidebar_nav = \Drupal::service('oho_nav.oho_nav_builder')->buildFixedMenuNav('main', 2, 5, [], ['type' => 'root']);
       }
       $vars['sidebar_nav'] = render($sidebar_nav);
     }

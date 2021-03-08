@@ -264,3 +264,12 @@ form .js-form-type-select .form-select {
 .site-footer--footer .sidebar-menu__container > ul > li a {
   padding: 0;
 }
+.sidebar-menu__container ul {
+  width: 100%;
+}
+.sidebar-menu__container > ul li.menu-item--expanded {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}

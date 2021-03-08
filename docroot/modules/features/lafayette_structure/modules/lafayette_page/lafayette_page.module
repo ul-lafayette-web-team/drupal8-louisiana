@@ -19,7 +19,7 @@ function lafayette_page_preprocess_node(&$vars) {
       $sidebar_nav = '';
       $enable_sidebar_nav = $vars['node']->get('field_sidebar_nav')->value;
       if ($enable_sidebar_nav && \Drupal::moduleHandler()->moduleExists('oho_nav')) {
-        $sidebar_nav = \Drupal::service('oho_nav.oho_nav_builder')->buildRelativeLevelNav(1, 2, [], ['type' => 'root']);
+        $sidebar_nav = \Drupal::service('oho_nav.oho_nav_builder')->buildFixedMenuNav('main', 2, 5, [], ['type' => 'root']);
       }
       $vars['sidebar_nav'] = render($sidebar_nav);
     }
