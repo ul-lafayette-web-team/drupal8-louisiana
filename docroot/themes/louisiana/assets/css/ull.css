@@ -184,6 +184,7 @@ article {
     padding-right: 1.25rem;
     padding-left: 1.25rem;
     max-width: 75rem;
+    margin: 0 auto;
 }
 .views-element-container .row {
     padding: 20px 0;
@@ -227,6 +228,19 @@ form .js-form-type-textfield label {
 .news__featured-image {
     text-align: center;
     display: block;
+}
+.news-story--featured .link-box {
+    color: black;
+}
+.news-story--featured .link-box:hover { 
+    text-decoration: none;
+    border: 0;
+}
+.ull-header__utility--first a:hover, .ull-header__utility--first a:focus, .ull-header__utility--second a:hover, .ull-header__utility--second a:focus {
+    color: white;
+}
+.admin-tabs a:hover {
+    color: white;
 }
 form .js-form-type-select .form-select {
     background: url(/themes/louisiana/assets/img/bg-select-arrow.svg) no-repeat 95% 50%;
@@ -290,6 +304,7 @@ a.costs__highlight:hover {
   font-size: 1.5rem;
   line-height: 1.9375rem;
   font-weight: 400;
+  font-size: 2rem;
 }
 .section--checkerbd h2.opt-title::after {
   content: "";
@@ -302,4 +317,11 @@ a.costs__highlight:hover {
   border-bottom: 2px solid #a1c4c9;
   transition: all 0.3s ease-out;
 }
-
+.alert--ens {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    background: #FF7900;
+    color: white;
+    font-size: 25px;
+}

@@ -1,0 +1,16 @@
+{% if "Situation Normal" not in content|render|render %}
+<div id="alert-wrapper">
+  <section class="alert--ens">
+    <div class="row">
+      <div class="columns small-12 medium-2 large-1">
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+      </div>
+      <div class="columns small-12 medium-8 large-9">
+        <h2 style="color: white">*** Emergency ***</h2>
+        <div style="padding: 25px 0">{{ content }}</div>
+        <div style="font-size: 12px;">For continued updates go to <a style="color: white; text-decoration: underline; border: 0" target="_blank" href="http://www.universityupdates.com">www.UniversityUpdates.com</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+{% endif %}
