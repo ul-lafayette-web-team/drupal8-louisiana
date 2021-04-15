@@ -1,4 +1,20 @@
-{{ content.field_tfs_cost_items }}
+{# content.field_tfs_cost_items #} 
+
+{% if content.field_tfs_cost_items[0] %}
+    {% for key, item in content.field_tfs_cost_items if key|first != '#' %}
+      {% if loop.first %}
+        {{ item }}
+
+
+
+      {% else %}
+        {{ item }}
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}
+
+
 <div class="grid-x costs--subtotal">
 <div class="cell small-12 medium-8 large-9">
   <div class="costs__textrow">

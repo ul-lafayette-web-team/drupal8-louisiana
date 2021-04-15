@@ -28,9 +28,11 @@ content.field_news_author }}</span></p>
               </div>
             </div>
             <div class="cell medium-6">
+            {# Commented out per Elizabeth 20210414
               <div class="news-story__subject__title">
                 <a class="link-arrow" href="{{ url }}">{{ label }}</a>
               </div>
+            #}
               <div class="news-story__text">
                 {% if content.field_news_story_subject_image|render %}
                 <div class="news-story--subject__image">

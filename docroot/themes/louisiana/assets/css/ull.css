@@ -242,7 +242,7 @@ form .js-form-type-textfield label {
 .admin-tabs a:hover {
     color: white;
 }
-form .js-form-type-select .form-select {
+#questionsetSelect, form .js-form-type-select .form-select {
     background: url(/themes/louisiana/assets/img/bg-select-arrow.svg) no-repeat 95% 50%;
 }
 .full-wysiwyg a, .wysiwyg a{
@@ -378,7 +378,7 @@ a.costs__highlight:hover {
 }
 .fyc-right a {
 }
-#views-exposed-form-find-your-counselor-block-1 .form-select {
+#questionsetSelect, #views-exposed-form-find-your-counselor-block-1 .form-select {
   webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -410,3 +410,5 @@ margin-bottom: 0.625rem;
 .section--org-contact h2::after { 
   border: 0;
 }
+.section--differentiators article article h2 { display: none; }
+.tuition-fees_set > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div.costs__accordion__content { display: block; }

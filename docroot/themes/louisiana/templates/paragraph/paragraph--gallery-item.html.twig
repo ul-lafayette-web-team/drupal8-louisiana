@@ -1,17 +1,47 @@
+{% set unique_id = random() %}
+{% set title_value = content.field_component_title|render %}
+{% set video_value = content.field_component_video|render %}
+{% set image_value = content.field_component_image|render %}
+ 
 <div class="gallery-image-video__slide">
-  <a href="#gallery-one" data-fancybox="ditl-fancy">  
-  <span class="show-for-sr">Click to exapnd this slide</span>
+  {% if video_value is empty %}
+  <a href="#gallery-{{ unique_id }}" data-fancybox="ditl-fancy-{{ content.field_fancybox }}" data-options='{"loop" : "true", "arrows" : "true"}'>  
+  <span class="show-for-sr">Click to expand this slide</span>
   <figure class="gallery-image-video__item " >
-    {{ content.field_component_image }}
-    {% if content.field_component_title|render %}
+    {{ image_value }}
+    {% if title_value|remove_html_comments|trim is not empty %}
       <figcaption>{{ content.field_component_title }}</figcaption>
     {% endif %}
   </figure>     
   </a>
-  <figure class="gallery-image-video__item--fancy" id="gallery-one">
-    {{ content.field_component_image }}
-    {% if content.field_component_title|render %}
+  <figure class="gallery-image-video__item--fancy" id="gallery-{{ unique_id }}">
+    {{ image_value }}
+    {% if title_value|remove_html_comments|trim is not empty %}
       <figcaption>{{ content.field_component_title }}</figcaption>
     {% endif %}
   </figure>  
+  {% endif %}
+  {% if video_value is not empty %}
+    <div class="gallery-image-video__slide">
+      <a href="#gallery-{{ unique_id }}" data-fancybox="ditl-fancy-{{ content.field_fancybox }}" data-options='{"loop" : "true", "arrows" : "true"}'>
+      <span class="show-for-sr">Click to expand this slide</span>
+      <figure class="gallery-image-video__item">
+        {{ content.field_component_image }}
+        <div class=" video-link--fancy">
+          <span class="show-for-sr">Click to play the video</span>
+          <span class="play-button"></span>
+        </div>
+        {% if title_value|remove_html_comments|trim is not empty %}
+          <figcaption>{{ content.field_component_title }}</figcaption>
+        {% endif %}
+      </figure>
+      </a>
+      <figure class="gallery-image-video__item--fancy" id="gallery-{{ unique_id }}">
+        {{ content.field_component_video }}
+        {% if title_value|remove_html_comments|trim is not empty %}
+          <figcaption>{{ content.field_component_title }}</figcaption>
+        {% endif %}
+      </figure>
+    </div>
+  {% endif %}
 </div>

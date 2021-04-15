@@ -94,8 +94,10 @@
                   <div class="disclaimer__text">
                     <div class="disclaimer__title">{{ content.field_tuition_fees_set.0['#paragraph'].field_tfs_disclaimer_title.value }}</div>
                     <div class="disclaimer__desc"><p>{{ content.field_tuition_fees_set.0['#paragraph'].field_tfs_disclaimer_text.value }}</p></div>
-                    <div class="calculator-button">{{ content.field_tuition_fees_set.0['#paragraph'].field_tfs_net_price_calc_link.0.value  }}</div>
-                  </div>                
+                  </div>
+                  {% if content.field_tuition_fees_set.0['#paragraph'].field_tfs_net_price_calc_link.0.url|length > 0 %}
+                    <div class="calculator-button"><a class="btn" href="{{ content.field_tuition_fees_set.0['#paragraph'].field_tfs_net_price_calc_link.0.url }}">{{ content.field_tuition_fees_set.0['#paragraph'].field_tfs_net_price_calc_link.0.title }}</a></div>
+                  {% endif %}
                 </div>
               </div>
             </article>
@@ -122,10 +124,11 @@
                   <div class="disclaimer__text">
                     <div class="disclaimer__title">{{ content.field_tuition_fees_set.1['#paragraph'].field_tfs_disclaimer_title.value }}</div>
                     <div class="disclaimer__desc"><p>{{ content.field_tuition_fees_set.1['#paragraph'].field_tfs_disclaimer_text.value }}</p></div>
-                    {% if content.field_tuition_fees_set.1['#paragraph'].field_tfs_net_price_calc_link.value|render %}
-                       <div class="calculator-button">{{ content.field_tuition_fees_set.1['#paragraph'].field_tfs_net_price_calc_link.value }}</div>
-                    {% endif %}
-                  </div>                
+                  </div>
+                  {% if content.field_tuition_fees_set.1['#paragraph'].field_tfs_net_price_calc_link.0.url|length > 0 %}
+                    <div class="calculator-button"><a class="btn" href="{{ content.field_tuition_fees_set.1['#paragraph'].field_tfs_net_price_calc_link.0.url }}">{{ content.field_tuition_fees_set.1['#paragraph'].field_tfs_net_price_calc_link.0.title }}</a></div>
+                  {% endif %}
+
                 </div>
               </div>
             </article>
@@ -152,8 +155,8 @@
                   <div class="disclaimer__text">
                     <div class="disclaimer__title">{{ content.field_tuition_fees_set.2['#paragraph'].field_tfs_disclaimer_title.value }}</div>
                     <div class="disclaimer__desc"><p>{{ content.field_tuition_fees_set.2['#paragraph'].field_tfs_disclaimer_text.value }}</p></div>
-                    {% if content.field_tuition_fees_set.2['#paragraph'].field_tfs_net_price_calc_link.value|render %}
-                      <div class="calculator-button">{{ content.field_tuition_fees_set.2['#paragraph'].field_tfs_net_price_calc_link.value }}</div>
+                    {% if content.field_tuition_fees_set.2['#paragraph'].field_tfs_net_price_calc_link.0.url|length > 0 %}
+                      <div class="calculator-button"><a class="btn" href="{{ content.field_tuition_fees_set.2['#paragraph'].field_tfs_net_price_calc_link.0.url }}">{{ content.field_tuition_fees_set.2['#paragraph'].field_tfs_net_price_calc_link.0.title }}</a></div>
                     {% endif %}
                   </div>                
                 </div>
