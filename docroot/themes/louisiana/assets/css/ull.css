@@ -412,3 +412,6 @@ margin-bottom: 0.625rem;
 }
 .section--differentiators article article h2 { display: none; }
 .tuition-fees_set > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div.costs__accordion__content { display: block; }
+.block {
+  margin: 0 0 10px 0;
+}

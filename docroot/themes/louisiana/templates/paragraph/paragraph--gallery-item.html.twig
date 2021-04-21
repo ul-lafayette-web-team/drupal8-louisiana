@@ -1,8 +1,15 @@
 {% set unique_id = random() %}
 {% set title_value = content.field_component_title|render %}
-{% set video_value = content.field_component_video|render %}
 {% set image_value = content.field_component_image|render %}
- 
+
+{% set video_value = content.field_component_video|render %}
+{% if video_value is not empty %}
+  {% set ytregex1 = '/^(?:https?:\\/\\/)?(?:www\.)?(?:youtu\.be\\/|youtube\.com)(?:\\/embed\\/|\\/v\\/|\\/watch\\?v=||\\/watch\\\?.+&v=)/' %}
+  {% set ytregexTrailingSlash = '/(\\/)$/' %}
+  {% set ytregexTrailingVariables = '/(&+.*)/' %}
+  {% set youtubeid = video_value | replace(ytregex1, '') | replace(ytregexTrailingSlash, '') | replace(ytregexTrailingVariables, '') %}
+{% endif %}
+
 <div class="gallery-image-video__slide">
   {% if video_value is empty %}
   <a href="#gallery-{{ unique_id }}" data-fancybox="ditl-fancy-{{ content.field_fancybox }}" data-options='{"loop" : "true", "arrows" : "true"}'>  
@@ -27,6 +34,10 @@
       <span class="show-for-sr">Click to expand this slide</span>
       <figure class="gallery-image-video__item">
         {{ content.field_component_image }}
+        
+        
+        {# As of now the image field is required to display properly but we talked about using the default Youtube thumb as a fallback. #}
+        {# http://img.youtube.com/vi/<insert-youtube-video-id-here>/[Thumnail-Size].jpg #}
         <div class=" video-link--fancy">
           <span class="show-for-sr">Click to play the video</span>
           <span class="play-button"></span>
@@ -36,7 +47,7 @@
         {% endif %}
       </figure>
       </a>
-      <figure class="gallery-image-video__item--fancy" id="gallery-{{ unique_id }}">
+      <figure youtubeid="{# youtubeid #}" class="gallery-image-video__item--fancy" id="gallery-{{ unique_id }}">
         {{ content.field_component_video }}
         {% if title_value|remove_html_comments|trim is not empty %}
           <figcaption>{{ content.field_component_title }}</figcaption>
