@@ -62,12 +62,14 @@ class OHOMenuBlock extends BlockBase implements ContainerFactoryPluginInterface 
    */
   public function defaultConfiguration() {
     return [
-      'nav_type' => 'fixed',
+      'nav_type' => 'fixed_level',
       'level' => 1,
       'depth' => 0,
       'expand' => 0,
+      'sibling_depth' => 0,
       'title_type' => '',
       'title_level' => 1,
+      'title_show_link' => FALSE,
     ];
   }
 
@@ -80,8 +82,8 @@ class OHOMenuBlock extends BlockBase implements ContainerFactoryPluginInterface 
 
     // Build the nav type options.
     $nav_type_options = [
-      'fixed' => 'Fixed',
-      'relative' => 'Relative',
+      'fixed_level' => 'Fixed Level',
+      'relative_level' => 'Relative Level',
     ];
 
     $form['nav_type'] = [
@@ -89,7 +91,7 @@ class OHOMenuBlock extends BlockBase implements ContainerFactoryPluginInterface 
       '#title' => $this->t('Nav type'),
       '#default_value' => $config['nav_type'],
       '#options' => $nav_type_options,
-      '#description' => $this->t('Whether the root of the nav is relative or fixed.'),
+      '#description' => $this->t('Select the type of nav to display.'),
       '#required' => TRUE,
     ];
 
@@ -107,7 +109,7 @@ class OHOMenuBlock extends BlockBase implements ContainerFactoryPluginInterface 
       '#title' => $this->t('Initial or relative menu level'),
       '#default_value' => $config['level'],
       '#options' => $level_options,
-      '#description' => $this->t('If this is a fixed nav, the minimum allowed level is 1. The menu will only be visible if the menu item for the current page is at or below the selected starting level. Select level 1 to always keep this menu visible. If this is a relative nav, this is the starting level for the nav, relative to the current menu item (where 0 is the current item, 1 is the parent item, etc).'),
+      '#description' => $this->t('If this is a Fixed Level nav, the minimum allowed level is 1. The menu will only be visible if the menu item for the current page is at or below the selected starting level. Select level 1 to always keep this menu visible. If this is a Relative Level nav, this is the starting level for the nav, relative to the current menu item (where 0 is the current item, 1 is the parent item, etc).'),
       '#required' => TRUE,
     ];
 
@@ -135,6 +137,18 @@ class OHOMenuBlock extends BlockBase implements ContainerFactoryPluginInterface 
       '#title' => $this->t('<strong>Expand all menu links</strong>'),
       '#default_value' => $config['expand'],
       '#description' => $this->t('All menu links that have children will "Show as expanded".'),
+    ];
+
+    // Build the sibling depth options.
+    $sibling_depth_options = range(0, -5);
+    $sibling_depth_options[0] = $this->t('None');
+
+    $form['advanced']['sibling_depth'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Sibling depth difference'),
+      '#default_value' => $config['sibling_depth'],
+      '#options' => $sibling_depth_options,
+      '#description' => $this->t('Depth difference between active trail and siblings.'),
     ];
 
     $form['nav_title'] = [
@@ -170,6 +184,13 @@ class OHOMenuBlock extends BlockBase implements ContainerFactoryPluginInterface 
       '#description' => $this->t('The level of the menu item in the active trail to display as the title. Must choose the "Level" title type.'),
     ];
 
+    $form['nav_title']['title_show_link'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Show nav title as link'),
+      '#default_value' => $config['title_show_link'],
+      '#description' => $this->t('Show the title as a link.'),
+    ];
+
     // Open the details field sets if their config is not set to defaults.
     foreach (['menu_levels', 'advanced'] as $fieldSet) {
       foreach (array_keys($form[$fieldSet]) as $field) {
@@ -200,7 +221,7 @@ class OHOMenuBlock extends BlockBase implements ContainerFactoryPluginInterface 
     $this->configuration['nav_type'] = $nav_type;
 
     $level = $form_state->getValue('level');
-    if ($nav_type == 'fixed' && $level < 1) {
+    if ($nav_type == 'fixed_level' && $level < 1) {
       // For a fixed nav, level cannot be less than 1.
       $level = 1;
     }
@@ -208,8 +229,11 @@ class OHOMenuBlock extends BlockBase implements ContainerFactoryPluginInterface 
 
     $this->configuration['depth'] = $form_state->getValue('depth');
     $this->configuration['expand'] = $form_state->getValue('expand');
+    $this->configuration['expand'] = $form_state->getValue('sibling_depth');
+
     $this->configuration['title_type'] = $form_state->getValue('title_type');
     $this->configuration['title_level'] = $form_state->getValue('title_level');
+    $this->configuration['title_show_link'] = $form_state->getValue('title_show_link');
   }
 
   /**
@@ -220,20 +244,28 @@ class OHOMenuBlock extends BlockBase implements ContainerFactoryPluginInterface 
     $level = $this->configuration['level'];
     $depth = $this->configuration['depth'];
     $expand = $this->configuration['expand'];
+    $sibling_depth = $this->configuration['sibling_depth'];
     $title_type = $this->configuration['title_type'];
     $title_level = $this->configuration['title_level'];
+    $show_link = $this->configuration['title_show_link'];
+
+    $options = [
+      'expand' => $expand,
+      'sibling_depth' => $sibling_depth,
+    ];
 
     $title_options = [
-      'nav_title_type' => $title_type,
-      'nav_title_level' => $title_level,
+      'type' => $title_type,
+      'level' => $title_level,
+      'show_link' => $show_link,
     ];
 
     $build = [];
-    if ($nav_type == 'fixed') {
-      $build = $this->ohoNavBuilder->buildFixedRootNav($level, $depth, $expand, $title_options);
+    if ($nav_type == 'fixed_level') {
+      $build = $this->ohoNavBuilder->buildFixedLevelNav($level, $depth, $options, $title_options);
     }
-    elseif ($nav_type == 'relative') {
-      $build = $this->ohoNavBuilder->buildRelativeRootNav($level, $depth, $expand, $title_options);
+    elseif ($nav_type == 'relative_level') {
+      $build = $this->ohoNavBuilder->buildRelativeLevelNav($level, $depth, $options, $title_options);
     }
 
     return $build;

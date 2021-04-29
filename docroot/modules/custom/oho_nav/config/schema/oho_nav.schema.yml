@@ -14,9 +14,15 @@ block.settings.oho_menu_block:*:
     expand:
       type: boolean
       label: 'Expand all menu links'
+    sibling_depth:
+      type: integer
+      label: 'Sibling depth difference'
     title_type:
       type: string
       label: 'Title type'
     title_level:
       type: integer
       label: 'Title level'
+    title_show_link:
+      type: boolean
+      label: 'Show title as a link'

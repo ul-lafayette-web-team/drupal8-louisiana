@@ -44,16 +44,16 @@ article {
   padding: 20px;
 }
 .section--campaign-highlight {
-  color: white; 
+  color: white;
   position: relative;
   z-index: 11;
 }
 
 .cal_date {
-    background: #ce181e;    
+    background: #ce181e;
     text-align: center;
     text-transform: uppercase;
-    color: 
+    color:
     #ffffff;
     font-family: "Roboto Slab", courier, georgia, serif;
     font-weight: 700;
@@ -63,7 +63,7 @@ article {
     width: 64px;
     padding: 12px;
 }
-  
+
 .cal_date .cal_date_month {
     font-family: "HCo Gotham SSm", helvetica, sans-serif;
     font-weight: 400;
@@ -166,7 +166,7 @@ article {
     background-size: auto !important;
 }
 .ull-header__main.main-menu--show.main-menu--sticky {
-    background: rgba(206, 24, 30, 0.9) !important;    
+    background: rgba(206, 24, 30, 0.9) !important;
 }
 .general-pg__media {
     margin-top: 0 !important;
@@ -252,12 +252,12 @@ form .js-form-type-textfield label {
 .profile-detail { margin-bottom: 50px; }
 .profile__departments ul li a { border: 0; }
 .ull-header__search .site-search .search-block-form input.form-search { padding: 0.5em; }
-.gallery__description { 
+.gallery__description {
   caption-side: bottom;
   color: #2e2e2e;
   font-size: 1rem;
   line-height: 1.5rem;
-  margin-top: 20px } 
+  margin-top: 20px }
 .career-feature__outcomes-cell { margin-top: 30px; }
 .program__other-prog-links div { display: inline; }
 
@@ -414,4 +414,31 @@ margin-bottom: 0.625rem;
 .tuition-fees_set > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div.costs__accordion__content { display: block; }
 .block {
   margin: 0 0 10px 0;
+
+.sidebar-menu__container a.is-active {
+  font-weight: 700;
+}
+.site-footer__main-nav .sidebar-menu__container > ul,
+.site-footer__links .sidebar-menu__container > ul,
+.site-footer--footer .sidebar-menu__container > ul {
+  border: none;
+}
+.site-footer__main-nav .sidebar-menu__container > ul > li,
+.site-footer__links .sidebar-menu__container > ul > li,
+.site-footer--footer .sidebar-menu__container > ul > li {
+  border: none;
+}
+.site-footer__main-nav .sidebar-menu__container > ul > li a,
+.site-footer__links .sidebar-menu__container > ul > li a,
+.site-footer--footer .sidebar-menu__container > ul > li a {
+  padding: 0;
+}
+.sidebar-menu__container ul {
+  width: 100%;
+}
+.sidebar-menu__container > ul li.menu-item--expanded {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
 }

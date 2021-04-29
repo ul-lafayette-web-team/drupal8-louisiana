@@ -17,26 +17,27 @@
   </div>
 </section>
 
-{% if sidebar_nav %}
-  <div class="cell initial-12 medium-3">
-    {{ sidebar_nav }}
-  </div>
-{% endif %}
-
 <div class="grid-container">
-  <div class="cell medium-auto">
-    <article class="basic-page">
-      {% if content.field_intro_text|render %}
-        <div class="intro-text">{{ content.field_intro_text }}</div>
-      {% endif %}
-      <section class="clearfix full-wysiwyg">
-        {{ content.body }}
-      </section>
-      <section class="process--other-information">
-        <h3 class="h5">Costs for Other Students</h3>
-        {{ content.field_taf_other_applicant_links }}
-      </section>
-    </article>
+  <div class="grid-x grid-margin-x">
+    {% if sidebar_nav %}
+      <div class="cell medium-3">
+        {{ sidebar_nav }}
+      </div>
+    {% endif %}
+    <div class="cell medium-auto">
+      <article class="basic-page">
+        {% if content.field_intro_text|render %}
+          <div class="intro-text">{{ content.field_intro_text }}</div>
+        {% endif %}
+        <section class="clearfix full-wysiwyg">
+          {{ content.body }}
+        </section>
+        <section class="process--other-information">
+          <h3 class="h5">Costs for Other Students</h3>
+          {{ content.field_taf_other_applicant_links }}
+        </section>
+      </article>
+    </div>
   </div>
 </div>
 
@@ -61,18 +62,18 @@
                   field_tfs_audience_name.value }}</option>
                   {% endif %}
                   {% if content.field_tuition_fees_set.1['#paragraph'].
-                  field_tfs_audience_name.value|render %}                  
+                  field_tfs_audience_name.value|render %}
                     <option value="tuition-fees-set-2">{{ content.field_tuition_fees_set.1['#paragraph'].field_tfs_audience_name.value }}</option>
                   {% endif %}
                   {% if content.field_tuition_fees_set.2['#paragraph'].
-                  field_tfs_audience_name.value|render %} 
+                  field_tfs_audience_name.value|render %}
                     <option value="tuition-fees-set-3">{{ content.field_tuition_fees_set.2['#paragraph'].field_tfs_audience_name.value }}</option>
                   {% endif %}
                 </select>
               </div>
             </div>
 
-{# Start First Set #}            
+{# Start First Set #}
             <article class="tuition-fees_set selected" id="tuition-fees-set-1">
   {# Cost & Aid rows for first set #}
             <div class="grid-container">
@@ -102,7 +103,7 @@
               </div>
             </article>
 {# End First Set #}
-{# Start Second Set #}            
+{# Start Second Set #}
             <article class="tuition-fees_set" id="tuition-fees-set-2">
   {# Cost & Aid rows for first set #}
             <div class="grid-container">
@@ -128,12 +129,11 @@
                   {% if content.field_tuition_fees_set.1['#paragraph'].field_tfs_net_price_calc_link.0.url|length > 0 %}
                     <div class="calculator-button"><a class="btn" href="{{ content.field_tuition_fees_set.1['#paragraph'].field_tfs_net_price_calc_link.0.url }}">{{ content.field_tuition_fees_set.1['#paragraph'].field_tfs_net_price_calc_link.0.title }}</a></div>
                   {% endif %}
-
                 </div>
               </div>
             </article>
 {# End Second Set #}
-{# Start Third Set #}            
+{# Start Third Set #}
             <article class="tuition-fees_set" id="tuition-fees-set-3">
   {# Cost & Aid rows for first set #}
             <div class="grid-container">
