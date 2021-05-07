@@ -26,7 +26,7 @@
 <div class="grid-container">
   <div class="cell medium-auto">
     <article class="basic-page">
-      {% if content.field_intro_text|render %}
+     {% if content.field_intro_text|render %}
         <div class="intro-text">{{ content.field_intro_text }}</div>
       {% endif %}
       <section class="clearfix full-wysiwyg">
@@ -41,6 +41,7 @@
 </div>
 
 {{ content.field_differentiators_section }}
+{{ content.field_page_differentiators }}
 
 {% if content.field_tuition_fees_set|render %}
 <section class="section--wide-lined-title section--banded section--dusty-light section--tuition-fees">
