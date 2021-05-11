@@ -414,7 +414,7 @@ margin-bottom: 0.625rem;
 .tuition-fees_set > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div.costs__accordion__content { display: block; }
 .block {
   margin: 0 0 10px 0;
-
+}
 .sidebar-menu__container a.is-active {
   font-weight: 700;
 }
@@ -442,3 +442,5 @@ margin-bottom: 0.625rem;
   justify-content: space-between;
   width: 100%;
 }
+.ull-header .audience-menu span.audience-menu__trigger { background: #0097A2; }
+figcaption { display: block; }
