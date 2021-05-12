@@ -248,7 +248,9 @@ form .js-form-type-textfield label {
 .full-wysiwyg a, .wysiwyg a{
     color: #000000;
 }
-.link-underline { font-weight: bold; color: black }
+.link-underline { font-weight: bold; color: #ce181e }
+.program__featured-item--small .link-underline { text-transform: none; }
+.section--banded .section__all-link a.link-underline { text-transform: none; }
 .profile-detail { margin-bottom: 50px; }
 .profile__departments ul li a { border: 0; }
 .ull-header__search .site-search .search-block-form input.form-search { padding: 0.5em; }
@@ -274,7 +276,7 @@ a.link-underline:hover {
   border: 0;
 }
 a.link-arrow {
-  color: black;
+  color: #ce181e;
 }
 a.link-arrow:hover {
   text-decoration: none;
@@ -483,3 +485,43 @@ margin-bottom: 0.625rem;
     font-size: 0.77rem !important;
 }
 .section--differentiators article article h2 { display: none; }
+.tuition-fees__select {	
+    background-image: url(/themes/louisiana/assets/img/bg-select-arrow.svg);	
+}	
+.kint {	
+    /* position: relative;	
+    z-index: 1111;	
+    display:none;*/	
+}	
+.costs__breakdown__body a {	
+    color: #ce181e;	
+    font-weight: bold;	
+    text-decoration: none;	
+    border: 0;	
+}	
+.costs__breakdown__body a:hover {	
+    text-decoration: underline;	
+}	
+.taf_number {	
+    margin-right: 5%;	
+    float: right;	
+}	
+.site-search .form-submit, #edit-submit--3 { display: none; } 
+.toolbar-fixed .ull-header__main, .has-alert 	
+.ull-header__main {	
+    background: transparent;	
+    background-size: auto;	
+}	
+.ull-header__main {	
+    background: transparent;	
+    background-size: auto;	
+}	
+.basic-page-cols { margin-top: 20px; } .full-wysiwyg { margin-top: 20px; } .page--general .page-wrapper {	
+    margin-top: -2px;	
+}	
+.ull-header__utility .ull-header__container--utility {	
+    padding-right: 150px !important;	
+}	
+.ull-header__utility--first li, .ull-header__utility--second li {	
+    font-size: 0.77rem !important;	
+}
