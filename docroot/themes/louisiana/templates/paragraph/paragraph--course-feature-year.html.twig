@@ -1,7 +1,9 @@
   <button class="courses__btn"><span class="show-for-sr">Click to open</span> Freshman Year</button>
   <article class="courses__feature">
     <h3 class="courses__title">{{ content.field_component_title }}</h3>
-    <div class="courses__professor">{{ content.field_cfy_professor_name }}</div>
+    {% if content.field_cfy_professor_name|render %}
+      <div class="courses__professor">with {{ content.field_cfy_professor_name }}</div>
+    {% endif %}
     <blockquote class="courses__quote">{{ content.field_component_body }}
     <footer class="courses__quote--source">{{ content.field_cfy_quote_source }}</footer>
     </blockquote>

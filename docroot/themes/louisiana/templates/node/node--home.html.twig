@@ -1,3 +1,12 @@
+<style>
+    .page-wrapper {
+      position: relative;
+      top: -100px;
+    }
+    .header__bg {
+      background: none;
+    }
+</style>
 <article class="home-page" style="padding: 0px">
   <section class="hero section--global-spacing hero--img {{hero_classes}}">
     <div class="hero__media">
@@ -7,9 +16,14 @@
           </video>
         </div>
     </div>
+{% if content.field_header_title|render %}
     <div class="hero__content">
       <h1>{{ content.field_header_title }}</h1>
     </div>
+{% endif %}
+  </section>
+  <section class="section--hero-cta">
+    {{ content.field_hero_cta }}
   </section>
   <section class="section--brand-features">
     <h2>{{ 'Find your'|t }}&hellip;</h2>

@@ -31,7 +31,7 @@ article {
 }
 
 .section--brand-features {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .ull-header__utility--second a {
@@ -161,10 +161,12 @@ article {
     background-image: url(/themes/louisiana/assets/img/bg-select-arrow.svg);
 }
 .site-search .form-submit, #edit-submit--3 { display: none; }
+/*
 .ull-header__main {
     background: transparent !important;
     background-size: auto !important;
 }
+*/
 .ull-header__main.main-menu--show.main-menu--sticky {
     background: rgba(206, 24, 30, 0.9) !important;
 }
@@ -414,9 +416,11 @@ margin-bottom: 0.625rem;
 }
 .section--differentiators article article h2 { display: none; }
 .tuition-fees_set > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div.costs__accordion__content { display: block; }
-.block {
-  margin: 0 0 10px 0;
+.block .grid-container {
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
+
 .sidebar-menu__container a.is-active {
   font-weight: 700;
 }
@@ -466,8 +470,9 @@ margin-bottom: 0.625rem;
   margin-right: 5%;
   float: right;
 }
-.site-search .form-submit, #edit-submit--3 { display: none; } .toolbar-fixed .ull-header__main, .has-alert 
-.ull-header__main {
+.site-search .form-submit, #edit-submit--3 { display: none; } 
+
+.toolbar-fixed .ull-header__main, .has-alert .ull-header__main {
     background: transparent;
     background-size: auto;
 }
@@ -478,9 +483,7 @@ margin-bottom: 0.625rem;
 .basic-page-cols { margin-top: 20px; } .full-wysiwyg { margin-top: 20px; } .page--general .page-wrapper {
     margin-top: -2px;
 }
-.ull-header__utility .ull-header__container--utility {
-    padding-right: 150px !important;
-}
+
 .ull-header__utility--first li, .ull-header__utility--second li {
     font-size: 0.77rem !important;
 }
@@ -524,4 +527,58 @@ margin-bottom: 0.625rem;
 }	
 .ull-header__utility--first li, .ull-header__utility--second li {	
     font-size: 0.77rem !important;	
+}
+#contact-message-sitewide-contact-form-form {
+    display: block;
+    padding: 7%;
+}
+.menu-item--active-trail a { font-weight: bold; }
+.paragraph--type--hero-cta { 
+    text-align: center;
+}
+@media only screen and (min-width: 950px) {
+  .btn-hero-cta {
+    {# position: relative;
+    top: -100px;
+    z-index: 8; #}
+  }
+}
+
+@media only screen and (max-width: 975px) {
+  .btn-hero-cta {
+    display: block;
+    width: 100%;
+    position: inital;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  #main-menu { background: #ffffff; }
+}
+
+.hero__content {
+    padding-bottom: 0 !important;
+}
+
+@media only screen and (min-width: 75em) {
+  .ull-header__utility .ull-header__container--utility {
+    padding-right: 150px;
+  } 
+}
+.organization__details li {
+  min-width: 150px;
+}
+
+.selected > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button:nth-child(1)::before {
+    transform: rotateX(180deg);
+}
+.costs__breakdown__body a {
+  color: #ce181e;
+  font-weight: bold;
+  text-decoration: none;
+  border: 0;
+  display: block;
+}
+.costs__breakdown__body a:hover {
+  text-decoration: underline;
 }

@@ -4,7 +4,8 @@
 		  <div class="section--org-contact__content">
 		    <div class="grid-x">
 		      <div class="cell small-12 medium-5">
-		        <h2>{{ content.field_component_title  }}</h2>
+		        <h2>{{ content.field_component_title }}</h2>
+                        {{ content.field_component_link }}  
 		      </div>
 		   	  {% if content.field_ocf_organizations[0] %}
 			    {% for key, item in content.field_ocf_organizations if key|first != '#' %}
