@@ -457,11 +457,12 @@ margin-bottom: 0.625rem;
   z-index: 1111;
   display:none;*/
 }
-.costs__breakdown__body a {
+.costs__breakdown__body.resources a {
   color: #ce181e;
   font-weight: bold;
   text-decoration: none;
   border: 0;
+  display: block;
 }
 .costs__breakdown__body a:hover {
   text-decoration: underline;
@@ -572,13 +573,45 @@ margin-bottom: 0.625rem;
 .selected > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button:nth-child(1)::before {
     transform: rotateX(180deg);
 }
+.selected > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button:nth-child(1).engaged::before {
+    transform: rotateX(0deg);
+}
 .costs__breakdown__body a {
   color: #ce181e;
   font-weight: bold;
   text-decoration: none;
   border: 0;
-  display: block;
 }
 .costs__breakdown__body a:hover {
   text-decoration: underline;
+}
+.page--home #main-menu {
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.01) 100%);
+}
+.cookie-compliance-popup {
+  background-color: #555;
+}
+.eu-cookie-compliance-message {
+    float: none;
+    max-width:100%;
+}
+.eu-cookie-compliance-content {
+    text-align: center;
+}
+.eu-cookie-compliance-buttons {
+    float: none;
+    max-width: 100%;
+}
+.eu-cookie-compliance-default-button {
+   color: #000;
+}
+.org-contact__organization i.fa-map-marker-alt span {
+  font-family: "HCo Gotham SSm", helvetica, sans-serif;
+  top: -18px;
+  position: relative;
+}
+@media only screen and (max-width: 750px) {
+  .org-contact__organization .organization__name::after {
+    border-top: none;
 }
