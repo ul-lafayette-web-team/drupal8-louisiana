@@ -533,7 +533,7 @@ margin-bottom: 0.625rem;
     display: block;
     padding: 7%;
 }
-.menu-item--active-trail a { font-weight: bold; }
+/* .menu-item--active-trail a { font-weight: bold; } */
 .paragraph--type--hero-cta { 
     text-align: center;
 }

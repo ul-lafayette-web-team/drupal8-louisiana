@@ -1,7 +1,21 @@
 <article class="landing-page">
   <article class="hero section--global-spacing hero--img">
+{% if content.field_header_image|render %}
+<style>
+    .page-wrapper {
+      position: relative;
+      top: -100px;
+    }
+    .header__bg {
+      background: none;
+    }
+    .page--landing-page #main-menu {
+      background: rgb(0,0,0);
+      background: linear-gradient(180deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.01) 100%);
+    }
+</style> 
     <div class="hero__media">
-{#
+  {#
     {% if content.field_header_video|render %}
       <div class="video-feature">
         <video id="hero" loop="" muted="" poster="http://placehold.it/768x480" autoplay="autoplay" >
@@ -9,9 +23,15 @@
         </video>
       </div>
     {% endif %}
-#}  
+  #}  
     {{ content.field_header_image }}
     </div>
+{% endif %}
+{% if not content.field_header_image|render %}
+  <style>
+        .hero__content { padding-top: 2.5rem !important; }
+  </style>
+{% endif %}
     {% if content.field_intro_text|render %}
       <div class="hero__content">
         <div class="grid-x">
