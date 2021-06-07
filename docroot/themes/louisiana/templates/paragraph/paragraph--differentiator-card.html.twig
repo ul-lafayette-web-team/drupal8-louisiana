@@ -1,11 +1,14 @@
 {% import "@oho_base/includes/oho-macros.html.twig" as oho_macros %}
+
 <section class="section----differentiators section--wide-lined-title section--banded section--white">
   <div class="grid-container">
-    <div class="grid-x">
-      <div class="cell">
-        <h2><span>{{ content.field_component_title }}</span></h2>
+    {% if content.field_component_title|render %}
+      <div class="grid-x">
+        <div class="cell">
+          <h2><span>{{ content.field_component_title }}</span></h2>
+        </div>
       </div>
-    </div>
+    {% endif %}
   {{ content.field_component_body }}
   <div class="row">
     <div class="grid-x grid-margin-x section__content oho-animate-sequence">
