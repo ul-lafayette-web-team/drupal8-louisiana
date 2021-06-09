@@ -16,14 +16,14 @@
   <span class="show-for-sr">Click to expand this slide</span>
   <figure class="gallery-image-video__item " >
     {{ image_value }}
-    {% if title_value|remove_html_comments|trim is not empty %}
+    {% if title_value is not empty %}
       <figcaption>{{ content.field_component_title }}</figcaption>
     {% endif %}
   </figure>     
   </a>
   <figure class="gallery-image-video__item--fancy" id="gallery-{{ unique_id }}">
     {{ image_value }}
-    {% if title_value|remove_html_comments|trim is not empty %}
+    {% if title_value is not empty %}
       <figcaption>{{ content.field_component_title }}</figcaption>
     {% endif %}
   </figure>  
@@ -42,14 +42,14 @@
           <span class="show-for-sr">Click to play the video</span>
           <span class="play-button"></span>
         </div>
-        {% if title_value|remove_html_comments|trim is not empty %}
+        {% if title_value is not empty %}
           <figcaption>{{ content.field_component_title }}</figcaption>
         {% endif %}
       </figure>
       </a>
       <figure youtubeid="{# youtubeid #}" class="gallery-image-video__item--fancy" id="gallery-{{ unique_id }}">
         {{ content.field_component_video }}
-        {% if title_value|remove_html_comments|trim is not empty %}
+        {% if title_value is not empty %}
           <figcaption>{{ content.field_component_title }}</figcaption>
         {% endif %}
       </figure>
